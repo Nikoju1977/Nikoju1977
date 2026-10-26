@@ -61,7 +61,7 @@ Le profil conserve neuf rubriques, et son script de vérification contrôle dés
 | [medicalvisionproai](https://github.com/Nikoju1977/medicalvisionproai), [Medivision-ai-pro](https://github.com/Nikoju1977/Medivision-ai-pro) | Distinguer le prototype d'imagerie opérationnel du simple starter PWA ; revoir formats, sécurité et exactitude des revendications |
 | [OPENVITA-DT1](https://github.com/Nikoju1977/OPENVITA-DT1), [jarvisdiabete](https://github.com/Nikoju1977/jarvisdiabete), [compagnon-diabete](https://github.com/Nikoju1977/compagnon-diabete) | Séparer démonstration et décision de traitement ; revue clinique et protection des données avant tout usage réel |
 | [dermato-ai](https://github.com/Nikoju1977/dermato-ai), [SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL), [agent-biometrique](https://github.com/Nikoju1977/agent-biometrique), [fibrobot](https://github.com/Nikoju1977/fibrobot), [fibrocare](https://github.com/Nikoju1977/fibrocare) | Revue des limites de modèles, des données médicales importées et de la terminologie clinique |
-| [purescanai](https://github.com/Nikoju1977/purescanai) | Vérifier les sources utilisées pour les scores liés aux ingrédients et éviter les conclusions toxicologiques non étayées |
+| [purescanai](https://github.com/Nikoju1977/purescanai) | Vérifier les fonctions annoncées d'analyse visuelle de la peau, les limites de l'IA dermatologique, la protection des images et l'absence de diagnostic médical validé |
 
 ### Priorité 1 — Services connectés, identité et secrets
 
