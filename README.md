@@ -67,7 +67,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 
 ## Projets retenus, classés par thème
 
-**39 projets publics sélectionnés parmi 45** sont répertoriés ci-dessous, chacun une seule fois. Les **5 variantes proches** et **1 projet hors sélection éditoriale** ne figurent plus dans cette vitrine. Les critères sont documentés dans [la politique de sélection](CURATION.md) ; [le guide de chaque application](PROJECTS.md) décrit concrètement leurs fonctionnalités, sans suppression de code. Les dépôts privés n'apparaissent pas dans ce catalogue. Les liens pointent vers le code et la documentation, pas nécessairement vers une application déployée.
+**39 projets publics sélectionnés parmi 44** sont répertoriés ci-dessous, chacun une seule fois. Les **4 variantes proches** et **1 projet hors sélection éditoriale** ne figurent plus dans cette vitrine. Les critères sont documentés dans [la politique de sélection](CURATION.md) ; [le guide de chaque application](PROJECTS.md) décrit concrètement leurs fonctionnalités, sans suppression de code. Les dépôts privés n'apparaissent pas dans ce catalogue. Les liens pointent vers le code et la documentation, pas nécessairement vers une application déployée.
 
 <details>
 <summary><strong>01 · Cinéma, image & arts numériques</strong> — 7 projets</summary>
@@ -110,7 +110,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 | [OPENVITA-DT1](https://github.com/Nikoju1977/OPENVITA-DT1) | Prototype d'aide au suivi du diabète de type 1 |
 | [jarvisdiabete](https://github.com/Nikoju1977/jarvisdiabete) | Compagnon vocal DiabCare |
 | [dermato-ai](https://github.com/Nikoju1977/dermato-ai) | Exploration de la vision artificielle en dermatologie |
-| [SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL) | Exploration d'images biomédicales |
+| [SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL) | Interface expérimentale de caméra et indicateurs biométriques |
 | [agent-biometrique](https://github.com/Nikoju1977/agent-biometrique) | Analyse et visualisation de données biométriques |
 | [fibrobot](https://github.com/Nikoju1977/fibrobot) | Agent d'information autour de la fibromyalgie |
 | [fibrocare](https://github.com/Nikoju1977/fibrocare) | Journal de suivi de la fibromyalgie |
@@ -156,8 +156,8 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 | [Boutique-morgane](https://github.com/Nikoju1977/Boutique-morgane) | Site vitrine et boutique |
 | [handimonde](https://github.com/Nikoju1977/handimonde) | Carte des lieux accessibles |
 | [job-search](https://github.com/Nikoju1977/job-search) | Recherche d'emploi et accompagnement des candidats |
-| [aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking) | Expérimentation d'assistant culinaire |
-| [purescanai](https://github.com/Nikoju1977/purescanai) | Exploration de la composition de produits |
+| [aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking) | Recettes de desserts, portions et espace Chef IA |
+| [purescanai](https://github.com/Nikoju1977/purescanai) | Prototype d'analyse visuelle de la peau et routines de soin |
 
 </details>
 
