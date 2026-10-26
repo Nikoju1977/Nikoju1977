@@ -96,6 +96,7 @@ def main() -> int:
         errors.append("La signature graphique SVG doit être présente et référencée.")
     elif "<svg" not in BANNER.read_text(encoding="utf-8"):
         errors.append("La signature graphique ne contient pas de SVG.")
+    studies = ""
     if not SHOWCASE.is_file() or "(SHOWCASE.md)" not in text:
         errors.append("Les études de projets doivent être présentes et liées.")
     else:
