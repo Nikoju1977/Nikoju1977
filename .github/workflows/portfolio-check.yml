@@ -6,6 +6,7 @@ on:
       - README.md
       - QUALITY_ROADMAP.md
       - CURATION.md
+      - PROJECTS.md
       - SHOWCASE.md
       - assets/studio-niko-cover.svg
       - scripts/check_portfolio.py
@@ -15,6 +16,7 @@ on:
       - README.md
       - QUALITY_ROADMAP.md
       - CURATION.md
+      - PROJECTS.md
       - SHOWCASE.md
       - assets/studio-niko-cover.svg
       - scripts/check_portfolio.py
