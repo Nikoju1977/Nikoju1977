@@ -100,7 +100,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 </details>
 
 <details>
-<summary><strong>03 · Santé, bien-être & biomédical</strong> — 9 projets</summary>
+<summary><strong>03 · Santé, bien-être & biomédical</strong> — 10 projets</summary>
 
 ### 3. Santé, bien-être & biomédical
 
@@ -110,6 +110,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 | [OPENVITA-DT1](https://github.com/Nikoju1977/OPENVITA-DT1) | Prototype d'aide au suivi du diabète de type 1 |
 | [jarvisdiabete](https://github.com/Nikoju1977/jarvisdiabete) | Compagnon vocal DiabCare |
 | [dermato-ai](https://github.com/Nikoju1977/dermato-ai) | Exploration de la vision artificielle en dermatologie |
+| [purescanai](https://github.com/Nikoju1977/purescanai) | Prototype d'analyse visuelle de la peau et routines de soin |
 | [SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL) | Interface expérimentale de caméra et indicateurs biométriques |
 | [agent-biometrique](https://github.com/Nikoju1977/agent-biometrique) | Analyse et visualisation de données biométriques |
 | [fibrobot](https://github.com/Nikoju1977/fibrobot) | Agent d'information autour de la fibromyalgie |
@@ -147,7 +148,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 </details>
 
 <details>
-<summary><strong>06 · Sites, services & applications du quotidien</strong> — 5 projets</summary>
+<summary><strong>06 · Sites, services & applications du quotidien</strong> — 4 projets</summary>
 
 ### 6. Sites, services & applications du quotidien
 
@@ -157,7 +158,6 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 | [handimonde](https://github.com/Nikoju1977/handimonde) | Carte des lieux accessibles |
 | [job-search](https://github.com/Nikoju1977/job-search) | Recherche d'emploi et accompagnement des candidats |
 | [aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking) | Recettes de desserts, portions et espace Chef IA |
-| [purescanai](https://github.com/Nikoju1977/purescanai) | Prototype d'analyse visuelle de la peau et routines de soin |
 
 </details>
 
