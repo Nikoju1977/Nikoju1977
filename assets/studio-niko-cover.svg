@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="t d">
+  <title id="t">STUDIO NIKO DESIGN — Cinéma, code et expériences humaines</title>
+  <desc id="d">Signature graphique : un cadre de cinéma et des orbites numériques lumineux sur fond bleu nuit, accompagnés de la devise Des histoires qui deviennent des outils.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07131c"/>
+      <stop offset=".65" stop-color="#102633"/>
+      <stop offset="1" stop-color="#071019"/>
+    </linearGradient>
+    <linearGradient id="light" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#70efdc"/>
+      <stop offset="1" stop-color="#e8bd73"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#4bceb9" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#4bceb9" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse">
+      <path d="M38 0H0V38" fill="none" stroke="#72cbbf" stroke-opacity=".11" stroke-width="1"/>
+    </pattern>
+    <clipPath id="cut"><rect width="1200" height="340" rx="22"/></clipPath>
+  </defs>
+  <g clip-path="url(#cut)">
+    <rect width="1200" height="340" fill="url(#bg)"/>
+    <rect width="1200" height="340" fill="url(#grid)" opacity=".7"/>
+    <circle cx="950" cy="166" r="260" fill="url(#glow)"/>
+    <path d="M0 306H1200" stroke="#a2e1db" stroke-opacity=".22"/>
+    <rect x="44" y="41" width="8" height="52" rx="4" fill="url(#light)"/>
+    <text x="75" y="57" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" letter-spacing="5" fill="#8fe8d8">INDEPENDENT CREATIVE LAB</text>
+    <text x="66" y="139" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="800" letter-spacing="-1.6" fill="#f7fbfa">STUDIO NIKO</text>
+    <text x="68" y="185" font-family="Arial, Helvetica, sans-serif" font-size="35" font-weight="700" letter-spacing="8" fill="#e9bf7b">DESIGN</text>
+    <path d="M67 204H487" stroke="url(#light)" stroke-width="2"/>
+    <text x="68" y="237" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#d7e5e6">Des histoires qui deviennent des outils.</text>
+    <text x="68" y="273" font-family="Arial, Helvetica, sans-serif" font-size="13" letter-spacing="2" fill="#a8c2c9">CINÉMA  /  ART INTERACTIF  /  INTELLIGENCE ARTIFICIELLE</text>
+    <g transform="translate(952 169)">
+      <circle r="135" fill="none" stroke="#79d7c6" stroke-opacity=".27" stroke-width="1.5" stroke-dasharray="4 10"/>
+      <circle r="110" fill="none" stroke="#6cbaaF" stroke-opacity=".52" stroke-width="1.5"/>
+      <circle r="86" fill="#0d202a" stroke="#9be6d9" stroke-opacity=".85" stroke-width="2"/>
+      <circle r="65" fill="#0b1923" stroke="#b8e6df" stroke-opacity=".18"/>
+      <circle r="45" fill="none" stroke="#eac17e" stroke-width="10" stroke-dasharray="42 18 34 18"/>
+      <circle r="23" fill="#a6e9dc" opacity=".94"/>
+      <circle r="10" fill="#0e2730"/>
+      <path d="M-150 0H-118 M118 0H150 M0 -150V-118 M0 118V150" stroke="#eac17e" stroke-width="2"/>
+      <path d="M-123 -74L-88 -49 M110 72L148 94" stroke="#eac17e" stroke-width="1.5"/>
+      <rect x="-176" y="-110" width="82" height="48" rx="7" fill="#0a1a24" stroke="#87c6bb" stroke-opacity=".45"/>
+      <path d="M-176 -93H-94" stroke="#87c6bb" stroke-opacity=".5"/>
+      <circle cx="-164" cy="-101" r="3" fill="#eac17e"/>
+      <circle cx="-154" cy="-101" r="3" fill="#7fdbc7"/>
+      <rect x="102" y="67" width="87" height="49" rx="7" fill="#0a1a24" stroke="#87c6bb" stroke-opacity=".5"/>
+      <path d="M114 83H174 M114 95H157" stroke="#7fdbc7" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+    </g>
+    <path d="M570 41H620 M570 49H594" stroke="#eac17e" stroke-width="2" stroke-linecap="round"/>
+    <text x="68" y="326" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="2" fill="#86aab4">NICOLAS JULIENNE  ·  FRANCE</text>
+    <text x="1124" y="326" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="end" letter-spacing="2" fill="#86aab4">EST. 2026  /  01</text>
+  </g>
+</svg>
