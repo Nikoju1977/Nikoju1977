@@ -26,6 +26,7 @@
 - **25 politiques `SECURITY.md` ajoutées** à des projets sensibles ou exploitant des APIs externes : 17 sur les applications de santé, assistants, données utilisateur et multimédia ; 8 autres sur les projets de géolocalisation, cinéma, galerie, journal personnel, veille et jeu jeune public.
 - Les politiques expliquent comment signaler une faille sans divulguer de secret. **Elles ne constituent pas une vérification des vulnérabilités ni la preuve que le signalement privé GitHub est activé.**
 - Aucune clé, visibilité de dépôt ou licence n'a été modifiée par cette campagne documentaire.
+- **Vérification automatisée du catalogue du profil** : `scripts/check_portfolio.py` contrôle hors réseau les 9 rubriques, les 46 liens de dépôts sans doublon et la présence du plan qualité ; `.github/workflows/portfolio-check.yml` déclenche ce contrôle sur modifications du profil. Il ne vérifie pas la disponibilité des démonstrations ni le bon fonctionnement des applications.
 
 ## Priorités techniques avant de qualifier un projet « prêt pour la production »
 
