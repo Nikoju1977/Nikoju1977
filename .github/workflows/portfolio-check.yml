@@ -1,0 +1,31 @@
+name: Catalogue du portfolio
+
+on:
+  push:
+    paths:
+      - README.md
+      - QUALITY_ROADMAP.md
+      - scripts/check_portfolio.py
+      - .github/workflows/portfolio-check.yml
+  pull_request:
+    paths:
+      - README.md
+      - QUALITY_ROADMAP.md
+      - scripts/check_portfolio.py
+      - .github/workflows/portfolio-check.yml
+
+permissions:
+  contents: read
+
+jobs:
+  catalogue:
+    name: Vérifier les thèmes et liens GitHub
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Contrôle hors réseau du catalogue
+        run: python scripts/check_portfolio.py
