@@ -10,8 +10,12 @@ ROOT = Path(__file__).resolve().parent.parent
 README = ROOT / "README.md"
 ROADMAP = ROOT / "QUALITY_ROADMAP.md"
 CURATION = ROOT / "CURATION.md"
+SHOWCASE = ROOT / "SHOWCASE.md"
+BANNER = ROOT / "assets" / "studio-niko-cover.svg"
 HEADING = "## Projets retenus, classés par thème"
 EXPECTED_COUNTS = [7, 3, 9, 3, 3, 7, 4, 4, 1]
+SIGNATURE = ("Vision-IA", "galerie-studio-niko", "Nikoassist", "medicalvisionproai",
+             "the-lovestronautes-machine", "handimonde")
 REFERENCES = {
     "nikogroove": "EBM-BRETONNE.",
     "Medivision-ai-pro": "medicalvisionproai",
@@ -83,11 +87,34 @@ def main() -> int:
     if "l-ultime-confrontation" in repo_names:
         errors.append("Le projet éditorial retiré ne doit pas être affiché.")
 
+    # La vitrine GitHub doit être lisible en un coup d'œil, tout en restant accessible.
+    if text.count("<details>") != len(EXPECTED_COUNTS):
+        errors.append("Le catalogue doit offrir 9 rubriques repliables.")
+    if text.count("</details>") != len(EXPECTED_COUNTS):
+        errors.append("Une ou plusieurs rubriques du catalogue ne sont pas refermées.")
+    if not BANNER.is_file() or 'src="assets/studio-niko-cover.svg"' not in text:
+        errors.append("La signature graphique SVG doit être présente et référencée.")
+    elif "<svg" not in BANNER.read_text(encoding="utf-8"):
+        errors.append("La signature graphique ne contient pas de SVG.")
+    if not SHOWCASE.is_file() or "(SHOWCASE.md)" not in text:
+        errors.append("Les études de projets doivent être présentes et liées.")
+    else:
+        studies = SHOWCASE.read_text(encoding="utf-8")
+        for name in SIGNATURE:
+            url = f"https://github.com/Nikoju1977/{name}"
+            if name not in repo_names or url not in studies or url not in text:
+                errors.append(f"Projet signature incohérent : {name}.")
+        if studies.count("## 0") != len(SIGNATURE):
+            errors.append("Six études de projets numérotées sont attendues.")
+    if "l-ultime-confrontation" in text or "le-s-raphin-livre" in text:
+        errors.append("Un projet retiré réapparaît sur le profil.")
+
+
     if errors:
         for error in errors:
             print(f"ERREUR : {error}", file=sys.stderr)
         return 1
-    print("OK : 9 thèmes, 41 projets sélectionnés et plan qualité référencé.")
+    print("OK : 9 thèmes repliables, 41 projets sélectionnés, 6 études et identité graphique.")
     return 0
 
 
