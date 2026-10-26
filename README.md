@@ -23,9 +23,9 @@ Loire-Atlantique, France · [Projets GitHub](https://github.com/Nikoju1977?tab=r
 | [Thelovestronautes Machine](https://github.com/Nikoju1977/the-lovestronautes-machine) | Musique | Séquenceur Web Audio et création sonore dans le navigateur. |
 | [HandiMonde](https://github.com/Nikoju1977/handimonde) | Accessibilité | Recherche cartographique de lieux et d'équipements accessibles à partir de données ouvertes. |
 
-## Tous les projets publics, classés par thème
+## Projets retenus, classés par thème
 
-**46 dépôts de projets publics sont répertoriés ci-dessous, chacun une seule fois.** Les dépôts privés ne figurent pas dans ce catalogue. Les liens pointent vers le code et la documentation, pas nécessairement vers une application déployée.
+**42 projets publics sélectionnés parmi 47** sont répertoriés ci-dessous, chacun une seule fois. Les **5 variantes proches** retirées de la vitrine sont documentées dans [la politique de sélection](CURATION.md), sans suppression de leurs dépôts. Les dépôts privés n'apparaissent pas dans ce catalogue. Les liens pointent vers le code et la documentation, pas nécessairement vers une application déployée.
 
 ### 1. Cinéma, image & arts numériques
 
@@ -45,7 +45,6 @@ Loire-Atlantique, France · [Projets GitHub](https://github.com/Nikoju1977?tab=r
 | --- | --- |
 | [the-lovestronautes-machine](https://github.com/Nikoju1977/the-lovestronautes-machine) | Séquenceur et synthèse Web Audio |
 | [EBM-BRETONNE.](https://github.com/Nikoju1977/EBM-BRETONNE.) | Groovebox électronique aux influences bretonnes |
-| [nikogroove](https://github.com/Nikoju1977/nikogroove) | Expérimentation de groovebox et composition |
 | [Dbmetre-pro](https://github.com/Nikoju1977/Dbmetre-pro) | Analyse sonore et affichage du niveau micro (dBFS) |
 
 ### 3. Santé, bien-être & biomédical
@@ -53,16 +52,13 @@ Loire-Atlantique, France · [Projets GitHub](https://github.com/Nikoju1977?tab=r
 | Dépôt | Objet |
 | --- | --- |
 | [medicalvisionproai](https://github.com/Nikoju1977/medicalvisionproai) | Prototype de visualisation d'imagerie |
-| [Medivision-ai-pro](https://github.com/Nikoju1977/Medivision-ai-pro) | Base applicative PWA expérimentale |
 | [OPENVITA-DT1](https://github.com/Nikoju1977/OPENVITA-DT1) | Prototype d'aide au suivi du diabète de type 1 |
 | [jarvisdiabete](https://github.com/Nikoju1977/jarvisdiabete) | Compagnon vocal DiabCare |
-| [compagnon-diabete](https://github.com/Nikoju1977/compagnon-diabete) | Prototype de compagnon diabète |
 | [dermato-ai](https://github.com/Nikoju1977/dermato-ai) | Exploration de la vision artificielle en dermatologie |
 | [SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL) | Exploration d'images biomédicales |
 | [agent-biometrique](https://github.com/Nikoju1977/agent-biometrique) | Analyse et visualisation de données biométriques |
 | [fibrobot](https://github.com/Nikoju1977/fibrobot) | Agent d'information autour de la fibromyalgie |
 | [fibrocare](https://github.com/Nikoju1977/fibrocare) | Journal de suivi de la fibromyalgie |
-| [daphnee-compagnon](https://github.com/Nikoju1977/daphnee-compagnon) | Prototype d'assistant bien-être |
 | [presentation-medtronic](https://github.com/Nikoju1977/presentation-medtronic) | Présentation interactive sur des technologies du diabète |
 
 > **Important :** ces projets sont présentés comme des prototypes et outils d'information. Leur présence ici ne vaut ni validation clinique, ni certification de dispositif médical, ni recommandation thérapeutique.
@@ -103,12 +99,12 @@ Loire-Atlantique, France · [Projets GitHub](https://github.com/Nikoju1977?tab=r
 | [Metrology-OS](https://github.com/Nikoju1977/Metrology-OS) | Gestion métrologique et parc d'instruments |
 | [aegis-earth-mobile](https://github.com/Nikoju1977/aegis-earth-mobile) | Application géospatiale mobile-first |
 | [radar-de-niko](https://github.com/Nikoju1977/radar-de-niko) | Collecte et restitution de veille structurée |
+| [White-hat](https://github.com/Nikoju1977/White-hat) | Cockpit de cybersécurité défensive et revue de dépôts publics |
 
 ### 8. Jardin, symbolique & spiritualité
 
 | Dépôt | Objet |
 | --- | --- |
-| [le-jardin-de-niko](https://github.com/Nikoju1977/le-jardin-de-niko) | Assistant de jardin et données d'environnement |
 | [oracle-du-jardinier](https://github.com/Nikoju1977/oracle-du-jardinier) | Assistant de jardinage et permaculture |
 | [tarot-de-niko](https://github.com/Nikoju1977/tarot-de-niko) | Tarot numérique et journal symbolique |
 | [oeil-hermes](https://github.com/Nikoju1977/oeil-hermes) | Grimoire numérique de correspondances symboliques |
@@ -122,7 +118,7 @@ Loire-Atlantique, France · [Projets GitHub](https://github.com/Nikoju1977?tab=r
 
 ---
 
-**[Suivi qualité et plan d'amélioration des 51 dépôts](QUALITY_ROADMAP.md)** — documentation, priorités techniques et limites de validation.
+**[Sélection des projets et variantes](CURATION.md)** · **[Suivi qualité et plan d'amélioration](QUALITY_ROADMAP.md)** — critères de choix, priorités techniques et limites de validation.
 
 ## Approche technique
 
