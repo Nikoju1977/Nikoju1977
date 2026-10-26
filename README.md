@@ -14,7 +14,7 @@ Créateur indépendant en Loire-Atlantique, France. Je relie narration, design d
 
 *Creative technologist building narrative tools, interactive worlds and human-centered software.*
 
-[**Explorer 6 projets signature**](SHOWCASE.md) · [**Parcourir les 9 univers**](#projets-retenus-classés-par-thème) · [**Écouter Thelovestronautes**](https://soundcloud.com/nicolas-julienne-670246252)
+[**Explorer 6 projets signature**](SHOWCASE.md) · [**Comprendre chaque application**](PROJECTS.md) · [**Parcourir les 9 univers**](#projets-retenus-classés-par-thème) · [**Écouter Thelovestronautes**](https://soundcloud.com/nicolas-julienne-670246252)
 
 </div>
 
@@ -50,7 +50,8 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 | **[Thelovestronautes Machine](https://github.com/Nikoju1977/the-lovestronautes-machine)** · Audio | Composer dans une groovebox au navigateur, avec synthèse et MIDI. | **Web Audio**, interaction temps réel, PWA. |
 | **[HandiMonde](https://github.com/Nikoju1977/handimonde)** · Cartographie | Rechercher des informations d'accessibilité de lieux. | **OpenStreetMap**, Leaflet, données ouvertes et limites explicitement documentées. |
 
-**[Lire les six études de projet : problème → choix techniques → code → limites](SHOWCASE.md)**
+**[Lire les six études de projet : problème → choix techniques → code → limites](SHOWCASE.md)**  
+**[Comprendre ce que fait chaque application, thème par thème](PROJECTS.md)**
 
 ### En laboratoire
 
@@ -66,7 +67,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 
 ## Projets retenus, classés par thème
 
-**41 projets publics sélectionnés parmi 47** sont répertoriés ci-dessous, chacun une seule fois. Les **5 variantes proches** et **1 projet hors sélection éditoriale** ne figurent plus dans cette vitrine. Les critères sont documentés dans [la politique de sélection](CURATION.md), sans suppression de code. Les dépôts privés n'apparaissent pas dans ce catalogue. Les liens pointent vers le code et la documentation, pas nécessairement vers une application déployée.
+**39 projets publics sélectionnés parmi 45** sont répertoriés ci-dessous, chacun une seule fois. Les **5 variantes proches** et **1 projet hors sélection éditoriale** ne figurent plus dans cette vitrine. Les critères sont documentés dans [la politique de sélection](CURATION.md) ; [le guide de chaque application](PROJECTS.md) décrit concrètement leurs fonctionnalités, sans suppression de code. Les dépôts privés n'apparaissent pas dans ce catalogue. Les liens pointent vers le code et la documentation, pas nécessairement vers une application déployée.
 
 <details>
 <summary><strong>01 · Cinéma, image & arts numériques</strong> — 7 projets</summary>
@@ -146,17 +147,15 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 </details>
 
 <details>
-<summary><strong>06 · Sites, services & applications du quotidien</strong> — 7 projets</summary>
+<summary><strong>06 · Sites, services & applications du quotidien</strong> — 5 projets</summary>
 
 ### 6. Sites, services & applications du quotidien
 
 | Dépôt | Objet |
 | --- | --- |
 | [Boutique-morgane](https://github.com/Nikoju1977/Boutique-morgane) | Site vitrine et boutique |
-| [haomassage-sandra](https://github.com/Nikoju1977/haomassage-sandra) | Site vitrine de massage bien-être |
 | [handimonde](https://github.com/Nikoju1977/handimonde) | Carte des lieux accessibles |
 | [job-search](https://github.com/Nikoju1977/job-search) | Recherche d'emploi et accompagnement des candidats |
-| [patisserie](https://github.com/Nikoju1977/patisserie) | Guide des métiers et maisons de pâtisserie |
 | [aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking) | Expérimentation d'assistant culinaire |
 | [purescanai](https://github.com/Nikoju1977/purescanai) | Exploration de la composition de produits |
 
@@ -213,7 +212,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 
 <small>Le catalogue ci-dessus est une sélection éditoriale de dépôts publics, et non une promesse de disponibilité ou de fonctionnement de chaque application. Les projets médicaux sont expérimentaux et ne remplacent pas un professionnel de santé. Les projets issus d'un code tiers conservent les crédits et licences d'origine.</small>
 
-**[Études de projet](SHOWCASE.md)** · **[Politique de sélection](CURATION.md)** · **[Plan qualité](QUALITY_ROADMAP.md)**
+**[Études de projet](SHOWCASE.md)** · **[Que fait chaque dépôt ?](PROJECTS.md)** · **[Politique de sélection](CURATION.md)** · **[Plan qualité](QUALITY_ROADMAP.md)**
 
 <div align="center">
 
