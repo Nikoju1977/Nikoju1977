@@ -28,6 +28,17 @@ Créateur indépendant en Loire-Atlantique, France. Je relie narration, design d
 
 Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, puis je choisis une architecture qui la rend possible. Le code est consultable, les décisions sont expliquées et les fonctions non validées restent explicitement annoncées comme telles.
 
+## Entrez dans le studio — 4 expériences à explorer
+
+| Votre point de départ | L'expérience | Explorer le travail |
+| :--- | :--- | :--- |
+| **01 / Créer un film** | [Ouvrir Vision-IA](https://nikoju1977.github.io/Vision-IA/) — atelier de préparation cinématographique | [Voir le code](https://github.com/Nikoju1977/Vision-IA) |
+| **02 / Visiter une exposition** | [Entrer dans la galerie 3D](https://galerie-studio-niko-nikoju1977s-projects.vercel.app) — espace d'art numérique | [Voir le code](https://github.com/Nikoju1977/galerie-studio-niko) |
+| **03 / Composer un morceau** | [Lancer la machine musicale](https://nikoju1977.github.io/the-lovestronautes-machine/) — séquenceur Web Audio | [Voir le code](https://github.com/Nikoju1977/the-lovestronautes-machine) |
+| **04 / Explorer des images** | [Ouvrir MedVision AI Pro](https://nikoju1977.github.io/medicalvisionproai/) — démonstration de visualisation, **sans données médicales réelles** | [Voir le code](https://github.com/Nikoju1977/medicalvisionproai) |
+
+<sub>Ces adresses de démonstration sont indiquées dans les README des projets ; leur accessibilité et leur fonctionnement n'ont pas été vérifiés en direct ici. Certains usages nécessitent un navigateur compatible ou une configuration personnelle d'API. Les prototypes biomédicaux ne sont pas des dispositifs médicaux certifiés.</sub>
+
 ## Six projets signature
 
 | Projet | Ce qu'il faut découvrir | Ce qu'il montre |
