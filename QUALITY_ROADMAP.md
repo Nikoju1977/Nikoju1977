@@ -6,7 +6,7 @@
 ## Périmètre vérifié
 
 - **52 dépôts** accessibles en propriété lors de la dernière lecture : **48 publics** (profil inclus), **4 privés** ; ce total a évolué depuis la revue initiale des 51 dépôts.
-- Le [README du profil](README.md) met désormais en avant **42 projets publics sélectionnés** parmi les **47 projets publics** (hors dépôt de profil), dans 9 domaines. Les **5 variantes secondaires** restent accessibles, mais sont regroupées dans [CURATION.md](CURATION.md).
+- Le [README du profil](README.md) met désormais en avant **41 projets publics sélectionnés** parmi les **47 projets publics** (hors dépôt de profil), dans 9 domaines. Les **5 variantes secondaires** et **1 projet non retenu éditorialement** ne figurent plus dans la vitrine. La sélection est documentée dans [CURATION.md](CURATION.md).
 - Une lecture des fichiers racine et des README a été réalisée pour les projets publics ; l'examen des dépôts privés a été limité à leurs README ou points d'entrée pertinents.
 - Les deux projets musicaux qui n'avaient pas de README en ont désormais un. Les dépôts privés ont été examinés séparément, sans diffusion de leur inventaire.
 - **Les 52 dépôts disposent d'un fichier README** (y compris `readme.md` en minuscules pour `radar-de-niko`).
@@ -17,7 +17,7 @@
 
 - Profil public restructuré par thème, avec vitrines sélectionnées et avertissement sur la maturité des projets.
 - README créés dans les dépôts publics : `EBM-BRETONNE.`, `nikogroove`.
-- README clarifiés : `handimonde`, `presentation-medtronic`, `Medivision-ai-pro`, `agent-biometrique`, `compagnon-diabete`, `daphnee-compagnon`, `applewatchcadrans`, `aylina-is-cooking`, `ia-studio-cine`, `fibrobot`, `SCAN-BIOMEDICAL`, `haomassage-sandra`, `miaotris`, `les-annales-akashiques`, `oracle-du-jardinier`, `purescanai`, `Neural-Art-mars-2026`, `l-ultime-confrontation`.
+- README clarifiés : `handimonde`, `presentation-medtronic`, `Medivision-ai-pro`, `agent-biometrique`, `compagnon-diabete`, `daphnee-compagnon`, `applewatchcadrans`, `aylina-is-cooking`, `ia-studio-cine`, `fibrobot`, `SCAN-BIOMEDICAL`, `haomassage-sandra`, `miaotris`, `les-annales-akashiques`, `oracle-du-jardinier`, `purescanai`, `Neural-Art-mars-2026`.
 - Les dépôts privés ont reçu une revue documentaire séparée. Leurs noms et détails de contenu ne sont pas exposés dans ce bilan public.
 
 ## Compléments documentaires et sécurité — 26 octobre 2026
@@ -26,11 +26,11 @@
 - **25 politiques `SECURITY.md` ajoutées** à des projets sensibles ou exploitant des APIs externes : 17 sur les applications de santé, assistants, données utilisateur et multimédia ; 8 autres sur les projets de géolocalisation, cinéma, galerie, journal personnel, veille et jeu jeune public.
 - Les politiques expliquent comment signaler une faille sans divulguer de secret. **Elles ne constituent pas une vérification des vulnérabilités ni la preuve que le signalement privé GitHub est activé.**
 - Aucune clé, visibilité de dépôt ou licence n'a été modifiée par cette campagne documentaire.
-- **Vérification automatisée du catalogue du profil** : `scripts/check_portfolio.py` contrôle hors réseau les 9 rubriques, les 42 liens des projets sélectionnés sans doublon et la présence du plan qualité ; `.github/workflows/portfolio-check.yml` déclenche ce contrôle sur modifications du profil. Il ne vérifie pas la disponibilité des démonstrations ni le bon fonctionnement des applications.
+- **Vérification automatisée du catalogue du profil** : `scripts/check_portfolio.py` contrôle hors réseau les 9 rubriques, les 41 liens des projets sélectionnés sans doublon et la présence du plan qualité ; `.github/workflows/portfolio-check.yml` déclenche ce contrôle sur modifications du profil. Il ne vérifie pas la disponibilité des démonstrations ni le bon fonctionnement des applications.
 
 ## Sélection des versions de référence — 26 octobre 2026
 
-Le profil privilégie désormais **une seule application représentative par famille fonctionnelle**. Cinq prototypes proches ont été retirés du catalogue principal, sans suppression de code ni de dépôt. Les critères sont documentés dans [CURATION.md](CURATION.md). Cette sélection repose sur les fichiers et la documentation consultables : **elle ne prouve pas la qualité en production**, faute de tests fonctionnels comparatifs sur appareils réels.
+Le profil privilégie désormais **une seule application représentative par famille fonctionnelle**. Cinq prototypes proches et un projet éditorial hors sélection ont été retirés du catalogue principal, sans suppression de code ni de dépôt. Les critères sont documentés dans [CURATION.md](CURATION.md). Cette sélection repose sur les fichiers et la documentation consultables : **elle ne prouve pas la qualité en production**, faute de tests fonctionnels comparatifs sur appareils réels.
 
 Le nouveau projet public `White-hat` a été ajouté au catalogue dans la catégorie des outils métier et de sécurité. Sa présence ne vaut pas validation de ses fonctions d'audit.
 
