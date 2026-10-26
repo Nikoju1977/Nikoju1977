@@ -108,6 +108,15 @@ def main() -> int:
             errors.append("Six études de projets numérotées sont attendues.")
     if "l-ultime-confrontation" in text or "le-s-raphin-livre" in text:
         errors.append("Un projet retiré réapparaît sur le profil.")
+    for demo_url in (
+        "https://nikoju1977.github.io/Vision-IA/",
+        "https://galerie-studio-niko-nikoju1977s-projects.vercel.app",
+        "https://nikoju1977.github.io/the-lovestronautes-machine/",
+        "https://nikoju1977.github.io/medicalvisionproai/",
+    ):
+        if demo_url not in text or demo_url not in studies:
+            errors.append(f"Accès direct absent de la vitrine ou des études : {demo_url}.")
+
 
 
     if errors:
