@@ -4,7 +4,7 @@
 
 Ce guide décrit **la fonction concrète de chaque dépôt public présenté par le studio**, le parcours proposé à l'utilisateur et le statut du code. Les descriptions proviennent des README et de la structure des dépôts consultés le **26 octobre 2026**. Elles ne sont pas des résultats de tests d'exécution.
 
-**Inventaire GitHub au 26 octobre 2026 :** 50 dépôts appartenant au compte, dont 46 publics (profil compris) et 4 privés. Parmi les 45 dépôts de projets publics, **39 projets distincts sont mis en avant**, **5 variantes sont décrites séparément** et **1 projet reste hors sélection éditoriale**. Les dépôts privés ne sont pas répertoriés.
+**Inventaire GitHub au 26 octobre 2026 :** 49 dépôts appartenant au compte, dont 45 publics (profil compris) et 4 privés. Parmi les 44 dépôts de projets publics, **39 projets distincts sont mis en avant**, **4 variantes sont décrites séparément** et **1 projet reste hors sélection éditoriale**. Les dépôts privés ne sont pas répertoriés.
 
 ## 39 projets de référence
 
@@ -92,7 +92,7 @@ Ce guide décrit **la fonction concrète de chaque dépôt public présenté par
 | --- | --- | --- |
 | [White-hat](https://github.com/Nikoju1977/White-hat) | Cockpit AEGIS de revue défensive des dépôts GitHub publics : examiner la présence de documentation, licences, politiques de sécurité et certaines configurations, puis exporter des constats. Les contrôles sont heuristiques et en lecture seule. | Prototype d'audit défensif |
 
-## Cinq variantes secondaires conservées
+## Quatre variantes secondaires conservées
 
 Elles restent publiques pour préserver le code, les essais et l'historique, mais **ne sont pas affichées comme des applications distinctes sur la page d'accueil**.
 
@@ -101,7 +101,6 @@ Elles restent publiques pour préserver le code, les essais et l'historique, mai
 | [nikogroove](https://github.com/Nikoju1977/nikogroove) | Version parallèle du Cyber-Fest-Noz, groovebox HTML/Tone.js apparentée à EBM-BRETONNE. ; conservée pour suivre ses essais et son historique. | [EBM-BRETONNE.](https://github.com/Nikoju1977/EBM-BRETONNE.) |
 | [Medivision-ai-pro](https://github.com/Nikoju1977/Medivision-ai-pro) | Base PWA Lit/TypeScript/Vite issue d'un starter PWABuilder ; ne contient pas encore les fonctionnalités de visualisation médicale du projet de référence. | [medicalvisionproai](https://github.com/Nikoju1977/medicalvisionproai) |
 | [compagnon-diabete](https://github.com/Nikoju1977/compagnon-diabete) | Prototype DAPHNÉE OMNI : interface expérimentale de compagnon diabète, avec pistes d'assistance IA et suivi informatif ; non destinée au traitement. | [OPENVITA-DT1](https://github.com/Nikoju1977/OPENVITA-DT1) |
-| [daphnee-compagnon](https://github.com/Nikoju1977/daphnee-compagnon) | Autre interface DAPHNÉE OMNI orientée compagnon personnel et bien-être ; prototype expérimental distinct des assistants conservés dans la vitrine. | [Sage-companion](https://github.com/Nikoju1977/Sage-companion) |
 | [le-jardin-de-niko](https://github.com/Nikoju1977/le-jardin-de-niko) | Variante Terroir Synthétique de l'Oracle du Jardinier : météo, qualité de l'air, suivi des semis, tâches et journal local, avec pistes de conseils IA. | [oracle-du-jardinier](https://github.com/Nikoju1977/oracle-du-jardinier) |
 
 ## Comprendre le niveau de maturité
