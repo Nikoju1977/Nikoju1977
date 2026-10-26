@@ -9,8 +9,8 @@ import sys
 ROOT = Path(__file__).resolve().parent.parent
 README = ROOT / "README.md"
 ROADMAP = ROOT / "QUALITY_ROADMAP.md"
-HEADING = "## Tous les projets publics, classés par thème"
-EXPECTED_COUNTS = [7, 4, 12, 3, 3, 7, 4, 5, 1]
+HEADING = "## Projets retenus, classés par thème"
+EXPECTED_COUNTS = [7, 3, 9, 3, 3, 7, 5, 4, 1]
 
 SECTION_RE = re.compile(r"^### (\d+)\. (.+)$", re.MULTILINE)
 REPO_RE = re.compile(
@@ -53,8 +53,8 @@ def main() -> int:
     duplicates = [name for name, count in Counter(repo_names).items() if count > 1]
     if duplicates:
         errors.append("Dépôts en double : " + ", ".join(sorted(duplicates)))
-    if len(repo_names) != 46:
-        errors.append(f"46 projets attendus ; {len(repo_names)} trouvés.")
+    if len(repo_names) != 42:
+        errors.append(f"42 projets attendus ; {len(repo_names)} trouvés.")
     if not ROADMAP.is_file() or "(QUALITY_ROADMAP.md)" not in text:
         errors.append("Le plan qualité doit être présent et lié depuis README.md.")
 
@@ -62,7 +62,7 @@ def main() -> int:
         for error in errors:
             print(f"ERREUR : {error}", file=sys.stderr)
         return 1
-    print("OK : 9 thèmes, 46 projets uniques et plan qualité référencé.")
+    print("OK : 9 thèmes, 42 projets sélectionnés et plan qualité référencé.")
     return 0
 
 
