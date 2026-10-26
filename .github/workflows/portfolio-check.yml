@@ -5,12 +5,14 @@ on:
     paths:
       - README.md
       - QUALITY_ROADMAP.md
+      - CURATION.md
       - scripts/check_portfolio.py
       - .github/workflows/portfolio-check.yml
   pull_request:
     paths:
       - README.md
       - QUALITY_ROADMAP.md
+      - CURATION.md
       - scripts/check_portfolio.py
       - .github/workflows/portfolio-check.yml
 
