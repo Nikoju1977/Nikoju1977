@@ -8,7 +8,7 @@
 - **51 dépôts** accessibles en propriété : **47 publics** (profil inclus), **4 privés**.
 - Le [README du profil](README.md) indexe les **46 dépôts de projets publics** dans 9 domaines.
 - Une lecture des fichiers racine et des README a été réalisée pour les projets publics ; l'examen des dépôts privés a été limité à leurs README ou points d'entrée pertinents.
-- Les deux projets musicaux qui n'avaient pas de README en ont désormais un ; le dépôt privé `medvisionproai` en a également reçu un.
+- Les deux projets musicaux qui n'avaient pas de README en ont désormais un. Les dépôts privés ont été examinés séparément, sans diffusion de leur inventaire.
 - **Les 51 dépôts disposent maintenant d'un fichier README** (y compris `readme.md` en minuscules pour `radar-de-niko`).
 
 **Limite de cette revue :** la présence d'un fichier, d'un workflow ou d'un texte documentaire ne prouve ni réussite de build, ni couverture de tests, ni conformité RGAA/WCAG, ni sécurité effective. Aucune exécution globale des applications ou analyse approfondie de leurs dépendances n'est attestée.
@@ -16,9 +16,16 @@
 ## Travaux documentaires réalisés
 
 - Profil public restructuré par thème, avec vitrines sélectionnées et avertissement sur la maturité des projets.
-- README créés : `EBM-BRETONNE.`, `nikogroove`, et `medvisionproai` (privé).
+- README créés dans les dépôts publics : `EBM-BRETONNE.`, `nikogroove`.
 - README clarifiés : `handimonde`, `presentation-medtronic`, `Medivision-ai-pro`, `agent-biometrique`, `compagnon-diabete`, `daphnee-compagnon`, `applewatchcadrans`, `aylina-is-cooking`, `ia-studio-cine`, `fibrobot`, `SCAN-BIOMEDICAL`, `haomassage-sandra`, `miaotris`, `les-annales-akashiques`, `oracle-du-jardinier`, `purescanai`, `Neural-Art-mars-2026`, `l-ultime-confrontation`.
-- Dépôts privés documentés sans changer leur visibilité : `galerie-niko-repo`, `le-s-raphin-livre`, `ron`, `medvisionproai`.
+- Les dépôts privés ont reçu une revue documentaire séparée. Leurs noms et détails de contenu ne sont pas exposés dans ce bilan public.
+
+## Compléments documentaires et sécurité — 26 octobre 2026
+
+- Quatre README supplémentaires clarifiés : `Metrology-OS`, `Dbmetre-pro`, `patisserie`, `le-jardin-de-niko` (dont correction d'un lien de démonstration non vérifié).
+- **25 politiques `SECURITY.md` ajoutées** à des projets sensibles ou exploitant des APIs externes : 17 sur les applications de santé, assistants, données utilisateur et multimédia ; 8 autres sur les projets de géolocalisation, cinéma, galerie, journal personnel, veille et jeu jeune public.
+- Les politiques expliquent comment signaler une faille sans divulguer de secret. **Elles ne constituent pas une vérification des vulnérabilités ni la preuve que le signalement privé GitHub est activé.**
+- Aucune clé, visibilité de dépôt ou licence n'a été modifiée par cette campagne documentaire.
 
 ## Priorités techniques avant de qualifier un projet « prêt pour la production »
 
@@ -68,7 +75,7 @@ Les cases non cochées représentent un **travail restant à confirmer**, et non
 - `EBM-BRETONNE.` / `nikogroove` : expériences musicales apparentées.
 - `le-jardin-de-niko` / `oracle-du-jardinier` : périmètres voisins autour du jardin.
 - `medicalvisionproai` / `Medivision-ai-pro` : noms proches, maturité et contenu différents.
-- `Ron-` public / `ron` privé : comparer les branches et leur historique avant une consolidation.
+- Toute éventuelle déclinaison privée d'un projet public : comparer les branches et l'historique avant une consolidation.
 
 **Aucun dépôt n'a été archivé, supprimé, renommé, rendu public ou fusionné dans le cadre de cette revue.**
 
