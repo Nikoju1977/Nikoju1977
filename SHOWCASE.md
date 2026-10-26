@@ -84,6 +84,21 @@
 
 ---
 
+## Accès rapides, preuves et limites
+
+Les six projets ont des finalités différentes. Les liens ci-dessous permettent d'inspecter le **code ou les contrôles réellement présents dans les dépôts** ; leur existence n'implique ni test réussi sur tous les appareils ni qualité de production.
+
+| Projet | Accès direct | Preuve à consulter dans le dépôt | Vérification restant à faire |
+| :--- | :--- | :--- | :--- |
+| **Vision-IA** | [Atelier web](https://nikoju1977.github.io/Vision-IA/) | [Outils](https://github.com/Nikoju1977/Vision-IA/tree/main/tools) et [politique de sécurité](https://github.com/Nikoju1977/Vision-IA/blob/main/SECURITY.md) | Import/export et flux vers les fournisseurs IA sur navigateur réel |
+| **Galerie 3D** | [Visiter la galerie](https://galerie-studio-niko-nikoju1977s-projects.vercel.app) | [Vérification du build](https://github.com/Nikoju1977/galerie-studio-niko/blob/main/tools/verify.mjs) | Publication distante, performances et expérience mobile |
+| **NikoAssist** | [Documentation](https://github.com/Nikoju1977/Nikoassist) | [Suite de tests](https://github.com/Nikoju1977/Nikoassist/tree/main/tests) et [guide d'installation](https://github.com/Nikoju1977/Nikoassist/blob/main/docs/INSTALLATION.md) | Builds signés et usage réel sur iOS/Android |
+| **MedVision AI Pro** | [Visualisation web](https://nikoju1977.github.io/medicalvisionproai/) | [Validation documentée](https://github.com/Nikoju1977/medicalvisionproai/blob/main/VALIDATION.md) et [tests](https://github.com/Nikoju1977/medicalvisionproai/tree/main/test) | Compatibilité DICOM réelle, vie privée et absence de validation clinique |
+| **Thelovestronautes Machine** | [Jouer dans le navigateur](https://nikoju1977.github.io/the-lovestronautes-machine/) | [Validateur statique](https://github.com/Nikoju1977/the-lovestronautes-machine/blob/main/scripts/validate.mjs) | Test de sortie audio, MIDI, export et installation PWA |
+| **HandiMonde** | [Code et documentation](https://github.com/Nikoju1977/handimonde) | [Page de test](https://github.com/Nikoju1977/handimonde/blob/main/test.html) | Exactitude et fraîcheur des données, revue d'accessibilité |
+
+**Lecture juste :** « présence d'un test » n'est pas « test passé », et « démo annoncée » n'est pas « disponibilité confirmée ». Les liens de démonstration ne doivent pas être utilisés comme preuve de fonctionnement sans essai.
+
 ## Principes transversaux
 
 **Créer avec une intention.** Le récit, l'usage et le public doivent dicter les interactions plutôt que l'inverse.
