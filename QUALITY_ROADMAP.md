@@ -5,11 +5,11 @@
 
 ## Périmètre vérifié
 
-- **50 dépôts** accessibles en propriété lors de la dernière lecture : **46 publics** (profil inclus), **4 privés**. Deux dépôts publics précédemment inventoriés ne sont plus accessibles sur le compte ; les liens obsolètes ont été retirés de la vitrine.
-- Le [README du profil](README.md) met désormais en avant **39 projets publics sélectionnés** parmi les **45 projets publics** (hors dépôt de profil), dans 9 domaines. Les **5 variantes secondaires** et **1 projet non retenu éditorialement** ne figurent plus dans la vitrine. La sélection est documentée dans [CURATION.md](CURATION.md).
+- **49 dépôts** accessibles en propriété lors de la dernière lecture : **45 publics** (profil inclus), **4 privés**. Trois dépôts publics précédemment inventoriés ne sont plus accessibles sur le compte ; deux liens obsolètes ont été retirés de la vitrine et une ancienne variante n'est plus répertoriée.
+- Le [README du profil](README.md) met désormais en avant **39 projets publics sélectionnés** parmi les **44 projets publics** (hors dépôt de profil), dans 9 domaines. Les **4 variantes secondaires** et **1 projet non retenu éditorialement** ne figurent plus dans la vitrine. La sélection est documentée dans [CURATION.md](CURATION.md).
 - Une lecture des fichiers racine et des README a été réalisée pour les projets publics ; l'examen des dépôts privés a été limité à leurs README ou points d'entrée pertinents.
 - Les deux projets musicaux qui n'avaient pas de README en ont désormais un. Les dépôts privés ont été examinés séparément, sans diffusion de leur inventaire.
-- **Les 50 dépôts actuellement visibles disposent d'un fichier README** (y compris `readme.md` en minuscules pour `radar-de-niko`).
+- **Les 49 dépôts actuellement visibles disposent d'un fichier README** (y compris `readme.md` en minuscules pour `radar-de-niko`).
 
 **Limite de cette revue :** la présence d'un fichier, d'un workflow ou d'un texte documentaire ne prouve ni réussite de build, ni couverture de tests, ni conformité RGAA/WCAG, ni sécurité effective. Aucune exécution globale des applications ou analyse approfondie de leurs dépendances n'est attestée.
 
@@ -30,7 +30,7 @@
 
 ## Sélection des versions de référence — 26 octobre 2026
 
-Le profil privilégie désormais **une seule application représentative par famille fonctionnelle**. Cinq prototypes proches et un projet éditorial hors sélection ont été retirés du catalogue principal, sans suppression de code ni de dépôt. Les critères sont documentés dans [CURATION.md](CURATION.md). Cette sélection repose sur les fichiers et la documentation consultables : **elle ne prouve pas la qualité en production**, faute de tests fonctionnels comparatifs sur appareils réels.
+Le profil privilégie désormais **une seule application représentative par famille fonctionnelle**. Quatre prototypes proches et un projet éditorial hors sélection ont été retirés du catalogue principal, sans suppression de code ni de dépôt. Les critères sont documentés dans [CURATION.md](CURATION.md). Cette sélection repose sur les fichiers et la documentation consultables : **elle ne prouve pas la qualité en production**, faute de tests fonctionnels comparatifs sur appareils réels.
 
 Le nouveau projet public `White-hat` a été ajouté au catalogue dans la catégorie des outils métier et de sécurité. Sa présence ne vaut pas validation de ses fonctions d'audit.
 
@@ -48,9 +48,9 @@ Le profil GitHub affiche une signature graphique originale (`assets/studio-niko-
 
 ## Descriptions de chaque dépôt public — 26 octobre 2026
 
-Le guide [PROJECTS.md](PROJECTS.md) décrit individuellement la vocation et les limites de **44 dépôts publics**, soit **39 projets de référence** et **5 variantes documentées à part**. Le projet exclu de la vitrine à la demande du propriétaire et les quatre dépôts privés ne sont pas répertoriés dans ce document public.
+Le guide [PROJECTS.md](PROJECTS.md) décrit individuellement la vocation et les limites de **43 dépôts publics**, soit **39 projets de référence** et **4 variantes documentées à part**. Le projet exclu de la vitrine à la demande du propriétaire et les quatre dépôts privés ne sont pas répertoriés dans ce document public.
 
-Le profil conserve neuf rubriques, et son script de vérification contrôle désormais la correspondance entre les **39 entrées du profil** et les **44 descriptions du guide**. La revue vérifie la cohérence documentaire, pas le fonctionnement applicatif ni la disponibilité des démos. Deux liens vers des dépôts qui ne sont plus accessibles ont été retirés du profil.
+Le profil conserve neuf rubriques, et son script de vérification contrôle désormais la correspondance entre les **39 entrées du profil** et les **43 descriptions du guide**. La revue vérifie la cohérence documentaire, pas le fonctionnement applicatif ni la disponibilité des démos. Deux liens vers des dépôts qui ne sont plus accessibles ont été retirés du profil.
 
 ## Priorités techniques avant de qualifier un projet « prêt pour la production »
 
