@@ -25,7 +25,7 @@ Loire-Atlantique, France · [Projets GitHub](https://github.com/Nikoju1977?tab=r
 
 ## Projets retenus, classés par thème
 
-**42 projets publics sélectionnés parmi 47** sont répertoriés ci-dessous, chacun une seule fois. Les **5 variantes proches** retirées de la vitrine sont documentées dans [la politique de sélection](CURATION.md), sans suppression de leurs dépôts. Les dépôts privés n'apparaissent pas dans ce catalogue. Les liens pointent vers le code et la documentation, pas nécessairement vers une application déployée.
+**41 projets publics sélectionnés parmi 47** sont répertoriés ci-dessous, chacun une seule fois. Les **5 variantes proches** et **1 projet hors sélection éditoriale** ne figurent plus dans cette vitrine. Les critères sont documentés dans [la politique de sélection](CURATION.md), sans suppression de code. Les dépôts privés n'apparaissent pas dans ce catalogue. Les liens pointent vers le code et la documentation, pas nécessairement vers une application déployée.
 
 ### 1. Cinéma, image & arts numériques
 
@@ -99,7 +99,6 @@ Loire-Atlantique, France · [Projets GitHub](https://github.com/Nikoju1977?tab=r
 | [Metrology-OS](https://github.com/Nikoju1977/Metrology-OS) | Gestion métrologique et parc d'instruments |
 | [aegis-earth-mobile](https://github.com/Nikoju1977/aegis-earth-mobile) | Application géospatiale mobile-first |
 | [radar-de-niko](https://github.com/Nikoju1977/radar-de-niko) | Collecte et restitution de veille structurée |
-| [White-hat](https://github.com/Nikoju1977/White-hat) | Cockpit de cybersécurité défensive et revue de dépôts publics |
 
 ### 8. Jardin, symbolique & spiritualité
 
@@ -110,11 +109,11 @@ Loire-Atlantique, France · [Projets GitHub](https://github.com/Nikoju1977?tab=r
 | [oeil-hermes](https://github.com/Nikoju1977/oeil-hermes) | Grimoire numérique de correspondances symboliques |
 | [les-annales-akashiques](https://github.com/Nikoju1977/les-annales-akashiques) | Expérience de réflexion spirituelle |
 
-### 9. Écriture & édition
+### 9. Cybersécurité & qualité logicielle
 
 | Dépôt | Objet |
 | --- | --- |
-| [l-ultime-confrontation](https://github.com/Nikoju1977/l-ultime-confrontation) | Univers narratif et présentation d'un roman |
+| [White-hat](https://github.com/Nikoju1977/White-hat) | Cockpit de cybersécurité défensive et revue de dépôts publics |
 
 ---
 
