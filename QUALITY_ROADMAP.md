@@ -40,6 +40,12 @@ Le nouveau projet public `White-hat` a été ajouté au catalogue dans la catég
 - **20 exécutions sur 20 ont été observées comme terminées avec succès** dans GitHub Actions lors du contrôle du 26 octobre 2026, notamment pour les applications de suivi, de musique/arts, de jardin, d'industrie et les démonstrations web concernées. Le [journal des Actions du compte](https://github.com/Nikoju1977?tab=repositories) permet de retrouver chaque projet ; exemple : [contrôle sur FibroCare](https://github.com/Nikoju1977/fibrocare/actions/runs/40355227644).
 - **Portée stricte :** un test de structure HTML **n'atteste pas** du démarrage correct de JavaScript, du bon fonctionnement d'une API, de l'accessibilité, du contenu, de la protection des données, d'une installation PWA ni de la sécurité. Les dépôts dotés d'autres workflows n'ont pas été normalisés de force.
 
+## Portfolio signature — identité et récit produit
+
+Le profil GitHub affiche une signature graphique originale (`assets/studio-niko-cover.svg`), **six projets signature** documentés dans [SHOWCASE.md](SHOWCASE.md) et un accès repliable aux **41 projets retenus** dans neuf domaines. Le contrôle `scripts/check_portfolio.py` vérifie désormais aussi l'existence de l'identité graphique, des études de projet, des références et des rubriques repliables.
+
+**La sélection est éditoriale.** Aucune disponibilité des démonstrations, certification ou compatibilité d'exécution n'est déduite de la présentation visuelle. Les projets tiers sont crédités selon leurs licences.
+
 ## Priorités techniques avant de qualifier un projet « prêt pour la production »
 
 ### Priorité 0 — Données sensibles et usages médicaux
