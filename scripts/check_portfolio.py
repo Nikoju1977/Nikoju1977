@@ -9,8 +9,16 @@ import sys
 ROOT = Path(__file__).resolve().parent.parent
 README = ROOT / "README.md"
 ROADMAP = ROOT / "QUALITY_ROADMAP.md"
+CURATION = ROOT / "CURATION.md"
 HEADING = "## Projets retenus, classés par thème"
 EXPECTED_COUNTS = [7, 3, 9, 3, 3, 7, 5, 4, 1]
+REFERENCES = {
+    "nikogroove": "EBM-BRETONNE.",
+    "Medivision-ai-pro": "medicalvisionproai",
+    "compagnon-diabete": "OPENVITA-DT1",
+    "daphnee-compagnon": "Sage-companion",
+    "le-jardin-de-niko": "oracle-du-jardinier",
+}
 
 SECTION_RE = re.compile(r"^### (\d+)\. (.+)$", re.MULTILINE)
 REPO_RE = re.compile(
@@ -57,6 +65,21 @@ def main() -> int:
         errors.append(f"42 projets attendus ; {len(repo_names)} trouvés.")
     if not ROADMAP.is_file() or "(QUALITY_ROADMAP.md)" not in text:
         errors.append("Le plan qualité doit être présent et lié depuis README.md.")
+    if not CURATION.is_file() or "(CURATION.md)" not in text:
+        errors.append("La politique de sélection doit être présente et liée depuis README.md.")
+    else:
+        selection = CURATION.read_text(encoding="utf-8")
+        for variant, reference in REFERENCES.items():
+            if variant in repo_names:
+                errors.append(f"Variante secondaire présente dans la vitrine : {variant}.")
+            if reference not in repo_names:
+                errors.append(f"Projet de référence absent du catalogue : {reference}.")
+            if f"https://github.com/Nikoju1977/{variant}" not in selection:
+                errors.append(f"Variante non documentée dans CURATION.md : {variant}.")
+            if f"https://github.com/Nikoju1977/{reference}" not in selection:
+                errors.append(f"Référence non documentée dans CURATION.md : {reference}.")
+    if "White-hat" not in repo_names:
+        errors.append("Le cockpit de cybersécurité manque au catalogue.")
 
     if errors:
         for error in errors:
