@@ -1,31 +1,64 @@
+<p align="center">
+  <img src="assets/studio-niko-cover.svg" width="1200" alt="Studio Niko Design, cinéma, art interactif et intelligence artificielle — des histoires qui deviennent des outils" />
+</p>
+
 <div align="center">
 
-# Nicolas Julienne — Studio Niko Design
+# Nicolas Julienne · Studio Niko Design
 
-**Cinéma & arts numériques · Applications web & IA · Prototypage HealthTech**
+**Des histoires qui deviennent des outils.**
 
-Conception d'expériences numériques : du scénario et de l'image à l'interaction, au son et aux outils de terrain.
+**Cinéma** · **Art numérique** · **Agents IA** · **Applications utiles**
 
-Loire-Atlantique, France · [Projets GitHub](https://github.com/Nikoju1977?tab=repositories) · [Musique — Thelovestronautes](https://soundcloud.com/nicolas-julienne-670246252)
+Créateur indépendant en Loire-Atlantique, France. Je relie narration, design d'interaction et ingénierie pour fabriquer des expériences qu'on peut explorer, tester et améliorer.
+
+*Creative technologist building narrative tools, interactive worlds and human-centered software.*
+
+[**Explorer 6 projets signature**](SHOWCASE.md) · [**Parcourir les 9 univers**](#projets-retenus-classés-par-thème) · [**Écouter Thelovestronautes**](https://soundcloud.com/nicolas-julienne-670246252)
 
 </div>
 
 ---
 
-## À découvrir
+## Ce qui rend ces projets différents
 
-| Projet | Domaine | Présentation |
-| --- | --- | --- |
-| [Vision-IA](https://github.com/Nikoju1977/Vision-IA) | Cinéma | Assistant de préparation de films : note d'intention, découpage et dossier de production. |
-| [Galerie Studio Niko](https://github.com/Nikoju1977/galerie-studio-niko) | Arts numériques | Galerie 3D dans le navigateur pour exposer images, sculptures, films et œuvres sonores. |
-| [NikoAssist](https://github.com/Nikoju1977/Nikoassist) | Agents IA | Surcouche multi-agents, installation et tests autour d'un projet open source. |
-| [MedVision AI Pro](https://github.com/Nikoju1977/medicalvisionproai) | HealthTech | Prototype de lecture et visualisation d'imagerie, avec documentation de validation. |
-| [Thelovestronautes Machine](https://github.com/Nikoju1977/the-lovestronautes-machine) | Musique | Séquenceur Web Audio et création sonore dans le navigateur. |
-| [HandiMonde](https://github.com/Nikoju1977/handimonde) | Accessibilité | Recherche cartographique de lieux et d'équipements accessibles à partir de données ouvertes. |
+| Raconter | Faire vivre | Rendre utile |
+| :--- | :--- | :--- |
+| **Cinéma & narration** — transformer un scénario en préparation de tournage. | **3D & musique** — inventer des lieux et des instruments qui fonctionnent dans le navigateur. | **IA & services** — construire des assistants avec permissions, données et limites documentées. |
+
+Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, puis je choisis une architecture qui la rend possible. Le code est consultable, les décisions sont expliquées et les fonctions non validées restent explicitement annoncées comme telles.
+
+## Six projets signature
+
+| Projet | Ce qu'il faut découvrir | Ce qu'il montre |
+| :--- | :--- | :--- |
+| **[Vision-IA](https://github.com/Nikoju1977/Vision-IA)** · Cinéma | Préparer un film : scénario, découpage, conducteur et dossier. | **Traçabilité des sources** et workflow éditorial assisté par IA. |
+| **[Galerie Studio Niko](https://github.com/Nikoju1977/galerie-studio-niko)** · Art 3D | Visiter une exposition numérique, placer des œuvres et publier une salle. | **Three.js**, création d'espace et chaîne de validation. |
+| **[NikoAssist](https://github.com/Nikoju1977/Nikoassist)** · Agents IA | Déléguer à des sous-agents avec budgets et autorisations. | **Python**, tests, garde-fous et travail sur un projet libre crédité. |
+| **[MedVision AI Pro](https://github.com/Nikoju1977/medicalvisionproai)** · Imagerie | Explorer des images et séries DICOM avec une interface de visualisation. | **Traitement local**, chiffrement et précautions sur les données. **Prototype non médicalement certifié.** |
+| **[Thelovestronautes Machine](https://github.com/Nikoju1977/the-lovestronautes-machine)** · Audio | Composer dans une groovebox au navigateur, avec synthèse et MIDI. | **Web Audio**, interaction temps réel, PWA. |
+| **[HandiMonde](https://github.com/Nikoju1977/handimonde)** · Cartographie | Rechercher des informations d'accessibilité de lieux. | **OpenStreetMap**, Leaflet, données ouvertes et limites explicitement documentées. |
+
+**[Lire les six études de projet : problème → choix techniques → code → limites](SHOWCASE.md)**
+
+### En laboratoire
+
+**[AEGIS / White Hat Security OS](https://github.com/Nikoju1977/White-hat)** — cockpit de lecture et de revue défensive des dépôts publics. Un projet expérimental de qualité logicielle, **pas** un audit de sécurité certifié.
+
+### Comment explorer ce travail
+
+**Une expérience à essayer ?** Commence par la [galerie 3D](https://github.com/Nikoju1977/galerie-studio-niko) ou la [machine musicale](https://github.com/Nikoju1977/the-lovestronautes-machine).  
+**Un système technique à étudier ?** Ouvre les [tests et scripts de NikoAssist](https://github.com/Nikoju1977/Nikoassist) ou la [chaîne de validation de la galerie](https://github.com/Nikoju1977/galerie-studio-niko).  
+**Un projet à évaluer sérieusement ?** Lis le [plan qualité](QUALITY_ROADMAP.md) et les limites de chaque README.
+
+---
 
 ## Projets retenus, classés par thème
 
 **41 projets publics sélectionnés parmi 47** sont répertoriés ci-dessous, chacun une seule fois. Les **5 variantes proches** et **1 projet hors sélection éditoriale** ne figurent plus dans cette vitrine. Les critères sont documentés dans [la politique de sélection](CURATION.md), sans suppression de code. Les dépôts privés n'apparaissent pas dans ce catalogue. Les liens pointent vers le code et la documentation, pas nécessairement vers une application déployée.
+
+<details>
+<summary><strong>01 · Cinéma, image & arts numériques</strong> — 7 projets</summary>
 
 ### 1. Cinéma, image & arts numériques
 
@@ -39,6 +72,11 @@ Loire-Atlantique, France · [Projets GitHub](https://github.com/Nikoju1977?tab=r
 | [applewatchcadrans](https://github.com/Nikoju1977/applewatchcadrans) | Concepts graphiques de cadrans |
 | [Wan2GP](https://github.com/Nikoju1977/Wan2GP) | Outil de génération multimodale fondé sur WanGP ; voir crédits et licence du projet d'origine |
 
+</details>
+
+<details>
+<summary><strong>02 · Musique, audio & création sonore</strong> — 3 projets</summary>
+
 ### 2. Musique, audio & création sonore
 
 | Dépôt | Objet |
@@ -46,6 +84,11 @@ Loire-Atlantique, France · [Projets GitHub](https://github.com/Nikoju1977?tab=r
 | [the-lovestronautes-machine](https://github.com/Nikoju1977/the-lovestronautes-machine) | Séquenceur et synthèse Web Audio |
 | [EBM-BRETONNE.](https://github.com/Nikoju1977/EBM-BRETONNE.) | Groovebox électronique aux influences bretonnes |
 | [Dbmetre-pro](https://github.com/Nikoju1977/Dbmetre-pro) | Analyse sonore et affichage du niveau micro (dBFS) |
+
+</details>
+
+<details>
+<summary><strong>03 · Santé, bien-être & biomédical</strong> — 9 projets</summary>
 
 ### 3. Santé, bien-être & biomédical
 
@@ -63,6 +106,11 @@ Loire-Atlantique, France · [Projets GitHub](https://github.com/Nikoju1977?tab=r
 
 > **Important :** ces projets sont présentés comme des prototypes et outils d'information. Leur présence ici ne vaut ni validation clinique, ni certification de dispositif médical, ni recommandation thérapeutique.
 
+</details>
+
+<details>
+<summary><strong>04 · Assistants & agents IA</strong> — 3 projets</summary>
+
 ### 4. Assistants & agents IA
 
 | Dépôt | Objet |
@@ -71,6 +119,11 @@ Loire-Atlantique, France · [Projets GitHub](https://github.com/Nikoju1977?tab=r
 | [Ron-](https://github.com/Nikoju1977/Ron-) | Assistant conversationnel et interface multimodale |
 | [Sage-companion](https://github.com/Nikoju1977/Sage-companion) | Assistant vocal mobile-first |
 
+</details>
+
+<details>
+<summary><strong>05 · Jeux & expériences interactives</strong> — 3 projets</summary>
+
 ### 5. Jeux & expériences interactives
 
 | Dépôt | Objet |
@@ -78,6 +131,11 @@ Loire-Atlantique, France · [Projets GitHub](https://github.com/Nikoju1977?tab=r
 | [Bouh-delivery](https://github.com/Nikoju1977/Bouh-delivery) | Jeu de livraison automobile sur le thème d'Halloween |
 | [Cosmo-citrouille](https://github.com/Nikoju1977/Cosmo-citrouille) | Jeu d'aventure spatial pour enfants |
 | [miaotris](https://github.com/Nikoju1977/miaotris) | Expérience ludique interactive |
+
+</details>
+
+<details>
+<summary><strong>06 · Sites, services & applications du quotidien</strong> — 7 projets</summary>
 
 ### 6. Sites, services & applications du quotidien
 
@@ -91,6 +149,11 @@ Loire-Atlantique, France · [Projets GitHub](https://github.com/Nikoju1977?tab=r
 | [aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking) | Expérimentation d'assistant culinaire |
 | [purescanai](https://github.com/Nikoju1977/purescanai) | Exploration de la composition de produits |
 
+</details>
+
+<details>
+<summary><strong>07 · Industrie, géodonnées & outils métier</strong> — 4 projets</summary>
+
 ### 7. Industrie, géodonnées & outils métier
 
 | Dépôt | Objet |
@@ -99,6 +162,11 @@ Loire-Atlantique, France · [Projets GitHub](https://github.com/Nikoju1977?tab=r
 | [Metrology-OS](https://github.com/Nikoju1977/Metrology-OS) | Gestion métrologique et parc d'instruments |
 | [aegis-earth-mobile](https://github.com/Nikoju1977/aegis-earth-mobile) | Application géospatiale mobile-first |
 | [radar-de-niko](https://github.com/Nikoju1977/radar-de-niko) | Collecte et restitution de veille structurée |
+
+</details>
+
+<details>
+<summary><strong>08 · Jardin, symbolique & spiritualité</strong> — 4 projets</summary>
 
 ### 8. Jardin, symbolique & spiritualité
 
@@ -109,26 +177,35 @@ Loire-Atlantique, France · [Projets GitHub](https://github.com/Nikoju1977?tab=r
 | [oeil-hermes](https://github.com/Nikoju1977/oeil-hermes) | Grimoire numérique de correspondances symboliques |
 | [les-annales-akashiques](https://github.com/Nikoju1977/les-annales-akashiques) | Expérience de réflexion spirituelle |
 
+</details>
+
+<details>
+<summary><strong>09 · Cybersécurité & qualité logicielle</strong> — 1 projet</summary>
+
 ### 9. Cybersécurité & qualité logicielle
 
 | Dépôt | Objet |
 | --- | --- |
 | [White-hat](https://github.com/Nikoju1977/White-hat) | Cockpit de cybersécurité défensive et revue de dépôts publics |
 
+</details>
+
 ---
 
-**[Sélection des projets et variantes](CURATION.md)** · **[Suivi qualité et plan d'amélioration](QUALITY_ROADMAP.md)** — critères de choix, priorités techniques et limites de validation.
+## Méthode de travail
 
-## Approche technique
+**01 · Concevoir** — identifier un usage, écrire le parcours, prototyper une interface.  
+**02 · Construire** — privilégier le web, les standards ouverts et des composants compréhensibles.  
+**03 · Vérifier** — rendre lisibles les tests, les autorisations et les limites ; différencier prototype et production.
 
-**Technologies présentes selon les projets :** HTML, CSS, JavaScript, TypeScript, Python, Web Audio, Three.js, WebGPU/ONNX Runtime Web, PWA, IndexedDB, APIs IA, Vercel et GitHub Actions.
+**Technologies rencontrées :** JavaScript / TypeScript, Python, Web Audio, Three.js, PWA, IndexedDB, WebGPU / ONNX Runtime Web, APIs d'IA, GitHub Actions et Vercel.
 
-**Principes de travail :** interfaces accessibles et mobiles, préférence pour les traitements locaux quand c'est possible, attention aux données sensibles, tests documentés, distinction entre prototype, démonstration et produit validé.
+<small>Le catalogue ci-dessus est une sélection éditoriale de dépôts publics, et non une promesse de disponibilité ou de fonctionnement de chaque application. Les projets médicaux sont expérimentaux et ne remplacent pas un professionnel de santé. Les projets issus d'un code tiers conservent les crédits et licences d'origine.</small>
 
-Chaque dépôt possède son propre niveau de maturité, ses dépendances et sa licence : consulter son README avant installation ou utilisation.
+**[Études de projet](SHOWCASE.md)** · **[Politique de sélection](CURATION.md)** · **[Plan qualité](QUALITY_ROADMAP.md)**
 
 <div align="center">
 
-**Studio Niko Design** · Expérimenter, documenter, améliorer.
+**STUDIO NIKO DESIGN** · Construire des mondes. Concevoir des outils. Documenter le réel.
 
 </div>
