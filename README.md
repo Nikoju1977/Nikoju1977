@@ -122,6 +122,8 @@ Loire-Atlantique, France · [Projets GitHub](https://github.com/Nikoju1977?tab=r
 
 ---
 
+**[Suivi qualité et plan d'amélioration des 51 dépôts](QUALITY_ROADMAP.md)** — documentation, priorités techniques et limites de validation.
+
 ## Approche technique
 
 **Technologies présentes selon les projets :** HTML, CSS, JavaScript, TypeScript, Python, Web Audio, Three.js, WebGPU/ONNX Runtime Web, PWA, IndexedDB, APIs IA, Vercel et GitHub Actions.
