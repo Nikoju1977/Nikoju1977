@@ -14,7 +14,7 @@ PROJECTS = ROOT / "PROJECTS.md"
 SHOWCASE = ROOT / "SHOWCASE.md"
 BANNER = ROOT / "assets" / "studio-niko-cover.svg"
 HEADING = "## Projets retenus, classés par thème"
-EXPECTED_COUNTS = [7, 3, 9, 3, 3, 5, 4, 4, 1]
+EXPECTED_COUNTS = [7, 3, 10, 3, 3, 4, 4, 4, 1]
 SIGNATURE = ("Vision-IA", "galerie-studio-niko", "Nikoassist", "medicalvisionproai",
              "the-lovestronautes-machine", "handimonde")
 REFERENCES = {
