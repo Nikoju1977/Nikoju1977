@@ -5,11 +5,11 @@
 
 ## Périmètre vérifié
 
-- **51 dépôts** accessibles en propriété : **47 publics** (profil inclus), **4 privés**.
-- Le [README du profil](README.md) indexe les **46 dépôts de projets publics** dans 9 domaines.
+- **52 dépôts** accessibles en propriété lors de la dernière lecture : **48 publics** (profil inclus), **4 privés** ; ce total a évolué depuis la revue initiale des 51 dépôts.
+- Le [README du profil](README.md) met désormais en avant **42 projets publics sélectionnés** parmi les **47 projets publics** (hors dépôt de profil), dans 9 domaines. Les **5 variantes secondaires** restent accessibles, mais sont regroupées dans [CURATION.md](CURATION.md).
 - Une lecture des fichiers racine et des README a été réalisée pour les projets publics ; l'examen des dépôts privés a été limité à leurs README ou points d'entrée pertinents.
 - Les deux projets musicaux qui n'avaient pas de README en ont désormais un. Les dépôts privés ont été examinés séparément, sans diffusion de leur inventaire.
-- **Les 51 dépôts disposent maintenant d'un fichier README** (y compris `readme.md` en minuscules pour `radar-de-niko`).
+- **Les 52 dépôts disposent d'un fichier README** (y compris `readme.md` en minuscules pour `radar-de-niko`).
 
 **Limite de cette revue :** la présence d'un fichier, d'un workflow ou d'un texte documentaire ne prouve ni réussite de build, ni couverture de tests, ni conformité RGAA/WCAG, ni sécurité effective. Aucune exécution globale des applications ou analyse approfondie de leurs dépendances n'est attestée.
 
@@ -26,7 +26,13 @@
 - **25 politiques `SECURITY.md` ajoutées** à des projets sensibles ou exploitant des APIs externes : 17 sur les applications de santé, assistants, données utilisateur et multimédia ; 8 autres sur les projets de géolocalisation, cinéma, galerie, journal personnel, veille et jeu jeune public.
 - Les politiques expliquent comment signaler une faille sans divulguer de secret. **Elles ne constituent pas une vérification des vulnérabilités ni la preuve que le signalement privé GitHub est activé.**
 - Aucune clé, visibilité de dépôt ou licence n'a été modifiée par cette campagne documentaire.
-- **Vérification automatisée du catalogue du profil** : `scripts/check_portfolio.py` contrôle hors réseau les 9 rubriques, les 46 liens de dépôts sans doublon et la présence du plan qualité ; `.github/workflows/portfolio-check.yml` déclenche ce contrôle sur modifications du profil. Il ne vérifie pas la disponibilité des démonstrations ni le bon fonctionnement des applications.
+- **Vérification automatisée du catalogue du profil** : `scripts/check_portfolio.py` contrôle hors réseau les 9 rubriques, les 42 liens des projets sélectionnés sans doublon et la présence du plan qualité ; `.github/workflows/portfolio-check.yml` déclenche ce contrôle sur modifications du profil. Il ne vérifie pas la disponibilité des démonstrations ni le bon fonctionnement des applications.
+
+## Sélection des versions de référence — 26 octobre 2026
+
+Le profil privilégie désormais **une seule application représentative par famille fonctionnelle**. Cinq prototypes proches ont été retirés du catalogue principal, sans suppression de code ni de dépôt. Les critères sont documentés dans [CURATION.md](CURATION.md). Cette sélection repose sur les fichiers et la documentation consultables : **elle ne prouve pas la qualité en production**, faute de tests fonctionnels comparatifs sur appareils réels.
+
+Le nouveau projet public `White-hat` a été ajouté au catalogue dans la catégorie des outils métier et de sécurité. Sa présence ne vaut pas validation de ses fonctions d'audit.
 
 ## Priorités techniques avant de qualifier un projet « prêt pour la production »
 
@@ -78,7 +84,7 @@ Les cases non cochées représentent un **travail restant à confirmer**, et non
 - `medicalvisionproai` / `Medivision-ai-pro` : noms proches, maturité et contenu différents.
 - Toute éventuelle déclinaison privée d'un projet public : comparer les branches et l'historique avant une consolidation.
 
-**Aucun dépôt n'a été archivé, supprimé, renommé, rendu public ou fusionné dans le cadre de cette revue.**
+**Aucun dépôt n'a été archivé, supprimé, renommé, rendu public ou fusionné dans le cadre de cette revue.** La sélection du portfolio ne modifie pas le code des applications.
 
 ## Organisation GitHub recommandée
 
