@@ -21,7 +21,6 @@ REFERENCES = {
     "nikogroove": "EBM-BRETONNE.",
     "Medivision-ai-pro": "medicalvisionproai",
     "compagnon-diabete": "OPENVITA-DT1",
-    "daphnee-compagnon": "Sage-companion",
     "le-jardin-de-niko": "oracle-du-jardinier",
 }
 
@@ -88,8 +87,8 @@ def main() -> int:
     else:
         details = PROJECTS.read_text(encoding="utf-8")
         detail_names = [match.group(2) for match in REPO_RE.finditer(details)]
-        if len(detail_names) != 44 or len(set(detail_names)) != 44:
-            errors.append(f"44 descriptions publiques uniques attendues ; {len(detail_names)} trouvées.")
+        if len(detail_names) != 43 or len(set(detail_names)) != 43:
+            errors.append(f"43 descriptions publiques uniques attendues ; {len(detail_names)} trouvées.")
         expected_details = set(repo_names) | set(REFERENCES)
         if set(detail_names) != expected_details:
             missing = sorted(expected_details - set(detail_names))
@@ -139,7 +138,7 @@ def main() -> int:
         for error in errors:
             print(f"ERREUR : {error}", file=sys.stderr)
         return 1
-    print("OK : 9 thèmes repliables, 39 projets sélectionnés, 44 descriptions et 6 études.")
+    print("OK : 9 thèmes repliables, 39 projets sélectionnés, 43 descriptions et 6 études.")
     return 0
 
 
