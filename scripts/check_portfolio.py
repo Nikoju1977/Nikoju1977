@@ -10,10 +10,11 @@ ROOT = Path(__file__).resolve().parent.parent
 README = ROOT / "README.md"
 ROADMAP = ROOT / "QUALITY_ROADMAP.md"
 CURATION = ROOT / "CURATION.md"
+PROJECTS = ROOT / "PROJECTS.md"
 SHOWCASE = ROOT / "SHOWCASE.md"
 BANNER = ROOT / "assets" / "studio-niko-cover.svg"
 HEADING = "## Projets retenus, classés par thème"
-EXPECTED_COUNTS = [7, 3, 9, 3, 3, 7, 4, 4, 1]
+EXPECTED_COUNTS = [7, 3, 9, 3, 3, 5, 4, 4, 1]
 SIGNATURE = ("Vision-IA", "galerie-studio-niko", "Nikoassist", "medicalvisionproai",
              "the-lovestronautes-machine", "handimonde")
 REFERENCES = {
@@ -65,8 +66,8 @@ def main() -> int:
     duplicates = [name for name, count in Counter(repo_names).items() if count > 1]
     if duplicates:
         errors.append("Dépôts en double : " + ", ".join(sorted(duplicates)))
-    if len(repo_names) != 41:
-        errors.append(f"41 projets attendus ; {len(repo_names)} trouvés.")
+    if len(repo_names) != 39:
+        errors.append(f"39 projets attendus ; {len(repo_names)} trouvés.")
     if not ROADMAP.is_file() or "(QUALITY_ROADMAP.md)" not in text:
         errors.append("Le plan qualité doit être présent et lié depuis README.md.")
     if not CURATION.is_file() or "(CURATION.md)" not in text:
@@ -82,6 +83,20 @@ def main() -> int:
                 errors.append(f"Variante non documentée dans CURATION.md : {variant}.")
             if f"https://github.com/Nikoju1977/{reference}" not in selection:
                 errors.append(f"Référence non documentée dans CURATION.md : {reference}.")
+    if not PROJECTS.is_file() or "(PROJECTS.md)" not in text:
+        errors.append("Les descriptions de chaque application doivent être accessibles depuis le profil.")
+    else:
+        details = PROJECTS.read_text(encoding="utf-8")
+        detail_names = [match.group(2) for match in REPO_RE.finditer(details)]
+        if len(detail_names) != 44 or len(set(detail_names)) != 44:
+            errors.append(f"44 descriptions publiques uniques attendues ; {len(detail_names)} trouvées.")
+        expected_details = set(repo_names) | set(REFERENCES)
+        if set(detail_names) != expected_details:
+            missing = sorted(expected_details - set(detail_names))
+            surplus = sorted(set(detail_names) - expected_details)
+            errors.append(f"Catalogue détaillé incohérent : absents={missing}, en trop={surplus}.")
+        if not all(name in details for name in SIGNATURE):
+            errors.append("Une ou plusieurs études de projets signature manquent dans PROJECTS.md.")
     if "White-hat" not in repo_names:
         errors.append("Le cockpit de cybersécurité manque au catalogue.")
     if "l-ultime-confrontation" in repo_names:
@@ -124,7 +139,7 @@ def main() -> int:
         for error in errors:
             print(f"ERREUR : {error}", file=sys.stderr)
         return 1
-    print("OK : 9 thèmes repliables, 41 projets sélectionnés, 6 études et identité graphique.")
+    print("OK : 9 thèmes repliables, 39 projets sélectionnés, 44 descriptions et 6 études.")
     return 0
 
 
