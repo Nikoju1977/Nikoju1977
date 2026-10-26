@@ -11,7 +11,7 @@ README = ROOT / "README.md"
 ROADMAP = ROOT / "QUALITY_ROADMAP.md"
 CURATION = ROOT / "CURATION.md"
 HEADING = "## Projets retenus, classés par thème"
-EXPECTED_COUNTS = [7, 3, 9, 3, 3, 7, 5, 4, 1]
+EXPECTED_COUNTS = [7, 3, 9, 3, 3, 7, 4, 4, 1]
 REFERENCES = {
     "nikogroove": "EBM-BRETONNE.",
     "Medivision-ai-pro": "medicalvisionproai",
@@ -61,8 +61,8 @@ def main() -> int:
     duplicates = [name for name, count in Counter(repo_names).items() if count > 1]
     if duplicates:
         errors.append("Dépôts en double : " + ", ".join(sorted(duplicates)))
-    if len(repo_names) != 42:
-        errors.append(f"42 projets attendus ; {len(repo_names)} trouvés.")
+    if len(repo_names) != 41:
+        errors.append(f"41 projets attendus ; {len(repo_names)} trouvés.")
     if not ROADMAP.is_file() or "(QUALITY_ROADMAP.md)" not in text:
         errors.append("Le plan qualité doit être présent et lié depuis README.md.")
     if not CURATION.is_file() or "(CURATION.md)" not in text:
@@ -80,12 +80,14 @@ def main() -> int:
                 errors.append(f"Référence non documentée dans CURATION.md : {reference}.")
     if "White-hat" not in repo_names:
         errors.append("Le cockpit de cybersécurité manque au catalogue.")
+    if "l-ultime-confrontation" in repo_names:
+        errors.append("Le projet éditorial retiré ne doit pas être affiché.")
 
     if errors:
         for error in errors:
             print(f"ERREUR : {error}", file=sys.stderr)
         return 1
-    print("OK : 9 thèmes, 42 projets sélectionnés et plan qualité référencé.")
+    print("OK : 9 thèmes, 41 projets sélectionnés et plan qualité référencé.")
     return 0
 
 
