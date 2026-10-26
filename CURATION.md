@@ -2,7 +2,7 @@
 
 **Mise à jour : 26 octobre 2026**
 
-Le profil met en avant **42 projets publics de référence** parmi **47 projets publics**. Les **5 variantes secondaires** restent consultables pour préserver leurs fonctionnalités et leur historique ; elles ne sont plus présentées comme des applications indépendantes dans le catalogue principal.
+Le profil met en avant **41 projets publics de référence** parmi **47 projets publics**. Les **5 variantes secondaires** restent consultables pour préserver leurs fonctionnalités et leur historique ; **1 projet supplémentaire a été exclu de la vitrine sur demande éditoriale**. Les dépôts écartés ne sont plus présentés comme des applications indépendantes dans le catalogue principal.
 
 ## Versions retenues et variantes proches
 
