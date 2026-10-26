@@ -2,7 +2,7 @@
 
 **Mise à jour : 26 octobre 2026**
 
-Le profil met en avant **39 projets publics de référence** parmi **45 projets publics**. Les **5 variantes secondaires** restent consultables pour préserver leurs fonctionnalités et leur historique ; **1 projet supplémentaire a été exclu de la vitrine sur demande éditoriale**. Les dépôts écartés ne sont plus présentés comme des applications indépendantes dans le catalogue principal.
+Le profil met en avant **39 projets publics de référence** parmi **44 projets publics**. Les **4 variantes secondaires** restent consultables pour préserver leurs fonctionnalités et leur historique ; **1 projet supplémentaire a été exclu de la vitrine sur demande éditoriale**. Les dépôts écartés ne sont plus présentés comme des applications indépendantes dans le catalogue principal.
 
 **[Que fait chaque application ?](PROJECTS.md)** — catalogue explicatif des projets de référence et variantes.
 
@@ -13,7 +13,6 @@ Le profil met en avant **39 projets publics de référence** parmi **45 projets 
 | Groovebox EBM / Breizh | [EBM-BRETONNE.](https://github.com/Nikoju1977/EBM-BRETONNE.) | [nikogroove](https://github.com/Nikoju1977/nikogroove) | Deux interfaces Cyber-Fest-Noz v2 très proches ; la version EBM dispose d'un index plus étoffé et d'une sauvegarde pré-biniou supplémentaire. |
 | Imagerie biomédicale | [medicalvisionproai](https://github.com/Nikoju1977/medicalvisionproai) | [Medivision-ai-pro](https://github.com/Nikoju1977/Medivision-ai-pro) | La première documente l'import d'imagerie et des fonctions DICOM/MPR ; la seconde est encore une base PWABuilder de démonstration. |
 | Compagnon diabète / suivi DT1 | [OPENVITA-DT1](https://github.com/Nikoju1977/OPENVITA-DT1) | [compagnon-diabete](https://github.com/Nikoju1977/compagnon-diabete) | Priorité à l'application dédiée au suivi DT1 plutôt qu'à une variante de l'interface DAPHNÉE OMNI. |
-| Assistant de santé généraliste / variante DAPHNÉE | [OPENVITA-DT1](https://github.com/Nikoju1977/OPENVITA-DT1) pour le suivi DT1 ; [Sage-companion](https://github.com/Nikoju1977/Sage-companion) pour l'assistance vocale | [daphnee-compagnon](https://github.com/Nikoju1977/daphnee-compagnon) | Une interface DAPHNÉE OMNI déjà partiellement couverte par les projets de suivi et d'assistance ciblés. |
 | Assistant jardin / permaculture | [oracle-du-jardinier](https://github.com/Nikoju1977/oracle-du-jardinier) | [le-jardin-de-niko](https://github.com/Nikoju1977/le-jardin-de-niko) | Priorité à l'application documentée avec une adresse de déploiement ; conserver la variante Terroir Synthétique pour ses modules et pistes d'évolution. |
 
 ## Ce qui n'est pas considéré comme un doublon
