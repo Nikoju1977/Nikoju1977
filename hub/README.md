@@ -35,3 +35,17 @@ Le plan gratuit Vercel Hobby est réservé aux usages non commerciaux ; vérifie
 3. Contrats d'échange de projets entre Vision-IA / META-STUDIO / UltraVision et Audio Lab.
 4. SSO et espaces privés éventuels — jamais de partage automatique de données de santé.
 5. Intégration RON via une API dédiée, uniquement avec authentification/permissions et protection des secrets.
+
+
+## Vérification des applications — novembre 2026
+
+- Lancer l'application via **Lancer ↗** dans le catalogue. L'app s'ouvre sur **son propre domaine** ; elle n'est ni copiée ni exécutée magiquement dans le Hub.
+- Les déploiements Vercel publics **READY** ajoutés : Niko Emploi, Handimonde, Alyina (dépôt \`miaotris\`) et Galerie Studio Niko. Ce statut garantit seulement un déploiement prêt.
+- Les démos GitHub Pages existantes sont conservées comme **liens documentés non certifiés**.
+- Les applis avec protection Vercel ne sont pas rendues publiques automatiquement. Les projets privés sont exclus.
+- Le bouton **Tester les accès** appelle \`/api/health?slug=<slug>\`, qui vérifie le statut **HTTP** côté serveur. Seuls les liens déjà présents et les hôtes \`*.vercel.app\` ou \`nikoju1977.github.io\` sont autorisés. Ce contrôle ne valide pas les flux de traitement, l'audio, les modèles ou les clés.
+- \`node hub/check.cjs\` vérifie la validité du catalogue, les identifiants de la page, les liens HTTPS et l'absence des dépôts privés ciblés.
+
+### Limitations irréductibles au portail
+
+Une application qui réclame GPU, base de données, backend, clé API, flux tiers, connexion Google/TikTok ou autorisations microphone/caméra doit être configurée et validée **dans son dépôt respectif**. La présence dans le catalogue ne la rend pas fonctionnelle. Certains déploiements Vercel ont besoin de corrections distinctes.

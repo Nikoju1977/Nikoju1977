@@ -37,7 +37,14 @@
     "repoUrl": "https://github.com/Nikoju1977/AutoEntrepreneur-1M",
     "demoUrl": "https://nikoju1977.github.io/AutoEntrepreneur-1M/",
     "featured": false,
-    "status": "documented-demo"
+    "status": "documented-demo",
+    "deployment": {
+      "provider": "Vercel",
+      "state": "READY",
+      "access": "protected",
+      "project": "autoentrepreneur-1m"
+    },
+    "requirements": "Déploiement Vercel protégé. Le lien historique GitHub Pages reste documenté."
   },
   {
     "slug": "aylina-is-cooking",
@@ -155,9 +162,15 @@
     "category": "Art & 3D",
     "description": "Galerie immersive 3D pour exposer films, images, sculptures et sons.",
     "repoUrl": "https://github.com/Nikoju1977/galerie-studio-niko",
-    "demoUrl": "https://galerie-studio-niko-nikoju1977s-projects.vercel.app",
+    "demoUrl": "https://galerie-studio-niko.vercel.app",
     "featured": true,
-    "status": "documented-demo"
+    "status": "deployed-unverified",
+    "deployment": {
+      "provider": "Vercel",
+      "state": "READY",
+      "access": "public",
+      "project": "galerie-studio-niko"
+    }
   },
   {
     "slug": "handimonde",
@@ -165,9 +178,16 @@
     "category": "Cartographie & Nature",
     "description": "Carte participative des lieux et équipements accessibles.",
     "repoUrl": "https://github.com/Nikoju1977/handimonde",
-    "demoUrl": null,
+    "demoUrl": "https://handimonde.vercel.app",
     "featured": false,
-    "status": "source-only"
+    "status": "deployed-unverified",
+    "deployment": {
+      "provider": "Vercel",
+      "state": "READY",
+      "access": "public",
+      "project": "handimonde"
+    },
+    "requirements": "Le déploiement est prêt ; certaines données cartographiques proviennent de services tiers."
   },
   {
     "slug": "ia-studio-cine",
@@ -177,7 +197,14 @@
     "repoUrl": "https://github.com/Nikoju1977/ia-studio-cine",
     "demoUrl": null,
     "featured": true,
-    "status": "source-only"
+    "status": "access-protected",
+    "deployment": {
+      "provider": "Vercel",
+      "state": "READY",
+      "access": "protected",
+      "project": "ia-studio-cine"
+    },
+    "requirements": "La version Vercel est protégée par authentification. Les fonctions Agnes nécessitent une clé API et une connexion réseau compatibles."
   },
   {
     "slug": "jarvisdiabete",
@@ -195,9 +222,16 @@
     "category": "Business & Services",
     "description": "Niko Emploi : recherche, suivi et rapprochement d'offres.",
     "repoUrl": "https://github.com/Nikoju1977/job-search",
-    "demoUrl": null,
+    "demoUrl": "https://niko-emploi.vercel.app",
     "featured": false,
-    "status": "source-only"
+    "status": "deployed-unverified",
+    "deployment": {
+      "provider": "Vercel",
+      "state": "READY",
+      "access": "public",
+      "project": "niko-emploi"
+    },
+    "requirements": "Déploiement Vercel prêt, mais certaines offres et notifications exigent des fournisseurs de données et des secrets côté serveur."
   },
   {
     "slug": "l-ultime-confrontation",
@@ -237,7 +271,14 @@
     "repoUrl": "https://github.com/Nikoju1977/medicalvisionproai",
     "demoUrl": "https://nikoju1977.github.io/medicalvisionproai/",
     "featured": false,
-    "status": "documented-demo"
+    "status": "documented-demo",
+    "deployment": {
+      "provider": "Vercel",
+      "state": "READY",
+      "access": "protected",
+      "project": "medicalvisionproai"
+    },
+    "requirements": "Prototype expérimental non certifié. Le déploiement Vercel est protégé."
   },
   {
     "slug": "Medivision-ai-pro",
@@ -257,7 +298,13 @@
     "repoUrl": "https://github.com/Nikoju1977/Metrology-OS",
     "demoUrl": null,
     "featured": false,
-    "status": "source-only"
+    "status": "access-protected",
+    "deployment": {
+      "provider": "Vercel",
+      "state": "READY",
+      "access": "protected",
+      "project": "metrology"
+    }
   },
   {
     "slug": "miaotris",
@@ -265,9 +312,16 @@
     "category": "Jeux & Expériences",
     "description": "Jeu de blocs félin dans le navigateur.",
     "repoUrl": "https://github.com/Nikoju1977/miaotris",
-    "demoUrl": null,
+    "demoUrl": "https://alyina-vampire-of-halloween.vercel.app",
     "featured": false,
-    "status": "source-only"
+    "status": "deployed-unverified",
+    "deployment": {
+      "provider": "Vercel",
+      "state": "READY",
+      "access": "public",
+      "project": "alyina-vampire-of-halloween"
+    },
+    "requirements": "Déploiement du jeu Vercel prêt sous l'intitulé Alyina Vampire of Halloween."
   },
   {
     "slug": "N8V",
@@ -277,7 +331,8 @@
     "repoUrl": "https://github.com/Nikoju1977/N8V",
     "demoUrl": null,
     "featured": false,
-    "status": "planned"
+    "status": "planned",
+    "requirements": "Dépôt sans application utilisable à ce stade."
   },
   {
     "slug": "Neural-Art-mars-2026",
@@ -307,7 +362,14 @@
     "repoUrl": "https://github.com/Nikoju1977/Nikoassist",
     "demoUrl": null,
     "featured": false,
-    "status": "source-only"
+    "status": "deployment-error",
+    "deployment": {
+      "provider": "Vercel",
+      "state": "ERROR",
+      "access": "protected",
+      "project": "nikoassist-pwa"
+    },
+    "requirements": "Dernier déploiement Vercel signalé en erreur. Runtime agentique à configurer et à tester séparément."
   },
   {
     "slug": "nikogroove",
@@ -357,7 +419,14 @@
     "repoUrl": "https://github.com/Nikoju1977/oracle-du-jardinier",
     "demoUrl": "https://oracle-du-jardinier.vercel.app",
     "featured": false,
-    "status": "documented-demo"
+    "status": "documented-demo",
+    "deployment": {
+      "provider": "Vercel",
+      "state": "READY",
+      "access": "protected",
+      "project": "oracle-du-jardinier"
+    },
+    "requirements": "L'application Vercel est protégée. Le lien historique est fourni sans garantie de disponibilité."
   },
   {
     "slug": "presentation-medtronic",
@@ -397,7 +466,8 @@
     "repoUrl": "https://github.com/Nikoju1977/Ron-",
     "demoUrl": "https://nikoju1977.github.io/Ron-/",
     "featured": true,
-    "status": "documented-demo"
+    "status": "documented-demo",
+    "requirements": "L'interface peut s'ouvrir ; les fonctions IA exigent leur moteur et les accès réseau appropriés."
   },
   {
     "slug": "Sage-companion",
@@ -457,7 +527,8 @@
     "repoUrl": "https://github.com/Nikoju1977/Wan2GP",
     "demoUrl": null,
     "featured": false,
-    "status": "source-only"
+    "status": "source-only",
+    "requirements": "Moteur de modèles lourds : GPU et serveur séparés indispensables. Non exécutable sur un hébergement statique."
   },
   {
     "slug": "White-hat",
