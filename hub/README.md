@@ -79,3 +79,10 @@ La configuration Vercel \`nikoassist-pwa\` a été réparée en ajoutant \`web/\
 La version web sans clé fonctionne pour Wikipédia, la météo Open-Meteo, les calculs et la liste de tâches locale. Les fonctions Python agentiques d'origine ne sont **pas** disponibles dans le navigateur. Le Hub peut transmettre explicitement jusqu'à 20 tâches non sensibles via URL-fragment avec consentement des deux côtés.
 
 Le catalogue compte maintenant **40 liens d'applications** ; l'état de disponibilité HTTP ne garantit pas les fonctionnalités de chaque application.
+
+
+## Metrology-OS : démonstration publique
+
+L'interface V4 autonome est déployée en démonstration sur <https://metrology-os-demo.vercel.app/> (HTTP 200 vérifié). Le projet Vercel industriel initial reste inchangé et protégé. L'interface n'est pas validée pour des certificats accrédités ni pour des données d'entreprise confidentielles.
+
+Le catalogue compte **41 accès directs** au 4 novembre 2026.

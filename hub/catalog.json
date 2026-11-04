@@ -334,15 +334,17 @@
     "category": "Business & Services",
     "description": "Suivi métrologique d'instruments et certificats.",
     "repoUrl": "https://github.com/Nikoju1977/Metrology-OS",
-    "demoUrl": null,
+    "demoUrl": "https://metrology-os-demo.vercel.app/",
     "featured": false,
-    "status": "access-protected",
+    "status": "page-responding",
     "deployment": {
       "provider": "Vercel",
       "state": "READY",
-      "access": "protected",
-      "project": "metrology"
-    }
+      "access": "public",
+      "project": "metrology-os-demo"
+    },
+    "pageCheckedOn": "2026-11-04",
+    "requirements": "Démonstration de GMAO métrologique navigateur. Aucun audit de conformité ISO ni certification n'est attesté. N'utilisez pas de données industrielles confidentielles sans sauvegardes, accès contrôlés et validation des calculs."
   },
   {
     "slug": "miaotris",
