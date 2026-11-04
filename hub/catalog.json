@@ -1,0 +1,472 @@
+[
+  {
+    "slug": "aegis-earth-mobile",
+    "name": "aegis-earth-mobile",
+    "category": "Cartographie & Nature",
+    "description": "Exploration géospatiale, météo, ciel et données publiques.",
+    "repoUrl": "https://github.com/Nikoju1977/aegis-earth-mobile",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "agent-biometrique",
+    "name": "agent-biometrique",
+    "category": "Santé & Bien-être",
+    "description": "Interface expérimentale d'analyse biométrique.",
+    "repoUrl": "https://github.com/Nikoju1977/agent-biometrique",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "applewatchcadrans",
+    "name": "applewatchcadrans",
+    "category": "Art & 3D",
+    "description": "Études et créations graphiques de cadrans.",
+    "repoUrl": "https://github.com/Nikoju1977/applewatchcadrans",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "AutoEntrepreneur-1M",
+    "name": "AutoEntrepreneur-1M",
+    "category": "Business & Services",
+    "description": "Atelier de profils experts et outils de gestion d'entreprise.",
+    "repoUrl": "https://github.com/Nikoju1977/AutoEntrepreneur-1M",
+    "demoUrl": "https://nikoju1977.github.io/AutoEntrepreneur-1M/",
+    "featured": false,
+    "status": "documented-demo"
+  },
+  {
+    "slug": "aylina-is-cooking",
+    "name": "aylina-is-cooking",
+    "category": "Jeux & Expériences",
+    "description": "Expérience culinaire et ludique.",
+    "repoUrl": "https://github.com/Nikoju1977/aylina-is-cooking",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "Bouh-delivery",
+    "name": "Bouh-delivery",
+    "category": "Jeux & Expériences",
+    "description": "Jeu d'arcade Halloween, conduite et défis.",
+    "repoUrl": "https://github.com/Nikoju1977/Bouh-delivery",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "Boutique-morgane",
+    "name": "Boutique-morgane",
+    "category": "Arts & Symbolique",
+    "description": "Univers Morgane : vitrine, boutique, tarot et consultations.",
+    "repoUrl": "https://github.com/Nikoju1977/Boutique-morgane",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "cockpit-mecaria",
+    "name": "cockpit-mecaria",
+    "category": "Business & Services",
+    "description": "Cockpit qualité, métrologie et production industrielle.",
+    "repoUrl": "https://github.com/Nikoju1977/cockpit-mecaria",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "compagnon-diabete",
+    "name": "compagnon-diabete",
+    "category": "Archives & Variantes",
+    "description": "Variante de compagnon de suivi du diabète.",
+    "repoUrl": "https://github.com/Nikoju1977/compagnon-diabete",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "Cosmo-citrouille",
+    "name": "Cosmo-citrouille",
+    "category": "Jeux & Expériences",
+    "description": "Aventure spatiale d'Halloween, 140 mondes annoncés.",
+    "repoUrl": "https://github.com/Nikoju1977/Cosmo-citrouille",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "Dbmetre-pro",
+    "name": "Dbmetre-pro",
+    "category": "Musique & Audio",
+    "description": "Analyseur spectral, mesure dBFS et enregistrement microphone.",
+    "repoUrl": "https://github.com/Nikoju1977/Dbmetre-pro",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "dermato-ai",
+    "name": "dermato-ai",
+    "category": "Santé & Bien-être",
+    "description": "Exploration visuelle dermatologique, sans diagnostic.",
+    "repoUrl": "https://github.com/Nikoju1977/dermato-ai",
+    "demoUrl": "https://nikoju1977.github.io/dermato-ai/",
+    "featured": false,
+    "status": "documented-demo"
+  },
+  {
+    "slug": "EBM-BRETONNE.",
+    "name": "EBM-BRETONNE.",
+    "category": "Musique & Audio",
+    "description": "Cyber-Fest-Noz : groovebox EBM aux influences bretonnes.",
+    "repoUrl": "https://github.com/Nikoju1977/EBM-BRETONNE.",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "fibrobot",
+    "name": "fibrobot",
+    "category": "Santé & Bien-être",
+    "description": "Compagnon fibromyalgie, journal et outils de bien-être.",
+    "repoUrl": "https://github.com/Nikoju1977/fibrobot",
+    "demoUrl": "https://nikoju1977.github.io/fibrobot/",
+    "featured": false,
+    "status": "documented-demo"
+  },
+  {
+    "slug": "fibrocare",
+    "name": "fibrocare",
+    "category": "Santé & Bien-être",
+    "description": "Journal de suivi et d'organisation du quotidien.",
+    "repoUrl": "https://github.com/Nikoju1977/fibrocare",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "galerie-studio-niko",
+    "name": "galerie-studio-niko",
+    "category": "Art & 3D",
+    "description": "Galerie immersive 3D pour exposer films, images, sculptures et sons.",
+    "repoUrl": "https://github.com/Nikoju1977/galerie-studio-niko",
+    "demoUrl": "https://galerie-studio-niko-nikoju1977s-projects.vercel.app",
+    "featured": true,
+    "status": "documented-demo"
+  },
+  {
+    "slug": "handimonde",
+    "name": "handimonde",
+    "category": "Cartographie & Nature",
+    "description": "Carte participative des lieux et équipements accessibles.",
+    "repoUrl": "https://github.com/Nikoju1977/handimonde",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "ia-studio-cine",
+    "name": "ia-studio-cine",
+    "category": "Cinéma & Image",
+    "description": "META-STUDIO PRO V5 : création audiovisuelle, timeline, looks et exports.",
+    "repoUrl": "https://github.com/Nikoju1977/ia-studio-cine",
+    "demoUrl": null,
+    "featured": true,
+    "status": "source-only"
+  },
+  {
+    "slug": "jarvisdiabete",
+    "name": "jarvisdiabete",
+    "category": "Santé & Bien-être",
+    "description": "Compagnon de suivi du diabète, prototype expérimental.",
+    "repoUrl": "https://github.com/Nikoju1977/jarvisdiabete",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "job-search",
+    "name": "job-search",
+    "category": "Business & Services",
+    "description": "Niko Emploi : recherche, suivi et rapprochement d'offres.",
+    "repoUrl": "https://github.com/Nikoju1977/job-search",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "l-ultime-confrontation",
+    "name": "l-ultime-confrontation",
+    "category": "Jeux & Expériences",
+    "description": "Projet narratif interactif.",
+    "repoUrl": "https://github.com/Nikoju1977/l-ultime-confrontation",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "le-jardin-de-niko",
+    "name": "le-jardin-de-niko",
+    "category": "Archives & Variantes",
+    "description": "Variante Terroir Synthétique de l'Oracle du Jardinier.",
+    "repoUrl": "https://github.com/Nikoju1977/le-jardin-de-niko",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "les-annales-akashiques",
+    "name": "les-annales-akashiques",
+    "category": "Arts & Symbolique",
+    "description": "Expérience créative et symbolique.",
+    "repoUrl": "https://github.com/Nikoju1977/les-annales-akashiques",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "medicalvisionproai",
+    "name": "medicalvisionproai",
+    "category": "Santé & Bien-être",
+    "description": "Visualisation d'images et de séries DICOM, prototype non certifié.",
+    "repoUrl": "https://github.com/Nikoju1977/medicalvisionproai",
+    "demoUrl": "https://nikoju1977.github.io/medicalvisionproai/",
+    "featured": false,
+    "status": "documented-demo"
+  },
+  {
+    "slug": "Medivision-ai-pro",
+    "name": "Medivision-ai-pro",
+    "category": "Archives & Variantes",
+    "description": "Ancienne variante de MedVision AI Pro.",
+    "repoUrl": "https://github.com/Nikoju1977/Medivision-ai-pro",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "Metrology-OS",
+    "name": "Metrology-OS",
+    "category": "Business & Services",
+    "description": "Suivi métrologique d'instruments et certificats.",
+    "repoUrl": "https://github.com/Nikoju1977/Metrology-OS",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "miaotris",
+    "name": "miaotris",
+    "category": "Jeux & Expériences",
+    "description": "Jeu de blocs félin dans le navigateur.",
+    "repoUrl": "https://github.com/Nikoju1977/miaotris",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "N8V",
+    "name": "N8V",
+    "category": "Cinéma & Image",
+    "description": "Projet de format vidéo expérimental — dépôt vide.",
+    "repoUrl": "https://github.com/Nikoju1977/N8V",
+    "demoUrl": null,
+    "featured": false,
+    "status": "planned"
+  },
+  {
+    "slug": "Neural-Art-mars-2026",
+    "name": "Neural-Art-mars-2026",
+    "category": "Art & 3D",
+    "description": "Laboratoire de peinture numérique et de compositions WebGL.",
+    "repoUrl": "https://github.com/Nikoju1977/Neural-Art-mars-2026",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "Niko-Ultravision",
+    "name": "Niko-Ultravision",
+    "category": "Cinéma & Image",
+    "description": "Restauration et super-résolution locale d'images et de vidéos.",
+    "repoUrl": "https://github.com/Nikoju1977/Niko-Ultravision",
+    "demoUrl": null,
+    "featured": true,
+    "status": "source-only"
+  },
+  {
+    "slug": "Nikoassist",
+    "name": "Nikoassist",
+    "category": "Intelligence & Agents",
+    "description": "Orchestration multi-agents et runtime compagnon nanoMuse.",
+    "repoUrl": "https://github.com/Nikoju1977/Nikoassist",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "nikogroove",
+    "name": "nikogroove",
+    "category": "Archives & Variantes",
+    "description": "Variante historique de Cyber-Fest-Noz.",
+    "repoUrl": "https://github.com/Nikoju1977/nikogroove",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "Nikoju1977",
+    "name": "Nikoju1977",
+    "category": "Studio & Portfolio",
+    "description": "Profil et documentation de l'écosystème Studio Niko.",
+    "repoUrl": "https://github.com/Nikoju1977/Nikoju1977",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "oeil-hermes",
+    "name": "oeil-hermes",
+    "category": "Arts & Symbolique",
+    "description": "Grimoire numérique, correspondances et calculs astrologiques.",
+    "repoUrl": "https://github.com/Nikoju1977/oeil-hermes",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "OPENVITA-DT1",
+    "name": "OPENVITA-DT1",
+    "category": "Santé & Bien-être",
+    "description": "Suivi expérimental du diabète de type 1 via Nightscout.",
+    "repoUrl": "https://github.com/Nikoju1977/OPENVITA-DT1",
+    "demoUrl": "https://nikoju1977.github.io/OPENVITA-DT1/",
+    "featured": false,
+    "status": "documented-demo"
+  },
+  {
+    "slug": "oracle-du-jardinier",
+    "name": "oracle-du-jardinier",
+    "category": "Cartographie & Nature",
+    "description": "Assistant jardin et permaculture, météo, tâches et calendrier.",
+    "repoUrl": "https://github.com/Nikoju1977/oracle-du-jardinier",
+    "demoUrl": "https://oracle-du-jardinier.vercel.app",
+    "featured": false,
+    "status": "documented-demo"
+  },
+  {
+    "slug": "presentation-medtronic",
+    "name": "presentation-medtronic",
+    "category": "Business & Services",
+    "description": "Support de présentation technique.",
+    "repoUrl": "https://github.com/Nikoju1977/presentation-medtronic",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "purescanai",
+    "name": "purescanai",
+    "category": "Santé & Bien-être",
+    "description": "Interface expérimentale d'analyse visuelle de la peau.",
+    "repoUrl": "https://github.com/Nikoju1977/purescanai",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "radar-de-niko",
+    "name": "radar-de-niko",
+    "category": "Business & Services",
+    "description": "Radar 44 : revue de presse, sources régionales et services.",
+    "repoUrl": "https://github.com/Nikoju1977/radar-de-niko",
+    "demoUrl": "https://nikoju1977.github.io/radar-de-niko/",
+    "featured": false,
+    "status": "documented-demo"
+  },
+  {
+    "slug": "Ron-",
+    "name": "Ron-",
+    "category": "Intelligence & Agents",
+    "description": "RON : compagnon multimodal, voix et assistance multi-agents.",
+    "repoUrl": "https://github.com/Nikoju1977/Ron-",
+    "demoUrl": "https://nikoju1977.github.io/Ron-/",
+    "featured": true,
+    "status": "documented-demo"
+  },
+  {
+    "slug": "Sage-companion",
+    "name": "Sage-companion",
+    "category": "Intelligence & Agents",
+    "description": "Compagnon vocal avec outils et commandes confirmées.",
+    "repoUrl": "https://github.com/Nikoju1977/Sage-companion",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "SCAN-BIOMEDICAL",
+    "name": "SCAN-BIOMEDICAL",
+    "category": "Santé & Bien-être",
+    "description": "Prototype de caméra et indicateurs biométriques.",
+    "repoUrl": "https://github.com/Nikoju1977/SCAN-BIOMEDICAL",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "tarot-de-niko",
+    "name": "tarot-de-niko",
+    "category": "Arts & Symbolique",
+    "description": "Tarot symbolique : 78 arcanes, grimoire et tirages.",
+    "repoUrl": "https://github.com/Nikoju1977/tarot-de-niko",
+    "demoUrl": "https://nikoju1977.github.io/tarot-de-niko/",
+    "featured": false,
+    "status": "documented-demo"
+  },
+  {
+    "slug": "the-lovestronautes-machine",
+    "name": "the-lovestronautes-machine",
+    "category": "Musique & Audio",
+    "description": "Groovebox, synthèse Web Audio, composition, MIDI et exports.",
+    "repoUrl": "https://github.com/Nikoju1977/the-lovestronautes-machine",
+    "demoUrl": "https://nikoju1977.github.io/the-lovestronautes-machine/",
+    "featured": true,
+    "status": "documented-demo"
+  },
+  {
+    "slug": "Vision-IA",
+    "name": "Vision-IA",
+    "category": "Cinéma & Image",
+    "description": "Assistant de réalisation : scénario, découpage, conducteur et dossiers de production.",
+    "repoUrl": "https://github.com/Nikoju1977/Vision-IA",
+    "demoUrl": "https://nikoju1977.github.io/Vision-IA/",
+    "featured": true,
+    "status": "documented-demo"
+  },
+  {
+    "slug": "Wan2GP",
+    "name": "Wan2GP",
+    "category": "Cinéma & Image",
+    "description": "Moteur de génération multimodale lourd, nécessite une machine GPU.",
+    "repoUrl": "https://github.com/Nikoju1977/Wan2GP",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only"
+  },
+  {
+    "slug": "White-hat",
+    "name": "White-hat",
+    "category": "Sécurité & Outils",
+    "description": "AEGIS : cockpit de contrôle défensif des dépôts.",
+    "repoUrl": "https://github.com/Nikoju1977/White-hat",
+    "demoUrl": "https://nikoju1977.github.io/White-hat/",
+    "featured": false,
+    "status": "documented-demo"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "name": "Studio Niko Hub",
+  "short_name": "Niko Hub",
+  "description": "Portail Studio Niko Design",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#080c14",
+  "theme_color": "#080c14",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
