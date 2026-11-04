@@ -92,7 +92,17 @@
   </main>
   <footer class="site-footer"><div class="wrap footer-inner"><a href="#accueil" class="footer-logo">N<span>✦</span></a><div><b>STUDIO NIKO DESIGN</b><small>Cinéma · Art numérique · Intelligence artificielle</small></div><span class="footer-copy">© <span id="year">2026</span> Studio Niko Design</span><a href="https://github.com/Nikoju1977" target="_blank" rel="noopener noreferrer">GITHUB ↗</a></div></footer>
   <div id="toast" role="status" aria-live="polite" class="toast" hidden></div>
-  <script src="./app.js" defer></script><script src="./workspace.js" defer></script><script src="./install.js" defer></script>
+  <script src="./app.js" defer></script><script src="./workspace.js" defer></script><script src="./install.js" defer></script><script src="./guide.js" defer></script>
 <dialog id="pwa-install-dialog" class="pwa-install-dialog" aria-labelledby="pwa-install-title"><h2 id="pwa-install-title">Installer votre application</h2><p id="pwa-install-guide">Consultez le menu de votre navigateur pour ajouter cette application à votre appareil.</p><p class="install-hint">Une PWA s’installe depuis le navigateur. Elle ne nécessite ni fichier APK ni accès au Play Store. Les fonctions demandant Internet resteront indisponibles hors connexion.</p><button type="button" id="pwa-install-close">Compris</button></dialog>
+<dialog id="user-guide-dialog" class="user-guide-dialog" aria-labelledby="user-guide-title">
+  <div class="guide-modal-top"><span>STUDIO NIKO / MODE D'EMPLOI</span><button type="button" id="user-guide-close" aria-label="Fermer le mode d'emploi">✕</button></div>
+  <h2 id="user-guide-title">Mode d'emploi</h2>
+  <p id="user-guide-description"></p>
+  <h3>Premiers pas</h3><ol id="user-guide-steps"></ol>
+  <h3>À savoir</h3><p id="user-guide-preparation"></p>
+  <div id="user-guide-caution" class="guide-caution" hidden></div>
+  <h3>Si quelque chose ne fonctionne pas</h3><p id="user-guide-troubleshooting"></p>
+  <div class="guide-modal-links"><a id="user-guide-source" target="_blank" rel="noopener noreferrer">Documentation GitHub ↗</a><a id="user-guide-launch" target="_blank" rel="noopener noreferrer" hidden>Ouvrir l'application ↗</a></div>
+</dialog>
 </body>
 </html>

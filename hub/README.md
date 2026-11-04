@@ -95,3 +95,8 @@ Le catalogue compte **41 accès directs** au 4 novembre 2026.
 - Avec Safari sur iPhone : **Partager → Sur l'écran d'accueil → Ajouter**. Sur Chrome/Edge desktop, utiliser l'icône d'installation ou le menu du navigateur.
 - Une PWA installée par le navigateur n'est pas un fichier APK ou IPA signé distribué via les magasins. Son installation dépend des conditions et options du navigateur et de l'appareil.
 - Les ressources statiques sont mises en cache ; les services distants (météo, Wikipédia, APIs et autres pages externes) ne fonctionnent pas hors ligne.
+
+
+## Modes d'emploi intégrés
+
+Chaque carte du catalogue affiche un bouton **? Mode d'emploi** ouvrant une notice propre à l'application : démarrage, prérequis, précautions, dépannage, liens d'ouverture et documentation. Les 47 notices sont conservées dans `guides.json`, mis en cache par la PWA (`guide.js`). Les projets sans interface publiable disposent malgré tout de leur notice depuis le Hub.

@@ -47,6 +47,7 @@ function render(){
       healthState+
       '<div class="card-links">'+(demo?'<a class="card-link primary" href="'+safeText(demo)+'" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir l’application '+safeText(item.name)+'">Lancer ↗</a>':'')+
       (demo?'<button class="card-link check-link" data-check="'+safeText(item.slug)+'" type="button" aria-label="Vérifier l’accès à '+safeText(item.name)+'" '+(checking?'disabled':'')+'>Tester</button>':'')+
+      '<button type="button" class="card-link guide-link" data-guide="'+safeText(item.slug)+'" aria-label="Mode d\'emploi de '+safeText(item.name)+'">? Mode d\'emploi</button>'+
       (repo?'<a class="card-link" href="'+safeText(repo)+'" target="_blank" rel="noopener noreferrer" aria-label="Voir le code de '+safeText(item.name)+'">Code ↗</a>':'')+'</div></article>';
   }).join('');
 }
@@ -132,6 +133,8 @@ byId('sort').addEventListener('change',render);
 document.querySelectorAll('[data-mode]').forEach(button=>button.addEventListener('click',()=>{filterMode=button.dataset.mode;updateFilterButtons();render();}));
 document.querySelectorAll('[data-category]').forEach(button=>button.addEventListener('click',()=>chooseCategory(button.dataset.category)));
 byId('cards').addEventListener('click',e=>{
+ const guide=e.target.closest('[data-guide]');
+ if(guide){window.StudioNikoGuide?.open(guide.dataset.guide);return;}
  const check=e.target.closest('[data-check]');
  if(check){checkOne(check.dataset.check);return;}
  const btn=e.target.closest('[data-favorite]');if(!btn)return;

@@ -18,7 +18,7 @@ for (const x of cat){
 assert(!cat.some(x=>['ron','Angie-local-commander','medvisionproai','galerie-niko-repo','le-s-raphin-livre'].includes(x.slug)),'No private repos');
 for(const match of app.matchAll(/byId\(['"]([^'"]+)['"]\)/g))assert(index.includes('id="'+match[1]+'"'),'DOM id '+match[1]);
 assert(index.includes('id="check-all"'),'Diagnostic button exists');
-assert(sw.includes('studio-niko-hub-v4'),'Service worker cache bumped');
+assert(sw.includes('studio-niko-hub-v5'),'Service worker cache bumped');
 assert(index.includes('id="atelier"'),'Workspace section');
 assert(fs.existsSync(path.join(dir,'workspace.js')),'Workspace JS');
 assert(fs.existsSync(path.join(dir,'workspace.css')),'Workspace CSS');
@@ -27,4 +27,9 @@ assert(fs.existsSync(path.join(dir,'install.js')),'PWA install handler');
 assert(index.includes('id="pwa-install"'),'PWA install button');
 const manifest=JSON.parse(fs.readFileSync(path.join(dir,'manifest.webmanifest'),'utf8'));
 for(const size of ['192x192','512x512'])assert(manifest.icons.some(x=>x.sizes===size&&x.type==='image/png'),'PWA icon '+size);
+assert(index.includes('id="user-guide-dialog"'),'Help dialog');
+assert(fs.existsSync(path.join(dir,'guide.js')),'Help JS');
+const guides=JSON.parse(fs.readFileSync(path.join(dir,'guides.json'),'utf8')).guides;
+assert(guides.length===cat.length&&cat.every(x=>guides.some(g=>g.slug===x.slug)),'All public applications documented');
+new Function(fs.readFileSync(path.join(dir,'guide.js'),'utf8'));
 console.log('PASS catalog='+cat.length+' launchUrls='+cat.filter(x=>x.demoUrl).length+' DOM bindings checked');
