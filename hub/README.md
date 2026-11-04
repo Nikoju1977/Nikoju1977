@@ -70,3 +70,12 @@ La commande \`node hub/check.cjs\` valide les invariants du catalogue et les lie
 L'atelier sous \`#atelier\` permet de créer jusqu'à 40 projets **locaux** avec notes et étapes, d'importer et exporter un projet au format \`studio-niko-project-v1\`, et de lancer volontairement un transfert de maximum 20 tâches à l'application Nikoassist Web via un fragment \`#handoff\`.
 
 Les projets ne sont pas synchronisés sur le réseau. Le transfert n'a lieu qu'après confirmation dans le Hub **et** acceptation dans Nikoassist ; ne pas l'utiliser pour des projets médicaux, confidentiels ou professionnels sensibles. Le fragment URL ne se retrouve pas dans la requête HTTP, mais la page cible peut en lire le contenu. Il n'existe pas encore de partage de timeline, médias, modèles IA ou de fichiers entre les applications.
+
+
+## Nikoassist Web — réparation et transfert
+
+La configuration Vercel \`nikoassist-pwa\` a été réparée en ajoutant \`web/\` à \`Nikoju1977/Nikoassist\` et en réglant la racine projet sur ce dossier. Nouvelle adresse publique : <https://nikoassist-pwa.vercel.app/>.
+
+La version web sans clé fonctionne pour Wikipédia, la météo Open-Meteo, les calculs et la liste de tâches locale. Les fonctions Python agentiques d'origine ne sont **pas** disponibles dans le navigateur. Le Hub peut transmettre explicitement jusqu'à 20 tâches non sensibles via URL-fragment avec consentement des deux côtés.
+
+Le catalogue compte maintenant **40 liens d'applications** ; l'état de disponibilité HTTP ne garantit pas les fonctionnalités de chaque application.

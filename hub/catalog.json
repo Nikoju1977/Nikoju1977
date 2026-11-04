@@ -401,18 +401,19 @@
     "slug": "Nikoassist",
     "name": "Nikoassist",
     "category": "Intelligence & Agents",
-    "description": "Orchestration multi-agents et runtime compagnon nanoMuse.",
+    "description": "Assistant web : météo, Wikipédia, calculatrice, tâches locales et dictée. Moteur Python distinct.",
     "repoUrl": "https://github.com/Nikoju1977/Nikoassist",
-    "demoUrl": null,
-    "featured": false,
-    "status": "deployment-error",
+    "demoUrl": "https://nikoassist-pwa.vercel.app/",
+    "featured": true,
+    "status": "page-responding",
     "deployment": {
       "provider": "Vercel",
-      "state": "ERROR",
-      "access": "protected",
+      "state": "READY",
+      "access": "public",
       "project": "nikoassist-pwa"
     },
-    "requirements": "Dernier déploiement Vercel signalé en erreur. Runtime agentique à configurer et à tester séparément."
+    "requirements": "La version web fonctionne sans clé pour la météo, Wikipédia, les calculs et les tâches. Le véritable moteur Python multi-agents n'est pas encore raccordé. Dictée selon navigateur et permissions.",
+    "pageCheckedOn": "2026-11-04"
   },
   {
     "slug": "nikogroove",
