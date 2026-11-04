@@ -86,3 +86,12 @@ Le catalogue compte maintenant **40 liens d'applications** ; l'état de disponib
 L'interface V4 autonome est déployée en démonstration sur <https://metrology-os-demo.vercel.app/> (HTTP 200 vérifié). Le projet Vercel industriel initial reste inchangé et protégé. L'interface n'est pas validée pour des certificats accrédités ni pour des données d'entreprise confidentielles.
 
 Le catalogue compte **41 accès directs** au 4 novembre 2026.
+
+
+## Installation PWA — Android, iPhone et ordinateur (4 novembre 2026)
+
+- Le site dispose désormais d'un manifeste avec icônes PNG 192×192 et 512×512, d'un service worker, et du bouton **Installer la PWA**.
+- Avec Chrome pour Android : sélectionner **Installer la PWA** ; sinon ouvrir le menu ⋮ → « Installer l'application » / « Ajouter à l'écran d'accueil ». Samsung Internet possède sa propre option d'ajout.
+- Avec Safari sur iPhone : **Partager → Sur l'écran d'accueil → Ajouter**. Sur Chrome/Edge desktop, utiliser l'icône d'installation ou le menu du navigateur.
+- Une PWA installée par le navigateur n'est pas un fichier APK ou IPA signé distribué via les magasins. Son installation dépend des conditions et options du navigateur et de l'appareil.
+- Les ressources statiques sont mises en cache ; les services distants (météo, Wikipédia, APIs et autres pages externes) ne fonctionnent pas hors ligne.

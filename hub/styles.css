@@ -16,3 +16,20 @@
 .health-badge.reachable{border-left-color:#8bcba7;color:#b8dec7}.health-badge.restricted{border-left-color:#daba7e;color:#e1c899}.health-badge.unavailable{border-left-color:#d48287;color:#f1b3b7}
 .card-link.check-link{background:transparent;color:#a7c6d0}.card-link.check-link:hover{background:#1e3742}
 @media(max-width:760px){.diagnostic-panel{grid-template-columns:1fr;padding:19px}.diagnostic-button{justify-self:start}.diagnostic-results{grid-column:1}.card-link.check-link{min-width:65px}}
+
+.install-strip{background:linear-gradient(110deg,#172d36,#112530);border-bottom:1px solid #365463}
+.install-strip-inner{min-height:56px;display:flex;justify-content:space-between;align-items:center;gap:18px;padding-block:9px}
+.install-strip-inner>span{font-size:11px;color:#a6c5cc;line-height:1.6}
+.install-strip-inner>span strong{color:#d7c4a9;letter-spacing:.1em;font-size:9px;margin-right:7px}
+#pwa-install{flex:none;border:1px solid #8cbdc1;border-radius:5px;background:#c7dddb;color:#142631;font-weight:800;font-size:11px;padding:11px 15px}
+#pwa-install:hover{background:#e3eeee}
+@media(max-width:600px){.install-strip-inner{min-height:65px}.install-strip-inner>span{font-size:10px}.install-strip-inner>span strong{display:block}.install-strip-inner button{font-size:10px;padding:11px 10px}}
+
+/* Installation PWA — navigateur et écran d'accueil */
+.pwa-install-dialog{width:min(480px,calc(100% - 30px));border:1px solid #60858b;background:#142535;color:#eff4f7;border-radius:12px;box-shadow:0 26px 110px #000b;padding:27px 29px}
+.pwa-install-dialog::backdrop{background:#030913cb;backdrop-filter:blur(6px)}
+.pwa-install-dialog h2{font:600 25px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.04em;margin:0 0 16px}
+.pwa-install-dialog p{font-size:13px;line-height:1.8;color:#d0dde4}
+.pwa-install-dialog .install-hint{font-size:11px;color:#8fa5b3}
+#pwa-install-close{margin-top:12px;background:#d4b991;border:0;border-radius:5px;color:#101923;padding:12px 19px;font-weight:800}
+#pwa-install:disabled{opacity:.76;cursor:default}

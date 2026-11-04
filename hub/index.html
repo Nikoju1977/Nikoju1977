@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta name="color-scheme" content="dark">
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
-  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" sizes="192x192" href="./icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Niko Hub">
   <link rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="./workspace.css">
   <title>Studio Niko Hub — Cinéma, IA & création</title>
 </head>
@@ -24,6 +24,7 @@
       <div class="header-actions"><button id="search-shortcut" class="search-mini" type="button" aria-label="Rechercher une application"><span>⌕</span><span>Rechercher</span><kbd>⌘ K</kbd></button><a class="nav-ron" href="https://nikoju1977.github.io/Ron-/" target="_blank" rel="noopener noreferrer"><span class="ron-dot"></span> Ouvrir RON <span aria-hidden="true">↗</span></a></div>
     </div>
   </header>
+  <div class="install-strip" aria-label="Installation de Studio Niko Hub"><div class="wrap install-strip-inner"><span><strong>STUDIO NIKO PARTOUT</strong> · Installez votre atelier sur téléphone ou ordinateur.</span><button id="pwa-install" type="button">Installer la PWA ↓</button></div><div id="pwa-install-status" class="sr-only" role="status" aria-live="polite"></div></div>
   <main id="accueil">
     <section class="hero wrap">
       <div class="hero-copy">
@@ -91,6 +92,7 @@
   </main>
   <footer class="site-footer"><div class="wrap footer-inner"><a href="#accueil" class="footer-logo">N<span>✦</span></a><div><b>STUDIO NIKO DESIGN</b><small>Cinéma · Art numérique · Intelligence artificielle</small></div><span class="footer-copy">© <span id="year">2026</span> Studio Niko Design</span><a href="https://github.com/Nikoju1977" target="_blank" rel="noopener noreferrer">GITHUB ↗</a></div></footer>
   <div id="toast" role="status" aria-live="polite" class="toast" hidden></div>
-  <script src="./app.js" defer></script><script src="./workspace.js" defer></script>
+  <script src="./app.js" defer></script><script src="./workspace.js" defer></script><script src="./install.js" defer></script>
+<dialog id="pwa-install-dialog" class="pwa-install-dialog" aria-labelledby="pwa-install-title"><h2 id="pwa-install-title">Installer votre application</h2><p id="pwa-install-guide">Consultez le menu de votre navigateur pour ajouter cette application à votre appareil.</p><p class="install-hint">Une PWA s’installe depuis le navigateur. Elle ne nécessite ni fichier APK ni accès au Play Store. Les fonctions demandant Internet resteront indisponibles hors connexion.</p><button type="button" id="pwa-install-close">Compris</button></dialog>
 </body>
 </html>
