@@ -33,6 +33,7 @@ function render(){
     const statusInfo=health.get(item.slug);
     const state=item.status==='planned'?'EN PRÉPARATION':
       item.status==='deployment-error'?'DÉPLOIEMENT EN ERREUR':
+      demo && item.pageCheckedOn?'PAGE ACCESSIBLE · HTTP 200':
       demo && item.deployment?.access==='public'?'VERCEL · PRÊT':
       demo?'DÉMO À VÉRIFIER':
       item.status==='access-protected'?'ACCÈS PROTÉGÉ':'CODE SOURCE';

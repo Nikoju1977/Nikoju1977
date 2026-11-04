@@ -49,3 +49,17 @@ Le plan gratuit Vercel Hobby est réservé aux usages non commerciaux ; vérifie
 ### Limitations irréductibles au portail
 
 Une application qui réclame GPU, base de données, backend, clé API, flux tiers, connexion Google/TikTok ou autorisations microphone/caméra doit être configurée et validée **dans son dépôt respectif**. La présence dans le catalogue ne la rend pas fonctionnelle. Certains déploiements Vercel ont besoin de corrections distinctes.
+
+
+## Vérification d'accessibilité du 4 novembre 2026
+
+Parmi **47 dépôts publics**, **39 applications/pages** ont désormais un lien vérifié par réponse HTTP **200**. Le catalogue affiche uniquement ces liens dans le filtre « Ouvrir une application ». Les autres restent consultables par leur code source, ou protégées, ou nécessitent du matériel/serveurs spécifiques.
+
+- 23 liens GitHub Pages déjà publiés ont été ajoutés au catalogue, sans créer d'hébergement inutile.
+- Le lien AEGIS/White-hat en 404 a été réparé en déployant un nouveau projet public : <https://aegis-white-hat.vercel.app/>.
+- L'ancien lien d'AEGIS renvoyait 404, il ne doit plus être utilisé.
+- Les 39 contrôles HTTP ne garantissent pas que les fonctionnalités internes, les autorisations navigateur, les abonnements, les intégrations ou les modèles IA fonctionnent.
+- Les projets non publiables comme un moteur GPU et un dépôt vide ne sont pas présentés comme utilisables.
+- Les informations liées à l'insuline, au diabète ou à la dermatologie sont présentées uniquement comme prototypes non certifiés ; les services commerciaux exigent un hébergement contractuellement adapté.
+
+La commande \`node hub/check.cjs\` valide les invariants du catalogue et les liens internes du Hub.
