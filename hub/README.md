@@ -63,3 +63,10 @@ Parmi **47 dépôts publics**, **39 applications/pages** ont désormais un lien 
 - Les informations liées à l'insuline, au diabète ou à la dermatologie sont présentées uniquement comme prototypes non certifiés ; les services commerciaux exigent un hébergement contractuellement adapté.
 
 La commande \`node hub/check.cjs\` valide les invariants du catalogue et les liens internes du Hub.
+
+
+## Atelier de projets (v1)
+
+L'atelier sous \`#atelier\` permet de créer jusqu'à 40 projets **locaux** avec notes et étapes, d'importer et exporter un projet au format \`studio-niko-project-v1\`, et de lancer volontairement un transfert de maximum 20 tâches à l'application Nikoassist Web via un fragment \`#handoff\`.
+
+Les projets ne sont pas synchronisés sur le réseau. Le transfert n'a lieu qu'après confirmation dans le Hub **et** acceptation dans Nikoassist ; ne pas l'utiliser pour des projets médicaux, confidentiels ou professionnels sensibles. Le fragment URL ne se retrouve pas dans la requête HTTP, mais la page cible peut en lire le contenu. Il n'existe pas encore de partage de timeline, médias, modèles IA ou de fichiers entre les applications.

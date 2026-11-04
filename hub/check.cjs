@@ -18,5 +18,9 @@ for (const x of cat){
 assert(!cat.some(x=>['ron','Angie-local-commander','medvisionproai','galerie-niko-repo','le-s-raphin-livre'].includes(x.slug)),'No private repos');
 for(const match of app.matchAll(/byId\(['"]([^'"]+)['"]\)/g))assert(index.includes('id="'+match[1]+'"'),'DOM id '+match[1]);
 assert(index.includes('id="check-all"'),'Diagnostic button exists');
-assert(sw.includes('studio-niko-hub-v2'),'Service worker cache bumped');
+assert(sw.includes('studio-niko-hub-v3'),'Service worker cache bumped');
+assert(index.includes('id="atelier"'),'Workspace section');
+assert(fs.existsSync(path.join(dir,'workspace.js')),'Workspace JS');
+assert(fs.existsSync(path.join(dir,'workspace.css')),'Workspace CSS');
+new Function(fs.readFileSync(path.join(dir,'workspace.js'),'utf8'));
 console.log('PASS catalog='+cat.length+' launchUrls='+cat.filter(x=>x.demoUrl).length+' DOM bindings checked');

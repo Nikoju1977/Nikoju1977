@@ -11,7 +11,7 @@
   <meta name="color-scheme" content="dark">
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="./workspace.css">
   <title>Studio Niko Hub — Cinéma, IA & création</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a href="#accueil" class="brand" aria-label="Studio Niko — accueil"><span class="brand-mark">N<span class="brand-star">✦</span></span><span class="brand-word">STUDIO <b>NIKO</b><small>DESIGN / DIGITAL LAB</small></span></a>
-      <nav class="top-nav" aria-label="Navigation principale"><a href="#univers">Univers</a><a href="#catalogue">Applications</a><a href="#methodologie">Le studio</a></nav>
+      <nav class="top-nav" aria-label="Navigation principale"><a href="#univers">Univers</a><a href="#atelier">Atelier</a><a href="#catalogue">Applications</a><a href="#methodologie">Le studio</a></nav>
       <div class="header-actions"><button id="search-shortcut" class="search-mini" type="button" aria-label="Rechercher une application"><span>⌕</span><span>Rechercher</span><kbd>⌘ K</kbd></button><a class="nav-ron" href="https://nikoju1977.github.io/Ron-/" target="_blank" rel="noopener noreferrer"><span class="ron-dot"></span> Ouvrir RON <span aria-hidden="true">↗</span></a></div>
     </div>
   </header>
@@ -56,17 +56,41 @@
       <div class="ron-visual" aria-hidden="true"><div class="ron-orb"><div></div></div><div class="ron-visual-label">RON // ASSISTANT</div></div>
       <div class="ron-content"><span class="section-kicker">02 / ASSISTANT INTELLIGENT</span><h2 id="ron-title">Rencontrez <em>RON.</em></h2><p>Le compagnon multimodal de Studio Niko. Une interface vocale et agentique à explorer depuis son application dédiée.</p><div class="ron-tags"><span>ASSISTANCE VOCALE</span><span>AGENTS</span><span>RECHERCHE</span></div><a class="btn btn-primary" href="https://nikoju1977.github.io/Ron-/" target="_blank" rel="noopener noreferrer">Accéder à RON <span aria-hidden="true">↗</span></a><small>RON s'ouvre dans son application distincte. Un moteur IA et ses éventuelles clés/API doivent être configurés pour générer des réponses.</small></div>
     </section>
+
+    <section id="atelier" class="work-section wrap" aria-labelledby="work-title">
+      <div class="section-heading"><div><span class="section-kicker">03 / ATELIER CONNECTÉ</span><h2 id="work-title">Construisez votre <em>projet.</em></h2></div><p>Un espace local pour organiser vos idées et préparer un transfert volontaire vers Nikoassist.</p></div>
+      <div class="workspace-shell">
+        <div class="workspace-left"><div class="workspace-header"><div><span class="work-indicator"></span><b>MES PROJETS</b></div><span id="work-count" aria-live="polite">0 projet</span></div>
+          <form id="work-create" class="work-create"><label class="sr-only" for="work-name">Nom du projet</label><input id="work-name" type="text" placeholder="Ex. : Mon prochain court-métrage" maxlength="100" required>
+          <label class="sr-only" for="work-type">Univers du projet</label><select id="work-type"><option>Cinéma & Image</option><option>Musique & Audio</option><option>Art & 3D</option><option>Intelligence & Agents</option><option>Business & Services</option><option>Jeux & Expériences</option></select>
+          <button type="submit">Créer un projet <span>＋</span></button></form>
+          <div class="work-list" id="work-list" role="group" aria-label="Projets enregistrés"></div>
+          <div class="work-privacy"><span>♧</span> Les projets sont enregistrés uniquement sur cet appareil. Pas de compte, pas de stockage distant.</div>
+        </div>
+        <div class="workspace-right"><div class="work-empty" id="work-empty"><span>◇</span><h3>Donnez vie à une idée.</h3><p>Créez un projet, planifiez ses étapes et partagez les tâches avec Nikoassist lorsque vous le décidez.</p></div>
+          <div id="work-detail" hidden>
+            <div class="work-detail-top"><div><span id="work-category"></span><h3 id="work-title-text"></h3></div><button id="work-delete" type="button" aria-label="Supprimer le projet">Supprimer</button></div>
+            <label class="work-label" for="work-notes">Notes / intention artistique</label><textarea id="work-notes" rows="4" maxlength="5000" placeholder="Décrivez votre vision, vos références, vos objectifs…"></textarea>
+            <div class="work-taskhead"><b>Étapes & tâches</b><span id="work-taskcount">0</span></div>
+            <form id="work-taskform" class="work-taskform"><label class="sr-only" for="work-taskinput">Ajouter une étape</label><input id="work-taskinput" type="text" maxlength="160" placeholder="Nouvelle tâche…" required><button type="submit" aria-label="Ajouter une étape">＋</button></form>
+            <ul id="work-tasks" class="work-tasks" aria-label="Liste des tâches du projet"></ul>
+            <div class="work-actions"><button type="button" id="work-export">Exporter JSON ↓</button><button type="button" id="work-send" class="work-send">Envoyer les tâches à Nikoassist ↗</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="workspace-foot"><div><b>Importer un projet :</b> <label for="work-import" class="work-upload">Choisir un fichier JSON ↑</label><input id="work-import" type="file" accept=".json,application/json" hidden></div><span id="work-status" role="status" aria-live="polite">L'atelier n'ouvre aucune application externe sans votre action.</span></div>
+    </section>
     <section id="catalogue" class="catalog-section wrap">
-      <div class="section-heading"><div><span class="section-kicker">03 / LE CATALOGUE</span><h2>À vous de <em>créer.</em></h2></div><p>Découvrez les projets publics, leurs sources et les démonstrations indiquées par leur documentation.</p></div>
+      <div class="section-heading"><div><span class="section-kicker">04 / LE CATALOGUE</span><h2>À vous de <em>créer.</em></h2></div><p>Découvrez les projets publics, leurs sources et les démonstrations indiquées par leur documentation.</p></div>
       <div class="toolbar"><label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">Rechercher une application</span><input id="search" type="search" placeholder="Nom, fonction, technologie..." autocomplete="off"></label><label class="select-wrap"><span class="sr-only">Filtrer par univers</span><select id="category"><option value="all">Tous les univers</option></select></label><label class="select-wrap sort-wrap"><span class="sr-only">Trier</span><select id="sort"><option value="featured">À la une</option><option value="name">A → Z</option><option value="category">Par univers</option></select></label></div>
       <div class="diagnostic-panel" id="diagnostics" aria-label="Contrôle de disponibilité"><div class="diagnostic-copy"><strong><span class="diagnostic-pulse" aria-hidden="true"></span> Diagnostic des accès</strong><p>Vérifiez la réponse HTTP des applications avant ouverture. Ce contrôle ne valide pas leurs fonctions internes.</p></div><button class="btn btn-outline diagnostic-button" id="check-all" type="button">Tester les accès <span aria-hidden="true">↗</span></button><div class="diagnostic-results" id="health-summary" role="status" aria-live="polite"></div></div><div class="filter-strip"><div class="filter-tabs" role="group" aria-label="Filtrer les projets"><button class="filter-tab active" data-mode="all" type="button" aria-pressed="true">Tous les projets</button><button class="filter-tab" data-mode="demo" type="button" aria-pressed="false">Ouvrir une application</button><button class="filter-tab" data-mode="needs" type="button" aria-pressed="false">À configurer</button><button class="filter-tab" data-mode="favs" type="button" aria-pressed="false">Mes favoris <span>★</span></button></div><span id="results-count" role="status" aria-live="polite"></span></div>
       <div id="cards" class="cards-grid" aria-live="off"><p class="loading-state">Chargement du catalogue…</p></div>
       <div class="catalog-footnote"><span>ⓘ</span><p><b>Transparence :</b> un état Vercel « prêt » signifie que le déploiement est achevé, pas que toutes les fonctions de l'application marchent. Les autres liens proviennent de la documentation ; vous pouvez tester leur accès HTTP depuis le bouton Diagnostic. Le catalogue présente du code existant, sans garantir que chaque application soit déployée ou entièrement fonctionnelle. Les projets privés ne sont pas publiés ici.</p></div>
     </section>
-    <section id="methodologie" class="about-section"><div class="wrap about-inner"><div><span class="section-kicker">04 / STUDIO NIKO DESIGN</span><h2>Des histoires<br>qui deviennent <em>des outils.</em></h2></div><div><p>Studio Niko imagine des expériences à la rencontre du cinéma, de l'art interactif et de l'ingénierie logicielle. Un écosystème évolutif, pensé pour expérimenter librement et documenter clairement ses limites.</p><a href="https://github.com/Nikoju1977" target="_blank" rel="noopener noreferrer" class="text-link">Explorer le GitHub de Studio Niko <span aria-hidden="true">↗</span></a></div></div></section>
+    <section id="methodologie" class="about-section"><div class="wrap about-inner"><div><span class="section-kicker">05 / STUDIO NIKO DESIGN</span><h2>Des histoires<br>qui deviennent <em>des outils.</em></h2></div><div><p>Studio Niko imagine des expériences à la rencontre du cinéma, de l'art interactif et de l'ingénierie logicielle. Un écosystème évolutif, pensé pour expérimenter librement et documenter clairement ses limites.</p><a href="https://github.com/Nikoju1977" target="_blank" rel="noopener noreferrer" class="text-link">Explorer le GitHub de Studio Niko <span aria-hidden="true">↗</span></a></div></div></section>
   </main>
   <footer class="site-footer"><div class="wrap footer-inner"><a href="#accueil" class="footer-logo">N<span>✦</span></a><div><b>STUDIO NIKO DESIGN</b><small>Cinéma · Art numérique · Intelligence artificielle</small></div><span class="footer-copy">© <span id="year">2026</span> Studio Niko Design</span><a href="https://github.com/Nikoju1977" target="_blank" rel="noopener noreferrer">GITHUB ↗</a></div></footer>
   <div id="toast" role="status" aria-live="polite" class="toast" hidden></div>
-  <script src="./app.js" defer></script>
+  <script src="./app.js" defer></script><script src="./workspace.js" defer></script>
 </body>
 </html>
