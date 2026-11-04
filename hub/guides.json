@@ -1,0 +1,758 @@
+{
+  "version": 1,
+  "date": "2026-11-04",
+  "guides": [
+    {
+      "slug": "aegis-earth-mobile",
+      "title": "aegis-earth-mobile",
+      "category": "Cartographie & Nature",
+      "description": "Exploration géospatiale, météo, ciel et données publiques.",
+      "steps": [
+        "Ouvrez le globe et patientez pendant le chargement de la cartographie.",
+        "Déplacez la vue par glissement, puis utilisez le zoom pour explorer une zone.",
+        "Affichez les informations météo ou géospatiales disponibles et consultez leurs sources."
+      ],
+      "preparation": "Certaines informations nécessitent Internet et l'accès à des services tiers.",
+      "caution": null,
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/aegis-earth-mobile",
+      "launchUrl": "https://nikoju1977.github.io/aegis-earth-mobile/"
+    },
+    {
+      "slug": "agent-biometrique",
+      "title": "agent-biometrique",
+      "category": "Santé & Bien-être",
+      "description": "Interface expérimentale d'analyse biométrique.",
+      "steps": [
+        "Autorisez l'accès à la caméra uniquement si vous souhaitez essayer l'analyse.",
+        "Choisissez « Démarrer l'analyse » et placez votre visage dans le cadre.",
+        "Consultez les indicateurs à titre expérimental, puis arrêtez la caméra."
+      ],
+      "preparation": "Outil expérimental de suivi ou démonstration, non destiné au diagnostic ou aux décisions de traitement.",
+      "caution": "Indicateurs non médicaux, sans fiabilité clinique garantie.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/agent-biometrique",
+      "launchUrl": "https://nikoju1977.github.io/agent-biometrique/"
+    },
+    {
+      "slug": "applewatchcadrans",
+      "title": "applewatchcadrans",
+      "category": "Art & 3D",
+      "description": "Études et créations graphiques de cadrans.",
+      "steps": [
+        "Choisissez un style visuel de cadran parmi les propositions.",
+        "Réglez la présentation (aiguilles ou numérique), les couleurs et les détails.",
+        "Prévisualisez le rendu avant d'utiliser une éventuelle option d'export."
+      ],
+      "preparation": "Les performances varient selon le GPU du téléphone et les autorisations du navigateur.",
+      "caution": null,
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/applewatchcadrans",
+      "launchUrl": "https://nikoju1977.github.io/applewatchcadrans/"
+    },
+    {
+      "slug": "AutoEntrepreneur-1M",
+      "title": "AutoEntrepreneur-1M",
+      "category": "Business & Services",
+      "description": "Atelier de profils experts et outils de gestion d'entreprise.",
+      "steps": [
+        "Sélectionnez un domaine métier puis une spécialisation et un rôle.",
+        "Décrivez votre mission et choisissez les profils d'experts à mobiliser.",
+        "Consultez la synthèse méthodologique et exportez le résultat pour validation."
+      ],
+      "preparation": "Vérifiez les données et les sources avant toute décision professionnelle.",
+      "caution": "Les profils d'experts sont déterministes : pas un million d'agents IA indépendants.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/AutoEntrepreneur-1M",
+      "launchUrl": "https://nikoju1977.github.io/AutoEntrepreneur-1M/"
+    },
+    {
+      "slug": "aylina-is-cooking",
+      "title": "aylina-is-cooking",
+      "category": "Santé & Bien-être",
+      "description": "Calculateur de glucides/part et estimation liée à l'insuline — prototype non médical.",
+      "steps": [
+        "Renseignez la quantité de glucides du gâteau et le nombre de portions.",
+        "Vérifiez les informations saisies avant le calcul par portion.",
+        "N'utilisez jamais une estimation de dose affichée pour décider seul d'une injection d'insuline."
+      ],
+      "preparation": "Outil expérimental de suivi ou démonstration, non destiné au diagnostic ou aux décisions de traitement.",
+      "caution": "Prototype éducatif : ne calculez pas une dose d'insuline réelle à partir de ce résultat.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/aylina-is-cooking",
+      "launchUrl": "https://nikoju1977.github.io/aylina-is-cooking/"
+    },
+    {
+      "slug": "Bouh-delivery",
+      "title": "Bouh-delivery",
+      "category": "Jeux & Expériences",
+      "description": "Jeu d'arcade Halloween, conduite et défis.",
+      "steps": [
+        "Ouvrez le jeu et choisissez une mission ou un niveau disponible.",
+        "Lisez les commandes affichées et entraînez-vous au déplacement du véhicule.",
+        "Suivez l'objectif de la mission, puis reprenez le niveau en cas d'échec."
+      ],
+      "preparation": "Les commandes et les performances varient selon le téléphone et le navigateur.",
+      "caution": null,
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/Bouh-delivery",
+      "launchUrl": "https://nikoju1977.github.io/Bouh-delivery/"
+    },
+    {
+      "slug": "Boutique-morgane",
+      "title": "Boutique-morgane",
+      "category": "Arts & Symbolique",
+      "description": "Univers Morgane : vitrine, boutique, tarot et consultations.",
+      "steps": [
+        "Consultez les rubriques de présentation des produits et consultations si elles sont publiées.",
+        "Vérifiez le prix, la disponibilité et les conditions avant toute demande.",
+        "Ne réalisez un paiement que sur une page officielle dont le fonctionnement et la sécurité ont été confirmés."
+      ],
+      "preparation": "Contenus de création, de symbolique ou de divertissement.",
+      "caution": "Avant des ventes réelles, vérifier les paiements, la conformité et la disponibilité des articles.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/Boutique-morgane",
+      "launchUrl": null
+    },
+    {
+      "slug": "cockpit-mecaria",
+      "title": "cockpit-mecaria",
+      "category": "Business & Services",
+      "description": "Cockpit qualité, métrologie et production industrielle.",
+      "steps": [
+        "Sélectionnez le module de pilotage ou de qualité concerné.",
+        "Renseignez ou importez les données nécessaires aux indicateurs.",
+        "Contrôlez les sources et les calculs avant d'utiliser un rapport en entreprise."
+      ],
+      "preparation": "Vérifiez les données et les sources avant toute décision professionnelle.",
+      "caution": null,
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/cockpit-mecaria",
+      "launchUrl": "https://nikoju1977.github.io/cockpit-mecaria/"
+    },
+    {
+      "slug": "compagnon-diabete",
+      "title": "compagnon-diabete",
+      "category": "Archives & Variantes",
+      "description": "Variante de compagnon de suivi du diabète.",
+      "steps": [
+        "Consultez les écrans de suivi disponibles sans connecter de dispositif réel au départ.",
+        "Renseignez uniquement des données de démonstration lors des premiers essais.",
+        "Vérifiez toute valeur auprès d'un dispositif médical certifié avant décision."
+      ],
+      "preparation": "Version secondaire ou historique : ses fonctions peuvent différer des projets principaux.",
+      "caution": "Application expérimentale non certifiée, ne commande pas une pompe à insuline.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/compagnon-diabete",
+      "launchUrl": "https://nikoju1977.github.io/compagnon-diabete/"
+    },
+    {
+      "slug": "Cosmo-citrouille",
+      "title": "Cosmo-citrouille",
+      "category": "Jeux & Expériences",
+      "description": "Aventure spatiale d'Halloween, 140 mondes annoncés.",
+      "steps": [
+        "Lancez le jeu et choisissez un monde accessible.",
+        "Utilisez les commandes tactiles ou clavier indiquées à l'écran.",
+        "Collectez les objectifs et progressez ; réduisez les effets si le téléphone ralentit."
+      ],
+      "preparation": "Les commandes et les performances varient selon le téléphone et le navigateur.",
+      "caution": null,
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/Cosmo-citrouille",
+      "launchUrl": "https://nikoju1977.github.io/Cosmo-citrouille/"
+    },
+    {
+      "slug": "Dbmetre-pro",
+      "title": "Dbmetre-pro",
+      "category": "Musique & Audio",
+      "description": "Analyseur spectral, mesure dBFS et enregistrement microphone.",
+      "steps": [
+        "Autorisez le microphone après avoir vérifié votre périphérique d'entrée.",
+        "Démarrez une mesure, puis consultez les niveaux dBFS et le spectre.",
+        "Arrêtez la capture et exportez les données si l'option est proposée."
+      ],
+      "preparation": "Pour entendre le son, appuyez sur un bouton audio dans la page ; le navigateur peut bloquer l'audio automatique.",
+      "caution": "Une valeur dBFS n'est pas une mesure certifiée de pression acoustique dB SPL.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/Dbmetre-pro",
+      "launchUrl": "https://nikoju1977.github.io/Dbmetre-pro/"
+    },
+    {
+      "slug": "dermato-ai",
+      "title": "dermato-ai",
+      "category": "Santé & Bien-être",
+      "description": "Exploration visuelle dermatologique, sans diagnostic.",
+      "steps": [
+        "Accordez l'accès à la caméra seulement pour un essai volontaire.",
+        "Placez la zone à observer dans une lumière claire et homogène.",
+        "Lisez les résultats comme des indications expérimentales, jamais un diagnostic."
+      ],
+      "preparation": "Outil expérimental de suivi ou démonstration, non destiné au diagnostic ou aux décisions de traitement.",
+      "caution": "Ne remplace pas un dermatologue.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/dermato-ai",
+      "launchUrl": "https://nikoju1977.github.io/dermato-ai/"
+    },
+    {
+      "slug": "EBM-BRETONNE.",
+      "title": "EBM-BRETONNE.",
+      "category": "Musique & Audio",
+      "description": "Cyber-Fest-Noz : groovebox EBM aux influences bretonnes.",
+      "steps": [
+        "Appuyez sur « Initialiser l'audio » pour autoriser le son.",
+        "Réglez tempo, swing et tonalité, puis programmez les patterns.",
+        "Lancez la lecture et ajustez les niveaux avant d'enregistrer votre travail si l'option est disponible."
+      ],
+      "preparation": "Pour entendre le son, appuyez sur un bouton audio dans la page ; le navigateur peut bloquer l'audio automatique.",
+      "caution": null,
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/EBM-BRETONNE.",
+      "launchUrl": "https://nikoju1977.github.io/EBM-BRETONNE./"
+    },
+    {
+      "slug": "fibrobot",
+      "title": "fibrobot",
+      "category": "Santé & Bien-être",
+      "description": "Compagnon fibromyalgie, journal et outils de bien-être.",
+      "steps": [
+        "Créez ou déverrouillez votre coffre local avec votre phrase secrète.",
+        "Renseignez votre journal, vos tâches et les modules de suivi utiles.",
+        "Pour les réponses Agnes AI, configurez une clé privée puis testez explicitement la connexion."
+      ],
+      "preparation": "Outil expérimental de suivi ou démonstration, non destiné au diagnostic ou aux décisions de traitement.",
+      "caution": "Application de bien-être et de suivi, non dispositif médical ; conserver les clés et sauvegardes en sécurité.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/fibrobot",
+      "launchUrl": "https://nikoju1977.github.io/fibrobot/"
+    },
+    {
+      "slug": "fibrocare",
+      "title": "fibrocare",
+      "category": "Santé & Bien-être",
+      "description": "Journal de suivi et d'organisation du quotidien.",
+      "steps": [
+        "Commencez par le suivi quotidien et ajoutez une entrée datée.",
+        "Consultez les synthèses et tendances descriptives de votre journal.",
+        "Sauvegardez vos données si une option d'export est disponible."
+      ],
+      "preparation": "Outil expérimental de suivi ou démonstration, non destiné au diagnostic ou aux décisions de traitement.",
+      "caution": "Suivi personnel expérimental non médical.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/fibrocare",
+      "launchUrl": "https://nikoju1977.github.io/fibrocare/"
+    },
+    {
+      "slug": "galerie-studio-niko",
+      "title": "galerie-studio-niko",
+      "category": "Art & 3D",
+      "description": "Galerie immersive 3D pour exposer films, images, sculptures et sons.",
+      "steps": [
+        "Entrez dans la salle 3D et familiarisez-vous avec les déplacements.",
+        "Importez une image, une vidéo, un son ou un modèle 3D compatible.",
+        "Placez les œuvres, personnalisez les cartels et la lumière, puis sauvegardez votre exposition."
+      ],
+      "preparation": "Les performances varient selon le GPU du téléphone et les autorisations du navigateur.",
+      "caution": "La publication partagée et les traductions IA demandent des services externes configurés.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/galerie-studio-niko",
+      "launchUrl": "https://galerie-studio-niko.vercel.app"
+    },
+    {
+      "slug": "handimonde",
+      "title": "handimonde",
+      "category": "Cartographie & Nature",
+      "description": "Carte participative des lieux et équipements accessibles.",
+      "steps": [
+        "Ouvrez la carte et choisissez une zone à explorer.",
+        "Utilisez les filtres et fiches d'accessibilité disponibles.",
+        "Recoupez les informations importantes avec des sources officielles avant un déplacement."
+      ],
+      "preparation": "Certaines informations nécessitent Internet et l'accès à des services tiers.",
+      "caution": null,
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/handimonde",
+      "launchUrl": "https://handimonde.vercel.app"
+    },
+    {
+      "slug": "ia-studio-cine",
+      "title": "ia-studio-cine",
+      "category": "Cinéma & Image",
+      "description": "META-STUDIO PRO V5 : création audiovisuelle, timeline, looks et exports.",
+      "steps": [
+        "Importez vos images, vidéos ou sons dans la médiathèque.",
+        "Ajoutez les éléments à la timeline et ajustez les pistes et looks disponibles.",
+        "Exportez le projet (JSON/EDL/OTIO/FCPXML) ; la timeline n'est pas encodée en MP4 final."
+      ],
+      "preparation": "Prévoyez de l'espace mémoire et vérifiez l'état de votre projet avant fermeture.",
+      "caution": "Pas d'export MP4 assemblé à partir de la timeline. Certains appels Agnes nécessitent une clé et peuvent être bloqués par CORS.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/ia-studio-cine",
+      "launchUrl": "https://nikoju1977.github.io/ia-studio-cine/"
+    },
+    {
+      "slug": "jarvisdiabete",
+      "title": "jarvisdiabete",
+      "category": "Santé & Bien-être",
+      "description": "Compagnon de suivi du diabète, prototype expérimental.",
+      "steps": [
+        "Ouvrez l'assistant et consultez les outils de suivi disponibles.",
+        "Utilisez la saisie ou la voix si le navigateur l'autorise.",
+        "Contrôlez toute information médicale auprès de votre équipe soignante."
+      ],
+      "preparation": "Outil expérimental de suivi ou démonstration, non destiné au diagnostic ou aux décisions de traitement.",
+      "caution": "Assistant non certifié ; un professionnel de santé reste indispensable.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/jarvisdiabete",
+      "launchUrl": "https://nikoju1977.github.io/jarvisdiabete/"
+    },
+    {
+      "slug": "job-search",
+      "title": "job-search",
+      "category": "Business & Services",
+      "description": "Niko Emploi : recherche, suivi et rapprochement d'offres.",
+      "steps": [
+        "Indiquez le métier, les mots-clés et la zone de recherche.",
+        "Consultez les offres et vérifiez systématiquement leur source et leur date.",
+        "Utilisez un compte candidat seulement si l'authentification et les services associés sont configurés."
+      ],
+      "preparation": "Vérifiez les données et les sources avant toute décision professionnelle.",
+      "caution": null,
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/job-search",
+      "launchUrl": "https://niko-emploi.vercel.app"
+    },
+    {
+      "slug": "l-ultime-confrontation",
+      "title": "l-ultime-confrontation",
+      "category": "Jeux & Expériences",
+      "description": "Projet narratif interactif.",
+      "steps": [
+        "Ouvrez le récit et sélectionnez le chapitre ou la section disponible.",
+        "Lisez le texte et activez éventuellement l'ambiance sonore.",
+        "Utilisez les commandes de lecture proposées pour poursuivre l'expérience."
+      ],
+      "preparation": "Les commandes et les performances varient selon le téléphone et le navigateur.",
+      "caution": null,
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/l-ultime-confrontation",
+      "launchUrl": "https://nikoju1977.github.io/l-ultime-confrontation/"
+    },
+    {
+      "slug": "le-jardin-de-niko",
+      "title": "le-jardin-de-niko",
+      "category": "Archives & Variantes",
+      "description": "Variante Terroir Synthétique de l'Oracle du Jardinier.",
+      "steps": [
+        "Choisissez votre commune ou votre environnement de jardinage.",
+        "Consultez les informations météo et les recommandations saisonnières.",
+        "Planifiez vos interventions après vérification des conditions réelles."
+      ],
+      "preparation": "Version secondaire ou historique : ses fonctions peuvent différer des projets principaux.",
+      "caution": null,
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/le-jardin-de-niko",
+      "launchUrl": "https://nikoju1977.github.io/le-jardin-de-niko/"
+    },
+    {
+      "slug": "les-annales-akashiques",
+      "title": "les-annales-akashiques",
+      "category": "Arts & Symbolique",
+      "description": "Expérience créative et symbolique.",
+      "steps": [
+        "Accédez à l'oracle et choisissez l'expérience symbolique disponible.",
+        "Renseignez uniquement les informations que vous souhaitez partager.",
+        "Lisez l'interprétation comme une création spirituelle ou narrative."
+      ],
+      "preparation": "Contenus de création, de symbolique ou de divertissement.",
+      "caution": null,
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/les-annales-akashiques",
+      "launchUrl": "https://nikoju1977.github.io/les-annales-akashiques/"
+    },
+    {
+      "slug": "medicalvisionproai",
+      "title": "medicalvisionproai",
+      "category": "Santé & Bien-être",
+      "description": "Visualisation d'images et de séries DICOM, prototype non certifié.",
+      "steps": [
+        "Importez un fichier médical de test ou une série DICOM non sensible.",
+        "Explorez les fonctions de visualisation et ajustez l'affichage.",
+        "Exportez uniquement après contrôle ; aucune fonction ne remplace une interprétation médicale qualifiée."
+      ],
+      "preparation": "Outil expérimental de suivi ou démonstration, non destiné au diagnostic ou aux décisions de traitement.",
+      "caution": "Visualiseur expérimental non certifié pour un diagnostic.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/medicalvisionproai",
+      "launchUrl": "https://nikoju1977.github.io/medicalvisionproai/"
+    },
+    {
+      "slug": "Medivision-ai-pro",
+      "title": "Medivision-ai-pro",
+      "category": "Archives & Variantes",
+      "description": "Ancienne variante de MedVision AI Pro.",
+      "steps": [
+        "Consultez le dépôt et sa documentation de version historique.",
+        "Vérifiez les prérequis avant d'essayer les fonctions d'imagerie.",
+        "Préférez la version active lorsque celle-ci est disponible."
+      ],
+      "preparation": "Version secondaire ou historique : ses fonctions peuvent différer des projets principaux.",
+      "caution": "Ancienne variante. Aucune qualification médicale revendiquée.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/Medivision-ai-pro",
+      "launchUrl": null
+    },
+    {
+      "slug": "Metrology-OS",
+      "title": "Metrology-OS",
+      "category": "Business & Services",
+      "description": "Suivi métrologique d'instruments et certificats.",
+      "steps": [
+        "Ouvrez le tableau d'instruments et recherchez un moyen de mesure.",
+        "Consultez ses échéances, procédures ou certificats enregistrés.",
+        "Vérifiez et validez les données avant toute décision de conformité."
+      ],
+      "preparation": "Vérifiez les données et les sources avant toute décision professionnelle.",
+      "caution": "Prototype non qualifié pour produire un certificat accrédité.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/Metrology-OS",
+      "launchUrl": "https://metrology-os-demo.vercel.app/"
+    },
+    {
+      "slug": "miaotris",
+      "title": "miaotris",
+      "category": "Jeux & Expériences",
+      "description": "Jeu de blocs félin dans le navigateur.",
+      "steps": [
+        "Ouvrez l'interface du jeu et démarrez la partie.",
+        "Utilisez les touches ou commandes tactiles indiquées.",
+        "Suivez la progression et recommencez une partie pour améliorer votre score."
+      ],
+      "preparation": "Les commandes et les performances varient selon le téléphone et le navigateur.",
+      "caution": null,
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/miaotris",
+      "launchUrl": "https://alyina-vampire-of-halloween.vercel.app"
+    },
+    {
+      "slug": "N8V",
+      "title": "N8V",
+      "category": "Cinéma & Image",
+      "description": "Projet de format vidéo expérimental — dépôt vide.",
+      "steps": [
+        "Consultez les objectifs expérimentaux du projet de codec.",
+        "Vérifiez l'existence de builds, d'exemples et de résultats de validation.",
+        "N'utilisez pas N8V comme encodeur livré : le dépôt est encore en préparation."
+      ],
+      "preparation": "Prévoyez de l'espace mémoire et vérifiez l'état de votre projet avant fermeture.",
+      "caution": "Projet en préparation : aucune application livrée.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/N8V",
+      "launchUrl": null
+    },
+    {
+      "slug": "Neural-Art-mars-2026",
+      "title": "Neural-Art-mars-2026",
+      "category": "Art & 3D",
+      "description": "Laboratoire de peinture numérique et de compositions WebGL.",
+      "steps": [
+        "Ouvrez l'atelier et vérifiez les autorisations caméra si vous souhaitez les utiliser.",
+        "Choisissez un pinceau ou un mode visuel avant de commencer votre composition.",
+        "Exportez votre création ; les fonctions Mistral nécessitent une clé valide."
+      ],
+      "preparation": "Les performances varient selon le GPU du téléphone et les autorisations du navigateur.",
+      "caution": "La caméra et les appels IA sont conditionnés aux autorisations et à la configuration du service.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/Neural-Art-mars-2026",
+      "launchUrl": "https://nikoju1977.github.io/Neural-Art-mars-2026/"
+    },
+    {
+      "slug": "Niko-Ultravision",
+      "title": "Niko-Ultravision",
+      "category": "Cinéma & Image",
+      "description": "Restauration et super-résolution locale d'images et de vidéos.",
+      "steps": [
+        "Déposez une image ou vidéo dans la zone d'import.",
+        "Choisissez Canvas pour un rééchantillonnage fidèle ou un modèle ONNX pour une super-résolution IA.",
+        "Vérifiez l'aperçu et les détails générés avant d'exporter le résultat."
+      ],
+      "preparation": "Prévoyez de l'espace mémoire et vérifiez l'état de votre projet avant fermeture.",
+      "caution": "Le mode IA peut nécessiter le chargement d'un grand modèle, WebGPU ou WASM ; il peut introduire de faux détails.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/Niko-Ultravision",
+      "launchUrl": "https://nikoju1977.github.io/Niko-Ultravision/"
+    },
+    {
+      "slug": "Nikoassist",
+      "title": "Nikoassist",
+      "category": "Intelligence & Agents",
+      "description": "Assistant web : météo, Wikipédia, calculatrice, tâches locales et dictée. Moteur Python distinct.",
+      "steps": [
+        "Ouvrez l'assistant web et saisissez « Météo à Nantes », « Qui est Alice Guy ? » ou « Calcule 2+2 ».",
+        "Ajoutez et cochez des tâches dans la colonne personnelle.",
+        "Utilisez « Lire les réponses » ou la dictée si votre navigateur le permet."
+      ],
+      "preparation": "Les moteurs IA et les commandes externes exigent parfois un fournisseur, des accès réseau ou une autorisation.",
+      "caution": "Les outils web gratuits fonctionnent sans clé ; le moteur Python multi-agent n'est pas raccordé à cette interface.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/Nikoassist",
+      "launchUrl": "https://nikoassist-pwa.vercel.app/"
+    },
+    {
+      "slug": "nikogroove",
+      "title": "nikogroove",
+      "category": "Archives & Variantes",
+      "description": "Variante historique de Cyber-Fest-Noz.",
+      "steps": [
+        "Initialisez l'audio d'un geste utilisateur.",
+        "Choisissez un pattern, réglez les paramètres du groove et lancez la lecture.",
+        "Enregistrez votre composition lorsque la fonction est proposée."
+      ],
+      "preparation": "Version secondaire ou historique : ses fonctions peuvent différer des projets principaux.",
+      "caution": null,
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/nikogroove",
+      "launchUrl": "https://nikoju1977.github.io/nikogroove/"
+    },
+    {
+      "slug": "Nikoju1977",
+      "title": "Nikoju1977",
+      "category": "Studio & Portfolio",
+      "description": "Profil et documentation de l'écosystème Studio Niko.",
+      "steps": [
+        "Ouvrez le profil Studio Niko puis son catalogue de projets.",
+        "Choisissez une application adaptée à votre usage.",
+        "Consultez la documentation et les contraintes du dépôt avant installation."
+      ],
+      "preparation": "Ce dépôt sert de présentation et de documentation.",
+      "caution": null,
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/Nikoju1977",
+      "launchUrl": null
+    },
+    {
+      "slug": "oeil-hermes",
+      "title": "oeil-hermes",
+      "category": "Arts & Symbolique",
+      "description": "Grimoire numérique, correspondances et calculs astrologiques.",
+      "steps": [
+        "Sélectionnez la langue et cherchez une notion dans le grimoire.",
+        "Parcourez les fiches symboliques et leurs correspondances.",
+        "Utilisez le contenu comme ressource culturelle et créative."
+      ],
+      "preparation": "Contenus de création, de symbolique ou de divertissement.",
+      "caution": null,
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/oeil-hermes",
+      "launchUrl": "https://nikoju1977.github.io/oeil-hermes/"
+    },
+    {
+      "slug": "OPENVITA-DT1",
+      "title": "OPENVITA-DT1",
+      "category": "Santé & Bien-être",
+      "description": "Suivi expérimental du diabète de type 1 via Nightscout.",
+      "steps": [
+        "Consultez le tableau de bord et lisez les informations de connexion Nightscout.",
+        "N'entrez des données réelles que dans un environnement dont vous maîtrisez la confidentialité.",
+        "Vérifiez les mesures et décisions thérapeutiques sur les outils médicaux de référence."
+      ],
+      "preparation": "Outil expérimental de suivi ou démonstration, non destiné au diagnostic ou aux décisions de traitement.",
+      "caution": "Ne modifiez aucun traitement ou dose sur la base de cet outil seul.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/OPENVITA-DT1",
+      "launchUrl": "https://nikoju1977.github.io/OPENVITA-DT1/"
+    },
+    {
+      "slug": "oracle-du-jardinier",
+      "title": "oracle-du-jardinier",
+      "category": "Cartographie & Nature",
+      "description": "Assistant jardin et permaculture, météo, tâches et calendrier.",
+      "steps": [
+        "Choisissez une localisation et ouvrez le briefing jardin.",
+        "Consultez la météo et les recommandations du calendrier.",
+        "Planifiez puis vérifiez vos travaux selon le terrain et la saison."
+      ],
+      "preparation": "Certaines informations nécessitent Internet et l'accès à des services tiers.",
+      "caution": null,
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/oracle-du-jardinier",
+      "launchUrl": "https://oracle-du-jardinier.vercel.app"
+    },
+    {
+      "slug": "presentation-medtronic",
+      "title": "presentation-medtronic",
+      "category": "Business & Services",
+      "description": "Support de présentation technique.",
+      "steps": [
+        "Ouvrez les documents de présentation présents dans le dépôt.",
+        "Vérifiez l'ordre des diapositives et les mentions de sources.",
+        "N'utilisez pas de données internes sans droits de diffusion."
+      ],
+      "preparation": "Vérifiez les données et les sources avant toute décision professionnelle.",
+      "caution": null,
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/presentation-medtronic",
+      "launchUrl": null
+    },
+    {
+      "slug": "purescanai",
+      "title": "purescanai",
+      "category": "Santé & Bien-être",
+      "description": "Interface expérimentale d'analyse visuelle de la peau.",
+      "steps": [
+        "Autorisez la caméra uniquement pour tester l'interface.",
+        "Cadrez la zone de peau et consultez l'analyse expérimentale.",
+        "Pour toute lésion ou changement inquiétant, consultez un dermatologue."
+      ],
+      "preparation": "Outil expérimental de suivi ou démonstration, non destiné au diagnostic ou aux décisions de traitement.",
+      "caution": "Ne remplace pas une consultation médicale.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/purescanai",
+      "launchUrl": "https://nikoju1977.github.io/purescanai/"
+    },
+    {
+      "slug": "radar-de-niko",
+      "title": "radar-de-niko",
+      "category": "Business & Services",
+      "description": "Radar 44 : revue de presse, sources régionales et services.",
+      "steps": [
+        "Ouvrez Radar 44 et consultez les dernières informations reçues.",
+        "Filtrez les articles par thème ou par territoire ; ouvrez leur source d'origine.",
+        "Utilisez les modules pratiques (météo, vigilance, emploi) en vérifiant leur date."
+      ],
+      "preparation": "Vérifiez les données et les sources avant toute décision professionnelle.",
+      "caution": null,
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/radar-de-niko",
+      "launchUrl": "https://nikoju1977.github.io/radar-de-niko/"
+    },
+    {
+      "slug": "Ron-",
+      "title": "Ron-",
+      "category": "Intelligence & Agents",
+      "description": "RON : compagnon multimodal, voix et assistance multi-agents.",
+      "steps": [
+        "Ouvrez RON et choisissez un mode d'assistance adapté.",
+        "Si nécessaire, configurez un fournisseur de modèles ou un serveur local compatible.",
+        "Testez la connexion avant d'utiliser la conversation et les outils vocaux."
+      ],
+      "preparation": "Les moteurs IA et les commandes externes exigent parfois un fournisseur, des accès réseau ou une autorisation.",
+      "caution": "Une page qui s'ouvre ne garantit pas qu'un moteur de langage soit disponible.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/Ron-",
+      "launchUrl": "https://nikoju1977.github.io/Ron-/"
+    },
+    {
+      "slug": "Sage-companion",
+      "title": "Sage-companion",
+      "category": "Intelligence & Agents",
+      "description": "Compagnon vocal avec outils et commandes confirmées.",
+      "steps": [
+        "Ouvrez les réglages et configurez votre propre clé Mistral si vous souhaitez les réponses IA.",
+        "Choisissez la langue et autorisez le microphone si nécessaire.",
+        "Posez une question puis vérifiez la réponse avant toute action externe."
+      ],
+      "preparation": "Les moteurs IA et les commandes externes exigent parfois un fournisseur, des accès réseau ou une autorisation.",
+      "caution": null,
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/Sage-companion",
+      "launchUrl": "https://nikoju1977.github.io/Sage-companion/"
+    },
+    {
+      "slug": "SCAN-BIOMEDICAL",
+      "title": "SCAN-BIOMEDICAL",
+      "category": "Santé & Bien-être",
+      "description": "Prototype de caméra et indicateurs biométriques.",
+      "steps": [
+        "Autorisez la caméra puis démarrez le flux vidéo.",
+        "Observez les indicateurs affichés à titre démonstratif.",
+        "Arrêtez la caméra après l'essai ; ne les utilisez pas pour une décision médicale."
+      ],
+      "preparation": "Outil expérimental de suivi ou démonstration, non destiné au diagnostic ou aux décisions de traitement.",
+      "caution": "Indicateurs de démonstration, non mesures médicales.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/SCAN-BIOMEDICAL",
+      "launchUrl": "https://nikoju1977.github.io/SCAN-BIOMEDICAL/"
+    },
+    {
+      "slug": "tarot-de-niko",
+      "title": "tarot-de-niko",
+      "category": "Arts & Symbolique",
+      "description": "Tarot symbolique : 78 arcanes, grimoire et tirages.",
+      "steps": [
+        "Choisissez un type de tirage et prenez connaissance des cartes proposées.",
+        "Découvrez la signification des arcanes et rédigez votre interprétation.",
+        "Sauvegardez ou exportez un tirage si l'interface offre cette possibilité."
+      ],
+      "preparation": "Contenus de création, de symbolique ou de divertissement.",
+      "caution": null,
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/tarot-de-niko",
+      "launchUrl": "https://nikoju1977.github.io/tarot-de-niko/"
+    },
+    {
+      "slug": "the-lovestronautes-machine",
+      "title": "the-lovestronautes-machine",
+      "category": "Musique & Audio",
+      "description": "Groovebox, synthèse Web Audio, composition, MIDI et exports.",
+      "steps": [
+        "Initialisez l'audio d'un clic ou toucher avant toute lecture.",
+        "Programmez les patterns et ouvrez « Composer un morceau » pour construire clips et sections.",
+        "Réglez le mixeur, vérifiez les synthés, puis exportez MIDI/WAV/MP3 selon les options disponibles."
+      ],
+      "preparation": "Pour entendre le son, appuyez sur un bouton audio dans la page ; le navigateur peut bloquer l'audio automatique.",
+      "caution": "Sur mobile, autorisez l'audio par un geste et gardez l'application ouverte pendant l'export.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/the-lovestronautes-machine",
+      "launchUrl": "https://nikoju1977.github.io/the-lovestronautes-machine/"
+    },
+    {
+      "slug": "Vision-IA",
+      "title": "Vision-IA",
+      "category": "Cinéma & Image",
+      "description": "Assistant de réalisation : scénario, découpage, conducteur et dossiers de production.",
+      "steps": [
+        "Importez les documents du projet dans le classeur du film.",
+        "Travaillez successivement la note d'intention, le découpage technique et le conducteur.",
+        "Vérifiez les faits extraits du scénario avant de produire le dossier exportable."
+      ],
+      "preparation": "Prévoyez de l'espace mémoire et vérifiez l'état de votre projet avant fermeture.",
+      "caution": "Les contenus créatifs et les analyses IA nécessitent vérification humaine et fournisseurs configurés.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/Vision-IA",
+      "launchUrl": "https://nikoju1977.github.io/Vision-IA/"
+    },
+    {
+      "slug": "Wan2GP",
+      "title": "Wan2GP",
+      "category": "Cinéma & Image",
+      "description": "Moteur de génération multimodale lourd, nécessite une machine GPU.",
+      "steps": [
+        "Consultez les instructions d'installation et vérifiez la disponibilité d'un GPU compatible.",
+        "Installez le moteur sur une machine ou un serveur approprié, pas sur GitHub Pages.",
+        "Chargez un modèle autorisé puis suivez la documentation de génération et d'export."
+      ],
+      "preparation": "Prévoyez de l'espace mémoire et vérifiez l'état de votre projet avant fermeture.",
+      "caution": "Nécessite un serveur GPU, des modèles et une installation ; ce n'est pas une application web gratuite autonome.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/Wan2GP",
+      "launchUrl": null
+    },
+    {
+      "slug": "White-hat",
+      "title": "White-hat",
+      "category": "Sécurité & Outils",
+      "description": "AEGIS : cockpit de contrôle défensif des dépôts.",
+      "steps": [
+        "Lancez l'inventaire des dépôts publics GitHub.",
+        "Consultez les vérifications défensives et leur niveau de gravité.",
+        "Documentez les constats puis exportez un rapport sans modifier ni attaquer d'autres systèmes."
+      ],
+      "preparation": "Utilisation défensive et autorisée uniquement.",
+      "caution": "Audit heuristique défensif, pas une garantie d'absence de vulnérabilité.",
+      "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
+      "repoUrl": "https://github.com/Nikoju1977/White-hat",
+      "launchUrl": "https://aegis-white-hat.vercel.app/"
+    }
+  ]
+}
