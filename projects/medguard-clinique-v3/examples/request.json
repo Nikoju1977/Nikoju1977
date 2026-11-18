@@ -1,0 +1,14 @@
+{
+  "answer": "Le matériel fictif doit être contrôlé avant usage.",
+  "sources": [
+    {
+      "id": "ref-synthetique",
+      "title": "Document purement fictif (exemple technique)",
+      "version": "1.0",
+      "reviewer": "Utilisateur de démonstration",
+      "reviewed": true,
+      "source_url": "",
+      "content": "Le matériel fictif doit être contrôlé avant usage."
+    }
+  ]
+}

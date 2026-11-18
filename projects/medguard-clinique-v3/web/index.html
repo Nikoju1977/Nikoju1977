@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1421">
+  <meta name="description" content="MEDGUARD CLINIQUE — prototype local de sécurité et de gouvernance, non certifié pour un usage médical.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>MEDGUARD CLINIQUE · Evidence & Gouvernance</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <script src="engine.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"><span>+</span></div>
+        <div><div class="brand-name">MEDGUARD<span class="brand-accent"> AI</span></div><div class="brand-sub">EVIDENCE & GOUVERNANCE // v3.0</div></div>
+      </div>
+      <div class="top-right"><span class="offline-dot"></span> Traitement local <span class="status-pill">Prototype non certifié · Mode local</span></div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="eyebrow">CONTRÔLE TEXTUEL LOCAL • MODE RECHERCHE NON CERTIFIÉ</div>
+        <h1>Une réponse sans preuve<br><em>ne doit pas passer.</em></h1>
+        <p>Analyse les affirmations d'une IA face à un corpus de référence. Toute affirmation non retrouvée textuellement est bloquée. Une correspondance <strong>n'est jamais une validation médicale</strong>.</p>
+        <div class="hero-bottom"><div><span class="hero-number">00</span><span class="hero-small">approbation automatique<br>en contexte médical</span></div><div class="hero-divider"></div><div><span class="hero-number">0<span class="unit"> </span></span><span class="hero-small">validation clinique<br>automatique</span></div></div>
+      </section>
+      <nav class="tabs" aria-label="Sections de l'application">
+        <button class="tab active" type="button" data-tab="review" aria-current="page">01 / Vérification</button>
+        <button class="tab" type="button" data-tab="integration">02 / API & intégration</button>
+        <button class="tab" type="button" data-tab="protocol">03 / Limites & protocole</button>
+        <button class="tab" type="button" data-tab="governance">04 / RGPD & validation</button>
+      </nav>
+      <section id="review" class="view active" aria-label="Vérification textuelle">
+        <div class="notice"><span class="notice-icon" aria-hidden="true">!</span><div><strong>Sécurité clinique</strong><p>Ne collez aucune information permettant d'identifier un patient. Ce prototype ne diagnostique pas, ne vérifie pas la fiabilité des documents et ne remplace jamais un professionnel de santé.</p></div></div>
+        <div class="workspace">
+          <section class="panel source-panel" aria-labelledby="source-title">
+            <div class="panel-head"><div class="panel-kicker">ÉTAPE 01</div><div class="panel-title-row"><h2 id="source-title">Bibliothèque de preuves</h2><span class="count-chip" id="sourceCount">0 document</span></div><p>Ajoutez le texte de références que vous avez examinées. La provenance déclarée n'est pas authentifiée.</p></div>
+            <form id="sourceForm" autocomplete="off">
+              <label for="srcTitle">Titre du document <span class="required">*</span></label>
+              <input id="srcTitle" required maxlength="200" placeholder="Ex. Référentiel interne validé">
+              <div class="two-fields"><div><label for="srcVersion">Version / date <span class="required">*</span></label><input id="srcVersion" required maxlength="80" placeholder="v1 · 2026-11-18"></div><div><label for="srcReviewer">Relecteur déclaré <span class="required">*</span></label><input id="srcReviewer" required maxlength="120" placeholder="Nom / fonction"></div></div>
+              <label for="srcUrl">Adresse de provenance (facultatif)</label><input id="srcUrl" type="url" maxlength="500" placeholder="https://…">
+              <label for="srcText">Contenu de référence <span class="required">*</span></label>
+              <textarea id="srcText" required maxlength="300000" rows="6" placeholder="Une affirmation par phrase ou par ligne. Préférez des références versionnées et actualisées."></textarea>
+              <div class="file-row"><label for="sourceFile" class="file-label">↥ Importer .txt / .md</label><input id="sourceFile" type="file" accept=".txt,.md,text/plain,text/markdown"><span id="fileInfo">Aucune pièce jointe</span></div>
+              <label class="checkline"><input id="srcReviewed" type="checkbox" required><span>Je déclare avoir examiné cette source et sa provenance. Ceci ne constitue pas une authentification professionnelle.</span></label>
+              <button class="btn btn-outline full" type="submit">+ Ajouter à la bibliothèque</button>
+            </form>
+            <div class="source-list-title">DOCUMENTS CHARGÉS</div><div id="sourceList" class="source-list"><p class="empty-mini">Aucune référence. Une réponse ne peut pas être autorisée sans corpus.</p></div>
+          </section>
+          <section class="panel answer-panel" aria-labelledby="answer-title">
+            <div class="panel-head"><div class="panel-kicker">ÉTAPE 02</div><h2 id="answer-title">Réponse de l'IA à contrôler</h2><p>Collez la sortie de votre modèle (Mistral, ChatGPT, système RAG, etc.). Le moteur analyse chaque phrase séparément.</p></div>
+            <label for="answerText">Texte de la réponse</label>
+            <textarea id="answerText" class="answer-text" rows="12" maxlength="100000" placeholder="Collez ici la réponse générée par votre IA médicale…"></textarea>
+            <div class="input-meta"><span id="charCounter">0 / 100 000 caractères</span><span>Aucun envoi réseau</span></div>
+            <div class="actions"><button id="checkBtn" class="btn btn-primary" type="button">Analyser & décider <span aria-hidden="true">↗</span></button><button id="exampleBtn" class="btn btn-subtle" type="button">Charger un exemple fictif</button><button id="resetBtn" class="btn btn-subtle" type="button">Tout effacer</button></div>
+            <div id="results" class="results" aria-live="polite">
+              <div class="result-placeholder"><div class="placeholder-graphic" aria-hidden="true">⊞</div><h3>Aucune analyse lancée</h3><p>Ajoutez une source déclarée revue et une sortie IA pour obtenir une décision conservatrice.</p></div>
+            </div>
+            <div class="export-row"><button type="button" class="btn btn-outline" id="exportBtn" disabled>↓ Exporter bilan sans contenu clinique</button><span>Sans texte d’IA, extraits de références ou données personnelles. Ne constitue pas une anonymisation du contenu traité.</span></div>
+          </section>
+        </div>
+        <div id="toast" role="status" aria-live="polite" class="toast" hidden></div>
+      </section>
+      <section id="integration" class="view" aria-label="API d'intégration">
+        <div class="doc-layout"><div><div class="eyebrow">INTÉGRATION SERVEUR</div><h2>Un garde-fou entre votre IA et son utilisateur.</h2><p>Le même moteur existe sous forme d'API FastAPI. Connectez-le aux réponses produites par un agent ou un système de génération augmentée par documents (RAG).</p><div class="route"><span class="method">POST</span><code>/api/v3/check</code></div><p>Le mode API V3 exige une référence inscrite dans un registre de confiance administré, avec empreinte SHA-256 correspondante et période de validité. Le registre livré est vide : toutes les requêtes sont bloquées par défaut. Le navigateur fonctionne seulement en mode laboratoire à sources déclaratives. Réponse possible : <code>BLOCKED</code> si une affirmation est non étayée ou un identifiant détecté ; <code>HUMAN_REVIEW</code> si toutes les phrases correspondent exactement à des sources déclarées revues. <strong>Il n'existe pas de statut d'autorisation clinique automatique.</strong></p><div class="note-strip">La vérification côté navigateur est locale ; pour un déploiement multiutilisateur, faites appliquer le blocage côté serveur, avec contrôle d'accès et audit sécurisé.</div></div><div><div class="code-heading">EXEMPLE DE REQUÊTE</div><pre><code>curl -X POST http://127.0.0.1:8000/api/v3/check \
+  -H 'X-API-Key: VOTRE_CLE_API_LOCALE' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "answer": "Le matériel fictif doit être contrôlé.",
+    "sources": [{
+      "id": "ref-1",
+      "title": "Exemple synthétique",
+      "version": "1.0",
+      "reviewer": "Relecteur déclaré",
+      "reviewed": true,
+      "content": "Le matériel fictif doit être contrôlé."
+    }]
+  }'</code></pre></div></div>
+      </section>
+      <section id="protocol" class="view" aria-label="Limites et protocole">
+        <div class="doc-layout"><div><div class="eyebrow">MODÈLE DE CONFIANCE</div><h2>Ce que le système fait et ne fait pas.</h2><div class="protocol-cards"><article><h3>01 / Correspondance exacte</h3><p>Vérifie si chaque phrase normalisée est identique à une phrase dans une source déclarée revue. Une simple ressemblance n'est jamais suffisante.</p></article><article><h3>02 / Blocage par défaut</h3><p>La moindre phrase non étayée, donnée personnelle détectée ou absence de preuve bloque la sortie. Les variations de nombres et de négation ne sont pas autorisées.</p></article><article><h3>03 / Audit explicite</h3><p>Fournit une décision, les extraits de preuves et les empreintes SHA-256 quand l'environnement le permet. Un humain qualifié doit confirmer la pertinence clinique.</p></article></div></div><div class="limitations"><h3>Limites fondamentales</h3><ul><li>Une source peut être fausse, périmée ou non applicable au patient.</li><li>Une phrase littéralement copiée peut être sortie de son contexte.</li><li>Un raisonnement faux peut utiliser des phrases exactes.</li><li>Les omissions, contradictions complexes, recommandations personnalisées et données sensibles non détectées restent possibles.</li><li>Les déclarations de relecture et liens source ne sont pas authentifiés.</li><li>Ce logiciel n’est pas certifié dispositif médical et n’a pas subi de validation clinique ; aucune affirmation de conformité RGPD n’est portée.</li></ul><p><strong>Avant tout usage médical réel :</strong> revue de risques, validation sur jeux de cas cliniques, gouvernance des sources, sécurité RGPD, supervision humaine et analyse réglementaire MDR/AI Act adaptées à l'usage envisagé.</p></div></div>
+      </section>
+      <section id="governance" class="view" aria-label="RGPD, validation et parcours clinique">
+        <div class="governance-hero">
+          <span class="eyebrow">PROGRAMME DE MISE EN CONFORMITÉ</span>
+          <h2>Conçu pour préparer un audit, pas pour simuler une certification.</h2>
+          <p>Ce tableau suit des <strong>actions préparatoires</strong> ; cocher une ligne ne signifie ni conformité juridique ni reconnaissance clinique. Les cases restent uniquement en mémoire pendant l’ouverture de cette page.</p>
+          <div class="governance-counters"><div><strong id="govCount">0 / 11</strong><span>actions marquées préparées</span></div><div><strong>0</strong><span>certification ou agrément obtenu</span></div></div>
+        </div>
+        <div class="gov-grid">
+          <section class="panel" aria-labelledby="govTitle">
+            <div class="panel-kicker">LISTE DE PRÉPARATION</div>
+            <h2 id="govTitle">Exigences à documenter</h2>
+            <p class="gov-help">État local seulement : le justificatif documentaire est à fournir au responsable conformité / DPO.</p>
+            <div id="govItems" class="gov-items"></div>
+            <div class="gov-actions"><button class="btn btn-outline" type="button" id="govExport">Exporter la feuille de préparation JSON</button><button class="btn btn-subtle" type="button" id="govReset">Réinitialiser</button></div>
+          </section>
+          <aside class="panel" aria-labelledby="privacyTitle">
+            <div class="panel-kicker">DONNÉES & SÉCURITÉ</div>
+            <h2 id="privacyTitle">Politique de démonstration</h2>
+            <div class="privacy-feature"><strong>Aucun compte, aucun cloud, aucune analytique</strong><p>Le moteur web traite le texte dans la mémoire du navigateur. Le code ne l’envoie à aucun service distant.</p></div>
+            <div class="privacy-feature"><strong>Pas de registre patient</strong><p>Aucune donnée patient réelle ne doit être saisie. Les détecteurs d’identifiants restent partiels : ils ne garantissent pas l’anonymat.</p></div>
+            <div class="privacy-feature"><strong>Effacement volontaire</strong><p>Utilisez « Tout effacer » dans Vérification puis fermez la page. Un navigateur ou appareil peut conserver des traces hors du contrôle de cette application.</p></div>
+            <div class="privacy-feature"><strong>API de développement protégée</strong><p>Exclusivement en boucle locale, clé secrète obligatoire, refus des origines web extérieures. Aucun serveur cloud ou hébergement HDS n’est livré.</p></div>
+            <div class="privacy-feature"><strong>Usage professionnel restant à qualifier</strong><p>Pour des données de santé personnelles ou une utilisation clinique, réaliser l’AIPD selon les risques, examiner le besoin HDS et obtenir les évaluations réglementaires adaptées.</p></div>
+            <h3>Textes de référence officiels</h3>
+            <p class="gov-links"><a href="https://www.cnil.fr/fr/RGPD-analyse-impact-protection-des-donnees-aipd" target="_blank" rel="noreferrer noopener">CNIL — AIPD</a> · <a href="https://esante.gouv.fr/produits-services/hds/certification-des-hebergeurs-de-donnees-de-sante" target="_blank" rel="noreferrer noopener">ANS — HDS</a> · <a href="https://esante.gouv.fr/produits-services/pro-sante-connect" target="_blank" rel="noreferrer noopener">ANS — Pro Santé Connect</a> · <a href="https://www.has-sante.fr/jcms/p_3363066/fr/dispositifs-medicaux-numeriques-a-usage-professionnel" target="_blank" rel="noreferrer noopener">HAS — DMN professionnels</a></p>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer><span>MEDGUARD CLINIQUE © 2026 — RECHERCHE / VALIDATION REQUISE</span><span>Aucun stockage applicatif volontaire · Aucune télémétrie · Ne pas saisir de données patient</span></footer>
+  </div>
+</body>
+</html>
