@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1421">
+  <meta name="description" content="MEDGUARD CLINIQUE — prototype local de sécurité et de gouvernance, non certifié pour un usage médical.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-OgFB2ivvf62IUFtiMX4q8l8af+e5PD4zXgT74E0VfCg=' 'sha256-ZiZwczpX3SzLLQT6qbwdCtsfRIp3+zZ1iu6u9Gqd4k8='; style-src 'sha256-kUOZhdYIQwZvEP4hyibt1lX7k7vzJn1/fKMcnQH5z88='; img-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>MEDGUARD CLINIQUE · Evidence & Gouvernance</title>
+
+
+<style>:root{--bg:#08111c;--surface:#101d2c;--surface2:#132334;--line:#283a4d;--ink:#e9f2f6;--muted:#91a5b7;--accent:#5dd7bb;--accent-strong:#2fc9a9;--warning:#f2bc74;--red:#ff8e92;--blue:#9cc6ec;--radius:15px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:14px;line-height:1.5}button,input,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.35;cursor:not-allowed}*:focus-visible{outline:2px solid var(--accent);outline-offset:3px}.site-shell{max-width:1536px;min-height:100vh;margin:0 auto;padding:0 36px}.topbar{height:90px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:14px}.brand-mark{width:48px;height:48px;background:linear-gradient(140deg,#55d5bd,#1f7b9a);border-radius:12px;display:grid;place-items:center;color:#0d1b28;font-size:34px;font-weight:300;box-shadow:0 0 25px #48d7bb24}.brand-name{font-size:22px;letter-spacing:.04em;font-weight:800;line-height:1.05}.brand-accent{color:var(--accent)}.brand-sub{font:10px ui-monospace,monospace;letter-spacing:.17em;color:var(--muted);margin-top:8px}.top-right{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12px}.offline-dot{height:7px;width:7px;background:var(--accent);border-radius:50%;box-shadow:0 0 10px #53eac5}.status-pill{border:1px solid #71593d;color:#f0c491;border-radius:999px;padding:6px 12px;margin-left:14px;background:#32271d}.hero{position:relative;overflow:hidden;padding:55px 50px 34px;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 90% 25%,#21535e77,transparent 38%),linear-gradient(90deg,#101e2d,#091622);border-left:1px solid var(--line);border-right:1px solid var(--line)}.hero:after{content:"";position:absolute;right:-42px;top:-86px;width:450px;height:450px;border-radius:50%;border:1px solid #80efc015;box-shadow:0 0 0 55px #80efc00a,0 0 0 110px #80efc00a,0 0 0 165px #80efc006;pointer-events:none}.eyebrow,.panel-kicker{color:var(--accent);font-size:11px;letter-spacing:.2em;font-weight:750}.hero h1{font-size:clamp(35px,4vw,58px);letter-spacing:-.04em;line-height:1.09;margin:20px 0 14px;font-weight:770}.hero h1 em{font-style:normal;color:var(--accent)}.hero p{max-width:650px;color:#b7c9d8;font-size:15px}.hero-bottom{margin-top:30px;display:flex;align-items:center;gap:28px}.hero-bottom>div{display:flex;align-items:center;gap:12px}.hero-number{font-size:32px;color:#dffcf3;font-weight:600;line-height:1}.hero-number .unit{font-size:16px}.hero-small{color:var(--muted);font-size:11px;line-height:1.5}.hero-divider{height:36px;width:1px;background:var(--line)}.tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin:0 0 25px;padding-top:9px;overflow-x:auto}.tab{padding:20px 23px;background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);white-space:nowrap;font-weight:650}.tab.active{color:var(--accent);border-bottom-color:var(--accent)}.tab:hover{color:#dff8f3}.view{display:none;min-height:400px}.view.active{display:block}.notice{display:flex;gap:16px;padding:15px 18px;border:1px solid #5b4b38;background:#211f1d;border-radius:var(--radius);margin-bottom:22px}.notice-icon{display:grid;place-items:center;flex:none;width:27px;height:27px;border:1px solid var(--warning);border-radius:50%;font-weight:700;color:var(--warning)}.notice strong{color:#f8c78a;font-size:13px}.notice p{margin:2px 0 0;color:#c6b8a8;font-size:12px}.workspace{display:grid;grid-template-columns:minmax(320px,.95fr) minmax(420px,1.15fr);gap:20px;align-items:start}.panel{min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:27px}.panel-head{margin-bottom:23px}.panel-head h2{font-size:22px;letter-spacing:-.025em;margin:9px 0 7px}.panel-title-row{display:flex;align-items:center;gap:15px;justify-content:space-between}.panel-head p{color:var(--muted);font-size:12px;margin:0;max-width:590px}.count-chip{border-radius:999px;border:1px solid #3b6662;background:#1b363d;color:#91e2ce;font-size:11px;padding:5px 9px;white-space:nowrap}label{display:block;color:#c2d2df;font-size:12px;font-weight:650;margin:17px 0 7px}.required{color:var(--warning)}input:not([type=checkbox]):not([type=file]),textarea{display:block;width:100%;padding:12px 13px;border:1px solid #304559;border-radius:9px;background:#0b1724;color:#e9f2f6;resize:vertical;outline:none;font-size:13px;transition:border-color .15s}textarea{min-height:120px;line-height:1.6}input::placeholder,textarea::placeholder{color:#667b8e}input:focus,textarea:focus{border-color:#56d2b7}.two-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.file-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:15px 0 14px}.file-row input{position:absolute;opacity:0;width:1px;height:1px}.file-label{margin:0;border:1px dashed #486e77;border-radius:7px;padding:8px 10px;color:#90dbc7;cursor:pointer}.file-row span{color:var(--muted);font-size:11px}.checkline{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-weight:400;line-height:1.5;margin:13px 0 18px}.checkline input{accent-color:var(--accent);margin-top:3px}.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;border-radius:8px;padding:12px 16px;border:1px solid transparent;font-weight:720;font-size:12px;min-height:43px;transition:background .15s,transform .15s}.btn:active{transform:translateY(1px)}.btn-primary{background:var(--accent);color:#061c20}.btn-primary:hover{background:#a0f5dd}.btn-outline{color:#b3ebdd;background:transparent;border-color:#41766f}.btn-outline:hover:not(:disabled){background:#1d3a3d}.btn-subtle{background:#1c2b3b;color:#c5d8e4;border-color:#273e4f}.btn-subtle:hover{background:#253c50}.full{width:100%}.source-list-title{margin-top:26px;padding-top:21px;border-top:1px solid var(--line);font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.16em}.source-list{margin-top:13px;display:grid;gap:10px}.empty-mini{color:#71889a;font-size:12px;margin:4px 0 12px}.source-item{background:#0c1a28;border:1px solid #284054;border-radius:10px;padding:13px}.source-item-top{display:flex;gap:12px;justify-content:space-between}.source-item strong{font-size:12px;display:block;overflow-wrap:anywhere}.source-item p{font-size:11px;color:var(--muted);margin:3px 0}.source-item .hash{font:10px ui-monospace,monospace;color:#77afa8;overflow-wrap:anywhere;margin-top:9px}.source-item button{border:0;background:transparent;color:#f0a6a6;font-size:12px;padding:0}.answer-text{min-height:280px;font-size:14px!important}.input-meta{display:flex;justify-content:space-between;color:#7890a1;font-size:11px;margin-top:8px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin:19px 0 20px}.results{border:1px solid #2b4052;border-radius:11px;min-height:242px;background:#0b1724;overflow:hidden}.result-placeholder{text-align:center;display:grid;place-items:center;align-content:center;padding:42px 28px;min-height:240px}.placeholder-graphic{color:#457e83;font-size:40px;margin-bottom:10px}.result-placeholder h3{font-size:14px;margin:0 0 7px}.result-placeholder p{font-size:12px;color:var(--muted);max-width:360px;margin:0}.result-head{display:flex;gap:12px;align-items:start;justify-content:space-between;padding:19px;border-bottom:1px solid #2b4052}.decision{font-size:17px;font-weight:780;letter-spacing:.01em}.decision.blocked{color:var(--red)}.decision.review{color:var(--warning)}.decision-help{color:#a9bdcb;font-size:12px;margin-top:4px}.decision-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:#3d222c;color:#ff9da0;font-size:19px}.review+.decision-icon{background:#3b3021;color:var(--warning)}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid #2b4052}.stat{padding:17px;text-align:center;border-right:1px solid #2b4052}.stat:last-child{border:0}.stat strong{font-size:23px;display:block}.stat span{color:var(--muted);font-size:10px}.result-section-title{font-size:11px;letter-spacing:.1em;color:#9db0bf;padding:16px 19px 8px;font-weight:760}.finding{padding:15px 19px;border-top:1px solid #213448}.finding-top{display:flex;justify-content:space-between;align-items:center;gap:10px}.finding p{margin:8px 0 3px;color:#e3ecf2;font-size:13px;overflow-wrap:anywhere}.finding small{color:#899baa}.finding .explanation{font-size:11px;color:#8399a9;margin-top:7px}.finding blockquote{font-size:12px;color:#b7dcd3;border-left:2px solid var(--accent);padding-left:10px;margin:9px 0 0;overflow-wrap:anywhere}.finding .match-label{font-size:10px;font-weight:800;letter-spacing:.05em;color:var(--accent)}.finding .unverified-label{color:var(--red)}.finding .conflict-label{color:var(--warning)}.finding .riskflag{font-size:10px;color:#f8bf80;border:1px solid #78603f;padding:2px 6px;border-radius:4px}.privacy-warn{padding:11px 19px;background:#3a2228;color:#ffb2ac;font-size:12px;border-bottom:1px solid #6b3e44}.result-foot{padding:15px 19px;color:var(--muted);font-size:11px;border-top:1px solid #263a4d}.export-row{display:flex;align-items:center;gap:13px;margin-top:14px;flex-wrap:wrap}.export-row span{font-size:11px;color:var(--muted)}.toast{position:fixed;bottom:24px;right:24px;background:#d2fff1;color:#0d2926;padding:12px 18px;border-radius:8px;box-shadow:0 12px 50px #0006;z-index:10}.doc-layout{padding:26px 0 70px;display:grid;grid-template-columns:1fr 1fr;gap:32px}.doc-layout h2{font-size:32px;line-height:1.2;letter-spacing:-.03em;margin:18px 0}.doc-layout p{color:var(--muted);font-size:14px}.route{background:var(--surface);border:1px solid var(--line);padding:16px;border-radius:10px;display:flex;gap:12px;align-items:center;margin:25px 0}.method{background:#295444;color:#9af0d4;border-radius:4px;font:700 11px ui-monospace,monospace;padding:5px 8px}.code-heading{font-size:11px;color:var(--muted);letter-spacing:.12em;margin:5px 0 14px}.doc-layout pre{background:#0c1927;border:1px solid var(--line);padding:24px;border-radius:12px;overflow:auto;line-height:1.75;font-size:12px;color:#a9e7d5}.doc-layout code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.note-strip{border-left:3px solid var(--accent);color:#a5caba;background:#142a31;padding:16px;line-height:1.6}.protocol-cards{display:grid;gap:12px;margin-top:20px}.protocol-cards article,.limitations{border:1px solid var(--line);background:var(--surface);padding:20px;border-radius:10px}.protocol-cards h3,.limitations h3{font-size:15px;margin:0 0 6px}.protocol-cards p{margin:0;font-size:12px}.limitations{align-self:start}.limitations ul{margin:12px 0;padding-left:20px;color:#b2c2ce}.limitations li{margin:12px 0;line-height:1.55}.limitations p{font-size:12px}footer{margin-top:30px;border-top:1px solid var(--line);display:flex;gap:20px;justify-content:space-between;padding:24px 0 36px;color:#60798a;font:10px ui-monospace,monospace;letter-spacing:.04em}@media(max-width:1030px){.site-shell{padding:0 18px}.workspace{grid-template-columns:1fr}.topbar{height:auto;min-height:82px}.hero{padding:42px 32px}.doc-layout{grid-template-columns:1fr}}@media(max-width:620px){.site-shell{padding:0 12px}.brand-mark{height:42px;width:42px}.brand-name{font-size:18px}.brand-sub{font-size:8px}.top-right{font-size:10px}.status-pill{display:none}.hero{padding:34px 21px}.hero h1{font-size:37px}.hero p{font-size:13px}.hero-bottom{gap:12px}.hero-number{font-size:25px}.hero-small{font-size:9px}.tabs{margin-bottom:15px}.tab{font-size:11px;padding:14px 13px}.panel{padding:17px}.panel-head h2{font-size:19px}.two-fields{grid-template-columns:1fr}.answer-text{min-height:220px}.btn{width:100%}.actions{display:grid}.input-meta{font-size:9px}.doc-layout h2{font-size:27px}footer{flex-direction:column}.source-item-top{flex-wrap:wrap}}
+
+/* MEDGUARD CLINIQUE v2.0 – Governance workspace */
+.governance-hero{border:1px solid var(--line);background:linear-gradient(120deg,#152c33,#0c1d2c);padding:30px;border-radius:14px;margin:25px 0 22px}
+.governance-hero h2{font-size:29px;line-height:1.2;max-width:780px;margin:12px 0}
+.governance-hero p{color:var(--muted);max-width:870px;font-size:14px}
+.governance-counters{display:flex;gap:38px;margin-top:25px;flex-wrap:wrap}
+.governance-counters>div{display:flex;flex-direction:column;gap:5px}
+.governance-counters strong{font-size:29px;color:var(--accent)}
+.governance-counters span{font-size:11px;color:var(--muted)}
+.gov-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;margin-bottom:45px}
+.gov-help{color:var(--muted);font-size:12px}
+.gov-items{margin-top:22px;display:grid;gap:9px}
+.gov-item{display:flex;align-items:flex-start;gap:15px;cursor:pointer;padding:13px;background:var(--surface2,#102435);border:1px solid var(--line);border-radius:9px}
+.gov-item input{flex:none;width:19px;height:19px;margin-top:4px;accent-color:#51d8b0}
+.gov-item span{display:flex;flex-direction:column;gap:5px}
+.gov-item small{color:var(--accent);font-size:10px;text-transform:uppercase;letter-spacing:1px}
+.gov-item strong{font-size:13px;line-height:1.45;font-weight:500}
+.gov-actions{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+.privacy-feature{border-bottom:1px solid var(--line);padding:16px 0}
+.privacy-feature strong{font-size:13px}.privacy-feature p{font-size:12px;color:var(--muted);line-height:1.55;margin:7px 0 0}
+.gov-links{font-size:12px;line-height:1.8}.gov-links a{color:#7ae9c5;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:880px){.gov-grid{grid-template-columns:1fr}}
+@media(max-width:620px){.governance-hero{padding:22px}.governance-hero h2{font-size:23px}.gov-actions{display:grid}.gov-actions .btn{width:100%}}
+</style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"><span>+</span></div>
+        <div><div class="brand-name">MEDGUARD<span class="brand-accent"> AI</span></div><div class="brand-sub">EVIDENCE & GOUVERNANCE // v3.0</div></div>
+      </div>
+      <div class="top-right"><span class="offline-dot"></span> Traitement local <span class="status-pill">Prototype non certifié · Mode local</span></div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="eyebrow">CONTRÔLE TEXTUEL LOCAL • MODE RECHERCHE NON CERTIFIÉ</div>
+        <h1>Une réponse sans preuve<br><em>ne doit pas passer.</em></h1>
+        <p>Analyse les affirmations d'une IA face à un corpus de référence. Toute affirmation non retrouvée textuellement est bloquée. Une correspondance <strong>n'est jamais une validation médicale</strong>.</p>
+        <div class="hero-bottom"><div><span class="hero-number">00</span><span class="hero-small">approbation automatique<br>en contexte médical</span></div><div class="hero-divider"></div><div><span class="hero-number">0<span class="unit"> </span></span><span class="hero-small">validation clinique<br>automatique</span></div></div>
+      </section>
+      <nav class="tabs" aria-label="Sections de l'application">
+        <button class="tab active" type="button" data-tab="review" aria-current="page">01 / Vérification</button>
+        <button class="tab" type="button" data-tab="integration">02 / API & intégration</button>
+        <button class="tab" type="button" data-tab="protocol">03 / Limites & protocole</button>
+        <button class="tab" type="button" data-tab="governance">04 / RGPD & validation</button>
+      </nav>
+      <section id="review" class="view active" aria-label="Vérification textuelle">
+        <div class="notice"><span class="notice-icon" aria-hidden="true">!</span><div><strong>Sécurité clinique</strong><p>Ne collez aucune information permettant d'identifier un patient. Ce prototype ne diagnostique pas, ne vérifie pas la fiabilité des documents et ne remplace jamais un professionnel de santé.</p></div></div>
+        <div class="workspace">
+          <section class="panel source-panel" aria-labelledby="source-title">
+            <div class="panel-head"><div class="panel-kicker">ÉTAPE 01</div><div class="panel-title-row"><h2 id="source-title">Bibliothèque de preuves</h2><span class="count-chip" id="sourceCount">0 document</span></div><p>Ajoutez le texte de références que vous avez examinées. La provenance déclarée n'est pas authentifiée.</p></div>
+            <form id="sourceForm" autocomplete="off">
+              <label for="srcTitle">Titre du document <span class="required">*</span></label>
+              <input id="srcTitle" required maxlength="200" placeholder="Ex. Référentiel interne validé">
+              <div class="two-fields"><div><label for="srcVersion">Version / date <span class="required">*</span></label><input id="srcVersion" required maxlength="80" placeholder="v1 · 2026-11-18"></div><div><label for="srcReviewer">Relecteur déclaré <span class="required">*</span></label><input id="srcReviewer" required maxlength="120" placeholder="Nom / fonction"></div></div>
+              <label for="srcUrl">Adresse de provenance (facultatif)</label><input id="srcUrl" type="url" maxlength="500" placeholder="https://…">
+              <label for="srcText">Contenu de référence <span class="required">*</span></label>
+              <textarea id="srcText" required maxlength="300000" rows="6" placeholder="Une affirmation par phrase ou par ligne. Préférez des références versionnées et actualisées."></textarea>
+              <div class="file-row"><label for="sourceFile" class="file-label">↥ Importer .txt / .md</label><input id="sourceFile" type="file" accept=".txt,.md,text/plain,text/markdown"><span id="fileInfo">Aucune pièce jointe</span></div>
+              <label class="checkline"><input id="srcReviewed" type="checkbox" required><span>Je déclare avoir examiné cette source et sa provenance. Ceci ne constitue pas une authentification professionnelle.</span></label>
+              <button class="btn btn-outline full" type="submit">+ Ajouter à la bibliothèque</button>
+            </form>
+            <div class="source-list-title">DOCUMENTS CHARGÉS</div><div id="sourceList" class="source-list"><p class="empty-mini">Aucune référence. Une réponse ne peut pas être autorisée sans corpus.</p></div>
+          </section>
+          <section class="panel answer-panel" aria-labelledby="answer-title">
+            <div class="panel-head"><div class="panel-kicker">ÉTAPE 02</div><h2 id="answer-title">Réponse de l'IA à contrôler</h2><p>Collez la sortie de votre modèle (Mistral, ChatGPT, système RAG, etc.). Le moteur analyse chaque phrase séparément.</p></div>
+            <label for="answerText">Texte de la réponse</label>
+            <textarea id="answerText" class="answer-text" rows="12" maxlength="100000" placeholder="Collez ici la réponse générée par votre IA médicale…"></textarea>
+            <div class="input-meta"><span id="charCounter">0 / 100 000 caractères</span><span>Aucun envoi réseau</span></div>
+            <div class="actions"><button id="checkBtn" class="btn btn-primary" type="button">Analyser & décider <span aria-hidden="true">↗</span></button><button id="exampleBtn" class="btn btn-subtle" type="button">Charger un exemple fictif</button><button id="resetBtn" class="btn btn-subtle" type="button">Tout effacer</button></div>
+            <div id="results" class="results" aria-live="polite">
+              <div class="result-placeholder"><div class="placeholder-graphic" aria-hidden="true">⊞</div><h3>Aucune analyse lancée</h3><p>Ajoutez une source déclarée revue et une sortie IA pour obtenir une décision conservatrice.</p></div>
+            </div>
+            <div class="export-row"><button type="button" class="btn btn-outline" id="exportBtn" disabled>↓ Exporter bilan sans contenu clinique</button><span>Sans texte d’IA, extraits de références ou données personnelles. Ne constitue pas une anonymisation du contenu traité.</span></div>
+          </section>
+        </div>
+        <div id="toast" role="status" aria-live="polite" class="toast" hidden></div>
+      </section>
+      <section id="integration" class="view" aria-label="API d'intégration">
+        <div class="doc-layout"><div><div class="eyebrow">INTÉGRATION SERVEUR</div><h2>Un garde-fou entre votre IA et son utilisateur.</h2><p>Le même moteur existe sous forme d'API FastAPI. Connectez-le aux réponses produites par un agent ou un système de génération augmentée par documents (RAG).</p><div class="route"><span class="method">POST</span><code>/api/v3/check</code></div><p>Le mode API V3 exige une référence inscrite dans un registre de confiance administré, avec empreinte SHA-256 correspondante et période de validité. Le registre livré est vide : toutes les requêtes sont bloquées par défaut. Le navigateur fonctionne seulement en mode laboratoire à sources déclaratives. Réponse possible : <code>BLOCKED</code> si une affirmation est non étayée ou un identifiant détecté ; <code>HUMAN_REVIEW</code> si toutes les phrases correspondent exactement à des sources déclarées revues. <strong>Il n'existe pas de statut d'autorisation clinique automatique.</strong></p><div class="note-strip">La vérification côté navigateur est locale ; pour un déploiement multiutilisateur, faites appliquer le blocage côté serveur, avec contrôle d'accès et audit sécurisé.</div></div><div><div class="code-heading">EXEMPLE DE REQUÊTE</div><pre><code>curl -X POST http://127.0.0.1:8000/api/v3/check \
+  -H 'X-API-Key: VOTRE_CLE_API_LOCALE' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "answer": "Le matériel fictif doit être contrôlé.",
+    "sources": [{
+      "id": "ref-1",
+      "title": "Exemple synthétique",
+      "version": "1.0",
+      "reviewer": "Relecteur déclaré",
+      "reviewed": true,
+      "content": "Le matériel fictif doit être contrôlé."
+    }]
+  }'</code></pre></div></div>
+      </section>
+      <section id="protocol" class="view" aria-label="Limites et protocole">
+        <div class="doc-layout"><div><div class="eyebrow">MODÈLE DE CONFIANCE</div><h2>Ce que le système fait et ne fait pas.</h2><div class="protocol-cards"><article><h3>01 / Correspondance exacte</h3><p>Vérifie si chaque phrase normalisée est identique à une phrase dans une source déclarée revue. Une simple ressemblance n'est jamais suffisante.</p></article><article><h3>02 / Blocage par défaut</h3><p>La moindre phrase non étayée, donnée personnelle détectée ou absence de preuve bloque la sortie. Les variations de nombres et de négation ne sont pas autorisées.</p></article><article><h3>03 / Audit explicite</h3><p>Fournit une décision, les extraits de preuves et les empreintes SHA-256 quand l'environnement le permet. Un humain qualifié doit confirmer la pertinence clinique.</p></article></div></div><div class="limitations"><h3>Limites fondamentales</h3><ul><li>Une source peut être fausse, périmée ou non applicable au patient.</li><li>Une phrase littéralement copiée peut être sortie de son contexte.</li><li>Un raisonnement faux peut utiliser des phrases exactes.</li><li>Les omissions, contradictions complexes, recommandations personnalisées et données sensibles non détectées restent possibles.</li><li>Les déclarations de relecture et liens source ne sont pas authentifiés.</li><li>Ce logiciel n’est pas certifié dispositif médical et n’a pas subi de validation clinique ; aucune affirmation de conformité RGPD n’est portée.</li></ul><p><strong>Avant tout usage médical réel :</strong> revue de risques, validation sur jeux de cas cliniques, gouvernance des sources, sécurité RGPD, supervision humaine et analyse réglementaire MDR/AI Act adaptées à l'usage envisagé.</p></div></div>
+      </section>
+      <section id="governance" class="view" aria-label="RGPD, validation et parcours clinique">
+        <div class="governance-hero">
+          <span class="eyebrow">PROGRAMME DE MISE EN CONFORMITÉ</span>
+          <h2>Conçu pour préparer un audit, pas pour simuler une certification.</h2>
+          <p>Ce tableau suit des <strong>actions préparatoires</strong> ; cocher une ligne ne signifie ni conformité juridique ni reconnaissance clinique. Les cases restent uniquement en mémoire pendant l’ouverture de cette page.</p>
+          <div class="governance-counters"><div><strong id="govCount">0 / 11</strong><span>actions marquées préparées</span></div><div><strong>0</strong><span>certification ou agrément obtenu</span></div></div>
+        </div>
+        <div class="gov-grid">
+          <section class="panel" aria-labelledby="govTitle">
+            <div class="panel-kicker">LISTE DE PRÉPARATION</div>
+            <h2 id="govTitle">Exigences à documenter</h2>
+            <p class="gov-help">État local seulement : le justificatif documentaire est à fournir au responsable conformité / DPO.</p>
+            <div id="govItems" class="gov-items"></div>
+            <div class="gov-actions"><button class="btn btn-outline" type="button" id="govExport">Exporter la feuille de préparation JSON</button><button class="btn btn-subtle" type="button" id="govReset">Réinitialiser</button></div>
+          </section>
+          <aside class="panel" aria-labelledby="privacyTitle">
+            <div class="panel-kicker">DONNÉES & SÉCURITÉ</div>
+            <h2 id="privacyTitle">Politique de démonstration</h2>
+            <div class="privacy-feature"><strong>Aucun compte, aucun cloud, aucune analytique</strong><p>Le moteur web traite le texte dans la mémoire du navigateur. Le code ne l’envoie à aucun service distant.</p></div>
+            <div class="privacy-feature"><strong>Pas de registre patient</strong><p>Aucune donnée patient réelle ne doit être saisie. Les détecteurs d’identifiants restent partiels : ils ne garantissent pas l’anonymat.</p></div>
+            <div class="privacy-feature"><strong>Effacement volontaire</strong><p>Utilisez « Tout effacer » dans Vérification puis fermez la page. Un navigateur ou appareil peut conserver des traces hors du contrôle de cette application.</p></div>
+            <div class="privacy-feature"><strong>API de développement protégée</strong><p>Exclusivement en boucle locale, clé secrète obligatoire, refus des origines web extérieures. Aucun serveur cloud ou hébergement HDS n’est livré.</p></div>
+            <div class="privacy-feature"><strong>Usage professionnel restant à qualifier</strong><p>Pour des données de santé personnelles ou une utilisation clinique, réaliser l’AIPD selon les risques, examiner le besoin HDS et obtenir les évaluations réglementaires adaptées.</p></div>
+            <h3>Textes de référence officiels</h3>
+            <p class="gov-links"><a href="https://www.cnil.fr/fr/RGPD-analyse-impact-protection-des-donnees-aipd" target="_blank" rel="noreferrer noopener">CNIL — AIPD</a> · <a href="https://esante.gouv.fr/produits-services/hds/certification-des-hebergeurs-de-donnees-de-sante" target="_blank" rel="noreferrer noopener">ANS — HDS</a> · <a href="https://esante.gouv.fr/produits-services/pro-sante-connect" target="_blank" rel="noreferrer noopener">ANS — Pro Santé Connect</a> · <a href="https://www.has-sante.fr/jcms/p_3363066/fr/dispositifs-medicaux-numeriques-a-usage-professionnel" target="_blank" rel="noreferrer noopener">HAS — DMN professionnels</a></p>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer><span>MEDGUARD CLINIQUE © 2026 — RECHERCHE / VALIDATION REQUISE</span><span>Aucun stockage applicatif volontaire · Aucune télémétrie · Ne pas saisir de données patient</span></footer>
+  </div>
+<script>/* MEDGUARD strict-v1 — Browser mirror of backend engine. No remote requests. */
+(function (root, factory) {
+  const api = factory();
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  root.MedGuardEngine = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+  'use strict';
+  const MAX_ANSWER_CHARS = 100000;
+  const MAX_SOURCES = 30;
+  const MAX_SOURCE_CHARS = 300000;
+  const MAX_CLAIMS = 300;
+  const MAX_CORPUS_SENTENCES = 4000;
+  const RISK_TERMS = ['posologie','dose','dosage','mg','µg','microgram','insuline','inject','prescri','traitement','therap','medicament','antibiotique','contre-indic','diagnostic','diagnosti','symptome','choc','urgence','convulsion','hemorrag','suicide','automutil','arret cardiaque','douleur thoracique','avc','treatment','medication','diagnos','prescription','emergency','insulin','pregnan','allerg','renal','hepatic','kidney','cardiac'];
+  const NEGATIONS = new Set(['ne','pas','jamais','aucun','sans','interdit','not','never','no','contraindique']);
+  const STOPWORDS = new Set(['le','la','les','de','du','des','un','une','et','en','est','au','aux','que','qui','a','il','elle','dans','pour','the','and','is','of','to','on','with']);
+  function normalize(value) {
+    return String(value || '').normalize('NFKD').replace(/\p{M}/gu, '').toLowerCase().replace(/’/g, "'").replace(/\u00a0/g, ' ')
+      .replace(/^\s*(?:[-*•]|\d+[.)])\s*/u, '')
+      .replace(/[^\p{L}\p{N}_\s.,/%+°µ'-]/gu, ' ')
+      .replace(/\s+/g, ' ').replace(/^[\s.,;:!?"']+|[\s.,;:!?"']+$/g, '');
+  }
+  function statements(value) {
+    return String(value || '').split(/(?:\r?\n)+|(?<=[.!?])\s+(?=[\p{L}\p{N}"“'(-])/u)
+      .map(s => s.trim().replace(/^\s*(?:[-*•]|\d+[.)])\s*/u,'').trim()).filter(Boolean);
+  }
+  function terms(value) {
+    return new Set((normalize(value).match(/[\p{L}\p{N}_]+(?:[.,][0-9]+)?/gu) || [])
+      .filter(w => !STOPWORDS.has(w) && w.length > 1));
+  }
+  function numbers(value) {
+    return normalize(value).match(/(?<!\w)\d+(?:[.,]\d+)?(?!\w)/g) || [];
+  }
+  function hasRisk(value) {const v=normalize(value);return RISK_TERMS.some(t=>v.includes(t));}
+  function privacyFlags(value) {
+    const a=[];
+    if (/\b[A-Z0-9._%+\-]+@[A-Z0-9.\-]+\.[A-Z]{2,}\b/i.test(value)) a.push('Adresse électronique potentielle');
+    if (/\b[12]\s?\d{2}\s?(?:0[1-9]|1[0-2])\s?\d{2}\s?\d{3}\s?\d{3}\s?\d{2}\b/.test(value)) a.push('Identifiant NIR potentiel');
+    if (/\b(?:\+33\s?|0)[1-9](?:[ .-]?\d{2}){4}\b/.test(value)) a.push('Numéro de téléphone potentiel');
+    return a;
+  }
+  async function sha256(content) {
+    if (!globalThis.crypto?.subtle) return 'indisponible dans ce contexte';
+    const digest = await globalThis.crypto.subtle.digest('SHA-256', new TextEncoder().encode(content));
+    return [...new Uint8Array(digest)].map(b=>b.toString(16).padStart(2,'0')).join('');
+  }
+  function candidateMatch(claim, corpus) {
+    const ts=terms(claim);
+    let best=null, max=0;
+    for(const c of corpus) {
+      const other=terms(c.text); if(!other.size) continue;
+      const overlap=[...ts].filter(t=>other.has(t)).length;
+      const score=overlap/(ts.size+other.size-overlap);
+      if(score>max) {max=score;best=c;}
+    }
+    return {best, similarity: Math.round(max*1000)/1000};
+  }
+  function potentialSourceConflict(matched, corpus) {
+    const base=terms(matched.text);
+    for(const other of corpus){
+      if(other===matched || other.normalized===matched.normalized) continue;
+      const ct=terms(other.text), intersection=[...base].filter(t=>ct.has(t)).length;
+      const union=base.size+ct.size-intersection,sim=union?intersection/union:0;
+      if(sim>=.58 && (numbers(matched.text).join('|')!==numbers(other.text).join('|') ||
+        [...base].some(t=>NEGATIONS.has(t)) !== [...ct].some(t=>NEGATIONS.has(t)))) {
+        return {source_id:other.source_id,source_title:other.source_title,text:other.text,source_sha256:other.source_sha256};
+      }
+    }
+    return null;
+  }
+  async function check(answer, sources) {
+    if(typeof answer!=='string') throw Error('La réponse doit être un texte.');
+    if(!Array.isArray(sources)) throw Error('Les sources doivent former une liste.');
+    if(answer.length>MAX_ANSWER_CHARS) throw Error('Réponse limitée à 100 000 caractères.');
+    if(sources.length>MAX_SOURCES) throw Error('Maximum 30 documents.');
+    const accepted=[], excluded=[], corpus=[];
+    let sourcePrivateData=false;
+    for(let i=0;i<sources.length;i++) {
+      const s=sources[i];
+      if(!s || typeof s!=='object') throw Error('Une source est invalide.');
+      const content=String(s.content||'');
+      if(content.length>MAX_SOURCE_CHARS) throw Error('Source limitée à 300 000 caractères.');
+      const meta={id:String(s.id||`doc-${i+1}`).slice(0,80), title:String(s.title||'').trim().slice(0,200),
+        version:String(s.version||'').trim().slice(0,80), reviewer:String(s.reviewer||'').trim().slice(0,120),
+        reviewed:s.reviewed===true, source_url:String(s.source_url||'').slice(0,500), sha256:await sha256(content)};
+      if(!meta.title || !meta.version || !meta.reviewer || !meta.reviewed || !content.trim()) {
+        excluded.push({...meta, reason:'Métadonnées/texte incomplets ou source non revue (déclaration).'});
+        continue;
+      }
+      accepted.push(meta);
+      sourcePrivateData=sourcePrivateData || privacyFlags(content).length>0;
+      statements(content).forEach(t=>corpus.push({source_id:meta.id, source_title:meta.title,text:t, normalized:normalize(t), source_sha256:meta.sha256}));
+      if(corpus.length>MAX_CORPUS_SENTENCES) throw Error(`Corpus trop grand : maximum ${MAX_CORPUS_SENTENCES} phrases.`);
+    }
+    const splitAnswer=statements(answer);
+    if(splitAnswer.length>MAX_CLAIMS) throw Error(`Réponse trop longue : maximum ${MAX_CLAIMS} phrases.`);
+    const claims=[];
+    splitAnswer.forEach((sentence,i)=>{
+      const norm=normalize(sentence), enough=norm.length>=22 && norm.split(' ').length>=4;
+      const matched=enough?corpus.find(c=>c.normalized===norm):null;
+      let status,evidence,similarity,alternateConflict=null;
+      if(matched) {
+        alternateConflict=potentialSourceConflict(matched,corpus);
+        status=alternateConflict?'SOURCE_DISAGREEMENT':'TEXT_MATCH';similarity=1;
+        evidence={source_id:matched.source_id,source_title:matched.source_title,text:matched.text,source_sha256:matched.source_sha256};
+      } else {
+        const rec=candidateMatch(sentence,corpus); similarity=rec.similarity;
+        const differs=Boolean(rec.best && similarity>=.48 && (
+          numbers(sentence).join('|')!==numbers(rec.best.text).join('|') ||
+          [...terms(sentence)].some(t=>NEGATIONS.has(t)) !== [...terms(rec.best.text)].some(t=>NEGATIONS.has(t))
+        ));
+        status=differs?'POSSIBLE_CONFLICT':'UNSUPPORTED';
+        evidence=rec.best && similarity>=.28 ? {source_id:rec.best.source_id, source_title:rec.best.source_title,text:rec.best.text,source_sha256:rec.best.source_sha256}:null;
+      }
+      claims.push({index:i+1,claim:sentence,status,risk_flag:hasRisk(sentence),evidence,conflicting_source:alternateConflict,similarity_for_review_only:similarity});
+    });
+    const flags=privacyFlags(answer);
+    if(sourcePrivateData) flags.push("Données personnelles potentielles dans le corpus documentaire");
+    let decision='BLOCKED',reason;
+    if(!claims.length) reason='Aucune affirmation à analyser.';
+    else if(flags.length) reason='Identifiants personnels potentiels détectés : supprimer les données personnelles.';
+    else if(claims.some(c=>c.status!=='TEXT_MATCH')) reason='Au moins une affirmation ne correspond pas textuellement à une source déclarée revue.';
+    else {decision='HUMAN_REVIEW';reason='Correspondances textuelles uniquement : validation clinique humaine obligatoire.';}
+    return {engine:'medguard-strict-v1',decision,reason,checked_at:new Date().toISOString(),
+      limitations:'Correspondance littérale seulement ; ni authenticité des sources, ni véracité médicale, ni complétude, ni contradictions complexes ne sont garanties.',
+      summary:{total:claims.length,text_matches:claims.filter(c=>c.status==='TEXT_MATCH').length,
+        unverified:claims.filter(c=>c.status!=='TEXT_MATCH').length,risk_flags:claims.filter(c=>c.risk_flag).length,
+        accepted_sources:accepted.length,excluded_sources:excluded.length},
+      privacy_flags:flags,claims,accepted_sources:accepted,excluded_sources:excluded};
+  }
+  return {check,normalize,statements,privacyFlags};
+});
+</script>
+<script>(function () {
+  'use strict';
+  let sources=[];
+  let lastReport=null;
+  const $=(id)=>document.getElementById(id);
+  const toast=(message)=>{const el=$('toast');el.textContent=message;el.hidden=false;clearTimeout(toast._timer);toast._timer=setTimeout(()=>{el.hidden=true;},3600);};
+  const make=(tag, cls, text)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=text;return node;};
+  document.querySelectorAll('.tab').forEach(button=>button.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(t=>{t.classList.toggle('active',t===button);t.removeAttribute('aria-current');});
+    button.setAttribute('aria-current','page');
+    document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===button.dataset.tab));
+  }));
+  function invalidate(){lastReport=null;$('exportBtn').disabled=true;$('results').replaceChildren();
+    const container=make('div','result-placeholder');container.append(make('div','placeholder-graphic','⊞'),make('h3',null,'Aucune analyse en cours'),make('p',null,'Une modification du texte ou du corpus nécessite une nouvelle analyse.'));$('results').append(container);}
+  function renderSources(){
+    $('sourceCount').textContent=`${sources.length} document${sources.length>1?'s':''}`;
+    const list=$('sourceList');list.replaceChildren();
+    if(!sources.length){list.append(make('p','empty-mini','Aucune référence. Une réponse ne peut pas être autorisée sans corpus.'));return;}
+    sources.forEach((s,i)=>{
+      const item=make('div','source-item'), head=make('div','source-item-top'),info=make('div');
+      info.append(make('strong',null,s.title),make('p',null,`${s.version} · Relecture déclarée : ${s.reviewer}`),make('p',null,`${s.content.length.toLocaleString('fr-FR')} caractères de texte`));
+      const remove=make('button',null,'Retirer');remove.type='button';remove.setAttribute('aria-label',`Retirer ${s.title}`);
+      remove.addEventListener('click',()=>{sources.splice(i,1);renderSources();invalidate();});
+      head.append(info,remove);item.append(head);list.append(item);
+    });
+  }
+  $('sourceFile').addEventListener('change',async(e)=>{
+    const f=e.target.files?.[0];if(!f)return;
+    if(!/\.(txt|md)$/i.test(f.name)){toast('Seuls les fichiers texte .txt et .md sont acceptés.');e.target.value='';return;}
+    if(f.size>600000){toast('Fichier trop volumineux : limite 300 000 caractères.');e.target.value='';return;}
+    const text=await f.text();if(text.length>300000){toast('Limite 300 000 caractères dépassée.');return;}
+    $('srcText').value=text;$('fileInfo').textContent=f.name;
+    if(!$('srcTitle').value)$('srcTitle').value=f.name.replace(/\.(txt|md)$/i,'');
+    toast('Texte importé localement. Complétez les métadonnées et confirmez la relecture.');
+  });
+  $('sourceForm').addEventListener('submit',(e)=>{
+    e.preventDefault();if(sources.length>=30){toast('30 documents au maximum.');return;}
+    if(!$('sourceForm').reportValidity())return;
+    const s={id:`doc-${Date.now()}-${sources.length}`,title:$('srcTitle').value.trim(),version:$('srcVersion').value.trim(),
+      reviewer:$('srcReviewer').value.trim(),source_url:$('srcUrl').value.trim(),content:$('srcText').value,reviewed:$('srcReviewed').checked};
+    if(!s.content.trim()){toast('Le contenu de référence est vide.');return;}
+    sources.push(s);$('sourceForm').reset();$('fileInfo').textContent='Aucune pièce jointe';$('sourceFile').value='';renderSources();invalidate();toast('Source ajoutée. Sa provenance reste déclarative.');
+  });
+  $('answerText').addEventListener('input',()=>{$('charCounter').textContent=`${$('answerText').value.length.toLocaleString('fr-FR')} / 100 000 caractères`;invalidate();});
+  $('exampleBtn').addEventListener('click',()=>{
+    sources=[{id:'example-synthetic',title:'Référentiel FICTIF de démonstration',version:'Exemple 1.0',reviewer:'Relecteur fictif (démo)',reviewed:true,source_url:'',
+      content:'Le matériel fictif A doit être contrôlé avant utilisation.\nNe pas utiliser le dispositif fictif B.\nLa mesure fictive attendue est de 5 unités.'}];
+    $('answerText').value='Le matériel fictif A doit être contrôlé avant utilisation.\nLe dispositif fictif B peut être utilisé sans vérification.\nLa mesure fictive attendue est de 50 unités.';
+    $('charCounter').textContent=`${$('answerText').value.length} / 100 000 caractères`;
+    renderSources();invalidate();toast('Exemple fictif chargé : les erreurs doivent être bloquées.');
+  });
+  $('resetBtn').addEventListener('click',()=>{
+    if((sources.length||$('answerText').value) && !confirm('Effacer tout le contenu de cette session ?'))return;
+    sources=[];$('sourceForm').reset();$('sourceFile').value='';$('fileInfo').textContent='Aucune pièce jointe';$('answerText').value='';$('charCounter').textContent='0 / 100 000 caractères';renderSources();invalidate();toast('Session effacée de cette page.');
+  });
+  $('checkBtn').addEventListener('click',async()=>{
+    const btn=$('checkBtn');btn.disabled=true;btn.textContent='Analyse en cours…';
+    try {lastReport=await MedGuardEngine.check($('answerText').value,sources);renderResults(lastReport);$('exportBtn').disabled=false;}
+    catch(err){toast(`Erreur : ${err.message}`);}
+    finally{btn.disabled=false;btn.replaceChildren(document.createTextNode('Analyser & décider '),make('span',null,'↗'));}
+  });
+  function renderResults(r){
+    const root=$('results');root.replaceChildren();
+    const head=make('div','result-head'),info=make('div'),decision=make('div',`decision ${r.decision==='BLOCKED'?'blocked':'review'}`,r.decision==='BLOCKED'?'SORTIE BLOQUÉE':'REVUE HUMAINE OBLIGATOIRE');
+    info.append(decision,make('div','decision-help',r.reason));head.append(info,make('div','decision-icon',r.decision==='BLOCKED'?'×':'!'));root.append(head);
+    if(r.privacy_flags.length) root.append(make('div','privacy-warn',r.privacy_flags.join(' · ')));
+    const stats=make('div','stats');
+    [[r.summary.total,'Affirmations'],[r.summary.text_matches,'Textes retrouvés'],[r.summary.unverified,'Non étayées']].forEach(([v,l])=>{const s=make('div','stat');s.append(make('strong',null,String(v)),make('span',null,l));stats.append(s);});root.append(stats);
+    root.append(make('div','result-section-title','DÉTAIL DES AFFIRMATIONS'));
+    if(!r.claims.length)root.append(make('div','finding','Aucun texte à examiner.'));
+    r.claims.forEach(c=>{
+      const block=make('article','finding'),top=make('div','finding-top');
+      const label=c.status==='TEXT_MATCH'?'TEXTE IDENTIQUE':c.status==='SOURCE_DISAGREEMENT'?'DÉSACCORD ENTRE SOURCES':c.status==='POSSIBLE_CONFLICT'?'ÉCART POSSIBLE':'NON ÉTAYÉ';
+      top.append(make('span',c.status==='TEXT_MATCH'?'match-label':['POSSIBLE_CONFLICT','SOURCE_DISAGREEMENT'].includes(c.status)?'conflict-label':'unverified-label',`${String(c.index).padStart(2,'0')}  ${label}`));
+      if(c.risk_flag)top.append(make('span','riskflag','SENSIBLE'));
+      block.append(top,make('p',null,c.claim));
+      if(c.evidence){const desc=c.status==='TEXT_MATCH'?'Phrase identique dans une source déclarée revue :':'Source ressemblante pour comparaison uniquement, sans valeur probante :';block.append(make('div','explanation',desc));const q=make('blockquote',null,c.evidence.text);block.append(q,make('small',null,c.evidence.source_title));}
+      else block.append(make('div','explanation','Aucune phrase de référence correspondante retrouvée.'));
+      if(c.conflicting_source){block.append(make('div','explanation','Une autre source du corpus semble présenter une valeur ou une négation différente :'));block.append(make('blockquote',null,c.conflicting_source.text),make('small',null,c.conflicting_source.source_title));}
+      if(c.status==='TEXT_MATCH')block.append(make('div','explanation','Correspondance textuelle ≠ validité médicale ; contexte à examiner.'));
+      root.append(block);
+    });
+    const foot=make('div','result-foot',`Corpus accepté : ${r.summary.accepted_sources} source(s) déclarée(s) revue(s) · ${r.summary.excluded_sources} exclue(s) · ${r.summary.risk_flags} drapeau(x) de vigilance · Contrôle conservateur, sans certification.`);root.append(foot);
+    root.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+  $('exportBtn').addEventListener('click',()=>{
+    if(!lastReport)return;
+    const summary={product:'MEDGUARD CLINIQUE v2.0 (prototype)', exported_at:new Date().toISOString(),
+      clinical_validation:false, rgpd_certified:false, medical_device_certified:false,
+      local_report_only:true, report_policy:'Aucun texte source, affirmation, nom, URL ou identifiant exporté.',
+      engine:lastReport.engine, decision:lastReport.decision,
+      counts:{...lastReport.summary}, privacy_alert_count:lastReport.privacy_flags.length,
+      statuses:lastReport.claims.reduce((out,c)=>{out[c.status]=(out[c.status]||0)+1;return out;}, {})};
+    saveJSON(summary,`medguard-bilan-technique-${new Date().toISOString().slice(0,10)}.json`);
+  });
+  function saveJSON(value,filename){
+    const blob=new Blob([JSON.stringify(value,null,2)],{type:'application/json'});
+    const url=URL.createObjectURL(blob),a=document.createElement('a');
+    a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),2500);
+  }
+  // "Prêt" here is a personal plan marker, NOT proof of compliance, legal clearance,
+  // identity verification or medical sign-off. No storage between sessions.
+  const requirements=[
+    ['RGPD','Définir finalité, responsabilité de traitement et bases juridiques (art. 6 et 9).'],
+    ['RGPD','Établir le registre, la notice d’information et la gestion des droits.'],
+    ['RGPD','Évaluer le risque et produire une AIPD si nécessaire avec le DPO.'],
+    ['Sécurité','Définir les flux et décider si un hébergement externe certifié HDS est requis.'],
+    ['Sécurité','Documenter chiffrement, habilitations, sauvegardes, journalisation et réponse aux incidents.'],
+    ['Identités','Étudier Pro Santé Connect / RPPS et les rôles professionnels vérifiés.'],
+    ['Qualité','Définir la destination d’usage et statuer sur la qualification MDR avec un spécialiste.'],
+    ['Qualité','Préparer analyse de risques, maîtrise des versions et assurance qualité du logiciel.'],
+    ['Clinique','Constituer un comité médical indépendant et des sources authentifiées, datées, révisées.'],
+    ['Clinique','Définir un protocole d’essais indépendant incluant faux positifs, erreurs et cas limites.'],
+    ['Validation','Faire auditer sécurité, conformité, documentation et résultats avant toute mise en soins.']
+  ];
+  const done=new Set();
+  function updateGov(){ $('govCount').textContent=`${done.size} / ${requirements.length}`; }
+  const govRoot=$('govItems');
+  requirements.forEach(([group,description],i)=>{
+    const wrap=make('label','gov-item'),input=make('input');input.type='checkbox';input.setAttribute('aria-label',`${group} : ${description}`);
+    input.addEventListener('change',()=>{input.checked?done.add(i):done.delete(i);updateGov();});
+    const content=make('span');content.append(make('small',null,group),make('strong',null,description));
+    wrap.append(input,content);govRoot.append(wrap);
+  });
+  $('govReset').addEventListener('click',()=>{done.clear();govRoot.querySelectorAll('input').forEach(i=>{i.checked=false;});updateGov();});
+  $('govExport').addEventListener('click',()=>{
+    saveJSON({product:'MEDGUARD CLINIQUE v2.0', status:'PLAN_INTERNE_NON_VERIFIE', exported_at:new Date().toISOString(),
+      notice:'Les cases renseignées sont des déclarations locales et non des attestations de conformité.',
+      actions:requirements.map(([categorie,description],i)=>({categorie,description, marque_prepare:done.has(i)}))},
+      `medguard-plan-conformite-${new Date().toISOString().slice(0,10)}.json`);
+  });
+  if('serviceWorker' in navigator && location.protocol==='https:') navigator.serviceWorker.register('./sw.js').catch(()=>{});
+  renderSources();
+})();
+</script>
+</body>
+</html>
