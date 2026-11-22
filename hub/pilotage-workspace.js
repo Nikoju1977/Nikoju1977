@@ -103,12 +103,44 @@
     parent.appendChild(el);
     return el;
   }
+  function renderNextActions() {
+    const box = $('tracking-next-actions');
+    if (!box) return;
+    const rank={P0:0,P1:1,P2:2};
+    const items=Object.entries(saved).filter(([name,project])=>
+      known.has(name) && (project.nextAction || project.blocker)
+    ).sort((a,b)=>
+      (rank[known.get(a[0]).priority] ?? 3)-(rank[known.get(b[0]).priority] ?? 3)
+       || a[0].localeCompare(b[0],'fr')
+    );
+    box.replaceChildren();
+    if (!items.length) {
+      text(box,'p','Aucune action déclarée. Utilise « Suivre ce projet » sur une fiche pour en ajouter.','track-muted');
+      return;
+    }
+    for (const [name, project] of items) {
+      const entry=document.createElement('article');entry.className='local-next-card';
+      text(entry,'span',known.get(name).priority+' · SUIVI MANUEL','local-priority');
+      text(entry,'h3',name);
+      if(project.nextAction) text(entry,'p',project.nextAction);
+      if(project.blocker) {
+        const p=document.createElement('p');
+        text(p,'strong','Blocage : ');
+        p.appendChild(document.createTextNode(project.blocker));
+        entry.appendChild(p);
+      }
+      const edit=document.createElement('button');
+      edit.type='button';edit.dataset.trackName=name;edit.textContent='Ouvrir la fiche locale';
+      entry.appendChild(edit);box.appendChild(entry);
+    }
+  }
   function setSummary() {
     const changed = Object.keys(saved).length;
     $('tracking-count').textContent = changed + ' fiche' + (changed > 1 ? 's' : '') + ' suivie' + (changed > 1 ? 's' : '') + ' localement';
     $('tracking-storage').textContent = persistAvailable
       ? 'Enregistrement local sur cet appareil (sans synchronisation).'
       : 'Stockage local indisponible : export JSON nécessaire.';
+    renderNextActions();
   }
   function refreshCards() {
     for (const card of document.querySelectorAll('#projects .card')) {
@@ -297,10 +329,12 @@
     }
     notice('Fiche locale supprimée.',false);
   }
-  document.getElementById('projects').addEventListener('click', event => {
-    const button=event.target.closest('[data-track-name]');
-    if(button)openProject(button.dataset.trackName);
-  });
+  for (const zone of ['projects','tracking-next-actions']) {
+    document.getElementById(zone).addEventListener('click', event => {
+      const button=event.target.closest('[data-track-name]');
+      if (button) openProject(button.dataset.trackName);
+    });
+  }
   for(const id of ['search','domain','priority','integration']) {
     const el=$(id); if(el)el.addEventListener(id==='search'?'input':'change',refreshCards);
   }
