@@ -2,6 +2,12 @@
 
 Date du lot : 22 novembre 2026. Ce document distingue les travaux **committés** des travaux **proposés**. Le [registre public](./registry.json) liste 50 dépôts publics ; les cinq dépôts privés ne sont pas publiés par le tableau de pilotage. Le total inventorié reste de 55.
 
+## Relevé HTTP public du 22 novembre 2026
+
+[Consulter le journal des réponses HTTP, des commits et des blocages Vercel](EVIDENCES_WEB_2026-11-22.md).
+
+Les pages du Hub, d'AutoCoder, de Niko Emploi et de NikoAssist sont accessibles sur les routes vérifiées (HTTP 200), mais cette preuve est limitée à la **présence de la réponse HTTP**. L'API d'AutoCoder indique le mode `local-only`. La promotion du nouveau Hub vers la production a été **refusée (HTTP 422)** ; la préproduction `READY` n'est donc pas revendiquée en production. Les essais fonctionnels sur appareils restent ouverts.
+
 ## Phase A — Socle technique (code enregistré)
 
 - [x] Source canonique `v0.1.0/core.js` dans ce dépôt principal.
