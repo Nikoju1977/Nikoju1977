@@ -141,7 +141,7 @@ async function load(){
   $('integrated').textContent=String(done);
   $('remaining').textContent=String(projects.length-done);
   const group=$('group'),selected=group.value;
-  group.replaceChildren(el('option','Toutes les familles'));
+  const all=el('option','Toutes les familles');all.value='';group.replaceChildren(all);
   for(const k of [...new Set(projects.map(p=>p.domain))].sort()){
     const o=el('option',labels[k]||k);o.value=k;group.appendChild(o);
   }
