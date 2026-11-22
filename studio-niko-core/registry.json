@@ -205,7 +205,10 @@
       "runtime": "not_verified_for_this_batch",
       "core_version": "0.1.0",
       "core_asset": "studio-niko-core.js",
-      "visibility": "public"
+      "visibility": "public",
+      "recovery_status": "committed_unverified",
+      "recovery_scope": "Timeline et références média (2 copies locales, sans binaires)",
+      "recovery_document": "SAUVEGARDE_MEDIA.md"
     },
     {
       "name": "jarvisdiabete",
@@ -493,7 +496,10 @@
       "runtime": "not_verified_for_this_batch",
       "core_version": "0.1.0",
       "core_asset": "studio-niko-core.js",
-      "visibility": "public"
+      "visibility": "public",
+      "recovery_status": "committed_unverified",
+      "recovery_scope": "État musical précédent, sans prises audio binaires",
+      "recovery_document": "SAUVEGARDE_EXPORT.md"
     },
     {
       "name": "Vision-IA",
