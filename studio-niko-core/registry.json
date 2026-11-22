@@ -56,10 +56,12 @@
       "full_name": "Nikoju1977/AutoEntrepreneur-1M",
       "domain": "agents",
       "priority": "P2",
-      "core_integration": "not_started",
+      "core_integration": "committed",
       "deployment": "not_verified_for_this_batch",
       "runtime": "not_verified_for_this_batch",
-      "visibility": "public"
+      "visibility": "public",
+      "core_version": "0.1.0",
+      "core_asset": "studio-niko-core.js"
     },
     {
       "name": "aylina-is-cooking",
@@ -394,10 +396,12 @@
       "full_name": "Nikoju1977/oracle-du-jardinier",
       "domain": "nature",
       "priority": "P2",
-      "core_integration": "not_started",
+      "core_integration": "committed",
       "deployment": "not_verified_for_this_batch",
       "runtime": "not_verified_for_this_batch",
-      "visibility": "public"
+      "visibility": "public",
+      "core_version": "0.1.0",
+      "core_asset": "studio-niko-core.js"
     },
     {
       "name": "presentation-medtronic",
