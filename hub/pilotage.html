@@ -113,6 +113,8 @@ footer{border-top:1px solid var(--line);padding:22px 0 35px;font-size:12px;color
 .track-history-item{background:#132e3d;border-left:2px solid #608897;padding:9px 12px;border-radius:0 7px 7px 0;overflow-wrap:anywhere}
 .track-history-item strong{font-size:12px;color:#e9d0a5}
 .track-history-item p{margin:5px 0 0;color:#c0d2de;white-space:pre-wrap;font-size:12px}
+.tracking-dialog-status{font-size:13px;line-height:1.5;min-height:21px;color:var(--aqua);margin:12px 0 0}
+.tracking-dialog-status[data-error="true"]{color:#ffb8a8;font-weight:700}
 @media(max-width:800px){.module-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:630px){.track-fields,.module-row{grid-template-columns:1fr}.track-fields label.full{grid-column:auto}.local-track{padding:15px}.track-header{padding:14px 12px}#tracking-form{padding:13px 12px 23px}.track-footer button{flex:1 1 120px}.track-footer .delete{flex:1 1 100%}}
 
@@ -271,6 +273,7 @@ render();
 <div id="tracking-modules"></div>
 <div class="track-subheading"><h3>Journal des décisions</h3><p>Historique limité aux 24 dernières modifications distinctes de cette fiche locale.</p></div>
 <div id="tracking-history" class="track-history"></div>
+<p id="tracking-dialog-status" role="status" aria-live="polite" class="tracking-dialog-status"></p>
 <div class="track-footer"><button id="track-delete" class="delete" type="button">Supprimer le suivi local</button><button id="track-cancel" type="button">Annuler</button><button class="save" type="submit">Enregistrer localement</button></div>
 </form>
 </dialog>
