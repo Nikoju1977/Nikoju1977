@@ -21,7 +21,7 @@ Date du lot : 22 novembre 2026. Ce document distingue les travaux **committés**
 - [x] Script `sync-core.mjs` : détection des liens symboliques et copie atomique en mode explicite `--apply`.
 - [x] Oracle du Jardinier : Service Worker `sw.js` servi depuis le site et manifeste statique, remplaçant l'inscription non valide depuis une URL Blob.
 
-**Limites :** les imports/exports existants restent inchangés ; les utilitaires ne sont pas encore substitués à ces flux. Aucun test utilisateur, revue de sécurité exhaustive ou certification iPhone n'est revendiqué. Les deployments doivent être suivis séparément.
+**Limites du socle v0.1.0 :** ce composant ne substitue aucun import/export métier ; les modifications ultérieures des flux sont documentées séparément en phase B. Aucun test utilisateur, revue de sécurité exhaustive ou certification iPhone n'est revendiqué. Les deployments doivent être suivis séparément.
 
 ## Phase B — Rendre les six parcours principaux fiables
 
@@ -54,6 +54,31 @@ Le tableau de pilotage constitue une photographie de code ; il **ne confirme pas
 - [ ] Vérifier après publication la restauration sur PC, Android, iPhone, Mac et tablette, sans considérer un commit comme une preuve de fonctionnement.
 
 **Limites :** les états de secours sont enregistrés localement et en clair ; un navigateur peut les purger. Les clips et enregistrements importés ne se retrouvent pas automatiquement par magie. Aucune campagne de tests physiques n'a été lancée à cette étape.
+
+### Lot B2 — Fiabilisation AutoCoder et Niko Emploi (commits du 22 novembre 2026)
+
+| Application | Changement réellement committé | Limite ouverte |
+|---|---|---|
+| **AutoCoder** | Copie locale précédente des fichiers de code, restauration volontaire, export de secours JSON, liens de téléchargement prolongés, enregistrement des modifications en attente lors de la mise en arrière-plan | Pyodide via CDN et prévisualisation à contrôler séparément sur mobile ; sauvegarde navigateur et quota non garantis |
+| **Niko Emploi** | Correction d'échappement du calendrier ICS et validation de dates, téléchargement manuel CSV/JSON/ICS, cache du shell public du radar avec accès aux suivis locaux hors connexion | Aucune recherche d'offres ou d'entreprises hors ligne ; conformité des sources, suivi des candidatures et intégrations réelles encore à évaluer |
+| **Galerie Studio Niko** | Aucun nouveau correctif de ce lot ; mode 2D sans WebGL déjà présent dans le dépôt | Cohérence source/généré, conservation des médias et navigation tactile à reprendre |
+| **NikoAssist** | Aucun nouveau correctif de ce lot | Revoir permissions, confirmation d'opérations réelles et affichage des actions effectivement exécutées |
+
+- [x] Code et interface de reprise d'AutoCoder enregistrés. [Limites et procédure](https://github.com/Nikoju1977/AutoCoder-Studio-Niko/blob/main/docs/RECUPERATION_PROJET.md).
+- [x] Code ICS, téléchargement et coque radar PWA de Niko Emploi enregistrés. [Documentation et limites](https://github.com/Nikoju1977/job-search/blob/main/docs/RADAR_LBB_INTEGRATION.md).
+- [x] Registre public et tableau Hub complétés avec les six états **phase B** distincts des statuts de publication et de fonctionnement.
+- [ ] Contrôler les commits en production, les intégrations et les comportements sur appareils réels **uniquement sur demande expresse**.
+
+### Ordre opérationnel restant — sans mélanger les projets
+
+1. **P0 — Fiabiliser Galerie Studio Niko :** remettre en cohérence les entrées HTML 3D/2D, l'interface tactile et la récupération des médias. Ne pas affirmer que WebGL fonctionne sans preuve de navigateur réel.
+2. **P0 — Renforcer NikoAssist :** chaque action potentiellement sensible doit disposer d'une autorisation explicite, d'une explication et d'un retour d'exécution honnête. Ne pas afficher un succès lorsqu'aucune action n'a été réalisée.
+3. **P0 — Continuer Niko Emploi :** préserver les candidatures sans inventer leur envoi, distinguer preuves de réception, liens externes et états manuels ; examiner la licéité et la fiabilité des sources.
+4. **P0 — Continuer AutoCoder :** rendre les erreurs Pyodide, Worker, chargement CDN et prévisualisation explicites sans simuler une exécution ni promettre Python hors connexion.
+5. **P0 — Cinéma et audio :** poursuivre la réconciliation des médias et le diagnostic d'erreurs réels, sans attribuer au navigateur un rendu 4K ou un export stéréo garanti.
+6. **Transversal — Confidentialité :** un ancien commit public du registre a contenu des noms privés ; la version actuelle n'en contient plus, mais le nettoyage d'historique est un chantier distinct, potentiellement destructif et soumis à autorisation préalable.
+
+**Règle de preuve :** « défini » ≠ « committé » ≠ « déployé » ≠ « vérifié sur appareil » ≠ « stable ». Aucun jalon de tests ni de déploiement n'est coché automatiquement.
 
 ## Phase C — Données sensibles et opérations
 
