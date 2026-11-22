@@ -32,10 +32,12 @@
   let persistAvailable = true;
 
   function notice(text, error) {
-    const el = $('tracking-notice');
-    if (el) {
-      el.textContent = text;
-      el.dataset.error = error ? 'true' : 'false';
+    for (const id of ['tracking-notice','tracking-dialog-status']) {
+      const el = $(id);
+      if (el) {
+        el.textContent = text;
+        el.dataset.error = error ? 'true' : 'false';
+      }
     }
   }
   function normalizeProject(raw) {
@@ -48,11 +50,15 @@
       blocker: limit(raw.blocker, 1200),
       reproduce: limit(raw.reproduce, 2200),
       decision: limit(raw.decision, 1200),
-      modules: modules.filter(m => m && typeof m === 'object' && !Array.isArray(m)).map(m => ({
-        name: limit(m.name, 120), version: limit(m.version, 64),
-        state: Object.hasOwn(states, m.state) ? m.state : 'unknown',
-        evidence: limit(m.evidence, 900)
-      })).filter(m => m.name),
+      modules: modules.filter(m => m && typeof m === 'object' && !Array.isArray(m)).map(m => {
+        const evidence = limit(m.evidence, 900);
+        const requested = Object.hasOwn(states, m.state) ? m.state : 'unknown';
+        return {
+          name:limit(m.name, 120), version:limit(m.version, 64),
+          state:evidenceRequired.has(requested) && evidence.length < 12 ? 'unknown' : requested,
+          evidence
+        };
+      }).filter(m => m.name),
       history: history.filter(h => h && typeof h === 'object').map(h => ({
         at: limit(h.at, 32),
         version: limit(h.version, 64),
@@ -109,19 +115,23 @@
       const name = card.querySelector('h3')?.textContent;
       if (!known.has(name)) continue;
       const actions = card.querySelector('.actions');
-      if (!actions || actions.querySelector('[data-track-name]')) continue;
-      const button = document.createElement('button');
-      button.type = 'button'; button.className = 'track-button';
-      button.dataset.trackName = name;
+      if (!actions) continue;
+      let button = actions.querySelector('[data-track-name]');
+      if (!button) {
+        button = document.createElement('button');
+        button.type = 'button'; button.className = 'track-button';
+        button.dataset.trackName = name;
+        actions.appendChild(button);
+      }
       button.textContent = saved[name] ? 'Modifier le suivi' : 'Suivre ce projet';
-      actions.appendChild(button);
+      let summary = card.querySelector('.track-summary');
       if (saved[name]) {
-        const existing = card.querySelector('.track-summary');
-        if (!existing) {
-          const summary = text(card, 'p', 'Suivi manuel : ' + saved[name].modules.length +
-            ' module(s) · ' + (saved[name].version || 'version à renseigner'), 'track-summary');
-          summary.title = 'Déclaration locale, sans vérification automatique';
-        }
+        if (!summary) summary = text(card, 'p', '', 'track-summary');
+        summary.textContent = 'Suivi manuel : ' + saved[name].modules.length +
+          ' module(s) · ' + (saved[name].version || 'version à renseigner');
+        summary.title = 'Déclaration locale, sans vérification automatique';
+      } else if (summary) {
+        summary.remove();
       }
     }
   }
@@ -300,6 +310,8 @@
   $('track-close').addEventListener('click',()=>dialog.close());
   $('track-delete').addEventListener('click',deleteProject);
   $('tracking-export').addEventListener('click',exportData);
+  $('tracking-import-button').addEventListener('click',()=> $('tracking-import').click());
   $('tracking-import').addEventListener('change',importData);
+  $('track-cancel').addEventListener('click',()=>dialog.close());
   setSummary();refreshCards();
 })();
