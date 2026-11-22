@@ -16,6 +16,10 @@ Date du lot : 22 novembre 2026. Ce document distingue les travaux **committés**
 - [x] Rafraîchissement explicite de l'instantané via `tools/refresh-hub.mjs` ; pas de statut de santé simulé.
 - [x] Correction du cache PWA Hub : chaque navigation a sa propre entrée, sans écraser l'accueil.
 - [x] Galerie : module intégré à la source, au HTML publié et option d'incrustation dans la construction autonome.
+- [x] Deuxième vague de migration : `AutoEntrepreneur-1M` et `oracle-du-jardinier`, soit huit dépôts publics avec copies du Core.
+- [x] Suivi local par projet/version/module, anomalies, actions, références déclaratives, historique et import/export JSON dans `hub/pilotage.html`.
+- [x] Script `sync-core.mjs` : détection des liens symboliques et copie atomique en mode explicite `--apply`.
+- [x] Oracle du Jardinier : Service Worker `sw.js` servi depuis le site et manifeste statique, remplaçant l'inscription non valide depuis une URL Blob.
 
 **Limites :** les imports/exports existants restent inchangés ; les utilitaires ne sont pas encore substitués à ces flux. Aucun test utilisateur, revue de sécurité exhaustive ou certification iPhone n'est revendiqué. Les deployments doivent être suivis séparément.
 
