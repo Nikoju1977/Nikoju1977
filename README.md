@@ -212,6 +212,10 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 
 <small>Le catalogue ci-dessus est une sélection éditoriale de dépôts publics, et non une promesse de disponibilité ou de fonctionnement de chaque application. Les projets médicaux sont expérimentaux et ne remplacent pas un professionnel de santé. Les projets issus d'un code tiers conservent les crédits et licences d'origine.</small>
 
+## Studio Niko Core — socle partagé
+
+La [bibliothèque Studio Niko Core v0.1.0](studio-niko-core/README.md) fournit des utilitaires JavaScript locaux et un diagnostic volontaire sans télémétrie. Le [registre des 55 dépôts](studio-niko-core/registry.json), le [cockpit de pilotage](studio-niko-core/index.html) et la [feuille de route](studio-niko-core/ROADMAP.md) distinguent les intégrations enregistrées dans GitHub des fonctionnalités réellement validées. Six projets phares utilisent déjà une copie locale du socle ; cela ne garantit pas encore leur déploiement ni leur fonctionnement sur appareil.
+
 **[Études de projet](SHOWCASE.md)** · **[Que fait chaque dépôt ?](PROJECTS.md)** · **[Politique de sélection](CURATION.md)** · **[Plan qualité](QUALITY_ROADMAP.md)**
 
 <div align="center">
