@@ -138,3 +138,18 @@ Ajouts vérifiés par lecture des dépôts et contrôle HTTP 200 des pages de pr
 - **Rave-Generator-2** — https://rave-generator-2.vercel.app/ ; groovebox Web Audio et fonctions WAV/MIDI dont le rendu sur appareils doit être validé.
 
 Le statut `page-responding` signifie **HTML HTTP 200 à la date indiquée** et non validation des fonctions, des exports, du streaming, du moteur IA, de l'Android ou de Safari iPhone. L'assertion `node hub/check.cjs` vérifie maintenant l'égalité exacte des dépôts publics du catalogue, du registre et des notices, plutôt qu'un total historique fixé à 47. Le cache PWA est renouvelé (`studio-niko-hub-v12-catalog50`).
+
+## Preuves de publication consignées le 22 novembre 2026
+
+Le registre public `studio-niko-core/registry.json` et le tableau `hub/pilotage.html` contiennent un **instantané daté** des versions constatées, et non une supervision continue. Le terme `READY` vient des métadonnées Vercel du projet et du commit exact, indépendamment des tests GitHub.
+
+| Application | Production Vercel relevée | Niveau de preuve |
+| --- | --- | --- |
+| AutoCoder | `066cdac1` | Construction READY et CI automatisée réussie ; ressources du commit et appareils physiques non recontrôlés |
+| Niko Emploi | `3f324a9f` | Construction READY, CI et 9 ressources publiques HTTP 200 (audit GitHub Actions `45058031630`) ; sources d'offres non certifiées |
+| NikoAssist | `091cf598` | Construction READY, CI et 6 ressources HTTP 200 (audit GitHub Actions `45053587151`) ; moteur Python du site non connecté |
+| Studio Niko Hub | `51ddd9ab` | Construction READY et CI ; aucune certification d'exécution sur appareils |
+
+Les champs `verification: http_assets_only` et `verification: deployment_ready_ci_only` distinguent ces deux périmètres. Le tableau affiche la **date de relève** et rappelle que l'état n'est pas mis à jour en direct. Pour rafraîchir correctement les preuves : relever l'alias Vercel, son environnement `production`, le SHA et l'état `READY`, puis exécuter un audit HTTP indépendant si l'on veut revendiquer cette preuve. Le registre, la capture `repository-snapshot` et les contrôles de cohérence doivent rester concordants.
+
+La vérification en navigateur de production, les interactions des moteurs métiers, l'installation PWA sur vrais appareils et les intégrations IA restent à documenter séparément. Aucun déploiement ou clic de démonstration ne prouve ces fonctions à lui seul.
