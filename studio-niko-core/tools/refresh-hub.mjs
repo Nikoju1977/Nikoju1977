@@ -25,7 +25,9 @@ const payload={
   private_repositories_omitted:registry.private_repositories_omitted,
   repositories:registry.repositories.map(r=>({
     name:r.name,full_name:r.full_name,domain:r.domain,priority:r.priority,
-    core_integration:r.core_integration,core_version:r.core_version||null
+    core_integration:r.core_integration,core_version:r.core_version||null,
+    recovery_status:r.recovery_status||null,recovery_scope:r.recovery_scope||null,
+    recovery_document:r.recovery_document||null
   }))
 };
 const serialized=JSON.stringify(payload).replace(/</g,'\\u003c');
