@@ -71,6 +71,51 @@ footer{border-top:1px solid var(--line);padding:22px 0 35px;font-size:12px;color
 @media(max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:630px){.top{min-height:unset;gap:10px}.nav{width:100%}.nav a{flex:1}.hero{padding-top:28px}.stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.stat{padding:14px}.filters{grid-template-columns:1fr;padding:13px;gap:10px}.grid{grid-template-columns:1fr}.card{padding:17px}.hero p{font-size:14px}.callout{padding:16px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Studio Niko — local production journal v1 */
+.local-track{border:1px solid var(--line);background:linear-gradient(120deg,#152d40,#111c2b);border-radius:17px;padding:20px;margin:0 0 36px}
+.local-track p{max-width:880px;color:#c2d5e0;font-size:13px;line-height:1.7;margin:9px 0}
+.local-track .tracking-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:15px 0}
+.local-track button,.track-footer button,#track-close,.track-remove,.card .actions button.track-button{border:1px solid #4d8290;border-radius:9px;background:#1c4252;color:#e8fbff;font-weight:700;min-height:44px;padding:10px 13px}
+.local-track button:hover,.track-footer button:hover,.card .actions button.track-button:hover{background:#2b5664}
+#tracking-count{display:inline-block;font-weight:750;color:var(--aqua);font-size:13px}
+#tracking-storage,.track-muted{color:var(--muted);font-size:12px}
+#tracking-notice{font-size:12px;min-height:20px;color:var(--aqua);margin-top:8px}
+#tracking-notice[data-error="true"]{color:#ffb4a5}
+.card .actions button.track-button{font-size:12px;min-height:43px;padding:10px 12px}
+.track-summary{margin:0;font-size:12px;color:#d1e0e8;background:#1a3542;border-left:3px solid #7ae5da;padding:7px 9px;border-radius:0 7px 7px 0}
+#tracking-dialog{width:min(970px,calc(100% - 22px));max-height:min(92dvh,960px);border:1px solid #4f8391;border-radius:17px;background:#0d1d2b;color:#e8f4fc;padding:0;box-shadow:0 40px 120px #000e;overscroll-behavior:contain}
+#tracking-dialog::backdrop{background:#02070be8;backdrop-filter:blur(6px)}
+.track-header{position:sticky;top:0;background:#102536f7;border-bottom:1px solid #315469;z-index:2;padding:17px 21px;display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.track-header .kicker{display:block;margin:0 0 5px}
+.track-header h2{margin:0;overflow-wrap:anywhere;font-size:clamp(20px,3vw,26px)}
+#track-close{min-width:44px;min-height:44px;background:#193448}
+#tracking-origin{font-size:12px;color:#abc6d1}
+#tracking-form{padding:19px 21px 25px}
+.track-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.track-fields label,.module-row label{display:block;font-size:12px;color:#b8cddd;font-weight:700}
+.track-fields label.full{grid-column:1/-1}
+#tracking-dialog :where(input,textarea,select){display:block;width:100%;max-width:100%;min-width:0;min-height:45px;background:#071522;border:1px solid #426678;color:#f0fbff;padding:11px 12px;border-radius:9px;margin:6px 0 0;font-size:16px;font-family:inherit}
+#tracking-dialog textarea{resize:vertical;min-height:85px;line-height:1.5}
+#tracking-dialog :where(input,textarea,select):focus-visible{outline:3px solid var(--aqua);outline-offset:2px}
+.track-subheading{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:23px 0 12px}
+.track-subheading h3{margin:0;font-size:18px}
+.track-subheading p{width:100%;font-size:12px;color:var(--muted);margin:0}
+#track-add{min-height:44px;border:1px solid var(--aqua);border-radius:9px;background:#17453f;color:#e1fff8;padding:9px 13px;font-weight:800}
+#tracking-modules{display:grid;gap:11px}
+.module-row{min-width:0;margin:0;border:1px solid #35596a;background:#132b3b;border-radius:11px;padding:14px;display:grid;grid-template-columns:minmax(145px,1.35fr) minmax(95px,.65fr) minmax(135px,.85fr) minmax(145px,1.3fr);gap:10px;align-items:end}
+.module-row legend{padding:0 8px;font-size:12px;color:var(--aqua);font-weight:800}
+.module-row .track-remove{grid-column:1/-1;justify-self:end;background:transparent;border-color:#98605a;color:#ffbbac;min-height:38px}
+.track-footer{display:flex;flex-wrap:wrap;gap:9px;align-items:center;border-top:1px solid #33556a;padding-top:17px;margin-top:20px}
+.track-footer .save{background:var(--aqua)!important;color:#072526!important;border-color:var(--aqua)}
+.track-footer .delete{background:transparent;border-color:#98605a;color:#ffbbac;margin-right:auto}
+.track-history{display:grid;gap:8px;max-height:230px;overflow:auto}
+.track-history-item{background:#132e3d;border-left:2px solid #608897;padding:9px 12px;border-radius:0 7px 7px 0;overflow-wrap:anywhere}
+.track-history-item strong{font-size:12px;color:#e9d0a5}
+.track-history-item p{margin:5px 0 0;color:#c0d2de;white-space:pre-wrap;font-size:12px}
+@media(max-width:800px){.module-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:630px){.track-fields,.module-row{grid-template-columns:1fr}.track-fields label.full{grid-column:auto}.local-track{padding:15px}.track-header{padding:14px 12px}#tracking-form{padding:13px 12px 23px}.track-footer button{flex:1 1 120px}.track-footer .delete{flex:1 1 100%}}
+
 </style>
 </head>
 <body>
@@ -112,6 +157,21 @@ footer{border-top:1px solid var(--line);padding:22px 0 35px;font-size:12px;color
 <p>Les six premières intégrations proposent un petit diagnostic technique volontaire et sans télémétrie. Les moteurs de génération, les données de santé, les fichiers de projet et les clés privées ne sont pas transmis par ce module. Les changements de code ne prouvent pas qu'une application est opérationnelle sur tous les appareils.</p>
 <div class="links"><a class="linkbtn" href="https://github.com/Nikoju1977/Nikoju1977/blob/main/studio-niko-core/README.md" target="_blank" rel="noopener noreferrer">Documentation du Core</a><a class="linkbtn" href="https://github.com/Nikoju1977/Nikoju1977/blob/main/studio-niko-core/registry.json" target="_blank" rel="noopener noreferrer">Registre source public</a></div>
 </section>
+
+<section class="local-track" id="suivi-local" aria-labelledby="tracking-heading">
+<div class="kicker">Journal de production</div>
+<h2 id="tracking-heading">Suivi des versions et anomalies</h2>
+<p>Ajoute des modules, leurs versions, les problèmes à résoudre, les étapes de reproduction et les décisions. Les états « testé », « déployé » et « stable » exigent une référence explicite mais restent des déclarations manuelles, non des vérifications automatiques.</p>
+<p>Enregistrement uniquement dans ce navigateur. Aucune synchronisation entre appareils, aucun envoi à GitHub/Vercel. Ne saisis ni données médicales ni identifiants ou clés API.</p>
+<div class="tracking-actions">
+<button id="tracking-export" type="button">Exporter le suivi JSON</button>
+<button id="tracking-import-button" type="button">Importer un suivi JSON</button>
+<input id="tracking-import" type="file" accept=".json,application/json" hidden aria-label="Importer un suivi Studio Niko">
+</div>
+<div><span id="tracking-count">0 fiche suivie localement</span> · <span id="tracking-storage">Chargement du stockage local…</span></div>
+<p id="tracking-notice" role="status" aria-live="polite"></p>
+</section>
+
 </main>
 <footer><div class="container">Studio Niko Design — catalogue public sans télémétrie. État de publication et fonctionnement non certifiés par cet inventaire.</div></footer>
 <script id="repository-snapshot" type="application/json">{"schema_version":"1.1","as_of":"2026-11-22","total_repositories":55,"private_repositories_omitted":5,"repositories":[{"name":"aegis-earth-mobile","full_name":"Nikoju1977/aegis-earth-mobile","domain":"cartography","priority":"P0","core_integration":"not_started","core_version":null},{"name":"agent-biometrique","full_name":"Nikoju1977/agent-biometrique","domain":"health","priority":"P1","core_integration":"not_started","core_version":null},{"name":"applewatchcadrans","full_name":"Nikoju1977/applewatchcadrans","domain":"visual-arts","priority":"P2","core_integration":"not_started","core_version":null},{"name":"AutoCoder-Studio-Niko","full_name":"Nikoju1977/AutoCoder-Studio-Niko","domain":"agents","priority":"P0","core_integration":"committed","core_version":"0.1.0"},{"name":"AutoEntrepreneur-1M","full_name":"Nikoju1977/AutoEntrepreneur-1M","domain":"agents","priority":"P2","core_integration":"not_started","core_version":null},{"name":"aylina-is-cooking","full_name":"Nikoju1977/aylina-is-cooking","domain":"business","priority":"P2","core_integration":"not_started","core_version":null},{"name":"Bouh-delivery","full_name":"Nikoju1977/Bouh-delivery","domain":"games","priority":"P2","core_integration":"not_started","core_version":null},{"name":"Boutique-morgane","full_name":"Nikoju1977/Boutique-morgane","domain":"business","priority":"P0","core_integration":"not_started","core_version":null},{"name":"cockpit-mecaria","full_name":"Nikoju1977/cockpit-mecaria","domain":"business","priority":"P2","core_integration":"not_started","core_version":null},{"name":"compagnon-diabete","full_name":"Nikoju1977/compagnon-diabete","domain":"health","priority":"P1","core_integration":"not_started","core_version":null},{"name":"Cosmo-citrouille","full_name":"Nikoju1977/Cosmo-citrouille","domain":"games","priority":"P2","core_integration":"not_started","core_version":null},{"name":"Dbmetre-pro","full_name":"Nikoju1977/Dbmetre-pro","domain":"music","priority":"P1","core_integration":"not_started","core_version":null},{"name":"dermato-ai","full_name":"Nikoju1977/dermato-ai","domain":"health","priority":"P1","core_integration":"not_started","core_version":null},{"name":"EBM-BRETONNE.","full_name":"Nikoju1977/EBM-BRETONNE.","domain":"music","priority":"P1","core_integration":"not_started","core_version":null},{"name":"fibrobot","full_name":"Nikoju1977/fibrobot","domain":"health","priority":"P0","core_integration":"not_started","core_version":null},{"name":"fibrocare","full_name":"Nikoju1977/fibrocare","domain":"health","priority":"P0","core_integration":"not_started","core_version":null},{"name":"galerie-studio-niko","full_name":"Nikoju1977/galerie-studio-niko","domain":"visual-arts","priority":"P0","core_integration":"committed","core_version":"0.1.0"},{"name":"handimonde","full_name":"Nikoju1977/handimonde","domain":"business","priority":"P2","core_integration":"not_started","core_version":null},{"name":"ia-studio-cine","full_name":"Nikoju1977/ia-studio-cine","domain":"cinema","priority":"P0","core_integration":"committed","core_version":"0.1.0"},{"name":"jarvisdiabete","full_name":"Nikoju1977/jarvisdiabete","domain":"health","priority":"P0","core_integration":"not_started","core_version":null},{"name":"job-search","full_name":"Nikoju1977/job-search","domain":"business","priority":"P0","core_integration":"committed","core_version":"0.1.0"},{"name":"l-ultime-confrontation","full_name":"Nikoju1977/l-ultime-confrontation","domain":"cinema","priority":"P1","core_integration":"not_started","core_version":null},{"name":"le-jardin-de-niko","full_name":"Nikoju1977/le-jardin-de-niko","domain":"nature","priority":"P2","core_integration":"not_started","core_version":null},{"name":"les-annales-akashiques","full_name":"Nikoju1977/les-annales-akashiques","domain":"visual-arts","priority":"P2","core_integration":"not_started","core_version":null},{"name":"medicalvisionproai","full_name":"Nikoju1977/medicalvisionproai","domain":"health","priority":"P1","core_integration":"not_started","core_version":null},{"name":"Medivision-ai-pro","full_name":"Nikoju1977/Medivision-ai-pro","domain":"health","priority":"P1","core_integration":"not_started","core_version":null},{"name":"Metrology-OS","full_name":"Nikoju1977/Metrology-OS","domain":"business","priority":"P2","core_integration":"not_started","core_version":null},{"name":"miaotris","full_name":"Nikoju1977/miaotris","domain":"games","priority":"P2","core_integration":"not_started","core_version":null},{"name":"N8V","full_name":"Nikoju1977/N8V","domain":"music","priority":"P1","core_integration":"not_started","core_version":null},{"name":"Neural-Art-mars-2026","full_name":"Nikoju1977/Neural-Art-mars-2026","domain":"visual-arts","priority":"P2","core_integration":"not_started","core_version":null},{"name":"niko-commande-live-tik-tok","full_name":"Nikoju1977/niko-commande-live-tik-tok","domain":"music","priority":"P1","core_integration":"not_started","core_version":null},{"name":"Niko-Ultravision","full_name":"Nikoju1977/Niko-Ultravision","domain":"cinema","priority":"P1","core_integration":"not_started","core_version":null},{"name":"Nikoassist","full_name":"Nikoju1977/Nikoassist","domain":"agents","priority":"P0","core_integration":"committed","core_version":"0.1.0"},{"name":"nikogroove","full_name":"Nikoju1977/nikogroove","domain":"music","priority":"P1","core_integration":"not_started","core_version":null},{"name":"Nikoju1977","full_name":"Nikoju1977/Nikoju1977","domain":"portfolio","priority":"P2","core_integration":"not_started","core_version":null},{"name":"oeil-hermes","full_name":"Nikoju1977/oeil-hermes","domain":"visual-arts","priority":"P2","core_integration":"not_started","core_version":null},{"name":"OPENVITA-DT1","full_name":"Nikoju1977/OPENVITA-DT1","domain":"health","priority":"P0","core_integration":"not_started","core_version":null},{"name":"oracle-du-jardinier","full_name":"Nikoju1977/oracle-du-jardinier","domain":"nature","priority":"P2","core_integration":"not_started","core_version":null},{"name":"presentation-medtronic","full_name":"Nikoju1977/presentation-medtronic","domain":"health","priority":"P1","core_integration":"not_started","core_version":null},{"name":"purescanai","full_name":"Nikoju1977/purescanai","domain":"health","priority":"P1","core_integration":"not_started","core_version":null},{"name":"radar-de-niko","full_name":"Nikoju1977/radar-de-niko","domain":"nature","priority":"P2","core_integration":"not_started","core_version":null},{"name":"Rave-Generator-2","full_name":"Nikoju1977/Rave-Generator-2","domain":"music","priority":"P1","core_integration":"not_started","core_version":null},{"name":"Ron-","full_name":"Nikoju1977/Ron-","domain":"agents","priority":"P2","core_integration":"not_started","core_version":null},{"name":"Sage-companion","full_name":"Nikoju1977/Sage-companion","domain":"agents","priority":"P2","core_integration":"not_started","core_version":null},{"name":"SCAN-BIOMEDICAL","full_name":"Nikoju1977/SCAN-BIOMEDICAL","domain":"health","priority":"P1","core_integration":"not_started","core_version":null},{"name":"tarot-de-niko","full_name":"Nikoju1977/tarot-de-niko","domain":"visual-arts","priority":"P2","core_integration":"not_started","core_version":null},{"name":"the-lovestronautes-machine","full_name":"Nikoju1977/the-lovestronautes-machine","domain":"music","priority":"P0","core_integration":"committed","core_version":"0.1.0"},{"name":"Vision-IA","full_name":"Nikoju1977/Vision-IA","domain":"cinema","priority":"P1","core_integration":"not_started","core_version":null},{"name":"Wan2GP","full_name":"Nikoju1977/Wan2GP","domain":"cinema","priority":"P1","core_integration":"not_started","core_version":null},{"name":"White-hat","full_name":"Nikoju1977/White-hat","domain":"security","priority":"P2","core_integration":"not_started","core_version":null}]}</script>
@@ -196,5 +256,24 @@ byId('reset').addEventListener('click',function(){search.value='';domain.value='
 render();
 })();
 </script>
+
+<dialog id="tracking-dialog" aria-labelledby="tracking-project">
+<div class="track-header"><div><span class="kicker">Fiche de suivi local</span><h2 id="tracking-project">Projet</h2><span id="tracking-origin"></span></div><button type="button" id="track-close" aria-label="Fermer sans enregistrer">Fermer ✕</button></div>
+<form id="tracking-form">
+<div class="track-fields">
+<label>Version suivie<input id="track-version" maxlength="64" placeholder="Ex. v2.3 ou commit court" autocomplete="off"></label>
+<label>Décision / changement de version<input id="track-decision" maxlength="1200" placeholder="Ex. Choisir un export WAV hors ligne" autocomplete="off"></label>
+<label class="full">Prochaine action<textarea id="track-nextAction" maxlength="1200" placeholder="Action concrète et vérifiable à réaliser"></textarea></label>
+<label class="full">Blocage ou régression<textarea id="track-blocker" maxlength="1200" placeholder="Décrire le problème rencontré ; laisser vide si inconnu"></textarea></label>
+<label class="full">Étapes reproductibles<textarea id="track-reproduce" maxlength="2200" placeholder="1. Ouvrir…&#10;2. Choisir…&#10;3. Observer…&#10;Résultat attendu…"></textarea></label>
+</div>
+<div class="track-subheading"><h3>Fonctions et modules</h3><button type="button" id="track-add">Ajouter un module</button><p>Un état élevé n'est pas une preuve : pour « Déployé », « Testé » ou « Stable », renseigne une référence vérifiable. Les autres états peuvent rester « Impossible à vérifier ».</p></div>
+<div id="tracking-modules"></div>
+<div class="track-subheading"><h3>Journal des décisions</h3><p>Historique limité aux 24 dernières modifications distinctes de cette fiche locale.</p></div>
+<div id="tracking-history" class="track-history"></div>
+<div class="track-footer"><button id="track-delete" class="delete" type="button">Supprimer le suivi local</button><button id="track-cancel" type="button">Annuler</button><button class="save" type="submit">Enregistrer localement</button></div>
+</form>
+</dialog>
+<script src="./pilotage-workspace.js" defer></script>
 </body>
 </html>
