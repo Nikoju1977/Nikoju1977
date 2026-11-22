@@ -18,7 +18,24 @@ for (const x of cat){
 assert(!cat.some(x=>['ron','Angie-local-commander','medvisionproai','galerie-niko-repo','le-s-raphin-livre'].includes(x.slug)),'No private repos');
 for(const match of app.matchAll(/byId\(['"]([^'"]+)['"]\)/g))assert(index.includes('id="'+match[1]+'"'),'DOM id '+match[1]);
 assert(index.includes('id="check-all"'),'Diagnostic button exists');
-assert(sw.includes('studio-niko-hub-v5'),'Service worker cache bumped');
+assert(/const CACHE=['\"]studio-niko-hub-v\\d+(?:-[a-z0-9-]+)?['\"]/.test(sw),'Service worker has a versioned cache');
+assert(sw.includes("'./pilotage.html'"),'Dashboard in PWA offline asset list');
+const registry=JSON.parse(fs.readFileSync(path.join(dir,'..','studio-niko-core','registry.json'),'utf8'));
+const pilotage=fs.readFileSync(path.join(dir,'pilotage.html'),'utf8');
+const snapshotMatch=pilotage.match(/<script id="repository-snapshot" type="application\\/json">([^<]+)<\\/script>/);
+assert(snapshotMatch,'Pilotage snapshot is embedded');
+const snapshot=JSON.parse(snapshotMatch[1]);
+assert(snapshot.repositories.length===registry.public_repositories,'Public registry count matches dashboard');
+assert(snapshot.private_repositories_omitted===registry.private_repositories_omitted,'Private repository count stays hidden');
+for(const repo of registry.repositories){
+  const item=snapshot.repositories.find(x=>x.name===repo.name);
+  assert(item,'Hub snapshot includes '+repo.name);
+  if(repo.preview_deployment){
+    assert(item.preview_deployment?.commit===repo.preview_deployment.commit,'Preview commit matches '+repo.name);
+    assert(item.preview_deployment?.verification==='build_ready_only','Preview evidence never claims runtime validation '+repo.name);
+    assert(new URL(item.preview_deployment.url).hostname.endsWith('.vercel.app'),'Preview URL is Vercel '+repo.name);
+  }
+}
 assert(index.includes('id="atelier"'),'Workspace section');
 assert(fs.existsSync(path.join(dir,'workspace.js')),'Workspace JS');
 assert(fs.existsSync(path.join(dir,'workspace.css')),'Workspace CSS');
