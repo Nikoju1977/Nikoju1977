@@ -50,11 +50,16 @@ for(const repo of registry.repositories){
   if(repo.production_deployment){
     assert(item.production_deployment?.commit===repo.production_deployment.commit,'Production commit matches '+repo.name);
     assert(item.production_deployment.state==='READY','Production is READY '+repo.name);
-    assert(item.production_deployment.verification==='http_assets_only','No device or end-to-end certification '+repo.name);
+    assert(['http_assets_only','deployment_ready_ci_only'].includes(item.production_deployment.verification),
+      'Recognized evidence scope only '+repo.name);
+    assert(/^[0-9a-f]{40}$/.test(item.production_deployment.commit),'Exact commit required '+repo.name);
+    assert(/^20[0-9]{2}-[0-9]{2}-[0-9]{2}$/.test(item.production_deployment.checked_on),
+      'Timestamp of inspected production required '+repo.name);
     const url=new URL(item.production_deployment.url);
     assert(url.protocol==='https:'&&url.hostname.endsWith('.vercel.app'),'Production link is HTTPS Vercel '+repo.name);
   }
 }
+assert(pilotage.includes('var httpVerified='),'Dashboard separates verified HTTP from CI-only READY');
 assert(index.includes('id="atelier"'),'Workspace section');
 assert(fs.existsSync(path.join(dir,'workspace.js')),'Workspace JS');
 assert(fs.existsSync(path.join(dir,'workspace.css')),'Workspace CSS');
