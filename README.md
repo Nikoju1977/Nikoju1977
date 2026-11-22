@@ -14,11 +14,15 @@ Créateur indépendant en Loire-Atlantique, France. Je relie narration, design d
 
 *Creative technologist building narrative tools, interactive worlds and human-centered software.*
 
-[**Explorer 6 projets signature**](SHOWCASE.md) · [**Comprendre chaque application**](PROJECTS.md) · [**Parcourir les 9 univers**](#projets-retenus-classés-par-thème) · [**Écouter Thelovestronautes**](https://soundcloud.com/nicolas-julienne-670246252)
+[**Explorer 6 projets signature**](SHOWCASE.md) · [**Comprendre chaque application**](PROJECTS.md) · [**Pilotage des dépôts publics**](hub/pilotage.html) · [**Parcourir les 9 univers**](#projets-retenus-classés-par-thème) · [**Écouter Thelovestronautes**](https://soundcloud.com/nicolas-julienne-670246252)
 
 </div>
 
 ---
+
+## Nouveau : Studio Niko Core
+
+[**Accéder au tableau de pilotage GitHub**](hub/pilotage.html) — inventaire de **55 dépôts**, dont **50 publics**, avec recherche, priorités et état des six premières intégrations de [Studio Niko Core](studio-niko-core/README.md). Les cinq dépôts privés sont exclus de ce tableau public. Les statuts sont un **instantané daté**, pas une surveillance continue ; un commit ne prouve pas un fonctionnement vérifié.
 
 ## Ce qui rend ces projets différents
 
