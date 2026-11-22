@@ -4,19 +4,19 @@ Portail public de **Studio Niko Design** — catalogue des dépôts publics, rec
 
 ## Pilotage Studio Niko Core
 
-Le fichier [`pilotage.html`](./pilotage.html) contient un tableau public autonome et responsive : **55 dépôts recensés, 50 publics, 5 privés volontairement masqués et 6 intégrations Core committées au 22 novembre 2026**. Recherche, domaine, priorité, état du socle, liens vers les dépôts et liens de publication connus.
+Le fichier [`pilotage.html`](./pilotage.html) contient un tableau public autonome et responsive : **55 dépôts recensés, 50 publics, 5 privés volontairement masqués et 8 intégrations Core committées au 22 novembre 2026**. Recherche, domaine, priorité, état du socle, liens vers les dépôts et liens de publication connus.
 
-Les statuts « déploiement non confirmé » et « fonctionnement non confirmé » sont volontairement distincts des commits GitHub. Le tableau ne sonde pas le réseau en arrière-plan, ne simule pas les résultats et ne publie aucun nom de dépôt privé. Le registre source est [`../studio-niko-core/registry.json`](../studio-niko-core/registry.json) ; pour mettre à jour le snapshot de la page : `node studio-niko-core/tools/refresh-hub.mjs --apply` depuis la racine du dépôt.
+Les statuts « déploiement non confirmé » et « fonctionnement non confirmé » sont volontairement distincts des commits GitHub. Le tableau ne sonde pas le réseau en arrière-plan, ne simule pas les résultats et ne publie aucun nom de dépôt privé. Le suivi manuel des modules, versions, blocages et décisions s'enregistre dans le navigateur et propose un export/import JSON. Aucune déclaration utilisateur n'est promue au rang de preuve automatique. Le registre source est [`../studio-niko-core/registry.json`](../studio-niko-core/registry.json) ; pour mettre à jour le snapshot de la page : `node studio-niko-core/tools/refresh-hub.mjs --apply` depuis la racine du dépôt.
 
 ## Principe
 
 - Source : dépôt GitHub \`Nikoju1977/Nikoju1977\`, répertoire \`hub/\`.
-- **Aucun dépôt privé, jeton ou code sensible** n'est exposé.
+- Le catalogue et le registre **actuels** n'affichent que les dépôts publics. Les commits historiques constituent une surface distincte ; leur purge éventuelle nécessite une intervention dédiée.
 - \`catalog.json\` est généré à partir de la liste des dépôts publics accessibles le 4 novembre 2026 (actualisation ultérieure explicite).
 - Un lien \`demoUrl\` signale **une adresse annoncée par la documentation**, pas un test de disponibilité ni une garantie de fonctionnement.
 - La rubrique RON est un **lancement vers l'application existante**, pas une intégration de son runtime IA.
-- N8V est présent comme **projet en préparation** parce que son dépôt est vide.
-- Les favoris sont purement locaux au navigateur. Aucun compte ni suivi n'est activé.
+- N8V héberge actuellement **NIKO ANALOG 37**, instrument de musique ; son nom de dépôt historique ne décrit plus le contenu actuel.
+- Les favoris et le journal de production de `pilotage.html` sont locaux au navigateur. Aucune synchronisation de suivi ni télémétrie ne sont activées.
 - Les domaines médico-sanitaires sont des prototypes, non des dispositifs médicaux certifiés.
 - Les dépôts liés à des projets tiers conservent leurs licences et attributions propres.
 
