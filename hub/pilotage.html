@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#091421">
+<meta name="description" content="Studio Niko — Tableau de pilotage des 50 dépôts publics et du socle technique partagé. Statuts de code distincts des déploiements et validations.">
+<title>Pilotage des applications — Studio Niko</title>
+<style>
+:root{color-scheme:dark;--bg:#08111d;--surface:#111f30;--surface2:#172a3c;--line:#2b495d;--text:#ecf8ff;--muted:#a4bdce;--aqua:#7ae5da;--gold:#ebc08f;--blue:#98bdfb}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 100% -15%,#183e54 0,transparent 40%),radial-gradient(circle at 0 50%,#101e38,transparent 45%),var(--bg);color:var(--text);font:15px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;min-height:100dvh}
+button,input,select{font:inherit}
+button{cursor:pointer;touch-action:manipulation}
+a{color:var(--aqua);text-decoration:none}
+a:hover{text-decoration:underline}
+:where(a,button,input,select):focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.container{max-width:1320px;margin:auto;padding:0 clamp(15px,3.5vw,42px)}
+.skip{position:absolute;left:12px;top:-110px;padding:10px;background:#fff;color:#08111d;z-index:200}
+.skip:focus{top:8px}
+header{border-bottom:1px solid var(--line);background:#091622ed;backdrop-filter:blur(18px)}
+.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;min-height:80px;padding-block:15px}
+.logo{display:grid;place-items:center;flex:0 0 44px;height:44px;border:1px solid var(--aqua);border-radius:12px;color:var(--aqua);font-size:25px;font-weight:900;box-shadow:inset 0 0 20px #7ae5da1c}
+.brand{flex:1;min-width:170px}
+.brand strong{display:block;font-size:17px;letter-spacing:.13em}
+.brand small{display:block;color:var(--muted);letter-spacing:.14em;font-size:10px}
+.nav{display:flex;gap:9px;flex-wrap:wrap}
+.nav a,.linkbtn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:43px;border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-weight:650;color:#d6e9f2;background:#142639;font-size:13px}
+.nav a:hover,.linkbtn:hover{background:#204053;text-decoration:none}
+.hero{padding-block:43px 19px}
+.kicker{font-size:11px;font-weight:800;color:var(--aqua);letter-spacing:.2em;text-transform:uppercase}
+h1{font-size:clamp(29px,5.4vw,52px);line-height:1.13;letter-spacing:-.045em;margin:10px 0 15px}
+h1 em{color:var(--aqua);font-style:normal}
+.hero p{color:#c0d5e3;max-width:820px;line-height:1.73;margin:0 0 15px}
+.note{font-size:12px;color:var(--muted);border-left:3px solid var(--aqua);padding-left:12px;max-width:830px;margin-top:21px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:22px 0 29px}
+.stat{border:1px solid var(--line);background:linear-gradient(140deg,#172e40,#0f1b2c);border-radius:16px;padding:20px 17px;min-width:0}
+.stat b{font-size:clamp(27px,4vw,42px);line-height:1.2;font-variant-numeric:tabular-nums;letter-spacing:-.045em;display:block}
+.stat span{font-size:12px;color:var(--muted)}
+.stat:nth-child(3) b{color:var(--aqua)}
+.heading{display:flex;align-items:flex-start;justify-content:space-between;gap:13px;flex-wrap:wrap;margin-bottom:13px}
+h2{font-size:clamp(20px,3vw,26px);margin:0 0 4px;letter-spacing:-.02em}
+.heading p{margin:0;color:var(--muted);font-size:13px}
+.filters{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:grid;grid-template-columns:minmax(180px,2fr) repeat(3,minmax(135px,1fr));gap:12px;margin-bottom:15px}
+.filters label{display:block;color:var(--muted);font-size:12px;font-weight:650;margin-bottom:6px}
+.filters input,.filters select{width:100%;background:#091929;color:#fff;border:1px solid #3c6478;border-radius:10px;padding:12px;min-height:46px;min-width:0}
+.filters input::placeholder{color:#9cb4c1}
+.tools{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:15px}
+#result-count{font-size:13px;color:var(--muted)}
+#reset{border:1px solid #3c6478;background:#183247;color:#d9f0f4;border-radius:9px;padding:10px 13px;min-height:44px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-bottom:35px}
+.card{min-width:0;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,#152a3d,#0e192b);padding:19px;display:flex;flex-direction:column;gap:11px;box-shadow:0 8px 30px #02081222}
+.card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:var(--muted)}
+.priority{font-size:11px;font-weight:800;color:var(--gold)}
+.card h3{font-size:clamp(17px,2.2vw,20px);overflow-wrap:anywhere;margin:0;line-height:1.28;letter-spacing:-.02em}
+.info{border-top:1px solid #2b4555;padding-top:11px;display:grid;gap:7px;color:#b7cbda;font-size:12px}
+.info div{display:flex;justify-content:space-between;gap:9px;flex-wrap:wrap}
+.info strong{font-weight:700;color:#e0eaf0}
+.code-on{color:var(--aqua)!important}
+.card .actions{margin-top:auto;padding-top:7px;display:flex;gap:8px;flex-wrap:wrap}
+.card .actions a{border-radius:9px;min-height:43px;padding:10px 13px;background:#1f4253;border:1px solid #3c6777;font-size:12px;font-weight:750;display:inline-flex;align-items:center}
+.card .actions a:hover{text-decoration:none;background:#2b5161}
+.card .actions a.secondary{background:transparent;color:#cfdae7}
+.empty{grid-column:1/-1;text-align:center;border:1px dashed #406276;border-radius:14px;padding:40px;color:var(--muted)}
+.callout{padding:22px;border:1px solid var(--line);background:linear-gradient(120deg,#162e3b,#0e1d31);border-radius:16px;margin-bottom:35px}
+.callout p{max-width:850px;color:#bdd3e0;font-size:13px;line-height:1.7}
+.callout .links{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}
+footer{border-top:1px solid var(--line);padding:22px 0 35px;font-size:12px;color:var(--muted)}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:630px){.top{min-height:unset;gap:10px}.nav{width:100%}.nav a{flex:1}.hero{padding-top:28px}.stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.stat{padding:14px}.filters{grid-template-columns:1fr;padding:13px;gap:10px}.grid{grid-template-columns:1fr}.card{padding:17px}.hero p{font-size:14px}.callout{padding:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#catalogue">Aller au catalogue</a>
+<header><div class="container top">
+<div class="logo" aria-hidden="true">N</div>
+<div class="brand"><strong>STUDIO NIKO</strong><small>CORE / PILOTAGE DES APPLICATIONS</small></div>
+<nav class="nav" aria-label="Navigation secondaire">
+<a href="./index.html">Portail Studio Niko</a>
+<a href="https://github.com/Nikoju1977/Nikoju1977/tree/main/studio-niko-core" target="_blank" rel="noopener noreferrer">Code du socle</a>
+</nav>
+</div></header>
+<main class="container">
+<section class="hero">
+<div class="kicker">Inventaire GitHub · Studio Niko</div>
+<h1>Un studio. <em>55 projets.</em><br>Des états vérifiables.</h1>
+<p>Ce tableau rassemble les projets publics et distingue l'intégration du code, la publication et la vérification réelle. Il ne simule ni surveillance automatique, ni taux de réussite.</p>
+<p class="note">Inventaire daté du 22 novembre 2026. Les données ci-dessous sont un instantané, non une mesure en temps réel. Cinq dépôts privés sont volontairement exclus du catalogue public.</p>
+</section>
+<section class="stats" aria-label="Chiffres de l'inventaire">
+<div class="stat"><b id="all-count">55</b><span>Dépôts recensés</span></div>
+<div class="stat"><b id="public-count">50</b><span>Dépôts publics</span></div>
+<div class="stat"><b id="integrated-count">6</b><span>Intégrations Core committées</span></div>
+<div class="stat"><b id="private-count">5</b><span>Dépôts privés non exposés</span></div>
+</section>
+<section id="catalogue">
+<div class="heading"><div><h2>Explorer les applications</h2><p>Rechercher un dépôt, filtrer son domaine, sa priorité et son état de migration.</p></div></div>
+<div class="filters">
+<div><label for="search">Rechercher</label><input id="search" type="search" placeholder="Cinéma, NikoAssist, musique…" autocomplete="off"></div>
+<div><label for="domain">Domaine</label><select id="domain"><option value="">Tous les univers</option></select></div>
+<div><label for="priority">Priorité</label><select id="priority"><option value="">Toutes</option><option value="P0">P0 — Prioritaire</option><option value="P1">P1 — Élevée</option><option value="P2">P2 — Progressive</option></select></div>
+<div><label for="integration">Studio Niko Core</label><select id="integration"><option value="">Tous les états</option><option value="committed">Code intégré</option><option value="not_started">Non intégré</option></select></div>
+</div>
+<div class="tools"><div role="status" aria-live="polite" id="result-count">50 projets visibles</div><button id="reset" type="button">Réinitialiser les filtres</button></div>
+<div class="grid" id="projects" aria-label="Dépôts publics Studio Niko"></div>
+</section>
+<section class="callout" aria-labelledby="core-heading">
+<div class="kicker">Infrastructure partagée</div><h2 id="core-heading">Studio Niko Core v0.1.0</h2>
+<p>Les six premières intégrations proposent un petit diagnostic technique volontaire et sans télémétrie. Les moteurs de génération, les données de santé, les fichiers de projet et les clés privées ne sont pas transmis par ce module. Les changements de code ne prouvent pas qu'une application est opérationnelle sur tous les appareils.</p>
+<div class="links"><a class="linkbtn" href="https://github.com/Nikoju1977/Nikoju1977/blob/main/studio-niko-core/README.md" target="_blank" rel="noopener noreferrer">Documentation du Core</a><a class="linkbtn" href="https://github.com/Nikoju1977/Nikoju1977/blob/main/studio-niko-core/registry.json" target="_blank" rel="noopener noreferrer">Registre source public</a></div>
+</section>
+</main>
+<footer><div class="container">Studio Niko Design — catalogue public sans télémétrie. État de publication et fonctionnement non certifiés par cet inventaire.</div></footer>
+<script id="repository-snapshot" type="application/json">{"schema_version":"1.1","as_of":"2026-11-22","total_repositories":55,"private_repositories_omitted":5,"repositories":[{"name":"aegis-earth-mobile","full_name":"Nikoju1977/aegis-earth-mobile","domain":"cartography","priority":"P0","core_integration":"not_started","core_version":null},{"name":"agent-biometrique","full_name":"Nikoju1977/agent-biometrique","domain":"health","priority":"P1","core_integration":"not_started","core_version":null},{"name":"applewatchcadrans","full_name":"Nikoju1977/applewatchcadrans","domain":"visual-arts","priority":"P2","core_integration":"not_started","core_version":null},{"name":"AutoCoder-Studio-Niko","full_name":"Nikoju1977/AutoCoder-Studio-Niko","domain":"agents","priority":"P0","core_integration":"committed","core_version":"0.1.0"},{"name":"AutoEntrepreneur-1M","full_name":"Nikoju1977/AutoEntrepreneur-1M","domain":"agents","priority":"P2","core_integration":"not_started","core_version":null},{"name":"aylina-is-cooking","full_name":"Nikoju1977/aylina-is-cooking","domain":"business","priority":"P2","core_integration":"not_started","core_version":null},{"name":"Bouh-delivery","full_name":"Nikoju1977/Bouh-delivery","domain":"games","priority":"P2","core_integration":"not_started","core_version":null},{"name":"Boutique-morgane","full_name":"Nikoju1977/Boutique-morgane","domain":"business","priority":"P0","core_integration":"not_started","core_version":null},{"name":"cockpit-mecaria","full_name":"Nikoju1977/cockpit-mecaria","domain":"business","priority":"P2","core_integration":"not_started","core_version":null},{"name":"compagnon-diabete","full_name":"Nikoju1977/compagnon-diabete","domain":"health","priority":"P1","core_integration":"not_started","core_version":null},{"name":"Cosmo-citrouille","full_name":"Nikoju1977/Cosmo-citrouille","domain":"games","priority":"P2","core_integration":"not_started","core_version":null},{"name":"Dbmetre-pro","full_name":"Nikoju1977/Dbmetre-pro","domain":"music","priority":"P1","core_integration":"not_started","core_version":null},{"name":"dermato-ai","full_name":"Nikoju1977/dermato-ai","domain":"health","priority":"P1","core_integration":"not_started","core_version":null},{"name":"EBM-BRETONNE.","full_name":"Nikoju1977/EBM-BRETONNE.","domain":"music","priority":"P1","core_integration":"not_started","core_version":null},{"name":"fibrobot","full_name":"Nikoju1977/fibrobot","domain":"health","priority":"P0","core_integration":"not_started","core_version":null},{"name":"fibrocare","full_name":"Nikoju1977/fibrocare","domain":"health","priority":"P0","core_integration":"not_started","core_version":null},{"name":"galerie-studio-niko","full_name":"Nikoju1977/galerie-studio-niko","domain":"visual-arts","priority":"P0","core_integration":"committed","core_version":"0.1.0"},{"name":"handimonde","full_name":"Nikoju1977/handimonde","domain":"business","priority":"P2","core_integration":"not_started","core_version":null},{"name":"ia-studio-cine","full_name":"Nikoju1977/ia-studio-cine","domain":"cinema","priority":"P0","core_integration":"committed","core_version":"0.1.0"},{"name":"jarvisdiabete","full_name":"Nikoju1977/jarvisdiabete","domain":"health","priority":"P0","core_integration":"not_started","core_version":null},{"name":"job-search","full_name":"Nikoju1977/job-search","domain":"business","priority":"P0","core_integration":"committed","core_version":"0.1.0"},{"name":"l-ultime-confrontation","full_name":"Nikoju1977/l-ultime-confrontation","domain":"cinema","priority":"P1","core_integration":"not_started","core_version":null},{"name":"le-jardin-de-niko","full_name":"Nikoju1977/le-jardin-de-niko","domain":"nature","priority":"P2","core_integration":"not_started","core_version":null},{"name":"les-annales-akashiques","full_name":"Nikoju1977/les-annales-akashiques","domain":"visual-arts","priority":"P2","core_integration":"not_started","core_version":null},{"name":"medicalvisionproai","full_name":"Nikoju1977/medicalvisionproai","domain":"health","priority":"P1","core_integration":"not_started","core_version":null},{"name":"Medivision-ai-pro","full_name":"Nikoju1977/Medivision-ai-pro","domain":"health","priority":"P1","core_integration":"not_started","core_version":null},{"name":"Metrology-OS","full_name":"Nikoju1977/Metrology-OS","domain":"business","priority":"P2","core_integration":"not_started","core_version":null},{"name":"miaotris","full_name":"Nikoju1977/miaotris","domain":"games","priority":"P2","core_integration":"not_started","core_version":null},{"name":"N8V","full_name":"Nikoju1977/N8V","domain":"music","priority":"P1","core_integration":"not_started","core_version":null},{"name":"Neural-Art-mars-2026","full_name":"Nikoju1977/Neural-Art-mars-2026","domain":"visual-arts","priority":"P2","core_integration":"not_started","core_version":null},{"name":"niko-commande-live-tik-tok","full_name":"Nikoju1977/niko-commande-live-tik-tok","domain":"music","priority":"P1","core_integration":"not_started","core_version":null},{"name":"Niko-Ultravision","full_name":"Nikoju1977/Niko-Ultravision","domain":"cinema","priority":"P1","core_integration":"not_started","core_version":null},{"name":"Nikoassist","full_name":"Nikoju1977/Nikoassist","domain":"agents","priority":"P0","core_integration":"committed","core_version":"0.1.0"},{"name":"nikogroove","full_name":"Nikoju1977/nikogroove","domain":"music","priority":"P1","core_integration":"not_started","core_version":null},{"name":"Nikoju1977","full_name":"Nikoju1977/Nikoju1977","domain":"portfolio","priority":"P2","core_integration":"not_started","core_version":null},{"name":"oeil-hermes","full_name":"Nikoju1977/oeil-hermes","domain":"visual-arts","priority":"P2","core_integration":"not_started","core_version":null},{"name":"OPENVITA-DT1","full_name":"Nikoju1977/OPENVITA-DT1","domain":"health","priority":"P0","core_integration":"not_started","core_version":null},{"name":"oracle-du-jardinier","full_name":"Nikoju1977/oracle-du-jardinier","domain":"nature","priority":"P2","core_integration":"not_started","core_version":null},{"name":"presentation-medtronic","full_name":"Nikoju1977/presentation-medtronic","domain":"health","priority":"P1","core_integration":"not_started","core_version":null},{"name":"purescanai","full_name":"Nikoju1977/purescanai","domain":"health","priority":"P1","core_integration":"not_started","core_version":null},{"name":"radar-de-niko","full_name":"Nikoju1977/radar-de-niko","domain":"nature","priority":"P2","core_integration":"not_started","core_version":null},{"name":"Rave-Generator-2","full_name":"Nikoju1977/Rave-Generator-2","domain":"music","priority":"P1","core_integration":"not_started","core_version":null},{"name":"Ron-","full_name":"Nikoju1977/Ron-","domain":"agents","priority":"P2","core_integration":"not_started","core_version":null},{"name":"Sage-companion","full_name":"Nikoju1977/Sage-companion","domain":"agents","priority":"P2","core_integration":"not_started","core_version":null},{"name":"SCAN-BIOMEDICAL","full_name":"Nikoju1977/SCAN-BIOMEDICAL","domain":"health","priority":"P1","core_integration":"not_started","core_version":null},{"name":"tarot-de-niko","full_name":"Nikoju1977/tarot-de-niko","domain":"visual-arts","priority":"P2","core_integration":"not_started","core_version":null},{"name":"the-lovestronautes-machine","full_name":"Nikoju1977/the-lovestronautes-machine","domain":"music","priority":"P0","core_integration":"committed","core_version":"0.1.0"},{"name":"Vision-IA","full_name":"Nikoju1977/Vision-IA","domain":"cinema","priority":"P1","core_integration":"not_started","core_version":null},{"name":"Wan2GP","full_name":"Nikoju1977/Wan2GP","domain":"cinema","priority":"P1","core_integration":"not_started","core_version":null},{"name":"White-hat","full_name":"Nikoju1977/White-hat","domain":"security","priority":"P2","core_integration":"not_started","core_version":null}]}</script>
+<script>
+(function(){
+'use strict';
+var snapshot=JSON.parse(document.getElementById('repository-snapshot').textContent);
+var rows=snapshot.repositories||[];
+var labels={
+  'cinema':'Cinéma & vidéo','music':'Musique & audio','health':'Santé & biomédical',
+  'cartography':'Cartographie','nature':'Nature & veille','visual-arts':'Art & création',
+  'agents':'Agents IA','business':'Services & entreprise','games':'Jeux','portfolio':'Portfolio','security':'Sécurité'
+};
+var publicLinks={
+  'ia-studio-cine':'https://ia-studio-cine.vercel.app/',
+  'galerie-studio-niko':'https://galerie-studio-niko.vercel.app/',
+  'job-search':'https://niko-emploi.vercel.app/',
+  'AutoCoder-Studio-Niko':'https://autocoder-studio-niko.vercel.app/',
+  'Nikoassist':'https://nikoassist-pwa.vercel.app/',
+  'AutoEntrepreneur-1M':'https://autoentrepreneur-1m.vercel.app/',
+  'fibrocare':'https://fibrocare-studio-niko.vercel.app/',
+  'aegis-earth-mobile':'https://aegis-earth-mobile.vercel.app/',
+  'oracle-du-jardinier':'https://oracle-du-jardinier.vercel.app/'
+};
+var byId=function(id){return document.getElementById(id)};
+var domain=byId('domain'),priority=byId('priority'),integration=byId('integration'),search=byId('search');
+byId('all-count').textContent=String(snapshot.total_repositories);
+byId('public-count').textContent=String(rows.length);
+byId('integrated-count').textContent=String(rows.filter(function(r){return r.core_integration==='committed'}).length);
+byId('private-count').textContent=String(snapshot.private_repositories_omitted||0);
+var domains=[...new Set(rows.map(function(r){return r.domain}))].sort(function(a,b){return (labels[a]||a).localeCompare(labels[b]||b,'fr')});
+domains.forEach(function(key){var option=document.createElement('option');option.value=key;option.textContent=labels[key]||key;domain.appendChild(option)});
+function textNode(parent,tag,value,className){
+ var el=document.createElement(tag);el.textContent=String(value);
+ if(className)el.className=className;
+ parent.appendChild(el);return el;
+}
+function info(parent,name,value,cls){
+ var line=document.createElement('div');
+ textNode(line,'span',name);
+ textNode(line,'strong',value,cls||'');
+ parent.appendChild(line);
+}
+function render(){
+ var query=search.value.trim().toLocaleLowerCase('fr');
+ var current=rows.filter(function(r){
+   return (!domain.value||r.domain===domain.value)&&(!priority.value||r.priority===priority.value)&&
+     (!integration.value||r.core_integration===integration.value)&&
+     (!query||(r.name+' '+(labels[r.domain]||r.domain)).toLocaleLowerCase('fr').includes(query));
+ });
+ current.sort(function(a,b){
+   var rank={P0:0,P1:1,P2:2};
+   return rank[a.priority]-rank[b.priority]||a.name.localeCompare(b.name,'fr');
+ });
+ var grid=byId('projects');
+ grid.replaceChildren();
+ current.forEach(function(r){
+   var card=document.createElement('article');card.className='card';
+   var head=document.createElement('div');head.className='card-top';
+   textNode(head,'span',labels[r.domain]||r.domain,'eyebrow');
+   textNode(head,'span',r.priority,'priority');
+   card.appendChild(head);
+   textNode(card,'h3',r.name);
+   var details=document.createElement('div');details.className='info';
+   info(details,'Code commun',r.core_integration==='committed'?'v'+r.core_version+' · committé':'Non intégré',r.core_integration==='committed'?'code-on':'');
+   info(details,'Déploiement de cette étape','Non confirmé');
+   info(details,'Fonctionnement réel','Non confirmé');
+   card.appendChild(details);
+   var actions=document.createElement('div');actions.className='actions';
+   var link=document.createElement('a');link.href='https://github.com/'+encodeURI(r.full_name);link.target='_blank';link.rel='noopener noreferrer';link.textContent='Voir le code';actions.appendChild(link);
+   if(publicLinks[r.name]){
+     var live=document.createElement('a');live.href=publicLinks[r.name];live.target='_blank';live.rel='noopener noreferrer';live.className='secondary';live.textContent='Ouvrir le site';
+     live.title='Lien de publication connu, fonctionnement non garanti';actions.appendChild(live);
+   }
+   card.appendChild(actions);grid.appendChild(card);
+ });
+ if(!current.length)textNode(grid,'p','Aucun dépôt public ne correspond aux filtres.','empty');
+ byId('result-count').textContent=current.length+' projet'+(current.length>1?'s':'')+' visible'+(current.length>1?'s':'')+' sur '+rows.length;
+}
+[search,domain,priority,integration].forEach(function(el){el.addEventListener(el===search?'input':'change',render)});
+byId('reset').addEventListener('click',function(){search.value='';domain.value='';priority.value='';integration.value='';render();search.focus()});
+render();
+})();
+</script>
+</body>
+</html>
