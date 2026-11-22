@@ -98,3 +98,9 @@ P0 : `fibrocare`, `fibrobot`, `jarvisdiabete`, `OPENVITA-DT1`, `Boutique-morgane
 - Priorité aux interactions tactiles et à la consommation mémoire.
 
 **Demande actuelle du propriétaire :** ne pas déclencher de campagnes de tests supplémentaires sans demande expresse. Les déploiements ne doivent jamais être confondus avec des essais réels.
+
+## Lot du 22 novembre 2026 — preuves de construction Vercel
+
+Les quatre aperçus AutoCoder (`8e959322`), Niko Emploi (`48fd0890`), NikoAssist (`d8b9f7ba`) et Studio Niko Hub (`27ec7656`) ont été construits en **READY** sur Vercel. Les URLs, projets, environnements et SHAs sont inscrits dans `registry.json`, sans assimiler ce résultat à une exécution testée.
+
+À effectuer avant toute déclaration « stable » : ouverture et navigation sur les appareils ciblés, absence de blocage console, import/export d'un véritable projet, vérification des permissions et dépendances, retour arrière testé, journal des résultats lié à la version exacte. La vérification navigateur automatisée externe a été bloquée par une limite de crédit ; aucun résultat de navigation n'est inventé.

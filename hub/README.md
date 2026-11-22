@@ -112,3 +112,16 @@ Le catalogue compte **41 accès directs** au 4 novembre 2026.
 ## Modes d'emploi intégrés
 
 Chaque carte du catalogue affiche un bouton **? Mode d'emploi** ouvrant une notice propre à l'application : démarrage, prérequis, précautions, dépannage, liens d'ouverture et documentation. Les 47 notices sont conservées dans `guides.json`, mis en cache par la PWA (`guide.js`). Les projets sans interface publiable disposent malgré tout de leur notice depuis le Hub.
+
+## Constructions de préproduction vérifiées le 22 novembre 2026
+
+Quatre déploiements Vercel ont retourné **READY** pour des commits identifiés. Cette preuve est limitée à la construction Vercel, sans validation de l'interface, du moteur métier, des services externes ni des appareils PC, Android, iPhone, Mac et tablette. Les versions de production ne sont pas remplacées par ces aperçus.
+
+| Projet | Commit | Aperçu Vercel | Limite |
+| --- | --- | --- | --- |
+| AutoCoder | `8e959322` | https://autocoder-studio-niko-gm58spo09-nikoju1977s-projects.vercel.app | Pyodide et exports non vérifiés |
+| Niko Emploi | `48fd0890` | https://niko-emploi-9yngjw7bk-nikoju1977s-projects.vercel.app | Recherche et candidatures non vérifiées |
+| NikoAssist | `d8b9f7ba` | https://nikoassist-au2acec1m-nikoju1977s-projects.vercel.app | Permissions et orchestration non vérifiées |
+| Studio Niko Hub | `27ec7656` | https://studio-niko-8xd269fjc-nikoju1977s-projects.vercel.app | Présentation et suivi navigateur non vérifiés |
+
+Le tableau de pilotage montre désormais ce niveau de preuve sur les fiches correspondantes, distinct du « fonctionnement réel » toujours **non confirmé**. L'aperçu n'est pas une preuve de stabilité. Aucun test d'appareil n'a été revendiqué.

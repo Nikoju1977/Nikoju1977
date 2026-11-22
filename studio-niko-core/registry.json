@@ -52,7 +52,17 @@
       "visibility": "public",
       "phase_b_status": "committed_partial",
       "phase_b_scope": "Code précédent récupérable et téléchargement de secours codés. Pyodide sur appareils non vérifié.",
-      "phase_b_document": "docs/RECUPERATION_PROJET.md"
+      "phase_b_document": "docs/RECUPERATION_PROJET.md",
+      "preview_deployment": {
+        "provider": "Vercel",
+        "project": "autocoder-studio-niko",
+        "environment": "preview",
+        "state": "READY",
+        "commit": "8e95932275cbf016b447dce57312240f726289ce",
+        "url": "https://autocoder-studio-niko-gm58spo09-nikoju1977s-projects.vercel.app",
+        "checked_on": "2026-11-22",
+        "verification": "build_ready_only"
+      }
     },
     {
       "name": "AutoEntrepreneur-1M",
@@ -241,7 +251,17 @@
       "visibility": "public",
       "phase_b_status": "committed_partial",
       "phase_b_scope": "Rappels calendrier corrigés, exports manuels et coque du radar hors ligne codés. Candidatures non vérifiées.",
-      "phase_b_document": "docs/RADAR_LBB_INTEGRATION.md"
+      "phase_b_document": "docs/RADAR_LBB_INTEGRATION.md",
+      "preview_deployment": {
+        "provider": "Vercel",
+        "project": "niko-emploi",
+        "environment": "preview",
+        "state": "READY",
+        "commit": "48fd08907251b0d590cf226b66e18dab25803cee",
+        "url": "https://niko-emploi-9yngjw7bk-nikoju1977s-projects.vercel.app",
+        "checked_on": "2026-11-22",
+        "verification": "build_ready_only"
+      }
     },
     {
       "name": "l-ultime-confrontation",
@@ -365,7 +385,17 @@
       "core_asset": "web/studio-niko-core.js",
       "visibility": "public",
       "phase_b_status": "defined_unverified",
-      "phase_b_scope": "Permissions et confirmations d'actions sensibles à revoir. Aucun nouveau résultat revendiqué."
+      "phase_b_scope": "Permissions et confirmations d'actions sensibles à revoir. Aucun nouveau résultat revendiqué.",
+      "preview_deployment": {
+        "provider": "Vercel",
+        "project": "nikoassist-pwa",
+        "environment": "preview",
+        "state": "READY",
+        "commit": "d8b9f7ba8780eff6ba2d3a72381642e90945faf6",
+        "url": "https://nikoassist-au2acec1m-nikoju1977s-projects.vercel.app",
+        "checked_on": "2026-11-22",
+        "verification": "build_ready_only"
+      }
     },
     {
       "name": "nikogroove",
@@ -385,7 +415,17 @@
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
       "runtime": "not_verified_for_this_batch",
-      "visibility": "public"
+      "visibility": "public",
+      "preview_deployment": {
+        "provider": "Vercel",
+        "project": "studio-niko-hub",
+        "environment": "preview",
+        "state": "READY",
+        "commit": "27ec76565d2b2c7b2cd10029e9fd6f52a367df8c",
+        "url": "https://studio-niko-8xd269fjc-nikoju1977s-projects.vercel.app",
+        "checked_on": "2026-11-22",
+        "verification": "build_ready_only"
+      }
     },
     {
       "name": "oeil-hermes",

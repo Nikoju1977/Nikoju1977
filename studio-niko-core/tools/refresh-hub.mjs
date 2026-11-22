@@ -29,7 +29,8 @@ const payload={
     recovery_status:r.recovery_status||null,recovery_scope:r.recovery_scope||null,
     recovery_document:r.recovery_document||null,
     phase_b_status:r.phase_b_status||null,phase_b_scope:r.phase_b_scope||null,
-    phase_b_document:r.phase_b_document||null
+    phase_b_document:r.phase_b_document||null,
+    preview_deployment:r.preview_deployment||null
   }))
 };
 const serialized=JSON.stringify(payload).replace(/</g,'\\u003c');
