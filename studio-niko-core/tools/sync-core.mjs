@@ -5,10 +5,11 @@
  * This does not deploy, execute apps, or run tests.
  */
 import { readFile, writeFile, stat } from 'node:fs/promises';
-import { join, resolve } from 'node:path';
+import { join, resolve, relative, isAbsolute } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 
-const base=resolve(new URL('..',import.meta.url).pathname);
+const base=resolve(fileURLToPath(new URL('..',import.meta.url)));
 const argv=process.argv.slice(2);
 const apply=argv.includes('--apply');
 const workspaceArg=argv.find(a=>!a.startsWith('--'));
@@ -25,7 +26,8 @@ if(!workspaceArg){
   for(const entry of registry.repositories.filter(x=>x.core_integration==='committed')){
     if(!entry.core_asset||entry.core_version!==version){conflicts++;console.log('VERSION_MISMATCH',entry.name);continue;}
     const target=join(workspace,entry.name,entry.core_asset);
-    if(!target.startsWith(workspace+'/')){conflicts++;console.log('UNSAFE_PATH',entry.name);continue;}
+    const rel=relative(workspace,target);
+    if(rel.startsWith('..')||isAbsolute(rel)){conflicts++;console.log('UNSAFE_PATH',entry.name);continue;}
     let previous;
     try{await stat(target);previous=await readFile(target,'utf8');}
     catch(_){unavailable++;console.log('UNAVAILABLE',entry.name,target);continue;}
