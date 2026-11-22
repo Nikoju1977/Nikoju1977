@@ -36,6 +36,16 @@ Le tableau de pilotage constitue une photographie de code ; il **ne confirme pas
 | Galerie Studio Niko | Three.js, mode 2D, médias et sauvegardes | Fonctionnement sur navigateur dépourvu de WebGL, sauvegarde récupérable |
 | NikoAssist | Permissions, orchestration et restitution | Afficher les actions réellement exécutées et demander confirmation des opérations sensibles |
 
+### Avancement de la phase B — sauvegardes et exports (code GitHub)
+
+- [x] `ia-studio-cine` : l'import JSON/ZIP valide les principaux champs avant de remplacer une timeline, demande une confirmation, et distingue les sources distantes des URL `blob:` expirées.
+- [x] `ia-studio-cine` : le ZIP embarque un index de médias, un index audio et les sources récupérables des clips audio de la timeline ; les fichiers manquants sont indiqués dans `media-non-disponibles.txt`.
+- [x] `ia-studio-cine` : lien manuel de téléchargement après un rendu ou un export asynchrone. [Procédure exacte](https://github.com/Nikoju1977/ia-studio-cine/blob/main/SAUVEGARDE_MEDIA.md).
+- [x] `the-lovestronautes-machine` : confirmation avant import, sauvegarde de l'état précédent pour restauration après incident, message explicite sur les prises audio non incluses dans le JSON.
+- [x] `the-lovestronautes-machine` : audit élémentaire des captures PCM (signal non nul, canaux stéréo cohérents) avant l'encodage WAV/MP3, et lien manuel après l'export. [Procédure exacte](https://github.com/Nikoju1977/the-lovestronautes-machine/blob/main/SAUVEGARDE_EXPORT.md).
+
+**À faire :** mesurer et corriger l'intégrité des fichiers générés et la fidélité du montage/son sur appareils réels ; les changements ci-dessus sont **du code committé**, pas une validation des traitements ni une certification de compatibilité iOS.
+
 ## Phase C — Données sensibles et opérations
 
 P0 : `fibrocare`, `fibrobot`, `jarvisdiabete`, `OPENVITA-DT1`, `Boutique-morgane` et `aegis-earth-mobile`. Prévoir une revue spécifique de chaque flux de données et permission ; ne jamais mutualiser indistinctement le stockage local pour les dossiers médicaux, les identifiants ou les paiements.
