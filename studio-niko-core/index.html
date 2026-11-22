@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b111e">
+<meta name="description" content="Pilotage vérifiable des 55 dépôts GitHub Studio Niko, des priorités et des modules réellement intégrés.">
+<title>Studio Niko Core — Pilotage des dépôts</title>
+<style>
+:root{color-scheme:dark;--bg:#0b111e;--surface:#131f30;--surface2:#1b2c40;--line:#304258;--ink:#f0f7ff;--muted:#adc1d4;--mint:#77d7ca;--gold:#ecc78c;--red:#ee9f9f}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse 60% 470px at 84% -140px,#23445b 0%,transparent 95%),var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;touch-action:manipulation}
+button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+a{color:var(--mint)}
+.skip{position:absolute;left:12px;top:-80px;background:#fff;color:#111;padding:11px;z-index:5}
+.skip:focus{top:12px}
+.wrap{max-width:1260px;margin:auto;padding:clamp(16px,3vw,35px);padding-bottom:calc(30px + env(safe-area-inset-bottom))}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-bottom:20px}
+.brand{flex:1;min-width:min(100%,270px)}
+.overline{font-size:11px;color:var(--mint);letter-spacing:.2em;font-weight:800;text-transform:uppercase}
+h1{font-size:clamp(28px,4vw,45px);letter-spacing:-.045em;line-height:1.1;margin:7px 0}
+p{margin:0 0 9px}
+.lead{max-width:780px;color:var(--muted)}
+.btn{border:1px solid var(--line);border-radius:12px;background:var(--surface2);padding:11px 14px;min-height:44px;font-weight:700}
+.btn:hover{border-color:var(--mint)}
+.layout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:23px 0}
+.stat{padding:17px;background:linear-gradient(150deg,#16273a,#101a29);border:1px solid var(--line);border-radius:16px}
+.stat output{display:block;font:750 clamp(27px,4vw,43px)/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--mint)}
+.stat span{font-size:12px;color:var(--muted)}
+.section{background:#0f1b2abd;border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:18px}
+.section h2{font-size:19px;margin:0 0 12px}
+.filters{display:grid;grid-template-columns:minmax(170px,2fr) repeat(3,minmax(120px,1fr));gap:10px}
+.filters label{font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:5px}
+.filters :is(input,select){width:100%;min-height:46px;border:1px solid #48617a;background:#0a1829;border-radius:10px;padding:10px 12px;font-size:15px}
+#summary{color:var(--muted);font-size:13px;margin:14px 0 0}
+#cards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.card{min-width:0;height:100%;display:flex;flex-direction:column;gap:12px;background:linear-gradient(160deg,#142237,#101a2b);border:1px solid var(--line);border-radius:14px;padding:16px}
+.card-title{display:flex;justify-content:space-between;gap:8px;align-items:start}
+.card h3{font-size:16px;margin:0;overflow-wrap:anywhere;line-height:1.25}
+.card a{font-size:13px;text-decoration:none}
+.card a:hover{text-decoration:underline}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.tag{font-size:11px;border-radius:99px;border:1px solid #526678;color:#b9cfdd;padding:4px 8px;background:#152b3a}
+.tag.done{color:#b4fae4;border-color:#277d6f}
+.tag.p0{color:#f6d3a5;border-color:#9f7240}
+.card p{font-size:12px;color:var(--muted);margin:0}
+.bottom{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.card .repo{font:12px ui-monospace,SFMono-Regular,Consolas,monospace;word-break:break-word;color:#c2d5ea}
+.warning{border-left:3px solid var(--gold);background:#30291e;padding:11px 13px;border-radius:0 9px 9px 0;color:#e6cfac;font-size:12px;margin-top:13px}
+#errors{color:var(--red);min-height:18px}
+footer{font-size:12px;color:var(--muted);margin-top:20px;border-top:1px solid var(--line);padding-top:17px}
+@media(max-width:1000px){#cards{grid-template-columns:repeat(2,minmax(0,1fr))}.filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){#cards{grid-template-columns:1fr}.layout{gap:8px}.stat{padding:12px}.section{padding:13px}.filters{grid-template-columns:1fr}.wrap{padding:13px}.card{padding:15px}.stat output{font-size:26px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a href="#depot-list" class="skip">Aller directement aux dépôts</a>
+<div class="wrap">
+<header>
+ <div class="brand"><div class="overline">Studio Niko · Engineering Control</div><h1>Core / Pilotage</h1><p class="lead">Un aperçu factuel des dépôts, des priorités de révision et de l'installation du socle partagé. Une interface publiée ne constitue pas une preuve de fonctionnement.</p></div>
+ <div><button type="button" class="btn" id="reload">Actualiser les données</button></div>
+</header>
+<main>
+ <section class="layout" aria-label="Indicateurs des dépôts">
+  <div class="stat"><output id="total">—</output><span>Dépôts recensés</span></div>
+  <div class="stat"><output id="integrated">—</output><span>Intégrations committées</span></div>
+  <div class="stat"><output id="remaining">—</output><span>Intégrations non commencées</span></div>
+ </section>
+ <section class="section" aria-label="Recherche et filtres">
+  <h2>Explorer les dépôts</h2>
+  <div class="filters">
+   <label for="search">Rechercher par nom<input id="search" type="search" placeholder="Ex. cinéma, coder, emploi..." autocomplete="off"></label>
+   <label for="group">Famille<select id="group"><option value="">Toutes les familles</option></select></label>
+   <label for="priority">Priorité<select id="priority"><option value="">Toutes les priorités</option><option>P0</option><option>P1</option><option>P2</option></select></label>
+   <label for="core">Socle partagé<select id="core"><option value="">Tous les statuts</option><option value="committed">Committé</option><option value="not_started">Non commencé</option></select></label>
+  </div>
+  <p id="summary" role="status" aria-live="polite">Chargement du registre local…</p>
+ </section>
+ <section id="depot-list" class="section" aria-labelledby="section-title">
+  <h2 id="section-title">Référentiel GitHub</h2>
+  <p id="errors" role="alert"></p>
+  <ul id="cards" aria-label="Liste des dépôts"></ul>
+  <p class="warning">Les étiquettes « Committé » indiquent uniquement la présence du code dans GitHub. Pour chacun des projets, le déploiement, les fonctionnalités réelles et la compatibilité mobile demandent une confirmation distincte.</p>
+ </section>
+</main>
+<footer>
+ <p>Source : <a href="./registry.json">registry.json</a> · Socle : <a href="./README.md">documentation</a> · <a href="./ROADMAP.md">feuille de route</a>.</p>
+ <p>Aucune connexion utilisateur, aucune API payante, aucun accès aux clés et aucune collecte de données de projet.</p>
+</footer>
+</div>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id);
+let projects=[];
+const labels={health:'Santé',music:'Musique',cinema:'Cinéma / vidéo',business:'Services / métier',agents:'Agents / IA','visual-arts':'Arts visuels',games:'Jeux',nature:'Nature / données',cartography:'Cartographie',portfolio:'Portfolio',security:'Cybersécurité'};
+const filters=['search','group','priority','core'];
+function el(tag,text,className){
+ const x=document.createElement(tag);if(text!==undefined)x.textContent=text;
+ if(className)x.className=className;
+ return x;
+}
+function render(){
+ const text=$('search').value.trim().toLocaleLowerCase('fr');
+ const group=$('group').value,p=$('priority').value,core=$('core').value;
+ const filtered=projects.filter(a=>(!text||a.name.toLocaleLowerCase('fr').includes(text))&&(!group||a.domain===group)&&(!p||a.priority===p)&&(!core||a.core_integration===core));
+ const list=$('cards');list.replaceChildren();
+ for(const a of filtered){
+  const li=el('li');const article=el('article',undefined,'card');
+  const top=el('div',undefined,'card-title');
+  const h=el('h3',a.name),mark=el('span',a.priority,'tag '+(a.priority==='P0'?'p0':''));
+  top.append(h,mark);
+  const meta=el('div',undefined,'meta');
+  meta.append(el('span',labels[a.domain]||a.domain,'tag'));
+  meta.append(el('span',a.core_integration==='committed'?'Socle committé':'Socle non commencé','tag '+(a.core_integration==='committed'?'done':'')));
+  const desc=el('p','Intégration : '+(a.core_version||'non commencée')+' · Déploiement et fonctionnement non vérifiés pendant ce lot.');
+  const bottom=el('div',undefined,'bottom');
+  const repo=el('span',a.full_name,'repo');
+  const anchor=el('a','Voir le dépôt');
+  const url='https://github.com/'+encodeURIComponent('Nikoju1977')+'/'+encodeURIComponent(a.name);
+  anchor.href=url;anchor.target='_blank';anchor.rel='noopener noreferrer';
+  bottom.append(repo,anchor);article.append(top,meta,desc,bottom);li.append(article);list.append(li);
+ }
+ $('summary').textContent=filtered.length+' dépôt'+(filtered.length>1?'s':'')+' affiché'+(filtered.length>1?'s':'')+' sur '+projects.length+'.';
+ if(!filtered.length)list.append(el('li','Aucun dépôt pour ces filtres.'));
+}
+async function load(){
+ $('errors').textContent='';
+ try{
+  const r=await fetch('./registry.json',{cache:'no-cache'});
+  if(!r.ok)throw Error('HTTP '+r.status);
+  const data=await r.json();
+  if(!Array.isArray(data.repositories))throw Error('Registre invalide');
+  projects=data.repositories.filter(a=>a&&typeof a.name==='string'&&typeof a.domain==='string');
+  $('total').textContent=String(projects.length);
+  const done=projects.filter(a=>a.core_integration==='committed').length;
+  $('integrated').textContent=String(done);
+  $('remaining').textContent=String(projects.length-done);
+  const group=$('group'),selected=group.value;
+  group.replaceChildren(el('option','Toutes les familles'));
+  for(const k of [...new Set(projects.map(p=>p.domain))].sort()){
+    const o=el('option',labels[k]||k);o.value=k;group.appendChild(o);
+  }
+  group.value=selected;
+  render();
+ }catch(e){
+  $('summary').textContent='Registre indisponible.';
+  $('errors').textContent='Impossible de lire registry.json. Ce tableau doit être servi par un serveur web (HTTP/HTTPS) avec le fichier registry.json.';
+ }
+}
+for(const id of filters)$(id).addEventListener('input',render);
+$('reload').addEventListener('click',load);
+load();
+})();
+</script>
+</body>
+</html>
