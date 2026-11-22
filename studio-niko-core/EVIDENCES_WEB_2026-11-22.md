@@ -59,3 +59,17 @@ Contrôle ultérieur du **22 novembre 2026**, après la rédaction du relevé in
 | Niko Emploi | Correction UX `b1049189`, CI réussite | **Production encore ancienne**, publication bloquée par quota Vercel | API `/api/jobs` 200 mais partielle, EasyJobs 403 ; ergonomie modifiée non vérifiée en production |
 | AutoCoder | Code existant | Production accessible HTTP 200 | Mode `local-only` confirmé par API ; Pyodide/export non vérifiés |
 | NikoAssist | Code existant | Production accessible HTTP 200 | Réponse HTTP seulement ; moteur original non connecté selon l'interface |
+
+
+## Mise à jour finale du lot — production HTTP et CI du 22 novembre 2026
+
+Cette section chronologiquement postérieure annule les anciennes mentions « non déployé » ou « quota bloquant » situées plus haut dans le journal. Les déploiements automatiques Git/Vercel ont finalement abouti. Les contrôles ci-dessous constituent des **preuves limitées de publication**, pas une certification métier ou mobile.
+
+| Projet | Déploiement READY en production | Ressources contrôlées | Limites |
+| --- | --- | --- | --- |
+| Studio Niko Hub | `dpl_7TDHd5yBkWoezExyYaWdkYndx7WT` · commit `352e1e44` | `/pilotage.html` HTTP 200, registre et Phase B présents | Ce commit précède la présente mise à jour du registre ; sa nouvelle publication est à recontrôler |
+| AutoCoder | `dpl_HJUv8T93uMxder6zCH8ci279Zu1p` · `f906e3bc` | `/sw.js` version `v2.3.1-offline-fallback`, `/py-worker.js` purge des modules ; HTTP 200 | Tests CI réussis ; Pyodide et imports sur appareils réels non validés |
+| Niko Emploi | `dpl_BDbL83LCdNZLURvAEW9mPo8RRVsj` · `3f324a9f` | `/app.js` : `search-coverage`, `widenSearch`, `officialSearch` ; `/styles.css` tactile ; HTTP 200 | Parcours Chromium CI réussi, mais sources externes partielles, EasyJobs 403 |
+| NikoAssist | `dpl_83kBNJPtWkn2dAkJcqret4XkpVYH` · `07cca853` | `/`, `/app.js`, `/tasks-backup.js`, `/sw.js` et `/api/health` : HTTP 200 ; guide 44px et restauration JSON visibles | CI de sauvegarde Node/Python réussie ; `pythonEngineConnected:false`, appareils physiques non testés |
+
+**Portabilité des tâches NikoAssist :** parser strict `nikoassist-tasks-v1`, sauvegarde de 256 Ko maximum, 200 tâches, doublons ignorés et aucune suppression des tâches existantes. La restauration est déclenchée par l'utilisateur avec validation et confirmation ; aucun mécanisme de synchronisation ni import de données sensibles à distance n'est présenté comme actif.

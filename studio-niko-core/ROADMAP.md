@@ -6,7 +6,7 @@ Date du lot : 22 novembre 2026. Ce document distingue les travaux **committés**
 
 [Consulter le journal des réponses HTTP, des commits et des blocages Vercel](EVIDENCES_WEB_2026-11-22.md).
 
-Les pages du Hub, d'AutoCoder, de Niko Emploi et de NikoAssist sont accessibles sur les routes vérifiées (HTTP 200), mais cette preuve est limitée à la **présence de la réponse HTTP**. L'API d'AutoCoder indique le mode `local-only`. La promotion du nouveau Hub vers la production a été **refusée (HTTP 422)** ; la préproduction `READY` n'est donc pas revendiquée en production. Les essais fonctionnels sur appareils restent ouverts.
+Les pages du Hub, d'AutoCoder, de Niko Emploi et de NikoAssist sont accessibles sur les routes vérifiées (HTTP 200), mais cette preuve est limitée à la **présence de la réponse HTTP**. L'API d'AutoCoder indique le mode `local-only`. La promotion manuelle initiale du Hub avait été refusée (HTTP 422), mais un **déploiement Git automatique a ensuite publié le tableau**. Le nouveau lot du 22 novembre confirme aussi la production HTTP de Niko Emploi, AutoCoder et NikoAssist, sans en déduire la stabilité des fonctions sur appareil. Les essais fonctionnels sur appareils restent ouverts.
 
 ## Phase A — Socle technique (code enregistré)
 
@@ -110,3 +110,17 @@ P0 : `fibrocare`, `fibrobot`, `jarvisdiabete`, `OPENVITA-DT1`, `Boutique-morgane
 Les quatre aperçus AutoCoder (`8e959322`), Niko Emploi (`48fd0890`), NikoAssist (`d8b9f7ba`) et Studio Niko Hub (`27ec7656`) ont été construits en **READY** sur Vercel. Les URLs, projets, environnements et SHAs sont inscrits dans `registry.json`, sans assimiler ce résultat à une exécution testée.
 
 À effectuer avant toute déclaration « stable » : ouverture et navigation sur les appareils ciblés, absence de blocage console, import/export d'un véritable projet, vérification des permissions et dépendances, retour arrière testé, journal des résultats lié à la version exacte. La vérification navigateur automatisée externe a été bloquée par une limite de crédit ; aucun résultat de navigation n'est inventé.
+
+
+## Lot B3 — Déploiements de production confirmés et sauvegardes NikoAssist (22 novembre 2026)
+
+Les résultats actualisés sont inscrits dans le [journal de preuves](EVIDENCES_WEB_2026-11-22.md) et dans `registry.json` sous `production_deployment`, avec `verification: http_assets_only`. Les aperçus antérieurs restent conservés comme historique ; ils ne remplacent pas les preuves de production.
+
+| Projet | Source/CI | Vercel production | Restant à vérifier |
+| --- | --- | --- | --- |
+| Studio Niko Hub | Tableau et snapshot synchronisés dans ce lot | Ancienne production HTTP 200 ; nouvelle publication à vérifier après commit | Navigation, PWA et interaction sur appareils |
+| AutoCoder | `f906e3bc` ; tests Python/Pyodide et navigateur CI réussis | `READY`, `/sw.js` et `/py-worker.js` vérifiés | Pyodide et sauvegardes sur appareils physiques |
+| Niko Emploi | `3f324a9f` ; tests Chromium CI réussis | `READY`, nouveaux `/app.js` et `/styles.css` vérifiés | Sources d'emplois encore partielles, EasyJobs HTTP 403 ; suivi réel |
+| NikoAssist | `07cca853` ; tests Python, Web et sauvegardes CI réussis | `READY`, import/export, aide mobile, `/api/health` vérifiés par HTTP | Import réel de fichier sur iPhone/Android, moteur Python non connecté |
+
+Aucun essai sur un téléphone physique n'est revendiqué. Le registre donne les commits et URLs consultés et ne se met pas à jour en temps réel sans nouveau relevé.

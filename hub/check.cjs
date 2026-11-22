@@ -40,6 +40,13 @@ for(const repo of registry.repositories){
     assert(item.preview_deployment?.verification==='build_ready_only','Preview evidence never claims runtime validation '+repo.name);
     assert(new URL(item.preview_deployment.url).hostname.endsWith('.vercel.app'),'Preview URL is Vercel '+repo.name);
   }
+  if(repo.production_deployment){
+    assert(item.production_deployment?.commit===repo.production_deployment.commit,'Production commit matches '+repo.name);
+    assert(item.production_deployment.state==='READY','Production is READY '+repo.name);
+    assert(item.production_deployment.verification==='http_assets_only','No device or end-to-end certification '+repo.name);
+    const url=new URL(item.production_deployment.url);
+    assert(url.protocol==='https:'&&url.hostname.endsWith('.vercel.app'),'Production link is HTTPS Vercel '+repo.name);
+  }
 }
 assert(index.includes('id="atelier"'),'Workspace section');
 assert(fs.existsSync(path.join(dir,'workspace.js')),'Workspace JS');
