@@ -143,7 +143,7 @@ Le registre et `hub/pilotage.html` contiennent maintenant **six preuves de publi
 - [x] Correctif source enregistré, v28 et assert de versions à jour.
 - [x] [Workflow GitHub Pages 45034342109](https://github.com/Nikoju1977/the-lovestronautes-machine/actions/runs/45034342109) : **success**, à la révision `e672eb3d`.
 - [x] Étapes **validation statique**, **régression audio mobile** et **interface Chromium** réussies dans le workflow existant.
-- [ ] [Workflow Validate 45034342072](https://github.com/Nikoju1977/the-lovestronautes-machine/actions/runs/45034342072) : attendre sa conclusion globale, y compris la composition PCM et WebKit ; aucun succès final inventé.
+- [x] [Workflow Validate 45034342072](https://github.com/Nikoju1977/the-lovestronautes-machine/actions/runs/45034342072) : **success**, deux jobs terminés ; contrôles statiques, encodeurs audio, composition PCM, interface Chromium et WebKit au format téléphone réussis.
 - [ ] Contrôler les ressources HTTP servies par le domaine GitHub Pages après propagation (le navigateur externe de vérification n'a pas pu accéder à l'URL dans ce contrôle).
 - [ ] Tester réellement sur iPhone/Android : activation audio, lecture prolongée, arrière-plan/reprise, clavier tactile, import/export MIDI/WAV/MP3 et sauvegarde.
 
