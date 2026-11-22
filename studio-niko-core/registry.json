@@ -1,8 +1,12 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "as_of": "2026-11-22",
   "source": "GitHub connector list_repositories_by_affiliation(owner)",
-  "notice": "Core integration is a GitHub code status, not proof of deployment or runtime functionality. Projects not integrated remain unchanged.",
+  "public_only": true,
+  "total_repositories": 55,
+  "public_repositories": 50,
+  "private_repositories_omitted": 5,
+  "notice": "Public registry intentionally excludes private repository names. Integration records describe committed code, not production health or real-device validation.",
   "canonical_core": "Nikoju1977/Nikoju1977/studio-niko-core/v0.1.0/core.js",
   "repositories": [
     {
@@ -12,7 +16,8 @@
       "priority": "P0",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "agent-biometrique",
@@ -21,16 +26,8 @@
       "priority": "P1",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
-    },
-    {
-      "name": "Angie-local-commander",
-      "full_name": "Nikoju1977/Angie-local-commander",
-      "domain": "music",
-      "priority": "P1",
-      "core_integration": "not_started",
-      "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "applewatchcadrans",
@@ -39,7 +36,8 @@
       "priority": "P2",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "AutoCoder-Studio-Niko",
@@ -50,7 +48,8 @@
       "deployment": "not_verified_for_this_batch",
       "runtime": "not_verified_for_this_batch",
       "core_version": "0.1.0",
-      "core_asset": "studio-niko-core.js"
+      "core_asset": "studio-niko-core.js",
+      "visibility": "public"
     },
     {
       "name": "AutoEntrepreneur-1M",
@@ -59,7 +58,8 @@
       "priority": "P2",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "aylina-is-cooking",
@@ -68,7 +68,8 @@
       "priority": "P2",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "Bouh-delivery",
@@ -77,7 +78,8 @@
       "priority": "P2",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "Boutique-morgane",
@@ -86,7 +88,8 @@
       "priority": "P0",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "cockpit-mecaria",
@@ -95,7 +98,8 @@
       "priority": "P2",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "compagnon-diabete",
@@ -104,7 +108,8 @@
       "priority": "P1",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "Cosmo-citrouille",
@@ -113,7 +118,8 @@
       "priority": "P2",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "Dbmetre-pro",
@@ -122,7 +128,8 @@
       "priority": "P1",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "dermato-ai",
@@ -131,7 +138,8 @@
       "priority": "P1",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "EBM-BRETONNE.",
@@ -140,7 +148,8 @@
       "priority": "P1",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "fibrobot",
@@ -149,7 +158,8 @@
       "priority": "P0",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "fibrocare",
@@ -158,16 +168,8 @@
       "priority": "P0",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
-    },
-    {
-      "name": "galerie-niko-repo",
-      "full_name": "Nikoju1977/galerie-niko-repo",
-      "domain": "visual-arts",
-      "priority": "P2",
-      "core_integration": "not_started",
-      "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "galerie-studio-niko",
@@ -178,7 +180,8 @@
       "deployment": "not_verified_for_this_batch",
       "runtime": "not_verified_for_this_batch",
       "core_version": "0.1.0",
-      "core_asset": "studio-niko-core.js"
+      "core_asset": "studio-niko-core.js",
+      "visibility": "public"
     },
     {
       "name": "handimonde",
@@ -187,7 +190,8 @@
       "priority": "P2",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "ia-studio-cine",
@@ -198,7 +202,8 @@
       "deployment": "not_verified_for_this_batch",
       "runtime": "not_verified_for_this_batch",
       "core_version": "0.1.0",
-      "core_asset": "studio-niko-core.js"
+      "core_asset": "studio-niko-core.js",
+      "visibility": "public"
     },
     {
       "name": "jarvisdiabete",
@@ -207,7 +212,8 @@
       "priority": "P0",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "job-search",
@@ -218,7 +224,8 @@
       "deployment": "not_verified_for_this_batch",
       "runtime": "not_verified_for_this_batch",
       "core_version": "0.1.0",
-      "core_asset": "public/studio-niko-core.js"
+      "core_asset": "public/studio-niko-core.js",
+      "visibility": "public"
     },
     {
       "name": "l-ultime-confrontation",
@@ -227,7 +234,8 @@
       "priority": "P1",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "le-jardin-de-niko",
@@ -236,16 +244,8 @@
       "priority": "P2",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
-    },
-    {
-      "name": "le-s-raphin-livre",
-      "full_name": "Nikoju1977/le-s-raphin-livre",
-      "domain": "visual-arts",
-      "priority": "P2",
-      "core_integration": "not_started",
-      "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "les-annales-akashiques",
@@ -254,7 +254,8 @@
       "priority": "P2",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "medicalvisionproai",
@@ -263,7 +264,8 @@
       "priority": "P1",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "Medivision-ai-pro",
@@ -272,16 +274,8 @@
       "priority": "P1",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
-    },
-    {
-      "name": "medvisionproai",
-      "full_name": "Nikoju1977/medvisionproai",
-      "domain": "health",
-      "priority": "P1",
-      "core_integration": "not_started",
-      "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "Metrology-OS",
@@ -290,7 +284,8 @@
       "priority": "P2",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "miaotris",
@@ -299,7 +294,8 @@
       "priority": "P2",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "N8V",
@@ -308,7 +304,8 @@
       "priority": "P1",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "Neural-Art-mars-2026",
@@ -317,7 +314,8 @@
       "priority": "P2",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "niko-commande-live-tik-tok",
@@ -326,7 +324,8 @@
       "priority": "P1",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "Niko-Ultravision",
@@ -335,7 +334,8 @@
       "priority": "P1",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "Nikoassist",
@@ -346,7 +346,8 @@
       "deployment": "not_verified_for_this_batch",
       "runtime": "not_verified_for_this_batch",
       "core_version": "0.1.0",
-      "core_asset": "web/studio-niko-core.js"
+      "core_asset": "web/studio-niko-core.js",
+      "visibility": "public"
     },
     {
       "name": "nikogroove",
@@ -355,7 +356,8 @@
       "priority": "P1",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "Nikoju1977",
@@ -364,7 +366,8 @@
       "priority": "P2",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "oeil-hermes",
@@ -373,7 +376,8 @@
       "priority": "P2",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "OPENVITA-DT1",
@@ -382,7 +386,8 @@
       "priority": "P0",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "oracle-du-jardinier",
@@ -391,7 +396,8 @@
       "priority": "P2",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "presentation-medtronic",
@@ -400,7 +406,8 @@
       "priority": "P1",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "purescanai",
@@ -409,7 +416,8 @@
       "priority": "P1",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "radar-de-niko",
@@ -418,7 +426,8 @@
       "priority": "P2",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "Rave-Generator-2",
@@ -427,16 +436,8 @@
       "priority": "P1",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
-    },
-    {
-      "name": "ron",
-      "full_name": "Nikoju1977/ron",
-      "domain": "agents",
-      "priority": "P2",
-      "core_integration": "not_started",
-      "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "Ron-",
@@ -445,7 +446,8 @@
       "priority": "P2",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "Sage-companion",
@@ -454,7 +456,8 @@
       "priority": "P2",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "SCAN-BIOMEDICAL",
@@ -463,7 +466,8 @@
       "priority": "P1",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "tarot-de-niko",
@@ -472,7 +476,8 @@
       "priority": "P2",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "the-lovestronautes-machine",
@@ -483,7 +488,8 @@
       "deployment": "not_verified_for_this_batch",
       "runtime": "not_verified_for_this_batch",
       "core_version": "0.1.0",
-      "core_asset": "studio-niko-core.js"
+      "core_asset": "studio-niko-core.js",
+      "visibility": "public"
     },
     {
       "name": "Vision-IA",
@@ -492,7 +498,8 @@
       "priority": "P1",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "Wan2GP",
@@ -501,7 +508,8 @@
       "priority": "P1",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "White-hat",
@@ -510,7 +518,8 @@
       "priority": "P2",
       "core_integration": "not_started",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     }
   ]
 }
