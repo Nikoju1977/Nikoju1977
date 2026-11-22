@@ -630,7 +630,7 @@
       "recovery_scope": "État musical précédent, sans prises audio binaires",
       "recovery_document": "SAUVEGARDE_EXPORT.md",
       "phase_b_status": "committed_partial",
-      "phase_b_scope": "Sauvegarde de secours et contrôle PCM des exports codés. Lecture iPhone non vérifiée.",
+      "phase_b_scope": "PWA V28 : navigation hors origine exclue, cache HTML/JS/CSS fiable et erreurs réseau explicites ; anciennes assertions V25 modernisées. Github Pages workflow SUCCESS, validation statique/mobile Chromium partiellement réussie, WebKit en cours ; aucun essai physique ni contrôle HTTP distant confirmé.",
       "phase_b_document": "SAUVEGARDE_EXPORT.md"
     },
     {

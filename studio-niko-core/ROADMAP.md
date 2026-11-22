@@ -134,3 +134,25 @@ Aucun essai sur un téléphone physique n'est revendiqué. Le registre donne les
 | **Rave Generator 2** | `38d64b09` ; [Actions 45033560298](https://github.com/Nikoju1977/Rave-Generator-2/actions/runs/45033560298) **success** ; WAV PCM généré et examiné dans Chromium local (stéréo, 44,1 kHz, 16 bits, 1 355 804 octets, signal non nul) ; import confirmé et préparé avant remplacement | `dpl_GJn1KnjVq4aRHWeeGsHSCq1gVodS` **READY production** ; HTML et nouveau SW HTTP 200 | Qualité musicale, enregistrement temps réel, téléchargement/partage et mobiles physiques non validés |
 
 Le registre et `hub/pilotage.html` contiennent maintenant **six preuves de publication en production**, sans convertir les tests Chromium sur runner GitHub en certifications des navigateurs Safari/Android. Les accès "Ouvrir le site" des fiches utilisent la vraie URL Vercel confirmée quand disponible.
+
+
+## Lot B5 — stabilité PWA audio et priorités en attente (22 novembre 2026)
+
+**Thelovestronautes Machine** : correction `af2021bf` puis réparation des assertions de compatibilité `e672eb3d` dans le [dépôt autonome](https://github.com/Nikoju1977/the-lovestronautes-machine). Le service worker `lovestronautes-v28-origin-safe-offline` limite les interceptions aux requêtes du site, ne montre plus l'interface musicale comme faux secours d'une navigation externe et préserve un repli sur les vrais JS/CSS mis en cache ; erreur explicite si le fichier demandé est absent. Les tests de V25 ne sont plus figés à une chaîne obsolète. Le moteur musical, les 18 pistes et les sauvegardes existantes ne sont pas remplacés.
+
+- [x] Correctif source enregistré, v28 et assert de versions à jour.
+- [x] [Workflow GitHub Pages 45034342109](https://github.com/Nikoju1977/the-lovestronautes-machine/actions/runs/45034342109) : **success**, à la révision `e672eb3d`.
+- [x] Étapes **validation statique**, **régression audio mobile** et **interface Chromium** réussies dans le workflow existant.
+- [ ] [Workflow Validate 45034342072](https://github.com/Nikoju1977/the-lovestronautes-machine/actions/runs/45034342072) : attendre sa conclusion globale, y compris la composition PCM et WebKit ; aucun succès final inventé.
+- [ ] Contrôler les ressources HTTP servies par le domaine GitHub Pages après propagation (le navigateur externe de vérification n'a pas pu accéder à l'URL dans ce contrôle).
+- [ ] Tester réellement sur iPhone/Android : activation audio, lecture prolongée, arrière-plan/reprise, clavier tactile, import/export MIDI/WAV/MP3 et sauvegarde.
+
+### Ordre de travail actualisé
+
+1. **P0 — Publication sans frais** : déploiements `ee9b04e9` du Hub et `073d6baa` de NikoAssist. Les branches et CI sont prêtes, mais le quota Vercel gratuit bloquait encore leurs publications au dernier relevé ; ne pas payer ni dire « déployé » sans preuve.
+2. **P0 — Audio** : conclure uniquement les validations déjà déclenchées de Thelovestronautes, puis poursuivre les régressions de lecture/enregistrement sur appareils réels.
+3. **P0 — Galerie Studio Niko** : vérifier le repli 2D sans WebGL, les permissions et les sauvegardes récupérables, sans abandonner la galerie existante.
+4. **P0 — Cine Agentique / ia-studio-cine** : valider la conservation des médias et une génération vidéo réelle, en séparant la préparation du prompt, l'appel au fournisseur et le résultat vidéo effectivement produit.
+5. **P0 — Données sensibles** : audits propres à chacun des dépôts médicaux/paiement. Ne pas copier les dossiers ou secrets dans le Core transversal.
+
+Rappel : **GitHub Pages publié ≠ réponse HTTP vérifiée ≠ fonctions confirmées ≠ essais sur téléphone physique ≠ stabilité certifiée**. Les 50 dépôts publics restent séparés ; les cinq privés restent absents des données du Hub.
