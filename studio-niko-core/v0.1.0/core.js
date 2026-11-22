@@ -60,12 +60,12 @@
 
   // No search params, fragments, token, user-agent, logs or local data.
   function diagnostic(){
-    var target=root.location?root.location.origin+root.location.pathname:'non disponible';
+    var target=root.location?root.location.origin:'non disponible';
     return [
       'STUDIO NIKO — DIAGNOSTIC VOLONTAIRE',
       'Date UTC: '+new Date().toISOString(),
       'Application: '+String(document.title||'Sans titre').slice(0,120),
-      'Page publique: '+target,
+      'Domaine de l’application: '+target,
       'Studio Niko Core: '+VERSION,
       'Contexte HTTPS: '+(root.isSecureContext?'oui':'non'),
       'Service Worker supporté: '+('serviceWorker' in navigator?'oui':'non'),
@@ -110,21 +110,20 @@
     var status=document.createElement('span');
     status.setAttribute('role','status');
     status.setAttribute('aria-live','polite');
-    status.style.cssText='font-size:11px;line-height:1.3';
-    if(autoCoder){
-      status.style.display='block';
-      holder.parentNode.insertBefore(status,holder);
-    }else{
-      status.style.cssText+=';position:absolute;left:0;bottom:100%;background:#0d2130;color:#e7fffc;border-radius:7px;padding:0 5px;pointer-events:none';
-      holder.appendChild(status);
-    }
+    status.style.cssText='position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)';
+    holder.appendChild(status);
     button.addEventListener('click',async function(){
       button.disabled=true;
+      var original=autoCoder?'Copier diagnostic':'Diag.';
       try{
         var copied=await copyDiagnostic();
         status.textContent=copied?'Diagnostic copié.':'Copie impossible sur ce navigateur.';
-      }catch(_){status.textContent='Copie indisponible.';}
-      finally{button.disabled=false;}
+        button.textContent=copied?'Copié ✓':original;
+      }catch(_){status.textContent='Copie indisponible.';button.textContent=original;}
+      finally{
+        button.disabled=false;
+        root.setTimeout(function(){button.textContent=original;status.textContent='';},2600);
+      }
     });
     return true;
   }
