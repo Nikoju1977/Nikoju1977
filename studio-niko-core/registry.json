@@ -48,7 +48,9 @@
       "priority": "P0",
       "core_integration": "committed",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "core_version": "0.1.0",
+      "core_asset": "studio-niko-core.js"
     },
     {
       "name": "AutoEntrepreneur-1M",
@@ -174,7 +176,9 @@
       "priority": "P0",
       "core_integration": "committed",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "core_version": "0.1.0",
+      "core_asset": "studio-niko-core.js"
     },
     {
       "name": "handimonde",
@@ -192,7 +196,9 @@
       "priority": "P0",
       "core_integration": "committed",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "core_version": "0.1.0",
+      "core_asset": "studio-niko-core.js"
     },
     {
       "name": "jarvisdiabete",
@@ -210,7 +216,9 @@
       "priority": "P0",
       "core_integration": "committed",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "core_version": "0.1.0",
+      "core_asset": "public/studio-niko-core.js"
     },
     {
       "name": "l-ultime-confrontation",
@@ -336,7 +344,9 @@
       "priority": "P0",
       "core_integration": "committed",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "core_version": "0.1.0",
+      "core_asset": "web/studio-niko-core.js"
     },
     {
       "name": "nikogroove",
@@ -471,7 +481,9 @@
       "priority": "P0",
       "core_integration": "committed",
       "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch"
+      "runtime": "not_verified_for_this_batch",
+      "core_version": "0.1.0",
+      "core_asset": "studio-niko-core.js"
     },
     {
       "name": "Vision-IA",
