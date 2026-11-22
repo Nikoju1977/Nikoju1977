@@ -36,3 +36,7 @@ L'alias public `studio-niko-hub.vercel.app` pointe encore sur le déploiement de
 5. Conserver séparément **codé**, **build READY**, **page HTTP accessible**, **fonction testé**, **stable**.
 
 Aucun test manuel sur appareil physique n'a été réalisé lors de ce relevé.
+
+## Signal d'erreurs d'exécution Vercel (fenêtre de 24 h)
+
+Le relevé Vercel du 22 novembre 2026 ne renvoie **aucun regroupement d'erreurs d'exécution** pour `studio-niko-hub`, `autocoder-studio-niko`, `niko-emploi` et `nikoassist-pwa` sur la fenêtre interrogée. Ce résultat peut aussi refléter l'absence de trafic ou des erreurs exclusivement côté navigateur ; il **ne prouve pas zéro bug**. Les tests réels de parcours, exports et appareils restent nécessaires.
