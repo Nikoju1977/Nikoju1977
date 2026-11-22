@@ -45,13 +45,13 @@
       "domain": "agents",
       "priority": "P0",
       "core_integration": "committed",
-      "deployment": "production_ready_http_checked",
-      "runtime": "frontend_assets_http_checked_business_not_certified",
+      "deployment": "production_ready_ci_only",
+      "runtime": "production_build_ready_business_not_certified",
       "core_version": "0.1.0",
       "core_asset": "studio-niko-core.js",
       "visibility": "public",
       "phase_b_status": "committed_partial",
-      "phase_b_scope": "Sauvegardes et reprise de code, cache PWA corrigé, purge des modules Pyodide entre projets ; CI réussie et ressources publiques vérifiées ; exécution mobile réelle non vérifiée.",
+      "phase_b_scope": "Récupération de code, commandes de fichiers clavier/tactiles, tests CI Chromium ; production READY ; affichage réel PC/iPhone/Android à vérifier.",
       "phase_b_document": "docs/RECUPERATION_PROJET.md",
       "preview_deployment": {
         "provider": "Vercel",
@@ -68,12 +68,12 @@
         "project": "autocoder-studio-niko",
         "environment": "production",
         "state": "READY",
-        "commit": "f906e3bcce4e8a6c06de0aca94bfa2449eeaf54f",
+        "commit": "066cdac1c96499f5bad0adb9fd7a3e5a4f44af64",
         "url": "https://autocoder-studio-niko.vercel.app/",
         "checked_on": "2026-11-22",
-        "verification": "http_assets_only",
+        "verification": "deployment_ready_ci_only",
         "ci": "success",
-        "evidence": "/sw.js : v2.3.1-offline-fallback ; /py-worker.js : validation puis purge des modules ; 2 workflows GitHub réussis ; essais physiques non réalisés"
+        "evidence": "Commit déployé : 066cdac1 ; tests GitHub Actions et Chromium local réussis ; aucun audit HTTP dédié de cette révision ni essai sur appareil physique."
       }
     },
     {
@@ -274,7 +274,7 @@
       "core_asset": "public/studio-niko-core.js",
       "visibility": "public",
       "phase_b_status": "committed_partial",
-      "phase_b_scope": "Message de couverture des sources, élargissement France et lien officiel externe France Travail, sans annonces inventées ; tests Chromium réussis et ressources publiques vérifiées ; EasyJobs 403.",
+      "phase_b_scope": "Radar, suivi et studio de candidature couverts par les tests locaux ; 9/9 ressources de production vérifiées HTTP ; couverture des sources externes partielle, pas de validation matérielle.",
       "phase_b_document": "docs/RADAR_LBB_INTEGRATION.md",
       "preview_deployment": {
         "provider": "Vercel",
@@ -296,7 +296,7 @@
         "checked_on": "2026-11-22",
         "verification": "http_assets_only",
         "ci": "success",
-        "evidence": "/app.js contient search-coverage, widenSearch, officialSearch ; /styles.css contient les styles mobiles ; recherche API partielle (EasyJobs 403) ; essais physiques non réalisés"
+        "evidence": "Audit HTTP réel 2026-11-22 18:58 UTC : 9/9 ressources HTTP 200 et marqueurs attendus (GitHub Actions 45058031630) ; parcours Chromium local sur données synthétiques ; fournisseurs d'offres et candidatures réelles non certifiés. Code audit plus récent fusionné sur GitHub : 1a9f8be8 (publication non attestée)."
       }
     },
     {
@@ -435,7 +435,7 @@
       "core_asset": "web/studio-niko-core.js",
       "visibility": "public",
       "phase_b_status": "committed_partial",
-      "phase_b_scope": "Restauration JSON locale des tâches sans écrasement, doublons contrôlés et guide compact 44 px ; tests Node/Python et HTTP publics réussis ; multi-agents Python non connecté.",
+      "phase_b_scope": "PWA v7 avec chargement réseau prioritaire et cache hors ligne ; sauvegarde JSON et guide tactile ; HTTP 6/6 et tests CI ; moteur Python web non connecté.",
       "preview_deployment": {
         "provider": "Vercel",
         "project": "nikoassist-pwa",
@@ -451,12 +451,12 @@
         "project": "nikoassist-pwa",
         "environment": "production",
         "state": "READY",
-        "commit": "07cca8532bc8603351261779211433353c780910",
+        "commit": "091cf59861bc4becd368bfca1f95c4561c170566",
         "url": "https://nikoassist-pwa.vercel.app/",
         "checked_on": "2026-11-22",
         "verification": "http_assets_only",
         "ci": "success",
-        "evidence": "/ : import-tasks et guide compact 44 px ; /tasks-backup.js, /app.js, /sw.js servis en HTTP 200 ; /api/health : pythonEngineConnected=false ; tests Node/Python GitHub réussis ; essais physiques non réalisés"
+        "evidence": "Audit HTTP réel 2026-11-22 18:12 UTC : 6/6 ressources HTTP 200 ; service worker v7 servi, API santé répond et signale pythonEngineConnected=false ; CI 3/3 réussie ; appareils réels non testés."
       }
     },
     {
@@ -475,8 +475,8 @@
       "domain": "portfolio",
       "priority": "P2",
       "core_integration": "not_started",
-      "deployment": "production_ready_http_checked",
-      "runtime": "frontend_assets_http_checked_business_not_certified",
+      "deployment": "production_ready_ci_only",
+      "runtime": "production_build_ready_business_not_certified",
       "visibility": "public",
       "preview_deployment": {
         "provider": "Vercel",
@@ -493,12 +493,12 @@
         "project": "studio-niko-hub",
         "environment": "production",
         "state": "READY",
-        "commit": "352e1e44aaac89eab93deed44e4c7189cb5e3767",
+        "commit": "51ddd9ab92a93cf327b3e956ead2d7e6aafc2eba",
         "url": "https://studio-niko-hub.vercel.app/",
         "checked_on": "2026-11-22",
-        "verification": "http_assets_only",
-        "ci": "not_checked",
-        "evidence": "/pilotage.html : HTTP 200 et registre intégré ; point de départ avant le prochain commit du tableau central ; parcours physiques non vérifiés"
+        "verification": "deployment_ready_ci_only",
+        "ci": "success",
+        "evidence": "Déploiement READY lié à studio-niko-hub.vercel.app et CI GitHub Actions réussie sur le commit 51ddd9ab ; absence d'audit HTTP indépendant sur cette révision ; autres appareils non testés."
       }
     },
     {
