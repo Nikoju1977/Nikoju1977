@@ -40,3 +40,22 @@ Aucun test manuel sur appareil physique n'a été réalisé lors de ce relevé.
 ## Signal d'erreurs d'exécution Vercel (fenêtre de 24 h)
 
 Le relevé Vercel du 22 novembre 2026 ne renvoie **aucun regroupement d'erreurs d'exécution** pour `studio-niko-hub`, `autocoder-studio-niko`, `niko-emploi` et `nikoassist-pwa` sur la fenêtre interrogée. Ce résultat peut aussi refléter l'absence de trafic ou des erreurs exclusivement côté navigateur ; il **ne prouve pas zéro bug**. Les tests réels de parcours, exports et appareils restent nécessaires.
+
+## Mise à jour : production Hub et recherche Niko Emploi
+
+Contrôle ultérieur du **22 novembre 2026**, après la rédaction du relevé initial. Il prime sur les mentions d'état de production antérieures dans ce même journal.
+
+- **Hub : production désormais déployée**. Vercel a construit automatiquement le commit GitHub `352e1e44aaac89eab93deed44e4c7189cb5e3767` sous l'identifiant `dpl_7TDHd5yBkWoezExyYaWdkYndx7WT` (`target=production`, `READY`). Les alias `studio-niko-hub.vercel.app` et `studio-niko-hub-nikoju1977s-projects.vercel.app` pointent sur ce déploiement. `GET https://studio-niko-hub.vercel.app/pilotage.html` répond **200** et le HTML contient bien les marqueurs de registre et de preuves de préproduction (`repository-snapshot`, `preview_deployment`, commit `8e959322`, phase B). Cela confirme la publication du **contenu HTML**, pas ses parcours interactifs sur appareils. L'échec 422 de promotion de la préversion est un blocage historique désormais contourné par le déploiement Git automatique, sans affirmer qu'une promotion a réussi.
+- **Niko Emploi : vrai endpoint** `GET /api/jobs` (et non `/api/offres`). Requête ciblée `?q=agent%20entretien&location=Nantes` : HTTP 200, **0 offre correspondante** après filtrage, **127 offres collectées en amont**, `partial:true`; EasyJobs répond **403 access_denied**, Jobicy 33 reçues, Arbeitnow 52, Himalayas 0, Greenhouse 42. Le contrôle n'établit **pas** qu'il n'existe aucune offre à Nantes : seuls ces fournisseurs et leurs limites sont couverts.
+- **Radar Niko Emploi** `GET /api/hidden-market?q=Nantes` : HTTP 200 avec **20 entreprises** dans la réponse. La consultation d'entreprises ne constitue pas une preuve d'offre d'emploi ni de recrutement.
+- **Options du service Niko Emploi** : `GET /api/config` répond 200, `aiConfigured:false`, `gmailConfigured:false`. Aucun envoi Gmail ni génération IA payante ne doit être présenté comme actif.
+- **Correction UX de recherche** enregistrée sur GitHub : commit `e57f781f` (explication de la couverture et action pour élargir la recherche) puis `b1049189` (mise en forme responsive). Les deux exécutions GitHub Actions `44999619877` et `44999630764` ont fini en **success**. La réponse HTTP de `/app.js` en production **ne contient pas encore** les nouveaux marqueurs `search-coverage` et `widenSearch` : **non déployé**. Le statut de commit Vercel renvoie une erreur `upgradeToPro=build-rate-limit` (limite de builds du plan Hobby). Ne pas facturer ni activer un forfait payant automatiquement ; attendre la reprise de capacité ou un déploiement gratuit autorisé, puis vérifier la révision servie.
+
+### Statuts après cette mise à jour
+
+| Projet | Code GitHub | Construction / déploiement | Vérification réelle |
+| --- | --- | --- | --- |
+| Studio Niko Hub | Modifications du tableau committées | **Production READY** ; `/pilotage.html` HTTP 200 avec nouvelles données | Affichage HTML vérifié ; interaction/PWA/appareils non vérifiés |
+| Niko Emploi | Correction UX `b1049189`, CI réussite | **Production encore ancienne**, publication bloquée par quota Vercel | API `/api/jobs` 200 mais partielle, EasyJobs 403 ; ergonomie modifiée non vérifiée en production |
+| AutoCoder | Code existant | Production accessible HTTP 200 | Mode `local-only` confirmé par API ; Pyodide/export non vérifiés |
+| NikoAssist | Code existant | Production accessible HTTP 200 | Réponse HTTP seulement ; moteur original non connecté selon l'interface |
