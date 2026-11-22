@@ -204,13 +204,25 @@
       "domain": "visual-arts",
       "priority": "P0",
       "core_integration": "committed",
-      "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch",
+      "deployment": "production_ready_http_checked",
+      "runtime": "browser_ci_tested_local_public_assets_http_checked_devices_not_verified",
       "core_version": "0.1.0",
       "core_asset": "studio-niko-core.js",
       "visibility": "public",
-      "phase_b_status": "defined_unverified",
-      "phase_b_scope": "Parcours WebGL / mode 2D et sauvegardes à vérifier sur appareils. Aucun nouveau résultat revendiqué."
+      "phase_b_status": "committed_partial",
+      "phase_b_scope": "Galerie 2D : sauvegarde JSON avec images et cartels restaurable, import non destructif dans IndexedDB, refus fichier invalide, confirmation suppression, téléchargement manuel. Chromium et construction 3D en CI réussis ; mobiles physiques non vérifiés.",
+      "production_deployment": {
+        "provider": "Vercel",
+        "project": "galerie-studio-niko",
+        "environment": "production",
+        "state": "READY",
+        "commit": "60aa8b2dd778959e8702991a662338ca2e3cb647",
+        "url": "https://galerie-studio-niko-nikoju1977s-projects.vercel.app/",
+        "checked_on": "2026-11-22",
+        "verification": "http_assets_only",
+        "ci": "success",
+        "evidence": "/galerie-2d.html et /backup-2d.js HTTP 200; CI 45040071669 succès, import/export éditable JSON via Chromium et IndexedDB ; CI 45040071713 chaîne de construction 3D success; iPhone/Android physiques non vérifiés"
+      }
     },
     {
       "name": "handimonde",

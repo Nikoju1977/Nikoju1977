@@ -156,3 +156,16 @@ Le registre et `hub/pilotage.html` contiennent maintenant **six preuves de publi
 5. **P0 — Données sensibles** : audits propres à chacun des dépôts médicaux/paiement. Ne pas copier les dossiers ou secrets dans le Core transversal.
 
 Rappel : **GitHub Pages publié ≠ réponse HTTP vérifiée ≠ fonctions confirmées ≠ essais sur téléphone physique ≠ stabilité certifiée**. Les 50 dépôts publics restent séparés ; les cinq privés restent absents des données du Hub.
+
+
+## Lot B5 — Galerie 2D : sauvegarde restaurable et contrôle production (22 novembre 2026)
+
+**Projet :** `Nikoju1977/galerie-studio-niko`, commit `60aa8b2d`, indépendant des autres applications.
+
+- **Fonction codée :** `galerie-2d.html` exporte des sauvegardes JSON comprenant vraies images et cartels, et les réimporte sans écraser la bibliothèque actuelle. Limites explicites de 15 Mo/image, 100 œuvres et 64 Mo/fichier JSON. Doublons par identifiant source ; transaction IndexedDB atomique ; suppression confirmée ; lien manuel de récupération en plus du téléchargement automatique. L'ancien export HTML reste un format de présentation, pas une sauvegarde rééditable.
+- **CI Chromium :** [run 45040071669](https://github.com/Nikoju1977/galerie-studio-niko/actions/runs/45040071669) **success** : ajout d'image, sauvegarde, annulation, restauration, doublons, JSON invalide, persistance et largeur 390 px.
+- **Chaîne complète Galerie 3D :** [run 45040071713](https://github.com/Nikoju1977/galerie-studio-niko/actions/runs/45040071713) **success** (build, vérifications existantes).
+- **Production Vercel :** `dpl_EczG11DhVy13Gw8pBxxWaaE37d3a` **READY**, SHA `60aa8b2d`. `GET /galerie-2d.html` et `GET /backup-2d.js` : **HTTP 200**, nouveaux contrôles et module de sauvegarde servis.
+- **Reste ouvert :** visite 3D et export de vrais médias sur appareils physiques ; disponibilité de l'espace IndexedDB sur iOS ; limite de taille des sauvegardes ; performances mobile. Un code 3D validé par CI n'est pas une certification Safari.
+
+L'enregistrement de ce lot dans le registre et dans le snapshot GitHub du Hub ne signifie **pas** que la mise à jour du Hub est en ligne : confirmer séparément le commit de déploiement public Vercel.
