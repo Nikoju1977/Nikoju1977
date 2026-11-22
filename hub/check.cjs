@@ -18,13 +18,18 @@ for (const x of cat){
 assert(!cat.some(x=>['ron','Angie-local-commander','medvisionproai','galerie-niko-repo','le-s-raphin-livre'].includes(x.slug)),'No private repos');
 for(const match of app.matchAll(/byId\(['"]([^'"]+)['"]\)/g))assert(index.includes('id="'+match[1]+'"'),'DOM id '+match[1]);
 assert(index.includes('id="check-all"'),'Diagnostic button exists');
-assert(/const CACHE=['\"]studio-niko-hub-v\\d+(?:-[a-z0-9-]+)?['\"]/.test(sw),'Service worker has a versioned cache');
+const cacheMatch=sw.match(/const CACHE=['"]([^'"]+)['"]/);
+assert(cacheMatch && /^studio-niko-hub-v[0-9]+(?:-[a-z0-9-]+)?$/.test(cacheMatch[1]),'Service worker has a versioned cache');
 assert(sw.includes("'./pilotage.html'"),'Dashboard in PWA offline asset list');
 const registry=JSON.parse(fs.readFileSync(path.join(dir,'..','studio-niko-core','registry.json'),'utf8'));
 const pilotage=fs.readFileSync(path.join(dir,'pilotage.html'),'utf8');
-const snapshotMatch=pilotage.match(/<script id="repository-snapshot" type="application\\/json">([^<]+)<\\/script>/);
-assert(snapshotMatch,'Pilotage snapshot is embedded');
-const snapshot=JSON.parse(snapshotMatch[1]);
+const snapshotStartTag='<script id="repository-snapshot" type="application/json">';
+const snapshotStart=pilotage.indexOf(snapshotStartTag);
+assert(snapshotStart>=0,'Pilotage snapshot exists');
+const payloadStart=snapshotStart+snapshotStartTag.length;
+const payloadEnd=pilotage.indexOf('</script>',payloadStart);
+assert(payloadEnd>payloadStart,'Pilotage snapshot is closed');
+const snapshot=JSON.parse(pilotage.slice(payloadStart,payloadEnd));
 assert(snapshot.repositories.length===registry.public_repositories,'Public registry count matches dashboard');
 assert(snapshot.private_repositories_omitted===registry.private_repositories_omitted,'Private repository count stays hidden');
 for(const repo of registry.repositories){
