@@ -40,7 +40,7 @@ Toujours séparer **code créé**, **copie intégrée**, **commit GitHub**, **d�
 
 ## Synchronisation maîtrisée entre dépôts clonés
 
-Le script [tools/sync-core.mjs](./tools/sync-core.mjs) inspecte les six copies déclarées dans `registry.json` depuis un dossier regroupant tes dépôts clonés. Il fonctionne localement sur Windows, macOS et Linux, sans token ni API distante, et **ne lance aucun test**.
+Le script [tools/sync-core.mjs](./tools/sync-core.mjs) inspecte les six copies publiques déclarées dans `registry.json` depuis un dossier regroupant tes dépôts clonés. Il fonctionne localement sur Windows, macOS et Linux, sans token ni API distante, et **ne lance aucun test**.
 
 ```bash
 node studio-niko-core/tools/sync-core.mjs /chemin/vers/tes/clones
@@ -49,5 +49,18 @@ node studio-niko-core/tools/sync-core.mjs /chemin/vers/tes/clones --apply
 ```
 
 Le premier appel affiche les différences sans rien écrire. Le deuxième copie uniquement dans les clones présents et refuse d'écraser une copie d'une autre version. Il ne fait aucun `git push`, n'envoie rien à Vercel et n'inclut aucun secret.
+
+## Pilotage public des dépôts
+
+La vue [Studio Niko Pilotage](../hub/pilotage.html) recense **50 dépôts publics** et affiche les six premières copies de Core v0.1.0. Les **5 dépôts privés** restent exclus du registre public ; le total de l'inventaire est de 55. Les états de déploiement et de fonctionnement ne sont jamais déduits de la seule existence d'un commit.
+
+Le tableau contient un instantané du registre intégré dans son HTML, afin de rester consultable sans connexion. Après mise à jour de `registry.json`, rafraîchir cet instantané par :
+
+```bash
+node studio-niko-core/tools/refresh-hub.mjs
+node studio-niko-core/tools/refresh-hub.mjs --apply
+```
+
+La première commande compare sans rien écrire, la deuxième actualise le fichier `hub/pilotage.html`. Il faut ensuite effectuer un commit et, si souhaité, publier le Hub. Aucun déploiement automatique n'est déclenché par ce script.
 
 Voir [ROADMAP.md](./ROADMAP.md) pour la suite des 55 dépôts.
