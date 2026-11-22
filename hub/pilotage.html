@@ -118,6 +118,18 @@ footer{border-top:1px solid var(--line);padding:22px 0 35px;font-size:12px;color
 @media(max-width:800px){.module-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:630px){.track-fields,.module-row{grid-template-columns:1fr}.track-fields label.full{grid-column:auto}.local-track{padding:15px}.track-header{padding:14px 12px}#tracking-form{padding:13px 12px 23px}.track-footer button{flex:1 1 120px}.track-footer .delete{flex:1 1 100%}}
 
+
+.local-next{padding:5px 0 0;margin:0 0 26px}
+.local-next-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.local-next-card{border:1px solid var(--line);border-radius:12px;background:#111f30;padding:16px;overflow-wrap:anywhere}
+.local-next-card h3{margin:0;font-size:16px}
+.local-next-card .local-priority{color:var(--gold);font-weight:800;font-size:11px}
+.local-next-card p{font-size:13px;color:#c9d9e5;white-space:pre-wrap;margin:10px 0;line-height:1.5}
+.local-next-card p strong{color:#ffb7a0}
+.local-next-card button{border:1px solid #457989;color:var(--aqua);background:#163948;padding:9px 12px;border-radius:9px;min-height:44px;font-weight:700}
+.local-next-grid>.track-muted{grid-column:1/-1;padding:20px 0}
+@media(max-width:680px){.local-next-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -160,6 +172,12 @@ footer{border-top:1px solid var(--line);padding:22px 0 35px;font-size:12px;color
 <div class="links"><a class="linkbtn" href="https://github.com/Nikoju1977/Nikoju1977/blob/main/studio-niko-core/README.md" target="_blank" rel="noopener noreferrer">Documentation du Core</a><a class="linkbtn" href="https://github.com/Nikoju1977/Nikoju1977/blob/main/studio-niko-core/registry.json" target="_blank" rel="noopener noreferrer">Registre source public</a></div>
 </section>
 
+<section class="local-next" id="prochaines-actions" aria-labelledby="local-next-title">
+  <div class="heading"><div><h2 id="local-next-title">Prochaines actions</h2><p>Cette vue ne contient que les actions et blocages que tu as renseignés sur cet appareil.</p></div></div>
+  <div class="local-next-grid" id="tracking-next-actions" aria-label="Actions locales par projet">
+    <p class="track-muted">Aucune action enregistrée.</p>
+  </div>
+</section>
 <section class="local-track" id="suivi-local" aria-labelledby="tracking-heading">
 <div class="kicker">Journal de production</div>
 <h2 id="tracking-heading">Suivi des versions et anomalies</h2>
