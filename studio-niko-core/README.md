@@ -37,3 +37,17 @@ Le diagnostic ne lit pas les contenus du stockage, n'enregistre pas les messages
 ## États de livraison
 
 Toujours séparer **code créé**, **copie intégrée**, **commit GitHub**, **déploiement confirmé** et **fonctionnement confirmé sur appareil**. Ne pas déclencher de campagne de tests sans instruction expresse de l'utilisateur. Le module n'a pas encore fait l'objet d'une certification de compatibilité iOS/Android.
+
+## Synchronisation maîtrisée entre dépôts clonés
+
+Le script [tools/sync-core.mjs](./tools/sync-core.mjs) inspecte les six copies déclarées dans `registry.json` depuis un dossier regroupant tes dépôts clonés. Il fonctionne localement sur Windows, macOS et Linux, sans token ni API distante, et **ne lance aucun test**.
+
+```bash
+node studio-niko-core/tools/sync-core.mjs /chemin/vers/tes/clones
+# Appliquer uniquement après revue de la liste des fichiers à modifier :
+node studio-niko-core/tools/sync-core.mjs /chemin/vers/tes/clones --apply
+```
+
+Le premier appel affiche les différences sans rien écrire. Le deuxième copie uniquement dans les clones présents et refuse d'écraser une copie d'une autre version. Il ne fait aucun `git push`, n'envoie rien à Vercel et n'inclut aucun secret.
+
+Voir [ROADMAP.md](./ROADMAP.md) pour la suite des 55 dépôts.
