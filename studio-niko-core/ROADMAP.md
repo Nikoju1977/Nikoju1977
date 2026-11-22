@@ -124,3 +124,13 @@ Les résultats actualisés sont inscrits dans le [journal de preuves](EVIDENCES_
 | NikoAssist | `07cca853` ; tests Python, Web et sauvegardes CI réussis | `READY`, import/export, aide mobile, `/api/health` vérifiés par HTTP | Import réel de fichier sur iPhone/Android, moteur Python non connecté |
 
 Aucun essai sur un téléphone physique n'est revendiqué. Le registre donne les commits et URLs consultés et ne se met pas à jour en temps réel sans nouveau relevé.
+
+
+## Lot B4 — Régie Live et synthétiseur Rave (22 novembre 2026)
+
+| Projet distinct | Code GitHub et contrôle CI | Publication Vercel | Limites |
+| --- | --- | --- | --- |
+| **Niko Live Commander** | `260ee5c8` ; [Actions 45033208120](https://github.com/Nikoju1977/niko-commande-live-tik-tok/actions/runs/45033208120) **success** ; restauration JSON avec consentement et conservation prouvée dans Chromium local | `dpl_53kM99jjcUZjzVBDj39fPXHXeaVR` **READY production** ; `/backup.js` et `/` HTTP 200 | Ni contrôle TikTok/OBS ni tests iPhone/Android physiques |
+| **Rave Generator 2** | `38d64b09` ; [Actions 45033560298](https://github.com/Nikoju1977/Rave-Generator-2/actions/runs/45033560298) **success** ; WAV PCM généré et examiné dans Chromium local (stéréo, 44,1 kHz, 16 bits, 1 355 804 octets, signal non nul) ; import confirmé et préparé avant remplacement | `dpl_GJn1KnjVq4aRHWeeGsHSCq1gVodS` **READY production** ; HTML et nouveau SW HTTP 200 | Qualité musicale, enregistrement temps réel, téléchargement/partage et mobiles physiques non validés |
+
+Le registre et `hub/pilotage.html` contiennent maintenant **six preuves de publication en production**, sans convertir les tests Chromium sur runner GitHub en certifications des navigateurs Safari/Android. Les accès "Ouvrir le site" des fiches utilisent la vraie URL Vercel confirmée quand disponible.

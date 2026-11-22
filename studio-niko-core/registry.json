@@ -383,9 +383,23 @@
       "domain": "music",
       "priority": "P1",
       "core_integration": "not_started",
-      "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch",
-      "visibility": "public"
+      "deployment": "production_ready_http_checked",
+      "runtime": "browser_ci_tested_local_public_assets_http_checked_devices_not_verified",
+      "visibility": "public",
+      "production_deployment": {
+        "provider": "Vercel",
+        "project": "niko-live-commander",
+        "environment": "production",
+        "state": "READY",
+        "commit": "260ee5c8c63408e510a8db3a4a1e106c24a48bbd",
+        "url": "https://niko-live-commander.vercel.app/",
+        "checked_on": "2026-11-22",
+        "verification": "http_assets_only",
+        "ci": "success",
+        "evidence": "GitHub Actions 45033208120 success (validation et Chromium local), import JSON avec confirmation, conservation du conducteur, validateur /backup.js HTTP 200, cibles mobile 390 px; aucun accès TikTok/OBS ni essai iPhone physique"
+      },
+      "phase_b_status": "committed_partial",
+      "phase_b_scope": "Restauration JSON avec validation/confirmation et conducteur local testé en Chromium CI. Contrôle effectif de TikTok/OBS absent ; appareils physiques non vérifiés."
     },
     {
       "name": "Niko-Ultravision",
@@ -543,9 +557,23 @@
       "domain": "music",
       "priority": "P1",
       "core_integration": "not_started",
-      "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch",
-      "visibility": "public"
+      "deployment": "production_ready_http_checked",
+      "runtime": "browser_ci_tested_local_public_assets_http_checked_devices_not_verified",
+      "visibility": "public",
+      "production_deployment": {
+        "provider": "Vercel",
+        "project": "rave-generator-2",
+        "environment": "production",
+        "state": "READY",
+        "commit": "38d64b0920e07fb5a8f6ae34df5505c9137a710d",
+        "url": "https://rave-generator-2.vercel.app/",
+        "checked_on": "2026-11-22",
+        "verification": "http_assets_only",
+        "ci": "success",
+        "evidence": "GitHub Actions 45033560298 success, WAV PCM 44.1kHz/16-bit/stereo de 1355804 octets et signal non nul (2398 échantillons de vérification, pic 16689) dans Chromium local; import JSON avec confirmation; site et SW HTTP 200; appareils non testés"
+      },
+      "phase_b_status": "committed_partial",
+      "phase_b_scope": "Import de projet avec confirmation ; décodage avant remplacement ; WAV PCM stéréo non silencieux vérifié en Chromium CI. Télécharger/partager sur Android/iPhone encore non vérifiés."
     },
     {
       "name": "Ron-",
