@@ -36,6 +36,24 @@
     "requirements": "Création visuelle de cadrans ; la mise en place sur une montre réelle dépend des outils et du système compatibles."
   },
   {
+    "slug": "AutoCoder-Studio-Niko",
+    "name": "AutoCoder — Studio Niko",
+    "category": "Intelligence & Agents",
+    "description": "Éditeur PWA avec génération de modèles locaux, exécution Python Pyodide, aperçu HTML isolé et export JSON. IA serveur facultative non configurée.",
+    "repoUrl": "https://github.com/Nikoju1977/AutoCoder-Studio-Niko",
+    "demoUrl": "https://autocoder-studio-niko.vercel.app/",
+    "featured": true,
+    "status": "page-responding",
+    "pageCheckedOn": "2026-11-22",
+    "deployment": {
+      "provider": "Vercel",
+      "state": "READY",
+      "access": "public",
+      "project": "autocoder-studio-niko"
+    },
+    "requirements": "Page HTTP 200 vérifiée le 22/11/2026. Le mode local repose sur des modèles prédéfinis sans IA ; Pyodide charge un CDN au premier lancement. Mode IA serveur non configuré. Tests réels sur iPhone/Android à réaliser."
+  },
+  {
     "slug": "AutoEntrepreneur-1M",
     "name": "AutoEntrepreneur-1M",
     "category": "Business & Services",
@@ -388,6 +406,18 @@
     "requirements": "Certaines fonctions demandent une clé Mistral et la permission caméra. La page accessible ne prouve pas que les fonctions IA sont configurées."
   },
   {
+    "slug": "niko-commande-live-tik-tok",
+    "name": "Niko Live Commander",
+    "category": "Musique & Audio",
+    "description": "Régie locale de préparation de lives : conducteur, horloges Miami/Paris, chronomètre, cues, checklist et setlist.",
+    "repoUrl": "https://github.com/Nikoju1977/niko-commande-live-tik-tok",
+    "demoUrl": "https://niko-live-commander.vercel.app/",
+    "featured": false,
+    "status": "page-responding",
+    "pageCheckedOn": "2026-11-22",
+    "requirements": "Page HTTP 200 vérifiée le 22/11/2026. Aucune commande réelle de TikTok, OBS, platines Pioneer ou iRig ; aucune synchronisation entre téléphones. Parcours et compatibilité iPhone/Android non testés."
+  },
+  {
     "slug": "Niko-Ultravision",
     "name": "Niko-Ultravision",
     "category": "Cinéma & Image",
@@ -512,6 +542,18 @@
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04"
+  },
+  {
+    "slug": "Rave-Generator-2",
+    "name": "Rave Generator 2",
+    "category": "Musique & Audio",
+    "description": "Groovebox 909 et synthé acid Web Audio ; patterns, mixage, enregistrement et rendu WAV, export MIDI et projets JSON.",
+    "repoUrl": "https://github.com/Nikoju1977/Rave-Generator-2",
+    "demoUrl": "https://rave-generator-2.vercel.app/",
+    "featured": false,
+    "status": "page-responding",
+    "pageCheckedOn": "2026-11-22",
+    "requirements": "Page HTTP 200 vérifiée le 22/11/2026. Le démarrage audio nécessite un geste utilisateur ; les exports WAV réels, la PWA et les performances doivent être testés sur appareils. Aucun envoi automatique vers Suno."
   },
   {
     "slug": "Ron-",

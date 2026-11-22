@@ -125,3 +125,16 @@ Quatre déploiements Vercel ont retourné **READY** pour des commits identifiés
 | Studio Niko Hub | `27ec7656` | https://studio-niko-8xd269fjc-nikoju1977s-projects.vercel.app | Présentation et suivi navigateur non vérifiés |
 
 Le tableau de pilotage montre désormais ce niveau de preuve sur les fiches correspondantes, distinct du « fonctionnement réel » toujours **non confirmé**. L'aperçu n'est pas une preuve de stabilité. Aucun test d'appareil n'a été revendiqué.
+
+
+## Mise à jour du catalogue — 22 novembre 2026
+
+Le Hub d'accueil répertorie maintenant **50 dépôts publics**, comme le registre de pilotage, et comporte **50 modes d'emploi**. Les cinq dépôts privés sont exclus. Le relevé historique du 4 novembre (47 dépôts et ses liens testés à cette date) reste un état antérieur, pas le total actuel.
+
+Ajouts vérifiés par lecture des dépôts et contrôle HTTP 200 des pages de production :
+
+- **AutoCoder-Studio-Niko** — https://autocoder-studio-niko.vercel.app/ ; modèles locaux, édition, Pyodide et API IA optionnelle non configurée.
+- **niko-commande-live-tik-tok** — https://niko-live-commander.vercel.app/ ; conducteur de préparation hors ligne, pas une commande directe de TikTok/OBS/Pioneer.
+- **Rave-Generator-2** — https://rave-generator-2.vercel.app/ ; groovebox Web Audio et fonctions WAV/MIDI dont le rendu sur appareils doit être validé.
+
+Le statut `page-responding` signifie **HTML HTTP 200 à la date indiquée** et non validation des fonctions, des exports, du streaming, du moteur IA, de l'Android ou de Safari iPhone. L'assertion `node hub/check.cjs` vérifie maintenant l'égalité exacte des dépôts publics du catalogue, du registre et des notices, plutôt qu'un total historique fixé à 47. Le cache PWA est renouvelé (`studio-niko-hub-v12-catalog50`).

@@ -7,7 +7,7 @@ const app=fs.readFileSync(path.join(dir,'app.js'),'utf8');
 const index=fs.readFileSync(path.join(dir,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(dir,'sw.js'),'utf8');
 const cat=JSON.parse(fs.readFileSync(path.join(dir,'catalog.json'),'utf8'));
-assert(Array.isArray(cat)&&cat.length===47,'47 public projects');
+assert(Array.isArray(cat),'Public catalog required');
 assert(new Set(cat.map(x=>x.slug)).size===cat.length,'No duplicate slugs');
 for (const x of cat){
  assert(x.slug&&x.name&&x.category&&x.description&&x.repoUrl,'Required fields '+x.slug);
@@ -31,6 +31,13 @@ const payloadEnd=pilotage.indexOf('</script>',payloadStart);
 assert(payloadEnd>payloadStart,'Pilotage snapshot is closed');
 const snapshot=JSON.parse(pilotage.slice(payloadStart,payloadEnd));
 assert(snapshot.repositories.length===registry.public_repositories,'Public registry count matches dashboard');
+assert(cat.length===registry.public_repositories,'Landing catalog includes all '+registry.public_repositories+' public repositories');
+const registryNames=new Set(registry.repositories.map(x=>x.name));
+const catalogNames=new Set(cat.map(x=>x.repoUrl.split('/').at(-1)));
+assert(catalogNames.size===registryNames.size,'Catalog identities are unique');
+for(const name of registryNames)assert(catalogNames.has(name),'Missing public repository in landing catalog '+name);
+for(const name of catalogNames)assert(registryNames.has(name),'Unregistered or private repository in landing catalog '+name);
+
 assert(snapshot.private_repositories_omitted===registry.private_repositories_omitted,'Private repository count stays hidden');
 for(const repo of registry.repositories){
   const item=snapshot.repositories.find(x=>x.name===repo.name);
@@ -59,6 +66,7 @@ for(const size of ['192x192','512x512'])assert(manifest.icons.some(x=>x.sizes===
 assert(index.includes('id="user-guide-dialog"'),'Help dialog');
 assert(fs.existsSync(path.join(dir,'guide.js')),'Help JS');
 const guides=JSON.parse(fs.readFileSync(path.join(dir,'guides.json'),'utf8')).guides;
-assert(guides.length===cat.length&&cat.every(x=>guides.some(g=>g.slug===x.slug)),'All public applications documented');
+assert(guides.length===cat.length&&new Set(guides.map(g=>g.slug)).size===cat.length
+  &&cat.every(x=>guides.some(g=>g.slug===x.slug)),'All public applications documented uniquely');
 new Function(fs.readFileSync(path.join(dir,'guide.js'),'utf8'));
 console.log('PASS catalog='+cat.length+' launchUrls='+cat.filter(x=>x.demoUrl).length+' DOM bindings checked');

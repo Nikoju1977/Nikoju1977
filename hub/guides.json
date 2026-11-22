@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "date": "2026-11-04",
+  "date": "2026-11-22",
   "guides": [
     {
       "slug": "aegis-earth-mobile",
@@ -49,6 +49,22 @@
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/applewatchcadrans",
       "launchUrl": "https://nikoju1977.github.io/applewatchcadrans/"
+    },
+    {
+      "slug": "AutoCoder-Studio-Niko",
+      "title": "AutoCoder — Studio Niko",
+      "category": "Intelligence & Agents",
+      "description": "Éditeur PWA avec génération de modèles locaux, exécution Python Pyodide, aperçu HTML isolé et export JSON. IA serveur facultative non configurée.",
+      "steps": [
+        "Ouvrez l'éditeur, choisissez un modèle local disponible ou décrivez le projet et sélectionnez la génération locale.",
+        "Relisez et modifiez les fichiers créés dans l'explorateur. Enregistrez une copie via l'export JSON.",
+        "Pour un fichier Python, lancez l'exécution ou les tests : le premier chargement de Pyodide nécessite Internet. Pour un site, utilisez l'aperçu isolé."
+      ],
+      "preparation": "Navigateur moderne ; connexion Internet lors du premier chargement du moteur Pyodide. Les modèles locaux ne sont pas une génération IA générale.",
+      "caution": "L'API IA serveur est facultative et non configurée au dernier contrôle. N'exécutez pas de code Python inconnu ni de code contenant des secrets : le Worker n'est pas une sandbox hostile certifiée. Aucun test physique mobile revendiqué.",
+      "troubleshooting": "En cas de problème, rechargez la page, vérifiez votre connexion et les permissions du navigateur. En PWA installée, fermez puis rouvrez l'application pour renouveler le cache. Consultez le dépôt GitHub pour les limites documentées.",
+      "repoUrl": "https://github.com/Nikoju1977/AutoCoder-Studio-Niko",
+      "launchUrl": "https://autocoder-studio-niko.vercel.app/"
     },
     {
       "slug": "AutoEntrepreneur-1M",
@@ -467,6 +483,22 @@
       "launchUrl": "https://nikoju1977.github.io/Neural-Art-mars-2026/"
     },
     {
+      "slug": "niko-commande-live-tik-tok",
+      "title": "Niko Live Commander",
+      "category": "Musique & Audio",
+      "description": "Régie locale de préparation de lives : conducteur, horloges Miami/Paris, chronomètre, cues, checklist et setlist.",
+      "steps": [
+        "Renseignez le titre du live, l'heure de Miami et les notes du conducteur.",
+        "Préparez la checklist, les cues INTRO/MIX/PAUSE/FIN et la setlist avec les BPM facultatifs.",
+        "Utilisez le chronomètre pendant votre préparation et exportez votre conducteur JSON pour le conserver."
+      ],
+      "preparation": "Application autonome dans le navigateur ; données locales sans compte ni synchronisation distante.",
+      "caution": "C'est un outil de préparation, pas un contrôleur TikTok, OBS, Pioneer ou iRig. Aucune connexion au compte TikTok ni diffusion automatique.",
+      "troubleshooting": "En cas de problème, rechargez la page, vérifiez votre connexion et les permissions du navigateur. En PWA installée, fermez puis rouvrez l'application pour renouveler le cache. Consultez le dépôt GitHub pour les limites documentées.",
+      "repoUrl": "https://github.com/Nikoju1977/niko-commande-live-tik-tok",
+      "launchUrl": "https://niko-live-commander.vercel.app/"
+    },
+    {
       "slug": "Niko-Ultravision",
       "title": "Niko-Ultravision",
       "category": "Cinéma & Image",
@@ -625,6 +657,22 @@
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/radar-de-niko",
       "launchUrl": "https://nikoju1977.github.io/radar-de-niko/"
+    },
+    {
+      "slug": "Rave-Generator-2",
+      "title": "Rave Generator 2",
+      "category": "Musique & Audio",
+      "description": "Groovebox 909 et synthé acid Web Audio ; patterns, mixage, enregistrement et rendu WAV, export MIDI et projets JSON.",
+      "steps": [
+        "Appuyez sur PLAY pour autoriser le moteur audio Web Audio du navigateur.",
+        "Réglez les patterns de percussion, la basse acid, le tempo, le mixeur et les effets.",
+        "Sauvegardez le projet JSON ou utilisez REC WAV / EXPORT WAV pour obtenir un fichier audio ; contrôlez personnellement le fichier téléchargé."
+      ],
+      "preparation": "Navigateur prenant en charge Web Audio ; son activé après une action de l'utilisateur. Prévoir de l'espace pour les fichiers WAV.",
+      "caution": "La réponse HTTP 200 ne garantit pas un rendu WAV correct sur votre téléphone. L'envoi à Suno reste manuel ; aucun téléchargement ni partage vers un compte tiers n'a été validé sur appareil physique.",
+      "troubleshooting": "En cas de problème, rechargez la page, vérifiez votre connexion et les permissions du navigateur. En PWA installée, fermez puis rouvrez l'application pour renouveler le cache. Consultez le dépôt GitHub pour les limites documentées.",
+      "repoUrl": "https://github.com/Nikoju1977/Rave-Generator-2",
+      "launchUrl": "https://rave-generator-2.vercel.app/"
     },
     {
       "slug": "Ron-",
