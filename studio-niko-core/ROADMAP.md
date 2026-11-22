@@ -1,6 +1,6 @@
 # Feuille de route Studio Niko — 55 dépôts
 
-Date du lot : 22 novembre 2026. Ce document distingue les travaux **committés** des travaux **proposés**. La liste à jour, avec les 55 noms exacts, est dans [registry.json](./registry.json).
+Date du lot : 22 novembre 2026. Ce document distingue les travaux **committés** des travaux **proposés**. Le [registre public](./registry.json) liste 50 dépôts publics ; les cinq dépôts privés ne sont pas publiés par le tableau de pilotage. Le total inventorié reste de 55.
 
 ## Phase A — Socle technique (code enregistré)
 
@@ -11,12 +11,17 @@ Date du lot : 22 novembre 2026. Ce document distingue les travaux **committés**
 - [x] Diagnostic déclenché uniquement par clic et sans contenu sensible.
 - [x] Utilitaires JSON et stockage local isolé **non utilisés pour les données médicales**.
 - [x] Référence des ressources dans les PWA hors ligne (4 des six applications).
-- [x] Registre des 55 dépôts et chemins de synchronisation locale.
+- [x] Registre public de 50 dépôts, avec nombre de dépôts privés sans leurs noms.
+- [x] Tableau de pilotage HTML autonome dans `hub/pilotage.html`, recherche, filtres et liens documentés.
+- [x] Rafraîchissement explicite de l'instantané via `tools/refresh-hub.mjs` ; pas de statut de santé simulé.
+- [x] Correction du cache PWA Hub : chaque navigation a sa propre entrée, sans écraser l'accueil.
 - [x] Galerie : module intégré à la source, au HTML publié et option d'incrustation dans la construction autonome.
 
 **Limites :** les imports/exports existants restent inchangés ; les utilitaires ne sont pas encore substitués à ces flux. Aucun test utilisateur, revue de sécurité exhaustive ou certification iPhone n'est revendiqué. Les deployments doivent être suivis séparément.
 
 ## Phase B — Rendre les six parcours principaux fiables
+
+Le tableau de pilotage constitue une photographie de code ; il **ne confirme pas** que le rendu cinéma, audio, médical ou graphique fonctionne sur un appareil. Ces audits métier restent à conduire séparément et uniquement à la demande du propriétaire.
 
 | Application | Fonction critique à fiabiliser | Livraison attendue |
 |---|---|---|
