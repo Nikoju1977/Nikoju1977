@@ -30,6 +30,12 @@ Chaque application conserve sa **copie locale** `studio-niko-core.js`, identique
 
 La copie locale rend la PWA indépendante d'un CDN et compatible avec `Content-Security-Policy: script-src 'self'`. Le fichier canonique est la source de vérité ; toute nouvelle version doit être publiée avec son numéro de version et synchronisée dans les applications concernées, sans écraser leurs modifications métier.
 
+## Journal de production local (Hub)
+
+`hub/pilotage.html` contient désormais un suivi **manuel**, sauvegardé uniquement dans le navigateur : versions, modules, blocages, étapes de reproduction, décisions, preuves déclaratives et prochaines actions par priorité. Son export/import JSON est limité à 1 Mo à l'import ; aucune synchronisation vers GitHub/Vercel n'est effectuée. Les mentions « déployé », « testé » ou « stable » nécessitent une référence, mais ne sont jamais automatiquement vérifiées.
+
+La vue publique contient **50 dépôts publics**, huit copies intégrées du socle et un compteur anonymisé pour les cinq dépôts privés. Les anciennes versions de fichiers dans l'historique Git sont distinctes des fichiers actuels : leur suppression demanderait une opération ciblée de nettoyage d'historique.
+
 ## Confidentialité
 
 Le diagnostic ne lit pas les contenus du stockage, n'enregistre pas les messages d'erreur, n'inspecte pas les comptes et n'envoie rien. Le composant **n'est pas un SDK de suivi d'utilisateurs**. Les données de santé nécessitent un stockage chiffré et des politiques spécifiques au projet ; le stockage utilitaire de cette bibliothèque ne les remplace pas.
@@ -48,7 +54,7 @@ node studio-niko-core/tools/sync-core.mjs /chemin/vers/tes/clones
 node studio-niko-core/tools/sync-core.mjs /chemin/vers/tes/clones --apply
 ```
 
-Le premier appel affiche les différences sans rien écrire. Le deuxième copie uniquement dans les clones présents et refuse d'écraser une copie d'une autre version. Il ne fait aucun `git push`, n'envoie rien à Vercel et n'inclut aucun secret.
+Le premier appel affiche les différences sans rien écrire. Le deuxième copie uniquement dans les clones présents et refuse d'écraser une copie d'une autre version ou un lien symbolique. Il prépare un fichier temporaire avant de remplacer une copie. Il ne fait aucun `git push`, n'envoie rien à Vercel et n'inclut aucun secret.
 
 ## Pilotage public des dépôts
 
