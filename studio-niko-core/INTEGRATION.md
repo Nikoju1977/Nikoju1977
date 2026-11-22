@@ -9,6 +9,11 @@
 - `galerie-studio-niko` — modifier `src/galerie.html` (source), garder la cohérence du fichier généré `index.html` et du mode autonome.
 - `Nikoassist` — intégrer dans `web/`, jamais dans le runtime Python/nanomuse ; aucun accès aux conversations.
 
+## Deuxième vague (code committé)
+
+- `AutoEntrepreneur-1M` — copie locale du Core, bouton diagnostic dans l'aide intégrée, PWA et version de cache mises à jour.
+- `oracle-du-jardinier` — copie locale du Core, Service Worker statique, manifeste et ressources limitées au shell. Les services météo et IA restent accessibles uniquement en ligne.
+
 ## Étapes de migration
 
 1. Livrer le script partagé v0.1.0 en copie locale.
