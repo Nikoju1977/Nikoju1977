@@ -46,6 +46,15 @@ Le tableau de pilotage constitue une photographie de code ; il **ne confirme pas
 
 **À faire :** mesurer et corriger l'intégrité des fichiers générés et la fidélité du montage/son sur appareils réels ; les changements ci-dessus sont **du code committé**, pas une validation des traitements ni une certification de compatibilité iOS.
 
+### Récupération après interruption (code GitHub, état distinct du déploiement)
+
+- [x] `ia-studio-cine` : ajout de deux générations locales de description de projet, checkpoint différé lors des changements et de la suspension de page, copie avant rendus coûteux / import / reset, boutons de restauration volontaire, export et effacement du secours. Le matériel vidéo/audio **n'est pas** inclus dans les snapshots.
+- [x] `the-lovestronautes-machine` : rotation d'une sauvegarde précédente en stockage navigateur, conservation des modifications différées avant suspension, rétablissement de secours en cas d'état courant illisible et panneau discret de restauration/export de l'état précédent.
+- [x] Mises à jour des références de version du navigateur et du cache PWA audio ; documentation des limites de quota, confidentialité, médias externes et stockage Safari.
+- [ ] Vérifier après publication la restauration sur PC, Android, iPhone, Mac et tablette, sans considérer un commit comme une preuve de fonctionnement.
+
+**Limites :** les états de secours sont enregistrés localement et en clair ; un navigateur peut les purger. Les clips et enregistrements importés ne se retrouvent pas automatiquement par magie. Aucune campagne de tests physiques n'a été lancée à cette étape.
+
 ## Phase C — Données sensibles et opérations
 
 P0 : `fibrocare`, `fibrobot`, `jarvisdiabete`, `OPENVITA-DT1`, `Boutique-morgane` et `aegis-earth-mobile`. Prévoir une revue spécifique de chaque flux de données et permission ; ne jamais mutualiser indistinctement le stockage local pour les dossiers médicaux, les identifiants ou les paiements.
