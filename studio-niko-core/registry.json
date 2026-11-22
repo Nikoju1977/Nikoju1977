@@ -49,7 +49,10 @@
       "runtime": "not_verified_for_this_batch",
       "core_version": "0.1.0",
       "core_asset": "studio-niko-core.js",
-      "visibility": "public"
+      "visibility": "public",
+      "phase_b_status": "committed_partial",
+      "phase_b_scope": "Code précédent récupérable et téléchargement de secours codés. Pyodide sur appareils non vérifié.",
+      "phase_b_document": "docs/RECUPERATION_PROJET.md"
     },
     {
       "name": "AutoEntrepreneur-1M",
@@ -183,7 +186,9 @@
       "runtime": "not_verified_for_this_batch",
       "core_version": "0.1.0",
       "core_asset": "studio-niko-core.js",
-      "visibility": "public"
+      "visibility": "public",
+      "phase_b_status": "defined_unverified",
+      "phase_b_scope": "Parcours WebGL / mode 2D et sauvegardes à vérifier sur appareils. Aucun nouveau résultat revendiqué."
     },
     {
       "name": "handimonde",
@@ -208,7 +213,10 @@
       "visibility": "public",
       "recovery_status": "committed_unverified",
       "recovery_scope": "Timeline et références média (2 copies locales, sans binaires)",
-      "recovery_document": "SAUVEGARDE_MEDIA.md"
+      "recovery_document": "SAUVEGARDE_MEDIA.md",
+      "phase_b_status": "committed_partial",
+      "phase_b_scope": "Archives média et audio, reprise locale codées. Génération et rendu réel non vérifiés.",
+      "phase_b_document": "SAUVEGARDE_MEDIA.md"
     },
     {
       "name": "jarvisdiabete",
@@ -230,7 +238,10 @@
       "runtime": "not_verified_for_this_batch",
       "core_version": "0.1.0",
       "core_asset": "public/studio-niko-core.js",
-      "visibility": "public"
+      "visibility": "public",
+      "phase_b_status": "committed_partial",
+      "phase_b_scope": "Rappels calendrier corrigés, exports manuels et coque du radar hors ligne codés. Candidatures non vérifiées.",
+      "phase_b_document": "docs/RADAR_LBB_INTEGRATION.md"
     },
     {
       "name": "l-ultime-confrontation",
@@ -352,7 +363,9 @@
       "runtime": "not_verified_for_this_batch",
       "core_version": "0.1.0",
       "core_asset": "web/studio-niko-core.js",
-      "visibility": "public"
+      "visibility": "public",
+      "phase_b_status": "defined_unverified",
+      "phase_b_scope": "Permissions et confirmations d'actions sensibles à revoir. Aucun nouveau résultat revendiqué."
     },
     {
       "name": "nikogroove",
@@ -499,7 +512,10 @@
       "visibility": "public",
       "recovery_status": "committed_unverified",
       "recovery_scope": "État musical précédent, sans prises audio binaires",
-      "recovery_document": "SAUVEGARDE_EXPORT.md"
+      "recovery_document": "SAUVEGARDE_EXPORT.md",
+      "phase_b_status": "committed_partial",
+      "phase_b_scope": "Sauvegarde de secours et contrôle PCM des exports codés. Lecture iPhone non vérifiée.",
+      "phase_b_document": "SAUVEGARDE_EXPORT.md"
     },
     {
       "name": "Vision-IA",
