@@ -1,0 +1,39 @@
+# Studio Niko Core — socle partagé (v0.1.0)
+
+Source canonique dans le dépôt [Nikoju1977/Nikoju1977](https://github.com/Nikoju1977/Nikoju1977/tree/main/studio-niko-core). La connexion GitHub disponible permet la création de fichiers mais pas encore la création d'un nouveau dépôt : **ce dossier est donc la source principale provisoire** et non un dépôt indépendant.
+
+## Objectif
+
+Faire évoluer les applications Studio Niko sans répliquer des corrections non maîtrisées : utilitaires légers, résilience, aide technique et contrat de publication. Le socle n'ajoute ni moteur IA, ni caméra, ni service payant, ni télémétrie.
+
+## Inclus dans v0.1.0
+
+`v0.1.0/core.js` expose `window.StudioNikoCore` :
+
+- `version` — version explicite, sans publicité de capacités inexistantes ;
+- `storage(namespace).read/write/remove` — stockage local par espace de nom, avec erreurs gérées ; **ne pas utiliser directement pour des données médicales ou des secrets** ;
+- `exportJSON(value, filename)` — téléchargement local sur action explicite ;
+- `importJSON(file, {maxBytes, validate})` — limite de taille, analyse JSON et validation métier facultative ;
+- `diagnostic()` — statut minimal public sans paramètres URL, historique, données de projet, identité, clés ni utilisateur ;
+- `copyDiagnostic()` — copie volontaire, sans transfert vers un serveur ;
+- `installDiagnosticControl()` — ajoute un bouton discret « Diag. » dans l'aide intégrée déjà existante, ou dans les réglages d'AutoCoder.
+
+La bibliothèque est **sans dépendance**, en JavaScript navigateur classique, et n'exécute aucune requête réseau. Elle est facultative : si son chargement échoue, les applications doivent continuer à fonctionner.
+
+## Stratégie d'intégration
+
+Chaque application conserve sa **copie locale** `studio-niko-core.js`, identique à `v0.1.0/core.js`, référencée avant `</body>` avec :
+
+```html
+<script defer src="./studio-niko-core.js"></script>
+```
+
+La copie locale rend la PWA indépendante d'un CDN et compatible avec `Content-Security-Policy: script-src 'self'`. Le fichier canonique est la source de vérité ; toute nouvelle version doit être publiée avec son numéro de version et synchronisée dans les applications concernées, sans écraser leurs modifications métier.
+
+## Confidentialité
+
+Le diagnostic ne lit pas les contenus du stockage, n'enregistre pas les messages d'erreur, n'inspecte pas les comptes et n'envoie rien. Le composant **n'est pas un SDK de suivi d'utilisateurs**. Les données de santé nécessitent un stockage chiffré et des politiques spécifiques au projet ; le stockage utilitaire de cette bibliothèque ne les remplace pas.
+
+## États de livraison
+
+Toujours séparer **code créé**, **copie intégrée**, **commit GitHub**, **déploiement confirmé** et **fonctionnement confirmé sur appareil**. Ne pas déclencher de campagne de tests sans instruction expresse de l'utilisateur. Le module n'a pas encore fait l'objet d'une certification de compatibilité iOS/Android.
