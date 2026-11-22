@@ -8,6 +8,12 @@ Le fichier [`pilotage.html`](./pilotage.html) contient un tableau public autonom
 
 Les statuts « déploiement non confirmé » et « fonctionnement non confirmé » sont volontairement distincts des commits GitHub. Le tableau ne sonde pas le réseau en arrière-plan, ne simule pas les résultats et ne publie aucun nom de dépôt privé. Le suivi manuel des modules, versions, blocages et décisions s'enregistre dans le navigateur et propose un export/import JSON. Aucune déclaration utilisateur n'est promue au rang de preuve automatique. Le registre source est [`../studio-niko-core/registry.json`](../studio-niko-core/registry.json) ; pour mettre à jour le snapshot de la page : `node studio-niko-core/tools/refresh-hub.mjs --apply` depuis la racine du dépôt.
 
+## Suivi de la phase B (22 novembre 2026)
+
+Le registre et le tableau `pilotage.html` distinguent désormais l'état des **six applications prioritaires** : quatre parcours ont des correctifs partiels committés (cinéma, audio, AutoCoder, Niko Emploi) et deux restent définis sans validation de cette phase (Galerie Studio Niko et NikoAssist). Chaque fiche décrit les limites et, lorsque disponible, renvoie à la procédure du dépôt. Aucun « code committé » n'est transformé en preuve de déploiement ou de fonctionnement sur appareil.
+
+La dernière vague renforce la récupération locale de projets AutoCoder et corrige les exports iCalendar, CSV et JSON du radar Niko Emploi. Le shell public du radar est référencé dans son cache PWA ; seules les notes locales déjà enregistrées peuvent être affichées hors connexion, pas les APIs de recherche.
+
 ## Principe
 
 - Source : dépôt GitHub \`Nikoju1977/Nikoju1977\`, répertoire \`hub/\`.
