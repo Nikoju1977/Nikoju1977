@@ -27,7 +27,9 @@ const payload={
     name:r.name,full_name:r.full_name,domain:r.domain,priority:r.priority,
     core_integration:r.core_integration,core_version:r.core_version||null,
     recovery_status:r.recovery_status||null,recovery_scope:r.recovery_scope||null,
-    recovery_document:r.recovery_document||null
+    recovery_document:r.recovery_document||null,
+    phase_b_status:r.phase_b_status||null,phase_b_scope:r.phase_b_scope||null,
+    phase_b_document:r.phase_b_document||null
   }))
 };
 const serialized=JSON.stringify(payload).replace(/</g,'\\u003c');
