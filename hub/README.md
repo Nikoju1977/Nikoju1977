@@ -2,6 +2,12 @@
 
 Portail public de **Studio Niko Design** — catalogue des dépôts publics, recherche, univers, favoris locaux, accès RON et PWA.
 
+## Pilotage Studio Niko Core
+
+Le fichier [`pilotage.html`](./pilotage.html) contient un tableau public autonome et responsive : **55 dépôts recensés, 50 publics, 5 privés volontairement masqués et 6 intégrations Core committées au 22 novembre 2026**. Recherche, domaine, priorité, état du socle, liens vers les dépôts et liens de publication connus.
+
+Les statuts « déploiement non confirmé » et « fonctionnement non confirmé » sont volontairement distincts des commits GitHub. Le tableau ne sonde pas le réseau en arrière-plan, ne simule pas les résultats et ne publie aucun nom de dépôt privé. Le registre source est [`../studio-niko-core/registry.json`](../studio-niko-core/registry.json) ; pour mettre à jour le snapshot de la page : `node studio-niko-core/tools/refresh-hub.mjs --apply` depuis la racine du dépôt.
+
 ## Principe
 
 - Source : dépôt GitHub \`Nikoju1977/Nikoju1977\`, répertoire \`hub/\`.
