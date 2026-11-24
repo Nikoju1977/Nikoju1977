@@ -2,6 +2,7 @@
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
+const {validateDeployment}=require('./evidence.cjs');
 const dir=__dirname;
 const app=fs.readFileSync(path.join(dir,'app.js'),'utf8');
 const index=fs.readFileSync(path.join(dir,'index.html'),'utf8');
@@ -33,6 +34,10 @@ const snapshot=JSON.parse(pilotage.slice(payloadStart,payloadEnd));
 assert(snapshot.repositories.length===registry.public_repositories,'Public registry count matches dashboard');
 assert(cat.length===registry.public_repositories,'Landing catalog includes all '+registry.public_repositories+' public repositories');
 const registryNames=new Set(registry.repositories.map(x=>x.name));
+const snapshotNames=new Set(snapshot.repositories.map(x=>x.name));
+assert.equal(registryNames.size,registry.repositories.length,'Registry identities are unique');
+assert.equal(snapshotNames.size,snapshot.repositories.length,'Snapshot identities are unique');
+assert.deepEqual(snapshotNames,registryNames,'Snapshot contains exactly the public registry identities');
 const catalogNames=new Set(cat.map(x=>x.repoUrl.split('/').at(-1)));
 assert(catalogNames.size===registryNames.size,'Catalog identities are unique');
 for(const name of registryNames)assert(catalogNames.has(name),'Missing public repository in landing catalog '+name);
@@ -42,22 +47,8 @@ assert(snapshot.private_repositories_omitted===registry.private_repositories_omi
 for(const repo of registry.repositories){
   const item=snapshot.repositories.find(x=>x.name===repo.name);
   assert(item,'Hub snapshot includes '+repo.name);
-  if(repo.preview_deployment){
-    assert(item.preview_deployment?.commit===repo.preview_deployment.commit,'Preview commit matches '+repo.name);
-    assert(item.preview_deployment?.verification==='build_ready_only','Preview evidence never claims runtime validation '+repo.name);
-    assert(new URL(item.preview_deployment.url).hostname.endsWith('.vercel.app'),'Preview URL is Vercel '+repo.name);
-  }
-  if(repo.production_deployment){
-    assert(item.production_deployment?.commit===repo.production_deployment.commit,'Production commit matches '+repo.name);
-    assert(item.production_deployment.state==='READY','Production is READY '+repo.name);
-    assert(['http_assets_only','deployment_ready_ci_only'].includes(item.production_deployment.verification),
-      'Recognized evidence scope only '+repo.name);
-    assert(/^[0-9a-f]{40}$/.test(item.production_deployment.commit),'Exact commit required '+repo.name);
-    assert(/^20[0-9]{2}-[0-9]{2}-[0-9]{2}$/.test(item.production_deployment.checked_on),
-      'Timestamp of inspected production required '+repo.name);
-    const url=new URL(item.production_deployment.url);
-    assert(url.protocol==='https:'&&url.hostname.endsWith('.vercel.app'),'Production link is HTTPS Vercel '+repo.name);
-  }
+  validateDeployment(repo.preview_deployment,item.preview_deployment,'preview',repo.name);
+  validateDeployment(repo.production_deployment,item.production_deployment,'production',repo.name);
 }
 assert(pilotage.includes('var httpVerified='),'Dashboard separates verified HTTP from CI-only READY');
 assert(index.includes('id="atelier"'),'Workspace section');

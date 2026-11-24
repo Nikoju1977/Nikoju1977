@@ -4,10 +4,12 @@ on:
   push:
     paths:
       - "hub/**"
+      - "studio-niko-core/registry.json"
       - ".github/workflows/hub-quality.yml"
   pull_request:
     paths:
       - "hub/**"
+      - "studio-niko-core/registry.json"
       - ".github/workflows/hub-quality.yml"
   workflow_dispatch:
   schedule:
@@ -32,8 +34,11 @@ jobs:
           node --check hub/api/health.js
           node --check hub/audit-links.cjs
           node --check hub/check.cjs
+          node --check hub/evidence.cjs
       - name: Verify catalog, privacy and DOM bindings
         run: node hub/check.cjs
+      - name: Evidence regression tests
+        run: node --test hub/evidence.test.cjs
       - name: Weekly or manual HTTP audit
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: node hub/audit-links.cjs
