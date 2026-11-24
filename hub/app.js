@@ -116,6 +116,7 @@ function notify(message){const node=byId('toast');node.textContent=message;node.
 function validateCatalog(d){return Array.isArray(d)&&d.every(x=>x && typeof x.name==='string'&&typeof x.slug==='string'&&typeof x.category==='string'&&typeof x.description==='string');}
 async function init(){
   try{
+    const initial=new URLSearchParams(location.search).get('q');if(initial){query=initial.slice(0,200);byId('search').value=query;}
     const res=await fetch('./catalog.json',{cache:'no-store'});if(!res.ok)throw new Error('HTTP '+res.status);
     const json=await res.json();if(!validateCatalog(json))throw new Error('Catalogue invalide');
     data=json;const cats=[...new Set(data.map(d=>d.category))].sort((a,b)=>a.localeCompare(b,'fr'));

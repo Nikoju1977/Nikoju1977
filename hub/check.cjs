@@ -101,4 +101,6 @@ const commandJs=fs.readFileSync(path.join(dir,'command.js'),'utf8');
 for(const match of commandJs.matchAll(/\$\('([^']+)'\)/g))assert(commandPage.includes('id="'+match[1]+'"'),'Command DOM id '+match[1]);
 for(const asset of ['command.html','command.js','command-core.js','command.css'])assert(sw.includes("'./"+asset+"'"),'Command offline asset '+asset);
 assert(index.includes('href="./command.html"')&&pilotage.includes('href="./command.html"'),'Command navigation');
+for(const page of ['index','pilotage','quality','deployments','security','agents','devices','recovery','command','provenance']){const html=fs.readFileSync(path.join(dir,page+'.html'),'utf8');for(const asset of ['design.css','design-core.js','design.js'])assert(html.includes('./'+asset),'Shared design '+page+' '+asset);}
+for(const asset of ['design.css','design-core.js','design.js'])assert(sw.includes("'./"+asset+"'"),'Design offline asset '+asset);
 console.log('PASS catalog='+cat.length+' launchUrls='+cat.filter(x=>x.demoUrl).length+' DOM bindings checked');
