@@ -1,0 +1,55 @@
+name: Studio Niko new repository inventory
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '31 7 * * 2'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/studio-niko-inventory.yml'
+      - 'hub/catalog.json'
+      - 'provenance/registry-*.json'
+permissions:
+  contents: read
+jobs:
+  inventory:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Compare public GitHub inventory with Hub and provenance
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api --paginate '/users/Nikoju1977/repos?type=owner&per_page=100' --jq '.[] | {name, fork, private, size}' | jq -s 'map(select(.private == false))' > repos.json
+          gh api 'repos/Nikoju1977/Nikoju1977/contents/hub/catalog.json?ref=main' --jq .content | base64 -d > catalog.json
+          gh api 'repos/Nikoju1977/Nikoju1977/contents/provenance?ref=main' --jq '.[] | select(.name | test("^registry-[0-9]{4}-[0-9]{2}-[0-9]{2}[.]json$")) | .name' | sort > snapshots.txt
+          latest=$(tail -n 1 snapshots.txt)
+          [[ "$latest" =~ ^registry-[0-9]{4}-[0-9]{2}-[0-9]{2}\.json$ ]]
+          gh api "repos/Nikoju1977/Nikoju1977/contents/provenance/$latest?ref=main" --jq .content | base64 -d > registry.json
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          public = {r["name"]:r for r in json.load(open("repos.json"))}
+          catalog = {r["repoUrl"].rstrip("/").split("/")[-1] for r in json.load(open("catalog.json"))}
+          registered = {r["repository"].split("/")[-1] for r in json.load(open("registry.json"))["repositories"]}
+          originals = {n for n,r in public.items() if not r["fork"]}
+          missing = sorted(originals - registered)
+          stale = sorted(registered - originals)
+          absent = sorted(set(public)-catalog)
+          invalid = sorted(catalog-set(public))
+          lines = ["## Studio Niko — contrôle des nouveaux dépôts",
+                   f"Inventaire public : {len(public)} ; catalogue : {len(catalog)} ; registre : {len(registered)}.",
+                   "", "### Dépôts originaux non référencés (vérifier aussi les dépôts vides)",
+                   *([f"- {n}" for n in missing] or ["Aucun"]),
+                   "", "### Références de provenance à réexaminer",
+                   *([f"- {n}" for n in stale if n in public] or ["Aucune référence publique concernée"]),
+                   f"Références devenues non publiques ou indisponibles (noms masqués) : {len(set(stale)-set(public))}",
+                   "", "### Dépôts publics absents du Hub",
+                   *([f"- {n}" for n in absent] or ["Aucun"]),
+                   "", f"Entrées du catalogue non retrouvées dans l'inventaire public (noms masqués) : {len(invalid)}",
+                   "", "Rapport en lecture seule. Les forks sont exclus du registre de provenance. Une inscription manquante exige un contrôle des droits et du contenu avant toute publication."]
+          result = "\n".join(lines)+"\n"
+          print(result)
+          with open(os.environ["GITHUB_STEP_SUMMARY"],"a",encoding="utf-8") as f: f.write(result)
+          PY
