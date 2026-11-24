@@ -65,4 +65,9 @@ const guides=JSON.parse(fs.readFileSync(path.join(dir,'guides.json'),'utf8')).gu
 assert(guides.length===cat.length&&new Set(guides.map(g=>g.slug)).size===cat.length
   &&cat.every(x=>guides.some(g=>g.slug===x.slug)),'All public applications documented uniquely');
 new Function(fs.readFileSync(path.join(dir,'guide.js'),'utf8'));
+const quality=fs.readFileSync(path.join(dir,'quality.html'),'utf8');
+const qualityJs=fs.readFileSync(path.join(dir,'quality.js'),'utf8');
+for(const match of qualityJs.matchAll(/\$\('([^']+)'\)/g))assert(quality.includes('id="'+match[1]+'"'),'Quality DOM id '+match[1]);
+for(const asset of ['quality.html','quality.css','quality-core.js','quality.js'])assert(sw.includes("'./"+asset+"'"),'Quality offline asset '+asset);
+assert(index.includes('href="./quality.html"')&&pilotage.includes('href="./quality.html"'),'Quality navigation');
 console.log('PASS catalog='+cat.length+' launchUrls='+cat.filter(x=>x.demoUrl).length+' DOM bindings checked');

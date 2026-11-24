@@ -35,10 +35,12 @@ jobs:
           node --check hub/audit-links.cjs
           node --check hub/check.cjs
           node --check hub/evidence.cjs
+          node --check hub/quality-core.js
+          node --check hub/quality.js
       - name: Verify catalog, privacy and DOM bindings
         run: node hub/check.cjs
       - name: Evidence regression tests
-        run: node --test hub/evidence.test.cjs
+        run: node --test hub/evidence.test.cjs hub/quality.test.cjs
       - name: Weekly or manual HTTP audit
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: node hub/audit-links.cjs
