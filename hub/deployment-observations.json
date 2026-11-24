@@ -1,0 +1,91 @@
+{
+  "schema": "studio-niko-deployments/1",
+  "checkedOn": "2026-11-24",
+  "source": "Vercel get_deployment by registered hostname and GitHub branches/main, authenticated connector read-only",
+  "rows": [
+    {
+      "repo": "AutoCoder-Studio-Niko",
+      "project": "autocoder-studio-niko",
+      "host": "autocoder-studio-niko.vercel.app",
+      "id": "dpl_DnpPfy87eYFQ1DZNXcs5UbpBaG2v",
+      "commit": "f825e7debc84dc11acd54e9500210d010e7525e3",
+      "head": "f825e7debc84dc11acd54e9500210d010e7525e3",
+      "branch": "main",
+      "target": "production",
+      "state": "READY",
+      "aliasConfirmed": true
+    },
+    {
+      "repo": "galerie-studio-niko",
+      "project": "galerie-studio-niko",
+      "host": "galerie-studio-niko-nikoju1977s-projects.vercel.app",
+      "id": "dpl_9riCMWRPmx1VRHHH8iWfzfd9LQ6g",
+      "commit": "ca453f882c238e0421179308556cb5a87d874b1c",
+      "head": "ca453f882c238e0421179308556cb5a87d874b1c",
+      "branch": "main",
+      "target": "production",
+      "state": "READY",
+      "aliasConfirmed": true
+    },
+    {
+      "repo": "job-search",
+      "project": "niko-emploi",
+      "host": "niko-emploi.vercel.app",
+      "id": "dpl_AB5tTNzb6MQiFTksae5EeyreMMzJ",
+      "commit": "722c41fcb411fca5321feecf7d2d012b5f124626",
+      "head": "722c41fcb411fca5321feecf7d2d012b5f124626",
+      "branch": "main",
+      "target": "production",
+      "state": "READY",
+      "aliasConfirmed": true
+    },
+    {
+      "repo": "niko-commande-live-tik-tok",
+      "project": "niko-live-commander",
+      "host": "niko-live-commander.vercel.app",
+      "id": "dpl_8fJ5MUbNE3D6CNZUKfDCBsGuyjNC",
+      "commit": "c1a71b0ef24b1b7958334a1e881b7583a8502274",
+      "head": "c1a71b0ef24b1b7958334a1e881b7583a8502274",
+      "branch": "main",
+      "target": "production",
+      "state": "READY",
+      "aliasConfirmed": true
+    },
+    {
+      "repo": "Nikoassist",
+      "project": "nikoassist-pwa",
+      "host": "nikoassist-pwa.vercel.app",
+      "id": "dpl_AMWrCAXkiXPWmPHD6AUY5wEfyexz",
+      "commit": "eb18f0d8ec8c1256e377a76e85c1f5568c605857",
+      "head": "eb18f0d8ec8c1256e377a76e85c1f5568c605857",
+      "branch": "main",
+      "target": "production",
+      "state": "READY",
+      "aliasConfirmed": true
+    },
+    {
+      "repo": "Nikoju1977",
+      "project": "studio-niko-hub",
+      "host": "studio-niko-hub.vercel.app",
+      "id": "dpl_5JhdQmrouNkneS4m1ihG8kNAGKfZ",
+      "commit": "d82f32302fb92b92f727515b2b35fab2fc833576",
+      "head": "d82f32302fb92b92f727515b2b35fab2fc833576",
+      "branch": "main",
+      "target": "production",
+      "state": "READY",
+      "aliasConfirmed": true
+    },
+    {
+      "repo": "Rave-Generator-2",
+      "project": "rave-generator-2",
+      "host": "rave-generator-2.vercel.app",
+      "id": "dpl_3RHfgZao6hUZTY25b6AmULfsWTKK",
+      "commit": "121538cbc225ff43699a04f1e0068593721fd371",
+      "head": "121538cbc225ff43699a04f1e0068593721fd371",
+      "branch": "main",
+      "target": "production",
+      "state": "READY",
+      "aliasConfirmed": true
+    }
+  ]
+}
