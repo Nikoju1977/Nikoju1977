@@ -1,0 +1,22 @@
+name: Studio Niko · Security Center
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  scan-tracked-files:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Validate detection rules with synthetic fixtures
+        run: node --test hub/security.test.cjs
+      - name: Scan tracked files without printing credential values
+        run: node hub/security-audit.cjs
