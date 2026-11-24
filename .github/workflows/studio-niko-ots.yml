@@ -1,0 +1,120 @@
+name: Studio Niko OpenTimestamps
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/studio-niko-ots.yml']
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+    inputs:
+      registry:
+        description: 'Public registry filename (registry-YYYY-MM-DD.json)'
+        default: 'registry-2026-11-24.json'
+        required: true
+      ref:
+        description: 'Exact commit SHA containing the registry'
+        default: 'f512089ca9fca53202849948a7680a67076186d1'
+        required: true
+      digest:
+        description: 'Expected SHA-256 of registry bytes'
+        default: 'd9f86b6a6120fc6deefa68e8705ae9f602872c457e75ad6e8c502258ee9d8034'
+        required: true
+permissions: {}
+concurrency:
+  group: studio-niko-ots
+  cancel-in-progress: false
+jobs:
+  stamp:
+    if: github.ref == 'refs/heads/main' && github.repository == 'Nikoju1977/Nikoju1977'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    outputs:
+      receipt: ${{ steps.proof.outputs.receipt }}
+      filename: ${{ steps.proof.outputs.filename }}
+      state: ${{ steps.proof.outputs.state }}
+    steps:
+      - name: Install reference client in isolated environment
+        run: |
+          python3 -m venv "$RUNNER_TEMP/ots"
+          "$RUNNER_TEMP/ots/bin/pip" install --disable-pip-version-check 'opentimestamps-client==0.7.2' 'opentimestamps==0.4.5'
+          echo "$RUNNER_TEMP/ots/bin" >> "$GITHUB_PATH"
+      - name: Timestamp or upgrade the pinned public registry
+        id: proof
+        env:
+          REGISTRY: ${{ inputs.registry || 'registry-2026-11-24.json' }}
+          REF: ${{ inputs.ref || 'f512089ca9fca53202849948a7680a67076186d1' }}
+          DIGEST: ${{ inputs.digest || 'd9f86b6a6120fc6deefa68e8705ae9f602872c457e75ad6e8c502258ee9d8034' }}
+        run: |
+          set -euo pipefail
+          [[ "$REGISTRY" =~ ^registry-[0-9]{4}-[0-9]{2}-[0-9]{2}\.json$ ]]
+          [[ "$REF" =~ ^[a-f0-9]{40}$ ]]
+          [[ "$DIGEST" =~ ^[a-f0-9]{64}$ ]]
+          base=https://raw.githubusercontent.com/Nikoju1977/Nikoju1977
+          curl -fsS --retry 2 "$base/$REF/provenance/$REGISTRY" -o "$REGISTRY"
+          printf '%s  %s\n' "$DIGEST" "$REGISTRY" | sha256sum -c -
+          receipt="$REGISTRY.$DIGEST.ots.base64"
+          proof="$REGISTRY.ots"
+          status=$(curl -sS --retry 2 -w '%{http_code}' "$base/main/provenance/timestamps/$receipt" -o existing.b64)
+          case "$status" in
+            200) base64 -d existing.b64 > "$proof"
+                 ots info "$proof" > before.txt
+                 grep -F "File sha256 hash: $DIGEST" before.txt
+                 cp "$proof" prior.ots
+                 if ! ots upgrade "$proof"; then
+                   echo 'Calendar upgrade not available; preserving prior receipt'
+                   cp prior.ots "$proof"
+                 fi ;;
+            404) ots stamp "$REGISTRY" ;;
+            *) echo "Receipt lookup failed: HTTP $status"; exit 1 ;;
+          esac
+          test -s "$proof"
+          ots info "$proof" | tee info.txt
+          grep -F "File sha256 hash: $DIGEST" info.txt
+          if grep -q BitcoinBlockHeaderAttestation info.txt; then
+            state=bitcoin-attestation-present-not-independently-verified
+          elif grep -q PendingAttestation info.txt; then
+            state=pending
+          else
+            echo 'Unexpected attestation type'; exit 1
+          fi
+          echo "OTS_STATE=$state"
+          echo "OTS_RECEIPT_BASE64=$(base64 -w0 "$proof")"
+          echo "receipt=$(base64 -w0 "$proof")" >> "$GITHUB_OUTPUT"
+          echo "filename=$receipt" >> "$GITHUB_OUTPUT"
+          echo "state=$state" >> "$GITHUB_OUTPUT"
+  persist:
+    needs: stamp
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Save receipt as Base64 without executing downloaded code
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RECEIPT: ${{ needs.stamp.outputs.receipt }}
+          FILENAME: ${{ needs.stamp.outputs.filename }}
+          STATE: ${{ needs.stamp.outputs.state }}
+        run: |
+          set -euo pipefail
+          [[ "$FILENAME" =~ ^registry-[0-9]{4}-[0-9]{2}-[0-9]{2}\.json\.[a-f0-9]{64}\.ots\.base64$ ]]
+          [[ "$RECEIPT" =~ ^[A-Za-z0-9+/=]+$ ]]
+          [[ "$STATE" == pending || "$STATE" == bitcoin-attestation-present-not-independently-verified ]]
+          printf '%s\n' "$RECEIPT" > receipt.b64
+          endpoint="repos/Nikoju1977/Nikoju1977/contents/provenance/timestamps/$FILENAME"
+          if gh api "$endpoint" > current.json 2> error.txt; then
+            jq -r .content current.json | tr -d '\n' | base64 -d > previous.b64
+            if cmp -s previous.b64 receipt.b64; then
+              echo 'Receipt already stored; no change'
+              exit 0
+            fi
+            sha=$(jq -r .sha current.json)
+            gh api --method PUT "$endpoint" -f message="provenance: upgrade OpenTimestamps receipt" -f branch=main -f sha="$sha" -f content="$(base64 -w0 receipt.b64)" --jq .commit.sha
+          elif grep -q 'HTTP 404' error.txt; then
+            gh api --method PUT "$endpoint" -f message="provenance: store OpenTimestamps receipt" -f branch=main -f content="$(base64 -w0 receipt.b64)" --jq .commit.sha
+          else
+            cat error.txt; exit 1
+          fi
+          echo "Saved receipt: $FILENAME ($STATE)"
