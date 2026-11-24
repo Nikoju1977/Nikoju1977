@@ -31,7 +31,7 @@ function render(){
     const repo=validUrl(item.repoUrl);
     const isFav=favorites.has(item.slug);
     const statusInfo=health.get(item.slug);
-    const state=item.status==='planned'?'EN PRÉPARATION':
+    const state=item.status==='empty-repository'?'DÉPÔT VIDE':item.status==='planned'?'EN PRÉPARATION':
       item.status==='deployment-error'?'DÉPLOIEMENT EN ERREUR':
       demo && item.pageCheckedOn?'PAGE ACCESSIBLE · HTTP 200':
       demo && item.deployment?.access==='public'?'VERCEL · PRÊT':

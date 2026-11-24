@@ -418,6 +418,17 @@
     "requirements": "Page HTTP 200 vérifiée le 22/11/2026. Aucune commande réelle de TikTok, OBS, platines Pioneer ou iRig ; aucune synchronisation entre téléphones. Parcours et compatibilité iPhone/Android non testés."
   },
   {
+    "slug": "niko-music-lab",
+    "name": "Studio Niko Music Lab Pro",
+    "category": "Musique & Audio",
+    "description": "Laboratoire musical et synthétiseurs EBM dans le navigateur.",
+    "repoUrl": "https://github.com/Nikoju1977/niko-music-lab",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only",
+    "requirements": "Web Audio et navigateur compatible. Le déploiement et la production sonore ne sont pas vérifiés pour cet inventaire."
+  },
+  {
     "slug": "Niko-Ultravision",
     "name": "Niko-Ultravision",
     "category": "Cinéma & Image",
@@ -554,6 +565,28 @@
     "status": "page-responding",
     "pageCheckedOn": "2026-11-22",
     "requirements": "Page HTTP 200 vérifiée le 22/11/2026. Le démarrage audio nécessite un geste utilisateur ; les exports WAV réels, la PWA et les performances doivent être testés sur appareils. Aucun envoi automatique vers Suno."
+  },
+  {
+    "slug": "rf-metrolgy-pro",
+    "name": "RF Metrology — dépôt vide",
+    "category": "Archives & Variantes",
+    "description": "Dépôt GitHub vide, sans application ni version exploitable.",
+    "repoUrl": "https://github.com/Nikoju1977/rf-metrolgy-pro",
+    "demoUrl": null,
+    "featured": false,
+    "status": "empty-repository",
+    "requirements": "Aucun fichier ni lancement disponible; dépôt conservé dans l'inventaire uniquement."
+  },
+  {
+    "slug": "RF-Metrology-Pro",
+    "name": "RF Metrology Pro",
+    "category": "Sécurité & Outils",
+    "description": "Projet Studio Niko consacré à la métrologie radiofréquence.",
+    "repoUrl": "https://github.com/Nikoju1977/RF-Metrology-Pro",
+    "demoUrl": null,
+    "featured": false,
+    "status": "source-only",
+    "requirements": "Consulter le README et les ressources du dépôt. Aucun déploiement ni résultat de mesure n'est confirmé."
   },
   {
     "slug": "Ron-",

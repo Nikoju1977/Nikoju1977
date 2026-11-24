@@ -1,0 +1,279 @@
+{
+  "date": "2026-11-24",
+  "total": 53,
+  "registered": 51,
+  "notice_count": 38,
+  "existing_license_count": 13,
+  "excluded": [
+    {
+      "name": "Wan2GP",
+      "reason": "Fork — licence d'origine conservée"
+    },
+    {
+      "name": "rf-metrolgy-pro",
+      "reason": "Dépôt vide — aucune version enregistrable"
+    }
+  ],
+  "registry_commit": "f512089ca9fca53202849948a7680a67076186d1",
+  "sha256": "d9f86b6a6120fc6deefa68e8705ae9f602872c457e75ad6e8c502258ee9d8034",
+  "audit_run": "https://github.com/Nikoju1977/Nikoju1977/actions/runs/45312655016",
+  "ots_run": "https://github.com/Nikoju1977/Nikoju1977/actions/runs/45313005957",
+  "ots_status": "Reçu créé le 24 novembre 2026 ; confirmation Bitcoin en attente lors du dernier contrôle de référence.",
+  "repositories": [
+    {
+      "repository": "Nikoju1977/l-ultime-confrontation",
+      "metadata_commit": "7cda371d732e37f0903c97d1bbbb95526a3d986b",
+      "metadata_url": "https://github.com/Nikoju1977/l-ultime-confrontation/blob/7cda371d732e37f0903c97d1bbbb95526a3d986b/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/presentation-medtronic",
+      "metadata_commit": "c21a2a277c64bae34bd8823a87395a435caae417",
+      "metadata_url": "https://github.com/Nikoju1977/presentation-medtronic/blob/c21a2a277c64bae34bd8823a87395a435caae417/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/SCAN-BIOMEDICAL",
+      "metadata_commit": "f4bd72e4e2f9f9e9b94eaae9231c4388c02be729",
+      "metadata_url": "https://github.com/Nikoju1977/SCAN-BIOMEDICAL/blob/f4bd72e4e2f9f9e9b94eaae9231c4388c02be729/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/fibrobot",
+      "metadata_commit": "12bd9ed9e371cbe56a0513f46908c4bd7886e0c2",
+      "metadata_url": "https://github.com/Nikoju1977/fibrobot/blob/12bd9ed9e371cbe56a0513f46908c4bd7886e0c2/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/compagnon-diabete",
+      "metadata_commit": "84b78232c910053ce9acb20c5d3ee616bdd67e61",
+      "metadata_url": "https://github.com/Nikoju1977/compagnon-diabete/blob/84b78232c910053ce9acb20c5d3ee616bdd67e61/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/jarvisdiabete",
+      "metadata_commit": "e84ebca7a31270a305522dde1a963770fda85000",
+      "metadata_url": "https://github.com/Nikoju1977/jarvisdiabete/blob/e84ebca7a31270a305522dde1a963770fda85000/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/purescanai",
+      "metadata_commit": "2e98ac00b2cf51c1365dfebf9e308204c169bc52",
+      "metadata_url": "https://github.com/Nikoju1977/purescanai/blob/2e98ac00b2cf51c1365dfebf9e308204c169bc52/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/aylina-is-cooking",
+      "metadata_commit": "81cf11120d6ff43ec5389677dadc547809d65040",
+      "metadata_url": "https://github.com/Nikoju1977/aylina-is-cooking/blob/81cf11120d6ff43ec5389677dadc547809d65040/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/ia-studio-cine",
+      "metadata_commit": "b6a61286dc2b320f2b6aa3f30d8480c8b02ec96b",
+      "metadata_url": "https://github.com/Nikoju1977/ia-studio-cine/blob/b6a61286dc2b320f2b6aa3f30d8480c8b02ec96b/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/Neural-Art-mars-2026",
+      "metadata_commit": "ff745ae4dbe3132204ed5d5ad1941745f91d6a45",
+      "metadata_url": "https://github.com/Nikoju1977/Neural-Art-mars-2026/blob/ff745ae4dbe3132204ed5d5ad1941745f91d6a45/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/applewatchcadrans",
+      "metadata_commit": "fe61abfa051f979cf944c93763762741732ddd9e",
+      "metadata_url": "https://github.com/Nikoju1977/applewatchcadrans/blob/fe61abfa051f979cf944c93763762741732ddd9e/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/oracle-du-jardinier",
+      "metadata_commit": "6e7dc2e41a01c0b652a55116fa0c5cf350dc89b3",
+      "metadata_url": "https://github.com/Nikoju1977/oracle-du-jardinier/blob/6e7dc2e41a01c0b652a55116fa0c5cf350dc89b3/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/agent-biometrique",
+      "metadata_commit": "bd97d7efb93c891450418c92e9d903d48ad31780",
+      "metadata_url": "https://github.com/Nikoju1977/agent-biometrique/blob/bd97d7efb93c891450418c92e9d903d48ad31780/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/les-annales-akashiques",
+      "metadata_commit": "bb891ffd43e03c4befa097a6127c4a2d92251dc8",
+      "metadata_url": "https://github.com/Nikoju1977/les-annales-akashiques/blob/bb891ffd43e03c4befa097a6127c4a2d92251dc8/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/miaotris",
+      "metadata_commit": "d62430eb026099fc78c687fa13f64382d75f56cb",
+      "metadata_url": "https://github.com/Nikoju1977/miaotris/blob/d62430eb026099fc78c687fa13f64382d75f56cb/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/Nikoju1977",
+      "metadata_commit": "b2ae34cecdf4d455470217b5a6947644d165f314",
+      "metadata_url": "https://github.com/Nikoju1977/Nikoju1977/blob/b2ae34cecdf4d455470217b5a6947644d165f314/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/nikogroove",
+      "metadata_commit": "5914a587ddeb22a85636b3d082f5ded9dba980b5",
+      "metadata_url": "https://github.com/Nikoju1977/nikogroove/blob/5914a587ddeb22a85636b3d082f5ded9dba980b5/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/Vision-IA",
+      "metadata_commit": "422e0ea150ee961a263c55c0e88fec3cca5539f7",
+      "metadata_url": "https://github.com/Nikoju1977/Vision-IA/blob/422e0ea150ee961a263c55c0e88fec3cca5539f7/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/job-search",
+      "metadata_commit": "722c41fcb411fca5321feecf7d2d012b5f124626",
+      "metadata_url": "https://github.com/Nikoju1977/job-search/blob/722c41fcb411fca5321feecf7d2d012b5f124626/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/radar-de-niko",
+      "metadata_commit": "a67106a76b496e6bd9bb17b4d69989ddeceeb170",
+      "metadata_url": "https://github.com/Nikoju1977/radar-de-niko/blob/a67106a76b496e6bd9bb17b4d69989ddeceeb170/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/oeil-hermes",
+      "metadata_commit": "016546711dec7ce6fb9809ce399ca13ea0f23eee",
+      "metadata_url": "https://github.com/Nikoju1977/oeil-hermes/blob/016546711dec7ce6fb9809ce399ca13ea0f23eee/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/cockpit-mecaria",
+      "metadata_commit": "c636d4829cf350eb767c6d1685138b98dff786ee",
+      "metadata_url": "https://github.com/Nikoju1977/cockpit-mecaria/blob/c636d4829cf350eb767c6d1685138b98dff786ee/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/Niko-Ultravision",
+      "metadata_commit": "7a5cd405ca1f182a069ae92f7a7ee5081fdda6b7",
+      "metadata_url": "https://github.com/Nikoju1977/Niko-Ultravision/blob/7a5cd405ca1f182a069ae92f7a7ee5081fdda6b7/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/Metrology-OS",
+      "metadata_commit": "33c36f4e409637b2df7ddfde71ba057cad0e6087",
+      "metadata_url": "https://github.com/Nikoju1977/Metrology-OS/blob/33c36f4e409637b2df7ddfde71ba057cad0e6087/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/Sage-companion",
+      "metadata_commit": "b7d63f7a4a1b241a4e12be3cd6abe60e58280877",
+      "metadata_url": "https://github.com/Nikoju1977/Sage-companion/blob/b7d63f7a4a1b241a4e12be3cd6abe60e58280877/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/EBM-BRETONNE.",
+      "metadata_commit": "1861a9d88be8f116de274b6d622ff7b364006835",
+      "metadata_url": "https://github.com/Nikoju1977/EBM-BRETONNE./blob/1861a9d88be8f116de274b6d622ff7b364006835/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/Ron-",
+      "metadata_commit": "23836a9c4aa7eaa56f53510cbcdaccdd35ce717a",
+      "metadata_url": "https://github.com/Nikoju1977/Ron-/blob/23836a9c4aa7eaa56f53510cbcdaccdd35ce717a/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/Dbmetre-pro",
+      "metadata_commit": "a25beb1d9e1b8f29c0c74ad9ab641553fa1e2596",
+      "metadata_url": "https://github.com/Nikoju1977/Dbmetre-pro/blob/a25beb1d9e1b8f29c0c74ad9ab641553fa1e2596/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/Boutique-morgane",
+      "metadata_commit": "97fa7697193cc3b515daaff0b9ceed75f6706d2c",
+      "metadata_url": "https://github.com/Nikoju1977/Boutique-morgane/blob/97fa7697193cc3b515daaff0b9ceed75f6706d2c/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/Cosmo-citrouille",
+      "metadata_commit": "374a0925ffe9f5646cf0c959d14f67ff7fd9e2cc",
+      "metadata_url": "https://github.com/Nikoju1977/Cosmo-citrouille/blob/374a0925ffe9f5646cf0c959d14f67ff7fd9e2cc/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/Bouh-delivery",
+      "metadata_commit": "d15e19c8b9eb6b8201c953ad72d5d57b36eeac07",
+      "metadata_url": "https://github.com/Nikoju1977/Bouh-delivery/blob/d15e19c8b9eb6b8201c953ad72d5d57b36eeac07/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/N8V",
+      "metadata_commit": "df503858c3a6206ccc31f7c1ac02f9b8d4e794bf",
+      "metadata_url": "https://github.com/Nikoju1977/N8V/blob/df503858c3a6206ccc31f7c1ac02f9b8d4e794bf/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/AutoEntrepreneur-1M",
+      "metadata_commit": "05c8209fa12cbe25e46a3959d73f3cde6bc60930",
+      "metadata_url": "https://github.com/Nikoju1977/AutoEntrepreneur-1M/blob/05c8209fa12cbe25e46a3959d73f3cde6bc60930/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/AutoCoder-Studio-Niko",
+      "metadata_commit": "f825e7debc84dc11acd54e9500210d010e7525e3",
+      "metadata_url": "https://github.com/Nikoju1977/AutoCoder-Studio-Niko/blob/f825e7debc84dc11acd54e9500210d010e7525e3/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/niko-commande-live-tik-tok",
+      "metadata_commit": "c1a71b0ef24b1b7958334a1e881b7583a8502274",
+      "metadata_url": "https://github.com/Nikoju1977/niko-commande-live-tik-tok/blob/c1a71b0ef24b1b7958334a1e881b7583a8502274/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/Rave-Generator-2",
+      "metadata_commit": "121538cbc225ff43699a04f1e0068593721fd371",
+      "metadata_url": "https://github.com/Nikoju1977/Rave-Generator-2/blob/121538cbc225ff43699a04f1e0068593721fd371/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/niko-music-lab",
+      "metadata_commit": "fb79ce80f954a7b9033b80818db852aba6be8f93",
+      "metadata_url": "https://github.com/Nikoju1977/niko-music-lab/blob/fb79ce80f954a7b9033b80818db852aba6be8f93/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/RF-Metrology-Pro",
+      "metadata_commit": "b2851933b58a4d346add009b6f32be767dd8a93f",
+      "metadata_url": "https://github.com/Nikoju1977/RF-Metrology-Pro/blob/b2851933b58a4d346add009b6f32be767dd8a93f/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/fibrocare",
+      "metadata_commit": "887ff95b8a98902dbd635fed3bff586b17efc31c",
+      "metadata_url": "https://github.com/Nikoju1977/fibrocare/blob/887ff95b8a98902dbd635fed3bff586b17efc31c/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/medicalvisionproai",
+      "metadata_commit": "c27defd2f121234bfd06b389a8fd068e6fc9d6cf",
+      "metadata_url": "https://github.com/Nikoju1977/medicalvisionproai/blob/c27defd2f121234bfd06b389a8fd068e6fc9d6cf/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/Medivision-ai-pro",
+      "metadata_commit": "8e49181991fe46073c89cdd8c992fc1ebf150088",
+      "metadata_url": "https://github.com/Nikoju1977/Medivision-ai-pro/blob/8e49181991fe46073c89cdd8c992fc1ebf150088/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/dermato-ai",
+      "metadata_commit": "eeef37620134b807c33e915bf4ffdc1ea020ae0f",
+      "metadata_url": "https://github.com/Nikoju1977/dermato-ai/blob/eeef37620134b807c33e915bf4ffdc1ea020ae0f/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/tarot-de-niko",
+      "metadata_commit": "7a6de7e1efea72f27b20813bacfd129c337efe3a",
+      "metadata_url": "https://github.com/Nikoju1977/tarot-de-niko/blob/7a6de7e1efea72f27b20813bacfd129c337efe3a/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/the-lovestronautes-machine",
+      "metadata_commit": "3903bb23403db04bb4f27e9cf840b837dc4f6ff2",
+      "metadata_url": "https://github.com/Nikoju1977/the-lovestronautes-machine/blob/3903bb23403db04bb4f27e9cf840b837dc4f6ff2/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/OPENVITA-DT1",
+      "metadata_commit": "0526102639b8ce018fea94103bd598b6ba2971aa",
+      "metadata_url": "https://github.com/Nikoju1977/OPENVITA-DT1/blob/0526102639b8ce018fea94103bd598b6ba2971aa/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/le-jardin-de-niko",
+      "metadata_commit": "1fbe50238e980572a931ff12b35c698ccf265ebf",
+      "metadata_url": "https://github.com/Nikoju1977/le-jardin-de-niko/blob/1fbe50238e980572a931ff12b35c698ccf265ebf/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/handimonde",
+      "metadata_commit": "76091a200024c8fa54c7d71923132d5275df9bb7",
+      "metadata_url": "https://github.com/Nikoju1977/handimonde/blob/76091a200024c8fa54c7d71923132d5275df9bb7/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/galerie-studio-niko",
+      "metadata_commit": "ca453f882c238e0421179308556cb5a87d874b1c",
+      "metadata_url": "https://github.com/Nikoju1977/galerie-studio-niko/blob/ca453f882c238e0421179308556cb5a87d874b1c/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/aegis-earth-mobile",
+      "metadata_commit": "8c6ab9536e7512e9650e7c32c4f310f4ce87785a",
+      "metadata_url": "https://github.com/Nikoju1977/aegis-earth-mobile/blob/8c6ab9536e7512e9650e7c32c4f310f4ce87785a/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/Nikoassist",
+      "metadata_commit": "eb18f0d8ec8c1256e377a76e85c1f5568c605857",
+      "metadata_url": "https://github.com/Nikoju1977/Nikoassist/blob/eb18f0d8ec8c1256e377a76e85c1f5568c605857/STUDIO-NIKO-METADATA.json"
+    },
+    {
+      "repository": "Nikoju1977/White-hat",
+      "metadata_commit": "269e707b8072170553f0b4ee9b78112b0b27291e",
+      "metadata_url": "https://github.com/Nikoju1977/White-hat/blob/269e707b8072170553f0b4ee9b78112b0b27291e/STUDIO-NIKO-METADATA.json"
+    }
+  ]
+}

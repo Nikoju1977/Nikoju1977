@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "date": "2026-11-22",
+  "date": "2026-11-24",
   "guides": [
     {
       "slug": "aegis-earth-mobile",
@@ -499,6 +499,22 @@
       "launchUrl": "https://niko-live-commander.vercel.app/"
     },
     {
+      "slug": "niko-music-lab",
+      "title": "Studio Niko Music Lab Pro",
+      "category": "Musique & Audio",
+      "description": "Laboratoire musical et synthétiseurs EBM dans le navigateur.",
+      "steps": [
+        "Consultez le README du dépôt.",
+        "Ouvrez index.html depuis un serveur local compatible.",
+        "Démarrez volontairement le moteur audio et vérifiez les instruments."
+      ],
+      "preparation": "Web Audio et navigateur compatible. Le déploiement et la production sonore ne sont pas vérifiés pour cet inventaire.",
+      "caution": "Aucune validation audio sur appareil réel à cette date.",
+      "troubleshooting": "Consultez la documentation et les issues du dépôt; aucun déploiement public n'a été confirmé.",
+      "repoUrl": "https://github.com/Nikoju1977/niko-music-lab",
+      "launchUrl": null
+    },
+    {
       "slug": "Niko-Ultravision",
       "title": "Niko-Ultravision",
       "category": "Cinéma & Image",
@@ -673,6 +689,37 @@
       "troubleshooting": "En cas de problème, rechargez la page, vérifiez votre connexion et les permissions du navigateur. En PWA installée, fermez puis rouvrez l'application pour renouveler le cache. Consultez le dépôt GitHub pour les limites documentées.",
       "repoUrl": "https://github.com/Nikoju1977/Rave-Generator-2",
       "launchUrl": "https://rave-generator-2.vercel.app/"
+    },
+    {
+      "slug": "rf-metrolgy-pro",
+      "title": "RF Metrology — dépôt vide",
+      "category": "Archives & Variantes",
+      "description": "Dépôt GitHub vide, sans application ni version exploitable.",
+      "steps": [
+        "Consultez le dépôt si nécessaire.",
+        "Utilisez le projet distinct RF-Metrology-Pro pour explorer le code existant."
+      ],
+      "preparation": "Aucun fichier ni lancement disponible; dépôt conservé dans l'inventaire uniquement.",
+      "caution": "Dépôt vide, aucune fonctionnalité à tester.",
+      "troubleshooting": "Consultez la documentation et les issues du dépôt; aucun déploiement public n'a été confirmé.",
+      "repoUrl": "https://github.com/Nikoju1977/rf-metrolgy-pro",
+      "launchUrl": null
+    },
+    {
+      "slug": "RF-Metrology-Pro",
+      "title": "RF Metrology Pro",
+      "category": "Sécurité & Outils",
+      "description": "Projet Studio Niko consacré à la métrologie radiofréquence.",
+      "steps": [
+        "Ouvrez le dépôt GitHub et consultez le README.",
+        "Identifiez les modules et leurs prérequis.",
+        "Validez les résultats avec des références et instruments adaptés."
+      ],
+      "preparation": "Consulter le README et les ressources du dépôt. Aucun déploiement ni résultat de mesure n'est confirmé.",
+      "caution": "Un prototype logiciel ne constitue pas une certification métrologique.",
+      "troubleshooting": "Consultez la documentation et les issues du dépôt; aucun déploiement public n'a été confirmé.",
+      "repoUrl": "https://github.com/Nikoju1977/RF-Metrology-Pro",
+      "launchUrl": null
     },
     {
       "slug": "Ron-",

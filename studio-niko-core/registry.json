@@ -1,10 +1,10 @@
 {
   "schema_version": "1.1",
-  "as_of": "2026-11-22",
-  "source": "GitHub connector list_repositories_by_affiliation(owner)",
+  "as_of": "2026-11-24",
+  "source": "GitHub connector list_repositories(owner), 2026-11-24",
   "public_only": true,
-  "total_repositories": 55,
-  "public_repositories": 50,
+  "total_repositories": 58,
+  "public_repositories": 53,
   "private_repositories_omitted": 5,
   "notice": "Public registry intentionally excludes private repository names. Integration records describe committed code, not production health or real-device validation.",
   "canonical_core": "Nikoju1977/Nikoju1977/studio-niko-core/v0.1.0/core.js",
@@ -414,6 +414,16 @@
       "phase_b_scope": "Restauration JSON avec validation/confirmation et conducteur local testé en Chromium CI. Contrôle effectif de TikTok/OBS absent ; appareils physiques non vérifiés."
     },
     {
+      "name": "niko-music-lab",
+      "full_name": "Nikoju1977/niko-music-lab",
+      "domain": "audio",
+      "priority": "P1",
+      "core_integration": "not_started",
+      "deployment": "not_verified_for_this_batch",
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
+    },
+    {
       "name": "Niko-Ultravision",
       "full_name": "Nikoju1977/Niko-Ultravision",
       "domain": "cinema",
@@ -586,6 +596,26 @@
       },
       "phase_b_status": "committed_partial",
       "phase_b_scope": "Import de projet avec confirmation ; décodage avant remplacement ; WAV PCM stéréo non silencieux vérifié en Chromium CI. Télécharger/partager sur Android/iPhone encore non vérifiés."
+    },
+    {
+      "name": "rf-metrolgy-pro",
+      "full_name": "Nikoju1977/rf-metrolgy-pro",
+      "domain": "archives",
+      "priority": "P2",
+      "core_integration": "not_started",
+      "deployment": "not_applicable_empty_repository",
+      "runtime": "not_applicable_empty_repository",
+      "visibility": "public"
+    },
+    {
+      "name": "RF-Metrology-Pro",
+      "full_name": "Nikoju1977/RF-Metrology-Pro",
+      "domain": "engineering",
+      "priority": "P1",
+      "core_integration": "not_started",
+      "deployment": "not_verified_for_this_batch",
+      "runtime": "not_verified_for_this_batch",
+      "visibility": "public"
     },
     {
       "name": "Ron-",
