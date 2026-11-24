@@ -1,0 +1,25 @@
+name: Studio Niko provenance audit
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 7 * * 2'
+  push:
+    branches: [main]
+    paths:
+      - 'provenance/**'
+      - '.github/workflows/studio-niko-provenance.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Retrieve public audit files
+        run: |
+          mkdir -p provenance
+          for file in verify.py registry-2026-11-24.json registry-2026-11-24.sha256; do
+            curl --fail --silent --show-error --retry 2 "https://raw.githubusercontent.com/Nikoju1977/Nikoju1977/main/provenance/$file" -o "provenance/$file"
+          done
+      - name: Verify registry and compare public metadata
+        run: python3 provenance/verify.py --self-test --online
