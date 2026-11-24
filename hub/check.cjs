@@ -103,4 +103,7 @@ for(const asset of ['command.html','command.js','command-core.js','command.css']
 assert(index.includes('href="./command.html"')&&pilotage.includes('href="./command.html"'),'Command navigation');
 for(const page of ['index','pilotage','quality','deployments','security','agents','devices','recovery','command','provenance']){const html=fs.readFileSync(path.join(dir,page+'.html'),'utf8');for(const asset of ['design.css','design-core.js','design.js'])assert(html.includes('./'+asset),'Shared design '+page+' '+asset);}
 for(const asset of ['design.css','design-core.js','design.js'])assert(sw.includes("'./"+asset+"'"),'Design offline asset '+asset);
+const precache=sw.match(/const ASSETS=\[(.*?)\];/s);assert(precache,'PWA precache manifest');
+const entries=[...precache[1].matchAll(/'([^']+)'/g)].map(x=>x[1]);assert.equal(new Set(entries).size,entries.length,'Unique precache entries');for(const asset of entries)assert(fs.existsSync(path.join(dir,asset)),'Existing precache asset '+asset);
+for(const shortcut of manifest.shortcuts||[])assert(entries.includes(shortcut.url),'Offline shortcut '+shortcut.url);
 console.log('PASS catalog='+cat.length+' launchUrls='+cat.filter(x=>x.demoUrl).length+' DOM bindings checked');

@@ -28,3 +28,19 @@ search.addEventListener('input',render);dialog.addEventListener('close',()=>{if(
 document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'&&!e.altKey&&!e.shiftKey&&!document.querySelector('dialog[open]:not(.sn-dialog)')){e.preventDefault();e.stopImmediatePropagation();open();}},true);
 window.addEventListener('storage',e=>{if(e.key===key){try{prefs=core.preferences(JSON.parse(e.newValue||'null'));}catch{prefs=core.preferences(null);}root.dataset.snTheme=prefs.theme;root.dataset.snDensity=prefs.density;theme.value=prefs.theme;density.value=prefs.density;}});
 })();
+
+(()=>{'use strict';
+if(!('serviceWorker' in navigator))return;
+let registration=null,requested=false,hadController=!!navigator.serviceWorker.controller,checking=false;
+const bar=document.querySelector('.sn-bar');if(!bar)return;
+const button=document.createElement('button'),update=document.createElement('button'),status=document.createElement('span');
+for(const b of [button,update]){b.type='button';b.className='sn-button';}
+button.textContent='Vérifier les mises à jour';update.textContent='Appliquer la mise à jour';update.hidden=true;
+status.className='sn-bar-status';status.setAttribute('role','status');bar.append(button,update,status);
+function showWaiting(){update.hidden=!registration?.waiting; if(registration?.waiting)status.textContent='Nouvelle version prête. Enregistrez votre travail et fermez les autres onglets avant de l’appliquer.';}
+navigator.serviceWorker.addEventListener('controllerchange',()=>{if(requested){location.reload();return;}if(hadController){status.textContent='Version modifiée dans un autre onglet. Enregistrez votre travail puis rechargez.';}hadController=true;});
+update.addEventListener('click',()=>{if(!registration?.waiting)return;if(!confirm('Avez-vous enregistré votre travail et fermé les autres onglets Studio Niko ? La page sera rechargée.'))return;requested=true;registration.waiting.postMessage({type:'ACTIVATE_UPDATE'});});
+button.addEventListener('click',async()=>{if(!registration||checking)return;checking=true;button.disabled=true;try{await registration.update();showWaiting();if(!registration.waiting)status.textContent='Vérification demandée. Aucun nouveau cache prêt pour le moment.';}catch{status.textContent='Mise à jour non vérifiable hors ligne ou serveur indisponible.';}finally{checking=false;button.disabled=false;}});
+button.disabled=true;
+navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'}).then(r=>{registration=r;button.disabled=false;showWaiting();r.addEventListener('updatefound',()=>{const w=r.installing;if(!w)return;w.addEventListener('statechange',()=>{if(w.state==='installed')showWaiting();if(w.state==='redundant')status.textContent='Installation du cache non terminée ; la version précédente reste active si disponible.';});});}).catch(()=>{status.textContent='Service Worker non disponible.';});
+})();

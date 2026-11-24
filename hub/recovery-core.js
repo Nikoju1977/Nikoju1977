@@ -5,7 +5,8 @@ const modules=[
 {id:'workspace',key:'studio-niko-workspace-v1',label:'Atelier créatif'},
 {id:'tracking',key:'studio-niko-project-tracking:v1',label:'Suivi des projets'},
 {id:'agents',key:'studio-niko-agent-journal-v1',label:'Journal Agent Studio'},
-{id:'devices',key:'studio-niko-device-reports-v1',label:'Rapports Device Lab'}
+{id:'devices',key:'studio-niko-device-reports-v1',label:'Rapports Device Lab'},
+{id:'design',key:'studio-niko-design-v1',label:'Préférences graphiques'}
 ];
 const MAX=4*1024*1024, MAX_ENTRY=2*1024*1024;
 const bytes=s=>new TextEncoder().encode(s).length;
@@ -23,6 +24,7 @@ function validate(id,raw){
  if(id==='tracking')ok=obj(x)&&x.schema==='studio-niko-tracking-v1'&&obj(x.projects)&&Object.keys(x.projects).length<=500&&Object.entries(x.projects).every(([k,p])=>/^[A-Za-z0-9_.-]{1,100}$/.test(k)&&obj(p)&&array(p.modules,24,m=>obj(m)&&str(m.name,120)&&str(m.state,30)&&str(m.evidence,900))&&array(p.history,24,h=>obj(h)&&str(h.at,32)&&str(h.decision,1200)));
  if(id==='agents')ok=array(x,50,r=>obj(r)&&str(r.project,100)&&str(r.at,40)&&array(r.actions,30,a=>obj(a)&&str(a.id,40)&&str(a.title,140)&&a.state==='accepted_for_review'));
  if(id==='devices')ok=array(x,80,r=>obj(r)&&str(r.project,100)&&str(r.at,40)&&r.source==='manual_self_report'&&r.certification===false&&array(r.tests,6,t=>obj(t)&&str(t.id,40)&&['pass','fail','blocked','not_tested'].includes(t.result)&&str(t.note,600))&&r.tests.length===6);
+ if(id==='design')ok=obj(x)&&['studio','graphite','midnight'].includes(x.theme)&&['compact','comfortable'].includes(x.density)&&Object.keys(x).length===2;
  if(!ok)throw Error('Schéma incompatible : '+id);
  return raw;
 }
