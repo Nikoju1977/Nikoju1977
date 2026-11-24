@@ -1,0 +1,16 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),c=require('./command-core.js');
+const p=[{name:'alpha',priority:'P0',category:'Audio',hasUrl:true,provenance:{}},{name:'beta',priority:'P2',category:'Art',hasUrl:false,provenance:null}],d=[{name:'alpha',status:'aligned',observation:{},checkedOn:'2026-11-24'},{name:'beta',status:'no_record',observation:null,checkedOn:null}];
+const make=(locals={})=>c.compose(p,d,locals);
+test('summary counts registered evidence only',()=>assert.deepEqual(c.summarize(make()),{total:2,p0:1,launch:1,aligned:1,missing:1,blockers:0,deviceReports:0,decisions:0}));
+test('missing proof is gap not outage',()=>assert(make()[1].alerts.some(a=>a.kind==='gap')));
+test('priorities sorted independently of state',()=>assert.equal(make()[0].name,'alpha'));
+test('reject mismatched inventories',()=>assert.throws(()=>c.compose(p,[d[0]],{}),/Inventaires/));
+test('reject duplicate deployment records',()=>assert.throws(()=>c.compose(p,[d[0],d[0]],{}),/double/));
+test('manual blocker marked as declared',()=>assert.equal(make({tracking:{schema:'studio-niko-tracking-v1',projects:{alpha:{blocker:'manual'}}}})[0].alerts[0].kind,'blocker'));
+test('ignore incompatible tracking format',()=>assert.equal(make({tracking:{projects:{alpha:{blocker:'manual'}}}})[0].blocker,''));
+test('manual reports not certification',()=>{const r=make({devices:[{project:'alpha',source:'manual_self_report',certification:false,tests:[{result:'fail'}]},{project:'alpha',certification:true,tests:[{result:'fail'}]}]});assert.equal(r[0].deviceReports,1);assert.equal(r[0].deviceFailures,1);});
+test('agent decisions do not count completed actions',()=>assert.equal(make({agents:[{project:'alpha',actions:[{state:'accepted_for_review'},{state:'done'}]}]})[0].agentDecisions,1));
+test('filter by priority and gap',()=>{assert.equal(c.filter(make(),'audio','P0').length,1);assert.equal(c.filter(make(),'','gap')[0].name,'beta');});
+test('notifications carry project and navigation route',()=>assert(c.notifications(make()).every(n=>n.project&&n.route.endsWith('.html'))));
+test('export omits private free text and preserves limitations',()=>{const r=c.report(make({tracking:{schema:'studio-niko-tracking-v1',projects:{alpha:{blocker:'private note',nextAction:'secret note'}}}}),'2026-11-24',{});assert(!JSON.stringify(r).includes('private note'));assert(!JSON.stringify(r).includes('secret note'));assert.equal(r.projects[0].hasDeclaredBlocker,true);assert.match(r.scope,/no live HTTP/);});
