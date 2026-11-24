@@ -46,10 +46,12 @@ jobs:
           node --check hub/agents.js
           node --check hub/devices-core.js
           node --check hub/devices.js
+          node --check hub/recovery-core.js
+          node --check hub/recovery.js
       - name: Verify catalog, privacy and DOM bindings
         run: node hub/check.cjs
       - name: Evidence regression tests
-        run: node --test hub/evidence.test.cjs hub/quality.test.cjs hub/deployments.test.cjs hub/security.test.cjs hub/agents.test.cjs hub/devices.test.cjs
+        run: node --test hub/evidence.test.cjs hub/quality.test.cjs hub/deployments.test.cjs hub/security.test.cjs hub/agents.test.cjs hub/devices.test.cjs hub/recovery.test.cjs
       - name: Weekly or manual HTTP audit
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: node hub/audit-links.cjs
