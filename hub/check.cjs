@@ -86,4 +86,9 @@ for(const match of agentJs.matchAll(/\$\('([^']+)'\)/g))assert(agentPage.include
 for(const asset of ['agents.html','agents.js','agents-core.js'])assert(sw.includes("'./"+asset+"'"),'Agent offline asset '+asset);
 assert(index.includes('href="./agents.html"'),'Agent navigation');
 require('./agents-core.js').buildProjects(cat,snapshot,JSON.parse(fs.readFileSync(path.join(dir,'deployment-observations.json'),'utf8')),JSON.parse(fs.readFileSync(path.join(dir,'provenance-snapshot.json'),'utf8')));
+const devicePage=fs.readFileSync(path.join(dir,'devices.html'),'utf8');
+const deviceJs=fs.readFileSync(path.join(dir,'devices.js'),'utf8');
+for(const match of deviceJs.matchAll(/\$\('([^']+)'\)/g))assert(devicePage.includes('id="'+match[1]+'"'),'Device DOM id '+match[1]);
+for(const asset of ['devices.html','devices.js','devices-core.js'])assert(sw.includes("'./"+asset+"'"),'Device offline asset '+asset);
+assert(index.includes('href="./devices.html"')&&pilotage.includes('href="./devices.html"'),'Device navigation');
 console.log('PASS catalog='+cat.length+' launchUrls='+cat.filter(x=>x.demoUrl).length+' DOM bindings checked');
