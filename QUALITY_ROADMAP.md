@@ -240,3 +240,8 @@ Les cinq workflows de correction du lot précédent sont terminés avec succès 
 
 
 **Metrology-OS — résultat confirmé :** [run 45705919795](https://github.com/Nikoju1977/Metrology-OS/actions/runs/45705919795) terminé avec succès à la révision ec410c83b6eaf3abbec18d4dd69d884170da7acf. Journal du job 139527739052, 25 novembre 2026 21:36:53 UTC : 6 609 assertions réussies sur les fonctions extraites du code de production, dont 6 561 combinaisons comparées à une référence entière indépendante. Qualification numérique uniquement, sans validation DOM, instrument, covariance ou accréditation.
+
+
+## Cockpit MECARIA — qualification des moteurs (25 novembre 2026)
+
+[Correctif](https://github.com/Nikoju1977/cockpit-mecaria/commit/a07a9fbe7dbe497ac952f9c93d0e00f133ef2f57), [tests](https://github.com/Nikoju1977/cockpit-mecaria/commit/b270ae511ad2ba7c4776b986251399b904a4856d), [CI](https://github.com/Nikoju1977/cockpit-mecaria/actions/runs/45706271309) terminée avec succès à ccfc77dc4b3dcae68a10517179d0f9ced1e05ac8. Journal job 139528945086, 25 novembre 2026 à 21:39:06 UTC : 5 153 assertions réussies sur les fonctions réelles extraites du HTML (TRS, agrégation pondérée, SPC Xbar-R/I-MR, capabilité, R&R et cache). Correctifs : seuil R&R dans le cache, cohérence des dimensions, fenêtres SPC R4, sous-dépassements et bornes numériques. Source relue. Aucun test DOM, IndexedDB, appareil physique, processus réel ni certification industrielle revendiqué. Licences inchangées. Seuils et règles internes à approuver avant usage industriel.
