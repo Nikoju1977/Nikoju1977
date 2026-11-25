@@ -169,3 +169,8 @@ Principe : conserver les fonctions utiles, corriger leur moteur et ne désactive
 ## Fiabilisation Metrology-OS (25 novembre 2026)
 
 [Calculs et règles de décision](https://github.com/Nikoju1977/Metrology-OS/commit/a9f177b390d79f3b19e686b495d76c0b1791ddba) ; [priorité non-conformité](https://github.com/Nikoju1977/Metrology-OS/commit/338080ef2ce8538cfb0fa2b03ccf2f55e230a773). 25 + 4 assertions JavaScript réussies, sources relues. Entrées strictes, coefficient nul, k configurable, comparaison décimale, décision incomplète non conforme à une libération, remise en service/échéance non automatiques. Tests navigateur et qualification industrielle non réalisés. Licence inchangée.
+
+
+## Fiabilisation Cockpit Mecaria (25 novembre 2026)
+
+[Correctif TRS, SPC et R&R](https://github.com/Nikoju1977/cockpit-mecaria/commit/2ac451b1bf9e6a5a51ba88253b24a348211e0fbc) ; [SHA-256 et KPI R&R](https://github.com/Nikoju1977/cockpit-mecaria/commit/a39b35c9087901419a1058485a44a719310a7160). 22 assertions TRS et validation numérique réussies ; sources relues. MSP/R&R et IA : corrections codées, tests d'exécution indépendants restant à réaliser. Interface et modules conservés ; aucune qualification industrielle ni déploiement vérifié. Licence inchangée.
