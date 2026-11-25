@@ -199,3 +199,12 @@ Le registre public `studio-niko-core/registry.json` et le tableau `hub/pilotage.
 Les champs `verification: http_assets_only` et `verification: deployment_ready_ci_only` distinguent ces deux périmètres. Le tableau affiche la **date de relève** et rappelle que l'état n'est pas mis à jour en direct. Pour rafraîchir correctement les preuves : relever l'alias Vercel, son environnement `production`, le SHA et l'état `READY`, puis exécuter un audit HTTP indépendant si l'on veut revendiquer cette preuve. Le registre, la capture `repository-snapshot` et les contrôles de cohérence doivent rester concordants.
 
 La vérification en navigateur de production, les interactions des moteurs métiers, l'installation PWA sur vrais appareils et les intégrations IA restent à documenter séparément. Aucun déploiement ou clic de démonstration ne prouve ces fonctions à lui seul.
+
+
+## Correction P0 — lot 1 (25 novembre 2026)
+
+- [agent-biometrique](https://github.com/Nikoju1977/agent-biometrique/commit/7d94d7666ac1ec8c98f4256d689639c49996688e) : Aperçu caméra facultatif, scores et alertes fictifs retirés du code. Aucune mesure biométrique ; cycle caméra à qualifier.
+- [SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL/commit/416dce75f69b5d93d1bd49836a6e9f0c1844de4b) : Repères faciaux expérimentaux et EAR ; pouls et fatigue retirés. Aucun usage médical ; modèle, permissions et suivi à qualifier.
+- [aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking/commit/c25e48bdf50a7f6b8eb6e9f7879b363a3d80e3e0) : Calcul alimentaire par portion et favoris locaux ; dose retirée, IA suspendue. Aucun calcul de traitement ; favoris non chiffrés, ancien profil effaçable volontairement.
+
+Sources relues après publication, empreintes SHA vérifiées ; aucun nouveau test d'exécution ou déploiement vérifié. Les constats antérieurs sont historiques, non des preuves de l'état actuel. Le chef distant est suspendu par précaution ; pas de suppression automatique des anciennes données locales.
