@@ -164,3 +164,8 @@ Principe : conserver les fonctions utiles, corriger leur moteur et ne désactive
 ## Fiabilisation OPENVITA-DT1 (25 novembre 2026)
 
 [Journal chiffré](https://github.com/Nikoju1977/OPENVITA-DT1/commit/536ca5fa3eca91463bfb29fcf1f8659d920375c7) et [restauration portable](https://github.com/Nikoju1977/OPENVITA-DT1/commit/45c7c00fe8e0567ce5bca165896cb2dffecfc2a6). Coffre persistant AES-GCM, observations manuelles et repas, historique et statistiques par unité, sauvegarde et restauration chiffrées. 14 assertions JavaScript réussies ; source relue. Les fonctions thérapeutiques et IA non qualifiées sont suspendues, anciennes données conservées sans migration automatique. Aucun test navigateur, crypto bout en bout ou déploiement vérifié. MIT inchangée.
+
+
+## Fiabilisation Metrology-OS (25 novembre 2026)
+
+[Calculs et règles de décision](https://github.com/Nikoju1977/Metrology-OS/commit/a9f177b390d79f3b19e686b495d76c0b1791ddba) ; [priorité non-conformité](https://github.com/Nikoju1977/Metrology-OS/commit/338080ef2ce8538cfb0fa2b03ccf2f55e230a773). 25 + 4 assertions JavaScript réussies, sources relues. Entrées strictes, coefficient nul, k configurable, comparaison décimale, décision incomplète non conforme à une libération, remise en service/échéance non automatiques. Tests navigateur et qualification industrielle non réalisés. Licence inchangée.
