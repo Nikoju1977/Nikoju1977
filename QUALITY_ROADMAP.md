@@ -174,3 +174,8 @@ Principe : conserver les fonctions utiles, corriger leur moteur et ne désactive
 ## Fiabilisation Cockpit Mecaria (25 novembre 2026)
 
 [Correctif TRS, SPC et R&R](https://github.com/Nikoju1977/cockpit-mecaria/commit/2ac451b1bf9e6a5a51ba88253b24a348211e0fbc) ; [SHA-256 et KPI R&R](https://github.com/Nikoju1977/cockpit-mecaria/commit/a39b35c9087901419a1058485a44a719310a7160). 22 assertions TRS et validation numérique réussies ; sources relues. MSP/R&R et IA : corrections codées, tests d'exécution indépendants restant à réaliser. Interface et modules conservés ; aucune qualification industrielle ni déploiement vérifié. Licence inchangée.
+
+
+## Fiabilisation RAUSBEAT 5.1 RC1.2 (25 novembre 2026)
+
+Candidat local construit depuis l'archive 5.1 RC1.1, distinct de Rave Generator 2. Arrêt du transport sécurisé, isolation des erreurs MIDI/deck et des blocs PCM entre prises, protection des écritures OPFS, cache PWA révisé. 23 suites Node réussies (30 nouvelles assertions). Chromium headless : lecture 8 s, arrêt, reprise 2,5 s, arrêt ; 63 pas, zéro erreur de pas et zéro voix/graphe actif après arrêt. Deux exports WAV 24 bits non silencieux avec entrée et OPFS simulés. Accès HTTP local bloqué dans l'environnement, tests avec scripts intégrés ; ni AudioWorklet en navigateur, ni périphérique physique, ni session longue ni PWA validés. Archive locale préparée ; aucune publication du code RAUSBEAT ni modification de production. Ne pas fusionner avec Rave Generator 2. Licences inchangées.
