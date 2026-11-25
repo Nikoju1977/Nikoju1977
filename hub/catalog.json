@@ -121,13 +121,13 @@
     "slug": "compagnon-diabete",
     "name": "compagnon-diabete",
     "category": "Archives & Variantes",
-    "description": "Variante Daphnée : lecture Bluetooth non fiable, prototype non médical.",
+    "description": "Maquette historique : lectures Bluetooth, calculs de bolus et IA retirés de l'entrée HTML.",
     "repoUrl": "https://github.com/Nikoju1977/compagnon-diabete",
     "demoUrl": "https://nikoju1977.github.io/compagnon-diabete/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Ne pas connecter de dispositif médical réel ni saisir de clé ou données de santé."
+    "requirements": "Ne pas utiliser comme outil médical ; ancienne copie possible. Publication de cette révision non vérifiée."
   },
   {
     "slug": "Cosmo-citrouille",
