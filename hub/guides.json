@@ -38,14 +38,14 @@
       "slug": "applewatchcadrans",
       "title": "applewatchcadrans",
       "category": "Art & 3D",
-      "description": "Études et créations graphiques de cadrans.",
+      "description": "Concepts de cadrans : PNG, SVG, HTML animé ; indicateurs de capteurs fictifs.",
       "steps": [
         "Choisissez un style visuel de cadran parmi les propositions.",
         "Réglez la présentation (aiguilles ou numérique), les couleurs et les détails.",
         "Prévisualisez le rendu avant d'utiliser une éventuelle option d'export."
       ],
       "preparation": "Les performances varient selon le GPU du téléphone et les autorisations du navigateur.",
-      "caution": null,
+      "caution": "Valeurs BPM, pas et batterie simulées. Aucun cadran watchOS natif ; ne pas saisir de clé réelle avant qualification du rendu.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/applewatchcadrans",
       "launchUrl": "https://nikoju1977.github.io/applewatchcadrans/"
@@ -86,14 +86,14 @@
       "slug": "aylina-is-cooking",
       "title": "aylina-is-cooking",
       "category": "Santé & Bien-être",
-      "description": "Calculateur de glucides/part et estimation liée à l'insuline — prototype non médical.",
+      "description": "Prototype culinaire ; calcul de dose d'insuline non validé à retirer.",
       "steps": [
-        "Renseignez la quantité de glucides du gâteau et le nombre de portions.",
-        "Vérifiez les informations saisies avant le calcul par portion.",
-        "N'utilisez jamais une estimation de dose affichée pour décider seul d'une injection d'insuline."
+        "Consultez le README et les limites du prototype.",
+        "Explorez uniquement les idées culinaires avec données fictives.",
+        "N'utilisez pas le calcul de dose."
       ],
       "preparation": "Outil expérimental de suivi ou démonstration, non destiné au diagnostic ou aux décisions de traitement.",
-      "caution": "Prototype éducatif : ne calculez pas une dose d'insuline réelle à partir de ce résultat.",
+      "caution": "Estimation thérapeutique non validée, correction P0. Ne saisir aucune donnée de santé.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/aylina-is-cooking",
       "launchUrl": "https://nikoju1977.github.io/aylina-is-cooking/"
@@ -102,7 +102,7 @@
       "slug": "Bouh-delivery",
       "title": "Bouh-delivery",
       "category": "Jeux & Expériences",
-      "description": "Jeu d'arcade Halloween, conduite et défis.",
+      "description": "Jeu automobile Halloween : dix missions, trois boss, Canvas et audio synthétisé.",
       "steps": [
         "Ouvrez le jeu et choisissez une mission ou un niveau disponible.",
         "Lisez les commandes affichées et entraînez-vous au déplacement du véhicule.",
