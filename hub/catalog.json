@@ -15,13 +15,13 @@
     "slug": "agent-biometrique",
     "name": "agent-biometrique",
     "category": "Santé & Bien-être",
-    "description": "Démonstrateur de session : scores et alertes simulés, caméra en aperçu uniquement.",
+    "description": "Aperçu caméra facultatif, scores et alertes fictifs retirés du code.",
     "repoUrl": "https://github.com/Nikoju1977/agent-biometrique",
     "demoUrl": "https://nikoju1977.github.io/agent-biometrique/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Ne pas utiliser pour évaluer la santé, la fatigue ou la sécurité ; aucune mesure biométrique réelle établie."
+    "requirements": "Aucune mesure biométrique ; cycle caméra à qualifier."
   },
   {
     "slug": "applewatchcadrans",
@@ -75,13 +75,13 @@
     "slug": "aylina-is-cooking",
     "name": "aylina-is-cooking",
     "category": "Santé & Bien-être",
-    "description": "Prototype culinaire ; calcul de dose d'insuline non validé à retirer.",
+    "description": "Calcul alimentaire par portion et favoris locaux ; dose retirée, IA suspendue.",
     "repoUrl": "https://github.com/Nikoju1977/aylina-is-cooking",
     "demoUrl": "https://nikoju1977.github.io/aylina-is-cooking/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Ne jamais utiliser pour un traitement. Ne saisir aucune donnée d'enfant ni clé réelle ; stockage non chiffré."
+    "requirements": "Aucun calcul de traitement ; favoris non chiffrés, ancien profil effaçable volontairement."
   },
   {
     "slug": "Bouh-delivery",
@@ -622,13 +622,13 @@
     "slug": "SCAN-BIOMEDICAL",
     "name": "SCAN-BIOMEDICAL",
     "category": "Santé & Bien-être",
-    "description": "Repères faciaux et EAR ; estimation BPM/fatigue non fiable.",
+    "description": "Repères faciaux expérimentaux et EAR ; pouls et fatigue retirés.",
     "repoUrl": "https://github.com/Nikoju1977/SCAN-BIOMEDICAL",
     "demoUrl": "https://nikoju1977.github.io/SCAN-BIOMEDICAL/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Prototype non clinique. Données fictives uniquement."
+    "requirements": "Aucun usage médical ; modèle, permissions et suivi à qualifier."
   },
   {
     "slug": "tarot-de-niko",
