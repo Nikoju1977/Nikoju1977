@@ -224,3 +224,8 @@ Les cinq workflows de correction du lot précédent sont terminés avec succès 
 
 
 **Résultat FibroCare confirmé :** [run 45704856308](https://github.com/Nikoju1977/fibrocare/actions/runs/45704856308) terminé avec succès ; journal du job 139524113392 du 25 novembre 2026 à 21:30:17 UTC : FIBROCARE CHROMIUM PASS, journal, sauvegarde chiffrée, mots de passe, altération, annulation, effacement ciblé, rechargement, PDF multipage réel, viewport mobile, absence de POST. Cette preuve remplace le statut en cours ci-dessus. Données synthétiques exclusivement ; aucun test clinique, physique, de stockage indisponible ou de fonctionnement hors ligne.
+
+
+## DAPHNÉE OMNI — qualification navigateur (25 novembre 2026)
+
+[Correctif](https://github.com/Nikoju1977/compagnon-diabete/commit/6406ef9c918a5b9c3fc0a8056618ce4ed95733bc) : confirmation de phrase secrète lors de l'export, nettoyage des champs et avertissement avant fermeture pour journal modifié. Avertissement conservé après demande de téléchargement (succès disque non garanti), dépendant du navigateur. [Workflow](https://github.com/Nikoju1977/compagnon-diabete/actions/runs/45705640274) Chromium en cours au contrôle initial ; données fictives, unités, édition, filtre, suppression, notes échappées, chiffrement Web Crypto, rejet des mots de passe/altérations, annulation et restauration, journal volontairement volatil, clé étrangère intacte, viewport mobile et absence de POST. Licence applicative inchangée ; banc indépendant GPL-3.0-or-later. Aucun test clinique ni physique revendiqué.
