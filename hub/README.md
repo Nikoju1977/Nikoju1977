@@ -4,7 +4,7 @@ Portail public de **Studio Niko Design** — catalogue des dépôts publics, rec
 
 ## Portfolio technique — 25 novembre 2026
 
-[48 README publics documentés et références de licence](../PROJECTS.md#registre-technique--48-dépôts-documentés) ; 53 entrées publiques vérifiées par inventaire. Les descriptions de N8V (NIKO ANALOG 37, non codec), META-STUDIO V6 et des prototypes biomédicaux sont actualisées. Les états HTTP historiques restent datés ; aucun nouveau test fonctionnel ni redéploiement n'est revendiqué.
+[50 README publics documentés et références de licence](../PROJECTS.md#registre-technique--50-dépôts-documentés) ; 53 entrées publiques vérifiées par inventaire. Les descriptions de N8V (NIKO ANALOG 37, non codec), META-STUDIO V6 et des prototypes biomédicaux sont actualisées. Les états HTTP historiques restent datés ; aucun nouveau test fonctionnel ni redéploiement n'est revendiqué.
 
 ## Pilotage Studio Niko Core
 
@@ -24,13 +24,13 @@ La dernière vague renforce la récupération locale de projets AutoCoder et cor
 
 ## Actualisation documentaire du catalogue — 25 novembre 2026
 
-Les 48 références du registre technique sont distinctes des 53 entrées de l'inventaire public et des six projets signature. Les fiches de UltraVision, AutoEntrepreneur 1M, Niko Emploi, Sage et Niko Live Commander précisent les frontières d'exécution constatées dans les sources. Les champs de statut HTTP et de déploiement restent historiques et inchangés. Aucun nouveau test, contrôle HTTP ou redéploiement n'est attesté ici.
+Les 50 références du registre technique sont distinctes des 53 entrées de l'inventaire public et des six projets signature. Les fiches de UltraVision, AutoEntrepreneur 1M, Niko Emploi, Sage et Niko Live Commander précisent les frontières d'exécution constatées dans les sources. Les champs de statut HTTP et de déploiement restent historiques et inchangés. Aucun nouveau test, contrôle HTTP ou redéploiement n'est attesté ici.
 
-[Registre public des README et licences](../PROJECTS.md#registre-technique--48-dépôts-documentés).
+[Registre public des README et licences](../PROJECTS.md#registre-technique--50-dépôts-documentés).
 
 ## Complément documentaire
 
-48 README publics et un guide de fork distinct ; deux déclarations MIT dans package.json sans fichier autonome identifié. Les fiches de cybersécurité, géospatial, commerce, accessibilité et galerie 3D ont été revues. Aucun nouveau contrôle HTTP, essai matériel ou déploiement n'est attesté. Les preuves historiques restent inchangées.
+50 README publics et un guide de fork distinct ; deux déclarations MIT dans package.json sans fichier autonome identifié. Les fiches de cybersécurité, géospatial, commerce, accessibilité et galerie 3D ont été revues. Aucun nouveau contrôle HTTP, essai matériel ou déploiement n'est attesté. Les preuves historiques restent inchangées.
 
 ## Correction de périmètre — traitement du signal et biométrie
 
@@ -55,6 +55,10 @@ Tarot : mélange Fisher–Yates et journal chiffré. Hermès : graphe, calculs a
 ## Complément — jeux et applications quotidiennes
 
 BOUH! Delivery est un jeu fictif. Aylina contient une estimation de dose non validée à retirer. Le studio de cadrans exporte des concepts graphiques, pas des cadrans watchOS natifs ; les indicateurs de capteurs sont fictifs. Aucun nouveau test ni déploiement vérifié.
+
+## Clôture documentaire
+
+53/53 références classées : 50 README de projets, profil/Hub, guide du fork Wan2GP et dépôt vide rf-metrolgy-pro (confirmé par GitHub). La présentation Medtronic est une maquette incomplète ; L'Ultime Confrontation est un site promotionnel avec ressource audio manquante. [Plan qualité](../QUALITY_ROADMAP.md). Aucun nouveau test fonctionnel ou déploiement vérifié.
 
 ## Principe
 
