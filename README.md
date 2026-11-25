@@ -32,11 +32,11 @@ Independent creative technologist in France — filmmaking, interactive art, rea
 | Industrial quality & metrology | [Metrology-OS](https://github.com/Nikoju1977/Metrology-OS) · [MECARIA](https://github.com/Nikoju1977/cockpit-mecaria) |
 | Interactive art & imaging research | [Neural Art](https://github.com/Nikoju1977/Neural-Art-mars-2026) · [MedVision](https://github.com/Nikoju1977/medicalvisionproai) |
 
-**31 public technical READMEs / 31 README techniques publics** — [registre technique et licences](PROJECTS.md#registre-technique--31-dépôts-documentés). Inventaire relu le 25 novembre 2026 : 58 dépôts, 53 publics, cinq privés non détaillés. Les 39 références historiques et six signatures restent une sélection éditoriale distincte.
+**33 public technical READMEs / 33 README techniques publics** — [registre technique et licences](PROJECTS.md#registre-technique--33-dépôts-documentés). Inventaire relu le 25 novembre 2026 : 58 dépôts, 53 publics, cinq privés non détaillés. Les 39 références historiques et six signatures restent une sélection éditoriale distincte.
 
 [Studio Niko Hub](https://studio-niko-hub.vercel.app/) (adresse annoncée, disponibilité non confirmée ici) · [Sources du Hub](hub/README.md) · [Preuves datées](QUALITY_EVIDENCE.md).
 
-**Engineering scope:** 31 public project READMEs and license references checked on GitHub; architecture diagrams and English summaries present. Two projects declare MIT in package.json without an identified standalone root license. One separate upstream fork guide is also documented. This is documentation evidence, separate from dated CI, deployment or runtime evidence. The catalogue is an inventory, not a certification.
+**Engineering scope:** 33 public project READMEs and license references checked on GitHub; architecture diagrams and English summaries present. Two projects declare MIT in package.json without an identified standalone root license. One separate upstream fork guide is also documented. This is documentation evidence, separate from dated CI, deployment or runtime evidence. The catalogue is an inventory, not a certification.
 
 **Collaboration:** reproducible feedback is welcome. Each project's actual license applies. Not all repositories are open source. Medical and industrial prototypes are not certified; no production readiness is implied.
 
@@ -144,7 +144,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 | [dermato-ai](https://github.com/Nikoju1977/dermato-ai) | Exploration de la vision artificielle en dermatologie |
 | [purescanai](https://github.com/Nikoju1977/purescanai) | Prototype d'analyse visuelle de la peau et routines de soin |
 | [SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL) | Interface expérimentale de caméra et indicateurs biométriques |
-| [agent-biometrique](https://github.com/Nikoju1977/agent-biometrique) | Analyse et visualisation de données biométriques |
+| [agent-biometrique](https://github.com/Nikoju1977/agent-biometrique) | Démonstrateur de session biométrique : scores fictifs, aucune mesure réelle |
 | [fibrobot](https://github.com/Nikoju1977/fibrobot) | Agent d'information autour de la fibromyalgie |
 | [fibrocare](https://github.com/Nikoju1977/fibrocare) | Journal de suivi de la fibromyalgie |
 | [presentation-medtronic](https://github.com/Nikoju1977/presentation-medtronic) | Présentation interactive sur des technologies du diabète |
