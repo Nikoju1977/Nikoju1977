@@ -18,8 +18,8 @@ try{
  }
 }catch{}
 function save(){
- try{localStorage.setItem(STORAGE,JSON.stringify(state));}
- catch{status('Le stockage navigateur est indisponible : les modifications ne seront pas conservées.');}
+ try{localStorage.setItem(STORAGE,JSON.stringify(state));return true;}
+ catch{status('Le stockage navigateur est indisponible : les modifications ne seront pas conservées. Exportez le projet avant de fermer la page.');return false;}
 }
 function status(msg){$('work-status').textContent=msg;}
 function selected(){return state.projects.find(p=>p.id===state.selected);}
@@ -55,7 +55,7 @@ $('work-create').addEventListener('submit',e=>{
  if(!title||!TYPES.has(category))return;
  if(state.projects.length>=LIMIT){status('Limite de '+LIMIT+' projets locaux atteinte. Exportez un projet avant de le supprimer.');return;}
  const p={id:guid(),title,category,notes:'',tasks:[],updatedAt:new Date().toISOString()};state.projects.unshift(p);state.selected=p.id;
- $('work-name').value='';save();refresh();status('Projet « '+p.title+' » créé uniquement sur cet appareil.');
+ $('work-name').value='';const saved=save();refresh();if(saved)status('Projet « '+p.title+' » créé uniquement sur cet appareil.');
 });
 $('work-list').addEventListener('click',e=>{const btn=e.target.closest('[data-project]');if(!btn)return;state.selected=btn.dataset.project;save();refresh();});
 $('work-notes').addEventListener('input',e=>{const p=selected();if(!p)return;p.notes=e.target.value.slice(0,5000);p.updatedAt=new Date().toISOString();save();});
@@ -77,7 +77,7 @@ $('work-tasks').addEventListener('click',e=>{
 $('work-delete').addEventListener('click',()=>{
  const p=selected();if(!p||!confirm('Supprimer le projet « '+p.title+' » de cet appareil ? Les notes et tâches locales seront perdues.'))return;
  state.projects=state.projects.filter(x=>x.id!==p.id);state.selected=state.projects[0]?.id||null;
- save();refresh();status('Projet supprimé de cet appareil.');
+ const saved=save();refresh();if(saved)status('Projet supprimé de cet appareil.');
 });
 function download(p){
  const data=JSON.stringify({format:'studio-niko-project-v1',exportedAt:new Date().toISOString(),
@@ -93,11 +93,12 @@ $('work-import').addEventListener('change',async e=>{
  if(state.projects.length>=LIMIT){status('Limite de projets atteinte.');return;}
  try{
   const raw=JSON.parse(await file.text());const x=raw.project;
-  if(raw.format!=='studio-niko-project-v1'||!x||typeof x.title!=='string'||!TYPES.has(x.category))throw Error('Format non reconnu');
+  if(state.projects.length>=LIMIT){status('Limite de projets atteinte pendant la lecture.');return;}
+  if(raw.format!=='studio-niko-project-v1'||!x||typeof x.title!=='string'||!x.title.trim()||!TYPES.has(x.category))throw Error('Format non reconnu');
   const p={id:guid(),title:x.title.slice(0,100),category:x.category,notes:String(x.notes||'').slice(0,5000),
   tasks:Array.isArray(x.tasks)?x.tasks.slice(0,80).filter(t=>t&&typeof t.text==='string').map(t=>({id:guid(),text:t.text.slice(0,160),done:!!t.done})):[],
   updatedAt:new Date().toISOString()};
-  state.projects.unshift(p);state.selected=p.id;save();refresh();status('Projet importé : '+p.title);
+  state.projects.unshift(p);state.selected=p.id;const saved=save();refresh();if(saved)status('Projet importé : '+p.title);
  }catch{status('Import impossible : sélectionnez un projet JSON exporté depuis Studio Niko Hub.');}
 });
 function encodeHandoff(payload){

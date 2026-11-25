@@ -75,3 +75,5 @@ assert(guides.length===cat.length&&new Set(guides.map(g=>g.slug)).size===cat.len
   &&cat.every(x=>guides.some(g=>g.slug===x.slug)),'All public applications documented uniquely');
 new Function(fs.readFileSync(path.join(dir,'guide.js'),'utf8'));
 console.log('PASS catalog='+cat.length+' launchUrls='+cat.filter(x=>x.demoUrl).length+' DOM bindings checked');
+
+require('node:child_process').execFileSync(process.execPath,[path.join(dir,'workspace-regression.cjs')],{stdio:'inherit'});
