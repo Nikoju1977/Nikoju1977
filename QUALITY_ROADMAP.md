@@ -211,3 +211,8 @@ Candidat construit depuis l'archive locale V4 PWA complète ; aucun dépôt V5 e
 | Portfolio | [CI catalogue 45704008846](https://github.com/Nikoju1977/Nikoju1977/actions/runs/45704008846) : succès | Contrôle du catalogue uniquement |
 
 Ne pas déduire une stabilité opérationnelle, une certification ou un essai physique d'un run statique ou Pages. Les corrections CI ci-dessus doivent être recontrôlées à leur SHA.
+
+
+## Qualification opérationnelle — 25 novembre 2026
+
+Les cinq workflows de correction du lot précédent sont terminés avec succès : IA Studio Ciné [Quality Gate](https://github.com/Nikoju1977/ia-studio-cine/actions/runs/45704278073), [V5](https://github.com/Nikoju1977/ia-studio-cine/actions/runs/45704278046), [Pages](https://github.com/Nikoju1977/ia-studio-cine/actions/runs/45704276669) ; NikoAssist [tests et intégration](https://github.com/Nikoju1977/Nikoassist/actions/runs/45704298706), [publication source](https://github.com/Nikoju1977/Nikoassist/actions/runs/45704298813). OPENVITA-DT1 : [test navigateur](https://github.com/Nikoju1977/OPENVITA-DT1/commit/70155b5a9403785316bffe795fa0d53f4515058f), [workflow](https://github.com/Nikoju1977/OPENVITA-DT1/commit/54a23523e8abe1592be939e00a22caba771cd51f), [run Chromium 45704539496](https://github.com/Nikoju1977/OPENVITA-DT1/actions/runs/45704539496) réussi. Web Crypto réel, stockage local, export blob, rejet mot de passe erroné et ciphertext altéré, rechargement, modification/suppression, restauration dans un autre coffre au sein du profil de test, viewport mobile simulé, absence de POST. Données synthétiques, pas de test physique ni qualification clinique. Application MIT ; banc de test autonome adapté de NikoAssist sous GPL-3.0-or-later, licence fournie.
