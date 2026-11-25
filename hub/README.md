@@ -2,6 +2,10 @@
 
 Portail public de **Studio Niko Design** — catalogue des dépôts publics, recherche, univers, favoris locaux, accès RON et PWA.
 
+## Portfolio technique — 25 novembre 2026
+
+[21 README documentés et licences](../PROJECTS.md#registre-technique--21-dépôts-documentés) ; 53 entrées publiques vérifiées par inventaire. Les descriptions de N8V (NIKO ANALOG 37, non codec), META-STUDIO V6 et des prototypes biomédicaux sont actualisées. Les états HTTP historiques restent datés ; aucun nouveau test fonctionnel ni redéploiement n'est revendiqué.
+
 ## Pilotage Studio Niko Core
 
 Le fichier [`pilotage.html`](./pilotage.html) contient un tableau public autonome et responsive : **53 dépôts publics dans le registre du 24 novembre 2026**. Recherche, domaine, priorité, état du socle, liens vers les dépôts et liens de publication connus.
