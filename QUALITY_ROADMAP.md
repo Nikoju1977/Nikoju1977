@@ -142,3 +142,8 @@ Critère de clôture : commit de correction identifié, reproduction sur donnée
 - [aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking/commit/c25e48bdf50a7f6b8eb6e9f7879b363a3d80e3e0) : Calcul alimentaire par portion et favoris locaux ; dose retirée, IA suspendue. Aucun calcul de traitement ; favoris non chiffrés, ancien profil effaçable volontairement.
 
 Sources relues après publication, empreintes SHA vérifiées ; aucun nouveau test d'exécution ou déploiement vérifié. Les constats antérieurs sont historiques, non des preuves de l'état actuel. Le chef distant est suspendu par précaution ; pas de suppression automatique des anciennes données locales.
+
+
+## Correction P0 — lot 2, étape 1 (25 novembre 2026)
+
+[compagnon-diabete](https://github.com/Nikoju1977/compagnon-diabete/commit/d773c0a540ac858a21898b4a1c4c27911725d4e5) : retrait des chemins de calcul de bolus, lecture Bluetooth, graphique fictif, IA distante, caméra et microphone de l'entrée HTML. Guide conservé. Source relue après publication ; aucun test navigateur ni déploiement vérifié. Données anciennes non supprimées automatiquement. OPENVITA-DT1 et fibrocare restent à corriger.
