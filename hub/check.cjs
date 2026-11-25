@@ -106,3 +106,15 @@ assert.equal(releases.rows.find(r=>r.repo===evidence.followup.oracle.repo).commi
 assert(qualityHtml.includes('/actions/runs/'+evidence.followup.oracle.preMerge.run));
 assert(qualityHtml.includes('/actions/runs/'+evidence.followup.wan.run));
 console.log('PASS scoped follow-up evidence');
+
+const distribution=evidence.distributionFollowup;
+const medical=distribution.medical,music=distribution.music;
+assert.equal(medical.httpStatus,200);
+for(const hash of [medical.sourceSha256,medical.distSha256,medical.publicSha256])assert(/^[0-9a-f]{64}$/.test(hash));
+assert.equal(medical.distSha256,medical.publicSha256);assert.notEqual(medical.sourceSha256,medical.distSha256);
+assert.equal(medical.fullRevisionVerified,false);assert.equal(medical.clinicalValidation,false);assert.equal(medical.customWorkflowRetained,true);
+assert.equal(music.customDeploy,'skipped');assert.equal(music.source,'legacy-main-root-confirmed');assert.equal(music.httpBytesVerified,false);assert.equal(music.physicalDevicesVerified,false);
+assert(/^[0-9a-f]{40}$/.test(music.commit));assert(/^[0-9a-f]{40}$/.test(medical.checkedCommit));
+for(const run of [medical.run,music.ci,music.route,music.pages]){assert(Number.isSafeInteger(run)&&run>0);assert(qualityHtml.includes('/actions/runs/'+run));}
+assert(qualityHtml.includes(medical.publicSha256));assert(qualityHtml.includes('/commit/'+music.commit));
+console.log('PASS distribution evidence and limits');

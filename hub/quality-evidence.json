@@ -977,5 +977,36 @@
       "gpuTested": false,
       "merged": false
     }
+  },
+  "distributionFollowup": {
+    "date": "2026-11-25",
+    "medical": {
+      "repo": "medicalvisionproai",
+      "run": 45549109277,
+      "checkedCommit": "3fccffffe1c9a80a4aafaf3924e8cb18c6f352e1",
+      "scope": "public index.html bytes only; PR merge-ref; diagnostic not a deployed revision",
+      "httpStatus": 200,
+      "sourceSha256": "68c1980ae179421c3b0628bc6dc81050ab4a3339358f8b278f60845ef46cb437",
+      "distSha256": "4fa10f6dfc5df7ff4e98f027edea5d5e7006215b166851bb3f41697b83457f54",
+      "publicSha256": "4fa10f6dfc5df7ff4e98f027edea5d5e7006215b166851bb3f41697b83457f54",
+      "buildType": "legacy",
+      "branch": "main",
+      "path": "/",
+      "fullRevisionVerified": false,
+      "clinicalValidation": false,
+      "customWorkflowRetained": true
+    },
+    "music": {
+      "repo": "the-lovestronautes-machine",
+      "commit": "2bde151a1497d9f7869646fefd17e3f5fb1bde84",
+      "pr": 34,
+      "ci": 45548941741,
+      "route": 45548941668,
+      "pages": 45548941093,
+      "customDeploy": "skipped",
+      "source": "legacy-main-root-confirmed",
+      "httpBytesVerified": false,
+      "physicalDevicesVerified": false
+    }
   }
 }
