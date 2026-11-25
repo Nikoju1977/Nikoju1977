@@ -22,7 +22,15 @@ Créateur indépendant en Loire-Atlantique, France. Je relie narration, design d
 
 ## Nouveau : Studio Niko Core
 
-[**Accéder au tableau de pilotage GitHub**](hub/pilotage.html) — inventaire de **55 dépôts**, dont **50 publics**, avec recherche, priorités et état des six premières intégrations de [Studio Niko Core](studio-niko-core/README.md). Les cinq dépôts privés sont exclus de ce tableau public. Les statuts sont un **instantané daté**, pas une surveillance continue ; un commit ne prouve pas un fonctionnement vérifié.
+[**Accéder au tableau de pilotage GitHub**](hub/pilotage.html) — inventaire daté de **53 dépôts publics**, avec recherche, priorités et état des six premières intégrations de [Studio Niko Core](studio-niko-core/README.md). Les cinq dépôts privés sont exclus de ce tableau public. Les statuts sont un **instantané daté**, pas une surveillance continue ; un commit ne prouve pas un fonctionnement vérifié.
+
+## Qualité logicielle — preuves publiques
+
+**53 dépôts publics recensés · 4 633 fichiers audités · 52 contrôles Docker réussis · 4 scénarios de correction validés.**
+
+[**Consulter les preuves par dépôt**](QUALITY_EVIDENCE.md) · [**Tableau de qualité du Hub**](hub/quality.html) · [**Code Mode Pro**](https://github.com/Nikoju1977/AutoCoder-Studio-Niko/pull/9)
+
+Instantané du 25 novembre 2026 : contrôles statiques et d'intégrité, quatre comparaisons fonctionnelles ciblées. Un dépôt partiellement audité et un dépôt vide ; aucune affirmation de validation globale en production.
 
 ## Ce qui rend ces projets différents
 
@@ -71,7 +79,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 
 ## Projets retenus, classés par thème
 
-**39 projets publics sélectionnés parmi 44** sont répertoriés ci-dessous, chacun une seule fois. Les **4 variantes proches** et **1 projet hors sélection éditoriale** ne figurent plus dans cette vitrine. Les critères sont documentés dans [la politique de sélection](CURATION.md) ; [le guide de chaque application](PROJECTS.md) décrit concrètement leurs fonctionnalités, sans suppression de code. Les dépôts privés n'apparaissent pas dans ce catalogue. Les liens pointent vers le code et la documentation, pas nécessairement vers une application déployée.
+**39 projets de la sélection éditoriale historique** sont répertoriés ci-dessous, chacun une seule fois. Les **4 variantes proches** et **1 projet hors sélection éditoriale** ne figurent plus dans cette vitrine. Les critères sont documentés dans [la politique de sélection](CURATION.md) ; [le guide de chaque application](PROJECTS.md) décrit concrètement leurs fonctionnalités, sans suppression de code. Les dépôts privés n'apparaissent pas dans ce catalogue. Les liens pointent vers le code et la documentation, pas nécessairement vers une application déployée.
 
 <details>
 <summary><strong>01 · Cinéma, image & arts numériques</strong> — 7 projets</summary>
@@ -218,7 +226,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 
 ## Studio Niko Core — socle partagé
 
-La [bibliothèque Studio Niko Core v0.1.0](studio-niko-core/README.md) fournit des utilitaires JavaScript locaux et un diagnostic volontaire sans télémétrie. Le [registre des 55 dépôts](studio-niko-core/registry.json), le [cockpit de pilotage](studio-niko-core/index.html) et la [feuille de route](studio-niko-core/ROADMAP.md) distinguent les intégrations enregistrées dans GitHub des fonctionnalités réellement validées. Six projets phares utilisent déjà une copie locale du socle ; cela ne garantit pas encore leur déploiement ni leur fonctionnement sur appareil.
+La [bibliothèque Studio Niko Core v0.1.0](studio-niko-core/README.md) fournit des utilitaires JavaScript locaux et un diagnostic volontaire sans télémétrie. Le [registre des dépôts publics](studio-niko-core/registry.json), le [cockpit de pilotage](studio-niko-core/index.html) et la [feuille de route](studio-niko-core/ROADMAP.md) distinguent les intégrations enregistrées dans GitHub des fonctionnalités réellement validées. Six projets phares utilisent déjà une copie locale du socle ; cela ne garantit pas encore leur déploiement ni leur fonctionnement sur appareil.
 
 **[Études de projet](SHOWCASE.md)** · **[Que fait chaque dépôt ?](PROJECTS.md)** · **[Politique de sélection](CURATION.md)** · **[Plan qualité](QUALITY_ROADMAP.md)**
 

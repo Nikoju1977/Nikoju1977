@@ -1,0 +1,899 @@
+{
+  "date": "2026-11-25",
+  "run": "https://github.com/Nikoju1977/AutoCoder-Studio-Niko/actions/runs/45517645580",
+  "scope": "public git blob audit; Docker integrity only; main commit snapshots; no production verification",
+  "totals": {
+    "repositories": 53,
+    "files": 4633,
+    "batches": 1560,
+    "dockerPassed": 52,
+    "partial": 1,
+    "empty": 1,
+    "readFailures": 0
+  },
+  "rows": [
+    {
+      "repo": "Nikoju1977/aegis-earth-mobile",
+      "commit": "8c6ab9536e7512e9650e7c32c4f310f4ce87785a",
+      "status": "audited",
+      "files": 16,
+      "batches": 6,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 7,
+        "valid": 9
+      },
+      "alerts": 24,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/agent-biometrique",
+      "commit": "bd97d7efb93c891450418c92e9d903d48ad31780",
+      "status": "audited",
+      "files": 7,
+      "batches": 3,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 5,
+        "valid": 2
+      },
+      "alerts": 9,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/applewatchcadrans",
+      "commit": "fe61abfa051f979cf944c93763762741732ddd9e",
+      "status": "audited",
+      "files": 6,
+      "batches": 2,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 4,
+        "valid": 2
+      },
+      "alerts": 15,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/AutoCoder-Studio-Niko",
+      "commit": "f825e7debc84dc11acd54e9500210d010e7525e3",
+      "status": "audited",
+      "files": 27,
+      "batches": 9,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 8,
+        "valid": 19
+      },
+      "alerts": 2,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/AutoEntrepreneur-1M",
+      "commit": "05c8209fa12cbe25e46a3959d73f3cde6bc60930",
+      "status": "audited",
+      "files": 1074,
+      "batches": 358,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 1069,
+        "valid": 5
+      },
+      "alerts": 5,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/aylina-is-cooking",
+      "commit": "81cf11120d6ff43ec5389677dadc547809d65040",
+      "status": "audited",
+      "files": 6,
+      "batches": 2,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 4,
+        "valid": 2
+      },
+      "alerts": 4,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/Bouh-delivery",
+      "commit": "d15e19c8b9eb6b8201c953ad72d5d57b36eeac07",
+      "status": "audited",
+      "files": 9,
+      "batches": 3,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 4,
+        "valid": 5
+      },
+      "alerts": 0,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/Boutique-morgane",
+      "commit": "97fa7697193cc3b515daaff0b9ceed75f6706d2c",
+      "status": "audited",
+      "files": 42,
+      "batches": 14,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 20,
+        "valid": 22
+      },
+      "alerts": 6,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/cockpit-mecaria",
+      "commit": "c636d4829cf350eb767c6d1685138b98dff786ee",
+      "status": "audited",
+      "files": 5,
+      "batches": 2,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 4,
+        "valid": 1
+      },
+      "alerts": 7,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/compagnon-diabete",
+      "commit": "84b78232c910053ce9acb20c5d3ee616bdd67e61",
+      "status": "audited",
+      "files": 6,
+      "batches": 2,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 4,
+        "valid": 2
+      },
+      "alerts": 1,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/Cosmo-citrouille",
+      "commit": "374a0925ffe9f5646cf0c959d14f67ff7fd9e2cc",
+      "status": "audited",
+      "files": 18,
+      "batches": 6,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 9,
+        "valid": 9
+      },
+      "alerts": 12,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/Dbmetre-pro",
+      "commit": "a25beb1d9e1b8f29c0c74ad9ab641553fa1e2596",
+      "status": "audited",
+      "files": 5,
+      "batches": 2,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 4,
+        "valid": 1
+      },
+      "alerts": 0,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/dermato-ai",
+      "commit": "eeef37620134b807c33e915bf4ffdc1ea020ae0f",
+      "status": "audited",
+      "files": 6,
+      "batches": 2,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 4,
+        "valid": 2
+      },
+      "alerts": 7,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/EBM-BRETONNE.",
+      "commit": "1861a9d88be8f116de274b6d622ff7b364006835",
+      "status": "audited",
+      "files": 7,
+      "batches": 3,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 6,
+        "valid": 1
+      },
+      "alerts": 14,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/fibrobot",
+      "commit": "12bd9ed9e371cbe56a0513f46908c4bd7886e0c2",
+      "status": "audited",
+      "files": 97,
+      "batches": 33,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "valid": 87,
+        "not_supported": 10
+      },
+      "alerts": 0,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/fibrocare",
+      "commit": "887ff95b8a98902dbd635fed3bff586b17efc31c",
+      "status": "audited",
+      "files": 6,
+      "batches": 2,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 4,
+        "valid": 2
+      },
+      "alerts": 12,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/galerie-studio-niko",
+      "commit": "ca453f882c238e0421179308556cb5a87d874b1c",
+      "status": "audited",
+      "files": 44,
+      "batches": 15,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 11,
+        "valid": 33
+      },
+      "alerts": 26,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/handimonde",
+      "commit": "76091a200024c8fa54c7d71923132d5275df9bb7",
+      "status": "audited",
+      "files": 11,
+      "batches": 4,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 6,
+        "valid": 5
+      },
+      "alerts": 21,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/ia-studio-cine",
+      "commit": "b6a61286dc2b320f2b6aa3f30d8480c8b02ec96b",
+      "status": "audited",
+      "files": 50,
+      "batches": 17,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 17,
+        "valid": 33
+      },
+      "alerts": 8,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/jarvisdiabete",
+      "commit": "e84ebca7a31270a305522dde1a963770fda85000",
+      "status": "audited",
+      "files": 49,
+      "batches": 17,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 9,
+        "valid": 40
+      },
+      "alerts": 0,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/job-search",
+      "commit": "722c41fcb411fca5321feecf7d2d012b5f124626",
+      "status": "audited",
+      "files": 86,
+      "batches": 29,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 23,
+        "valid": 63
+      },
+      "alerts": 7,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/l-ultime-confrontation",
+      "commit": "7cda371d732e37f0903c97d1bbbb95526a3d986b",
+      "status": "audited",
+      "files": 5,
+      "batches": 2,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 3,
+        "valid": 2
+      },
+      "alerts": 0,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/le-jardin-de-niko",
+      "commit": "1fbe50238e980572a931ff12b35c698ccf265ebf",
+      "status": "audited",
+      "files": 5,
+      "batches": 2,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 3,
+        "valid": 2
+      },
+      "alerts": 20,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/les-annales-akashiques",
+      "commit": "bb891ffd43e03c4befa097a6127c4a2d92251dc8",
+      "status": "audited",
+      "files": 5,
+      "batches": 2,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 4,
+        "valid": 1
+      },
+      "alerts": 11,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/medicalvisionproai",
+      "commit": "c27defd2f121234bfd06b389a8fd068e6fc9d6cf",
+      "status": "audited",
+      "files": 36,
+      "batches": 12,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 8,
+        "valid": 28
+      },
+      "alerts": 26,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/Medivision-ai-pro",
+      "commit": "8e49181991fe46073c89cdd8c992fc1ebf150088",
+      "status": "audited",
+      "files": 22,
+      "batches": 8,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 12,
+        "valid": 10
+      },
+      "alerts": 1,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/Metrology-OS",
+      "commit": "33c36f4e409637b2df7ddfde71ba057cad0e6087",
+      "status": "audited",
+      "files": 5,
+      "batches": 2,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 4,
+        "valid": 1
+      },
+      "alerts": 30,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/miaotris",
+      "commit": "d62430eb026099fc78c687fa13f64382d75f56cb",
+      "status": "audited",
+      "files": 11,
+      "batches": 4,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 7,
+        "valid": 4
+      },
+      "alerts": 6,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/N8V",
+      "commit": "df503858c3a6206ccc31f7c1ac02f9b8d4e794bf",
+      "status": "audited",
+      "files": 6,
+      "batches": 2,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 4,
+        "valid": 2
+      },
+      "alerts": 0,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/Neural-Art-mars-2026",
+      "commit": "ff745ae4dbe3132204ed5d5ad1941745f91d6a45",
+      "status": "audited",
+      "files": 11,
+      "batches": 4,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 4,
+        "valid": 7
+      },
+      "alerts": 0,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/niko-commande-live-tik-tok",
+      "commit": "c1a71b0ef24b1b7958334a1e881b7583a8502274",
+      "status": "audited",
+      "files": 9,
+      "batches": 3,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 4,
+        "valid": 5
+      },
+      "alerts": 0,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/niko-music-lab",
+      "commit": "fb79ce80f954a7b9033b80818db852aba6be8f93",
+      "status": "audited",
+      "files": 5,
+      "batches": 2,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "valid": 2,
+        "not_supported": 3
+      },
+      "alerts": 9,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/Niko-Ultravision",
+      "commit": "7a5cd405ca1f182a069ae92f7a7ee5081fdda6b7",
+      "status": "audited",
+      "files": 76,
+      "batches": 26,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 70,
+        "valid": 6
+      },
+      "alerts": 0,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/Nikoassist",
+      "commit": "eb18f0d8ec8c1256e377a76e85c1f5568c605857",
+      "status": "audited",
+      "files": 47,
+      "batches": 16,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 16,
+        "valid": 31
+      },
+      "alerts": 1,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/nikogroove",
+      "commit": "5914a587ddeb22a85636b3d082f5ded9dba980b5",
+      "status": "audited",
+      "files": 5,
+      "batches": 2,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 4,
+        "valid": 1
+      },
+      "alerts": 9,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/Nikoju1977",
+      "commit": "e9b456a7ec5f84cb5b519fb08cd5c47c476657bb",
+      "status": "audited",
+      "files": 72,
+      "batches": 24,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 35,
+        "valid": 37
+      },
+      "alerts": 5,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/oeil-hermes",
+      "commit": "016546711dec7ce6fb9809ce399ca13ea0f23eee",
+      "status": "audited",
+      "files": 8,
+      "batches": 3,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 5,
+        "valid": 3
+      },
+      "alerts": 4,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/OPENVITA-DT1",
+      "commit": "0526102639b8ce018fea94103bd598b6ba2971aa",
+      "status": "audited",
+      "files": 6,
+      "batches": 2,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 4,
+        "valid": 2
+      },
+      "alerts": 7,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/oracle-du-jardinier",
+      "commit": "6e7dc2e41a01c0b652a55116fa0c5cf350dc89b3",
+      "status": "audited",
+      "files": 9,
+      "batches": 3,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 4,
+        "valid": 5
+      },
+      "alerts": 69,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/presentation-medtronic",
+      "commit": "c21a2a277c64bae34bd8823a87395a435caae417",
+      "status": "audited",
+      "files": 7,
+      "batches": 3,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 5,
+        "valid": 2
+      },
+      "alerts": 0,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/purescanai",
+      "commit": "2e98ac00b2cf51c1365dfebf9e308204c169bc52",
+      "status": "audited",
+      "files": 7,
+      "batches": 3,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 5,
+        "valid": 2
+      },
+      "alerts": 7,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/radar-de-niko",
+      "commit": "a67106a76b496e6bd9bb17b4d69989ddeceeb170",
+      "status": "audited",
+      "files": 34,
+      "batches": 12,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 9,
+        "valid": 25
+      },
+      "alerts": 0,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/Rave-Generator-2",
+      "commit": "121538cbc225ff43699a04f1e0068593721fd371",
+      "status": "audited",
+      "files": 8,
+      "batches": 3,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 4,
+        "valid": 4
+      },
+      "alerts": 10,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/rf-metrolgy-pro",
+      "commit": null,
+      "status": "empty_repository",
+      "files": 0,
+      "batches": 0,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {},
+      "alerts": 0,
+      "docker": "not_applicable",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/RF-Metrology-Pro",
+      "commit": "0cf3e08cd3bd3e2ac0d5de324888a7e5fec8fec9",
+      "status": "audited",
+      "files": 14,
+      "batches": 5,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 7,
+        "valid": 7
+      },
+      "alerts": 0,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/Ron-",
+      "commit": "23836a9c4aa7eaa56f53510cbcdaccdd35ce717a",
+      "status": "audited",
+      "files": 48,
+      "batches": 16,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 13,
+        "valid": 35
+      },
+      "alerts": 57,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/Sage-companion",
+      "commit": "b7d63f7a4a1b241a4e12be3cd6abe60e58280877",
+      "status": "audited",
+      "files": 7,
+      "batches": 3,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 5,
+        "valid": 2
+      },
+      "alerts": 3,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/SCAN-BIOMEDICAL",
+      "commit": "f4bd72e4e2f9f9e9b94eaae9231c4388c02be729",
+      "status": "audited",
+      "files": 7,
+      "batches": 3,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 5,
+        "valid": 2
+      },
+      "alerts": 7,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/tarot-de-niko",
+      "commit": "7a6de7e1efea72f27b20813bacfd129c337efe3a",
+      "status": "audited",
+      "files": 24,
+      "batches": 8,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 9,
+        "valid": 15
+      },
+      "alerts": 0,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/the-lovestronautes-machine",
+      "commit": "3903bb23403db04bb4f27e9cf840b837dc4f6ff2",
+      "status": "audited",
+      "files": 64,
+      "batches": 22,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 20,
+        "valid": 44
+      },
+      "alerts": 45,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/Vision-IA",
+      "commit": "422e0ea150ee961a263c55c0e88fec3cca5539f7",
+      "status": "audited",
+      "files": 25,
+      "batches": 9,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 11,
+        "valid": 14
+      },
+      "alerts": 12,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/Wan2GP",
+      "commit": "a02526122d204caa1efcf7ac76d7075fc7224c0b",
+      "status": "partial",
+      "files": 2436,
+      "batches": 812,
+      "failed": 0,
+      "oversized": 2,
+      "syntax": {
+        "valid": 2294,
+        "not_supported": 130,
+        "invalid": 12
+      },
+      "alerts": 370,
+      "docker": "passed",
+      "functionalTests": false
+    },
+    {
+      "repo": "Nikoju1977/White-hat",
+      "commit": "269e707b8072170553f0b4ee9b78112b0b27291e",
+      "status": "audited",
+      "files": 32,
+      "batches": 11,
+      "failed": 0,
+      "oversized": 0,
+      "syntax": {
+        "not_supported": 13,
+        "valid": 19
+      },
+      "alerts": 3,
+      "docker": "passed",
+      "functionalTests": false
+    }
+  ],
+  "fixes": [
+    {
+      "repo": "the-lovestronautes-machine",
+      "scenario": "Restauration des boucles musicales",
+      "commit": "d5436d4af6c0a53d28bbfe9b66d05546295668d2",
+      "run": 45517345460,
+      "pr": 31
+    },
+    {
+      "repo": "job-search",
+      "scenario": "Fermeture du dialogue PWA",
+      "commit": "7839af7161eff01339eeff7d2d49f57f11782865",
+      "run": 45517856039,
+      "pr": 17
+    },
+    {
+      "repo": "medicalvisionproai",
+      "scenario": "Sources documentaires indisponibles",
+      "commit": "4fecc4ae59cff6d7e71f51f7be15a53896f39b67",
+      "run": 45517856039,
+      "pr": 16
+    },
+    {
+      "repo": "Nikoju1977",
+      "scenario": "Imports simultanés et sauvegarde",
+      "commit": "a96eb662c6ea1a6b1a78ef16e675a0eea6082a10",
+      "run": 45517856039,
+      "pr": 5
+    }
+  ],
+  "wanRecheck": {
+    "run": "https://github.com/Nikoju1977/AutoCoder-Studio-Niko/actions/runs/45518107709",
+    "rechecked": 12,
+    "valid": 10,
+    "rejected": 2,
+    "oversized": 2
+  }
+}
