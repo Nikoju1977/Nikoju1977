@@ -87,3 +87,6 @@ assert.equal(evidence.fixes.length,4);
 for(const file of ['quality.html','quality.css','quality-evidence.json']){assert(fs.existsSync(path.join(dir,file)));assert(sw.includes("'./"+file+"'"));}
 assert(index.includes('href="./quality.html"'));
 console.log('PASS quality evidence references and counts');
+
+
+require('node:child_process').execFileSync(process.execPath,[path.join(dir,'workspace-regression.cjs')],{stdio:'inherit'});
