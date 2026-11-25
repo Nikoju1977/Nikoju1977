@@ -15,13 +15,13 @@
     "slug": "agent-biometrique",
     "name": "agent-biometrique",
     "category": "Santé & Bien-être",
-    "description": "Interface expérimentale d'analyse biométrique.",
+    "description": "Démonstrateur de session : scores et alertes simulés, caméra en aperçu uniquement.",
     "repoUrl": "https://github.com/Nikoju1977/agent-biometrique",
     "demoUrl": "https://nikoju1977.github.io/agent-biometrique/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Outil non médical. Les estimations biométriques vidéo ne sont pas des constantes cliniques."
+    "requirements": "Ne pas utiliser pour évaluer la santé, la fatigue ou la sécurité ; aucune mesure biométrique réelle établie."
   },
   {
     "slug": "applewatchcadrans",
@@ -145,13 +145,13 @@
     "slug": "Dbmetre-pro",
     "name": "Dbmetre-pro",
     "category": "Musique & Audio",
-    "description": "Analyseur spectral, mesure dBFS et enregistrement microphone.",
+    "description": "RMS dBFS, FFT 4096 points et capture microphone ; non étalonné.",
     "repoUrl": "https://github.com/Nikoju1977/Dbmetre-pro",
     "demoUrl": "https://nikoju1977.github.io/Dbmetre-pro/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Un microphone et une autorisation navigateur sont nécessaires. Les mesures dB SPL absolues exigent un calibrage acoustique."
+    "requirements": "Autorisation microphone nécessaire. Offset SPL indicatif, moyenne des dB non équivalente à Leq."
   },
   {
     "slug": "dermato-ai",
@@ -324,7 +324,7 @@
     "slug": "medicalvisionproai",
     "name": "medicalvisionproai",
     "category": "Santé & Bien-être",
-    "description": "DICOM/MPR local et IA distante optionnelle.",
+    "description": "DICOM/MPR local, projections MIP/MinIP et IA distante optionnelle ; prototype non clinique.",
     "repoUrl": "https://github.com/Nikoju1977/medicalvisionproai",
     "demoUrl": "https://nikoju1977.github.io/medicalvisionproai/",
     "featured": false,
