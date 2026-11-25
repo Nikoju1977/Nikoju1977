@@ -121,13 +121,13 @@
     "slug": "compagnon-diabete",
     "name": "compagnon-diabete",
     "category": "Archives & Variantes",
-    "description": "Maquette historique : lectures Bluetooth, calculs de bolus et IA retirés de l'entrée HTML.",
+    "description": "Journal descriptif fonctionnel : saisie, historique, filtre, modification et sauvegarde chiffrée.",
     "repoUrl": "https://github.com/Nikoju1977/compagnon-diabete",
     "demoUrl": "https://nikoju1977.github.io/compagnon-diabete/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Ne pas utiliser comme outil médical ; ancienne copie possible. Publication de cette révision non vérifiée."
+    "requirements": "Données fictives pendant qualification ; HTTPS ou localhost pour Web Crypto. Tests navigateur et déploiement non vérifiés."
   },
   {
     "slug": "Cosmo-citrouille",
