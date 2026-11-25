@@ -159,3 +159,8 @@ Principe : conserver les fonctions utiles, corriger leur moteur et ne désactive
 ## Fiabilisation FibroCare (25 novembre 2026)
 
 [Correctif journal et PDF](https://github.com/Nikoju1977/fibrocare/commit/9f3b3c58582d5d1e17038bba589ea512e71eb1c7) et [dialogue de sauvegarde masqué](https://github.com/Nikoju1977/fibrocare/commit/5e0aee76c991cb3b7f72ad573e4642d298ec9341). Interface conservée ; sauvegarde chiffrée de cinq rubriques, restauration validée, effacement ciblé, PDF paginé et graphiques triés. 12 assertions de validation réussies ; sources relues. Stockage actif en clair, clés historiques génériques, contenu médical et tests de navigateur/crypto/PDF/déploiement encore à qualifier. Aucun changement de licence.
+
+
+## Fiabilisation OPENVITA-DT1 (25 novembre 2026)
+
+[Journal chiffré](https://github.com/Nikoju1977/OPENVITA-DT1/commit/536ca5fa3eca91463bfb29fcf1f8659d920375c7) et [restauration portable](https://github.com/Nikoju1977/OPENVITA-DT1/commit/45c7c00fe8e0567ce5bca165896cb2dffecfc2a6). Coffre persistant AES-GCM, observations manuelles et repas, historique et statistiques par unité, sauvegarde et restauration chiffrées. 14 assertions JavaScript réussies ; source relue. Les fonctions thérapeutiques et IA non qualifiées sont suspendues, anciennes données conservées sans migration automatique. Aucun test navigateur, crypto bout en bout ou déploiement vérifié. MIT inchangée.
