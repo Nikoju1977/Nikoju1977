@@ -147,3 +147,10 @@ Sources relues après publication, empreintes SHA vérifiées ; aucun nouveau te
 ## Correction P0 — lot 2, étape 1 (25 novembre 2026)
 
 [compagnon-diabete](https://github.com/Nikoju1977/compagnon-diabete/commit/d773c0a540ac858a21898b4a1c4c27911725d4e5) : retrait des chemins de calcul de bolus, lecture Bluetooth, graphique fictif, IA distante, caméra et microphone de l'entrée HTML. Guide conservé. Source relue après publication ; aucun test navigateur ni déploiement vérifié. Données anciennes non supprimées automatiquement. OPENVITA-DT1 et fibrocare restent à corriger.
+
+
+## Fiabilisation fonctionnelle — DAPHNÉE OMNI (25 novembre 2026)
+
+[Commit fonctionnel](https://github.com/Nikoju1977/compagnon-diabete/commit/a41a5043e37fdb3ceb4b39890ab54011d04381a2) : le journal descriptif remplace la maquette transitoire. Saisie avec unité explicite, modification, suppression, filtre, sauvegarde et restauration chiffrées implémentés. 13 assertions de validation des données ont réussi en JavaScript. Source relue ; tests navigateur, cryptographie bout en bout et publication non vérifiés. Fonctions médicales à risque toujours suspendues jusqu'à qualification. Aucune licence modifiée.
+
+Principe : conserver les fonctions utiles, corriger leur moteur et ne désactiver que les chemins non qualifiés présentant un risque significatif ; ne pas assimiler une maquette à une application stable.
