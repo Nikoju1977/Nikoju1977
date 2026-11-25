@@ -4,7 +4,7 @@ Portail public de **Studio Niko Design** — catalogue des dépôts publics, rec
 
 ## Pilotage Studio Niko Core
 
-Le fichier [`pilotage.html`](./pilotage.html) contient un tableau public autonome et responsive : **55 dépôts recensés, 50 publics, 5 privés volontairement masqués et 8 intégrations Core committées au 22 novembre 2026**. Recherche, domaine, priorité, état du socle, liens vers les dépôts et liens de publication connus.
+Le fichier [`pilotage.html`](./pilotage.html) contient un tableau public autonome et responsive : **53 dépôts publics dans le registre du 24 novembre 2026**. Recherche, domaine, priorité, état du socle, liens vers les dépôts et liens de publication connus.
 
 Les statuts « déploiement non confirmé » et « fonctionnement non confirmé » sont volontairement distincts des commits GitHub. Le tableau ne sonde pas le réseau en arrière-plan, ne simule pas les résultats et ne publie aucun nom de dépôt privé. Le suivi manuel des modules, versions, blocages et décisions s'enregistre dans le navigateur et propose un export/import JSON. Aucune déclaration utilisateur n'est promue au rang de preuve automatique. Le registre source est [`../studio-niko-core/registry.json`](../studio-niko-core/registry.json) ; pour mettre à jour le snapshot de la page : `node studio-niko-core/tools/refresh-hub.mjs --apply` depuis la racine du dépôt.
 
@@ -13,6 +13,10 @@ Les statuts « déploiement non confirmé » et « fonctionnement non confirmé 
 Le registre et le tableau `pilotage.html` distinguent désormais l'état des **six applications prioritaires** : quatre parcours ont des correctifs partiels committés (cinéma, audio, AutoCoder, Niko Emploi) et deux restent définis sans validation de cette phase (Galerie Studio Niko et NikoAssist). Chaque fiche décrit les limites et, lorsque disponible, renvoie à la procédure du dépôt. Aucun « code committé » n'est transformé en preuve de déploiement ou de fonctionnement sur appareil.
 
 La dernière vague renforce la récupération locale de projets AutoCoder et corrige les exports iCalendar, CSV et JSON du radar Niko Emploi. Le shell public du radar est référencé dans son cache PWA ; seules les notes locales déjà enregistrées peuvent être affichées hors connexion, pas les APIs de recherche.
+
+## Preuves de qualité (25 novembre 2026)
+
+[Tableau des preuves](quality.html) et [instantané JSON](quality-evidence.json) : 53 dépôts publics, 4 633 fichiers audités, 52 contrôles Docker d’intégrité et quatre comparaisons fonctionnelles ciblées. Les preuves historiques sont séparées des états de production. Le catalogue et les licences existants sont conservés.
 
 ## Principe
 

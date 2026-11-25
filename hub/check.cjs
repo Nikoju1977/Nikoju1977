@@ -75,3 +75,18 @@ assert(guides.length===cat.length&&new Set(guides.map(g=>g.slug)).size===cat.len
   &&cat.every(x=>guides.some(g=>g.slug===x.slug)),'All public applications documented uniquely');
 new Function(fs.readFileSync(path.join(dir,'guide.js'),'utf8'));
 console.log('PASS catalog='+cat.length+' launchUrls='+cat.filter(x=>x.demoUrl).length+' DOM bindings checked');
+
+const evidence=JSON.parse(fs.readFileSync(path.join(dir,'quality-evidence.json'),'utf8'));
+assert.equal(evidence.rows.length,cat.length);
+assert.equal(new Set(evidence.rows.map(r=>r.repo)).size,cat.length);
+for(const r of evidence.rows){assert(registry.repositories.some(x=>x.full_name===r.repo));assert(r.commit===null||/^[a-f0-9]{40}$/.test(r.commit));assert.equal(r.functionalTests,false);}
+assert.equal(evidence.rows.reduce((n,r)=>n+r.files,0),evidence.totals.files);
+assert.equal(evidence.rows.reduce((n,r)=>n+r.batches,0),evidence.totals.batches);
+assert.equal(evidence.rows.filter(r=>r.docker==='passed').length,evidence.totals.dockerPassed);
+assert.equal(evidence.fixes.length,4);
+for(const file of ['quality.html','quality.css','quality-evidence.json']){assert(fs.existsSync(path.join(dir,file)));assert(sw.includes("'./"+file+"'"));}
+assert(index.includes('href="./quality.html"'));
+console.log('PASS quality evidence references and counts');
+
+
+require('node:child_process').execFileSync(process.execPath,[path.join(dir,'workspace-regression.cjs')],{stdio:'inherit'});
