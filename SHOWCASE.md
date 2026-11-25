@@ -6,7 +6,7 @@
 
 ## International overview
 
-Six signature case studies showcasing design and engineering trade-offs, not a production-readiness claim. The [21-project technical register](PROJECTS.md#registre-technique--21-dépôts-documentés) links current READMEs and licenses. [Historical quality evidence](QUALITY_EVIDENCE.md) records specific commits and runs, not validation of future revisions.
+Six signature case studies showcasing design and engineering trade-offs, not a production-readiness claim. The [26-project technical register](PROJECTS.md#registre-technique--26-dépôts-documentés) links current READMEs and licenses. [Historical quality evidence](QUALITY_EVIDENCE.md) records specific commits and runs, not validation of future revisions.
 
 ## 01 — Vision-IA · Construire un film sans confondre faits et propositions
 
@@ -102,6 +102,18 @@ Les six projets ont des finalités différentes. Les liens ci-dessous permettent
 | **HandiMonde** | [Code et documentation](https://github.com/Nikoju1977/handimonde) | [Page de test](https://github.com/Nikoju1977/handimonde/blob/main/test.html) | Exactitude et fraîcheur des données, revue d'accessibilité |
 
 **Lecture juste :** « présence d'un test » n'est pas « test passé », et « démo annoncée » n'est pas « disponibilité confirmée ». Les liens de démonstration ne doivent pas être utilisés comme preuve de fonctionnement sans essai.
+
+## Further engineering work / Autres compétences documentées
+
+| Domain | Project | Evidence and boundary |
+| --- | --- | --- |
+| Image restoration | [UltraVision](https://github.com/Nikoju1977/Niko-Ultravision) | ONNX inference, WebCodecs and explicit fidelity limits |
+| Business tooling | [AutoEntrepreneur 1M](https://github.com/Nikoju1977/AutoEntrepreneur-1M) | Addressable specialist profiles and deterministic reports, not independent LLMs |
+| Employment | [Niko Emploi](https://github.com/Nikoju1977/job-search) | Job API adapters, optional browser embeddings and conditional server automation |
+| Voice interaction | [Sage](https://github.com/Nikoju1977/Sage-companion) | Mistral orchestration and browser actions; no billing guarantee |
+| Live production | [Niko Live Commander](https://github.com/Nikoju1977/niko-commande-live-tik-tok) | Local show preparation, not live-platform control |
+
+Ces cinq références complètent les six études signature sans modifier la sélection éditoriale. Les README et licences ont été consultés, aucun nouveau test fonctionnel ni contrôle HTTP des démonstrations n'a été effectué.
 
 ## Principes transversaux
 
