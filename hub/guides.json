@@ -342,14 +342,14 @@
       "slug": "l-ultime-confrontation",
       "title": "l-ultime-confrontation",
       "category": "Jeux & Expériences",
-      "description": "Projet narratif interactif.",
+      "description": "Site promotionnel littéraire : couverture, animations et lien de paiement externe.",
       "steps": [
-        "Ouvrez le récit et sélectionnez le chapitre ou la section disponible.",
-        "Lisez le texte et activez éventuellement l'ambiance sonore.",
-        "Utilisez les commandes de lecture proposées pour poursuivre l'expérience."
+        "Consultez la présentation du roman et ses illustrations.",
+        "Vérifiez les informations commerciales avant toute commande.",
+        "La page ne contient pas le livre complet."
       ],
       "preparation": "Les commandes et les performances varient selon le téléphone et le navigateur.",
-      "caution": null,
+      "caution": "Ressource audio absente ; paiement externe non vérifié.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/l-ultime-confrontation",
       "launchUrl": "https://nikoju1977.github.io/l-ultime-confrontation/"
@@ -566,14 +566,14 @@
       "slug": "Nikoju1977",
       "title": "Nikoju1977",
       "category": "Studio & Portfolio",
-      "description": "Profil et documentation de l'écosystème Studio Niko.",
+      "description": "Profil et Hub : 53 références publiques classées ; registre et plan qualité.",
       "steps": [
         "Ouvrez le profil Studio Niko puis son catalogue de projets.",
         "Choisissez une application adaptée à votre usage.",
         "Consultez la documentation et les contraintes du dépôt avant installation."
       ],
       "preparation": "Ce dépôt sert de présentation et de documentation.",
-      "caution": null,
+      "caution": "Couverture documentaire, non validation fonctionnelle.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/Nikoju1977",
       "launchUrl": null
@@ -630,14 +630,13 @@
       "slug": "presentation-medtronic",
       "title": "presentation-medtronic",
       "category": "Business & Services",
-      "description": "Support de présentation technique.",
+      "description": "Maquette HTML/CSS incomplète, sans moteur de présentation ou médical.",
       "steps": [
-        "Ouvrez les documents de présentation présents dans le dépôt.",
-        "Vérifiez l'ordre des diapositives et les mentions de sources.",
-        "N'utilisez pas de données internes sans droits de diffusion."
+        "Consultez les sources HTML et le README.",
+        "La maquette doit être complétée avant utilisation."
       ],
       "preparation": "Vérifiez les données et les sources avant toute décision professionnelle.",
-      "caution": null,
+      "caution": "Aucun moteur médical ou présentation fonctionnelle établi.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/presentation-medtronic",
       "launchUrl": null
