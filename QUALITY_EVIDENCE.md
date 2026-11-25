@@ -74,3 +74,16 @@ Ces tests ciblés ne prouvent ni le fonctionnement complet de l'application ni l
 ## Points ouverts
 
 Wan2GP : [contrôle ciblé](https://github.com/Nikoju1977/AutoCoder-Studio-Niko/actions/runs/45518107709) de 12 rejets : 10 faux positifs BOM résolus par correction de l'auditeur, 2 rejets persistants (indentation Python et script Gradio), 2 fichiers >1 Mio. Le tableau garde les alertes initiales, sans réécrire l'historique. Les tests de navigation, les tests sur appareils physiques et les déploiements ne sont pas certifiés par cette campagne.
+
+## Publication des correctifs — instantané du 25 novembre 2026
+
+Quatre correctifs fusionnés et CI réussies après fusion. Les deux déploiements Pages sont confirmés par les journaux pour les commits exacts ; aucune validation HTTP de la révision ou sur appareils physiques.
+
+| Projet | Commit de fusion | CI | Publication |
+|---|---|---|---|
+| [the-lovestronautes-machine](https://github.com/Nikoju1977/the-lovestronautes-machine/pull/31) | [ca0a8e58](https://github.com/Nikoju1977/the-lovestronautes-machine/commit/ca0a8e589ca9b9e9dd1d06d31279df446fc63421) | [Réussie](https://github.com/Nikoju1977/the-lovestronautes-machine/actions/runs/45520549669) | [Pages réussie](https://github.com/Nikoju1977/the-lovestronautes-machine/actions/runs/45520549011) · [Incident du workflow personnalisé](https://github.com/Nikoju1977/the-lovestronautes-machine/actions/runs/45520549762) |
+| [job-search](https://github.com/Nikoju1977/job-search/pull/17) | [db7f3f4f](https://github.com/Nikoju1977/job-search/commit/db7f3f4fd0a6e3b6dc8d0e6e9e51575bc45c532d) | [Réussie](https://github.com/Nikoju1977/job-search/actions/runs/45520568481) | Non confirmée |
+| [medicalvisionproai](https://github.com/Nikoju1977/medicalvisionproai/pull/16) | [85942d85](https://github.com/Nikoju1977/medicalvisionproai/commit/85942d8518aae49efa60da692a4453130e8d3c04) | [Réussie](https://github.com/Nikoju1977/medicalvisionproai/actions/runs/45520582551) | [Pages réussie](https://github.com/Nikoju1977/medicalvisionproai/actions/runs/45520581607) |
+| [Nikoju1977](https://github.com/Nikoju1977/Nikoju1977/pull/6) | [693bcbe0](https://github.com/Nikoju1977/Nikoju1977/commit/693bcbe014ab1a85c15f345630f5f6631414f16f) | [Réussie](https://github.com/Nikoju1977/Nikoju1977/actions/runs/45518869495) | Non confirmée |
+
+Le workflow Pages natif de la machine musicale a réussi après l'échec du workflow personnalisé sur le même commit. L'artefact de ce dernier est apparu après l'erreur. Pas de changement de configuration Pages sans confirmation de la source de publication. Le quota Vercel empêche actuellement de nouvelles publications via API.

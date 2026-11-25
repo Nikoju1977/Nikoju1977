@@ -895,5 +895,47 @@
     "valid": 10,
     "rejected": 2,
     "oversized": 2
+  },
+  "releaseSnapshot": {
+    "date": "2026-11-25",
+    "scope": "merge commit and CI verified; Pages deployment logs only; physical devices and HTTP revision not checked",
+    "rows": [
+      {
+        "repo": "the-lovestronautes-machine",
+        "commit": "ca0a8e589ca9b9e9dd1d06d31279df446fc63421",
+        "pr": 31,
+        "ci": 45520549669,
+        "pages": 45520549011,
+        "url": "https://nikoju1977.github.io/the-lovestronautes-machine/",
+        "incident": 45520549762
+      },
+      {
+        "repo": "job-search",
+        "commit": "db7f3f4fd0a6e3b6dc8d0e6e9e51575bc45c532d",
+        "pr": 17,
+        "ci": 45520568481,
+        "pages": null,
+        "url": null,
+        "incident": null
+      },
+      {
+        "repo": "medicalvisionproai",
+        "commit": "85942d8518aae49efa60da692a4453130e8d3c04",
+        "pr": 16,
+        "ci": 45520582551,
+        "pages": 45520581607,
+        "url": "https://nikoju1977.github.io/medicalvisionproai/",
+        "incident": null
+      },
+      {
+        "repo": "Nikoju1977",
+        "commit": "693bcbe014ab1a85c15f345630f5f6631414f16f",
+        "pr": 6,
+        "ci": 45518869495,
+        "pages": null,
+        "url": null,
+        "incident": null
+      }
+    ]
   }
 }

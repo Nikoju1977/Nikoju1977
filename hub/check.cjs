@@ -90,3 +90,11 @@ console.log('PASS quality evidence references and counts');
 
 
 require('node:child_process').execFileSync(process.execPath,[path.join(dir,'workspace-regression.cjs')],{stdio:'inherit'});
+
+const releases=evidence.releaseSnapshot;
+assert.equal(releases.rows.length,4);
+assert.equal(new Set(releases.rows.map(r=>r.repo)).size,releases.rows.length);
+for(const r of releases.rows){assert(evidence.fixes.some(f=>f.repo===r.repo));assert(/^[a-f0-9]{40}$/.test(r.commit));assert(Number.isSafeInteger(r.ci)&&r.ci>0);assert(r.pages===null||Number.isSafeInteger(r.pages)&&r.pages>0);assert(r.incident===null||Number.isSafeInteger(r.incident)&&r.incident>0);if(r.url){assert.equal(new URL(r.url).origin,'https://nikoju1977.github.io');assert(r.pages!==null)}}
+const qualityHtml=fs.readFileSync(path.join(dir,'quality.html'),'utf8');
+for(const r of releases.rows){assert(qualityHtml.includes('/commit/'+r.commit));assert(qualityHtml.includes('/actions/runs/'+r.ci));if(r.pages)assert(qualityHtml.includes('/actions/runs/'+r.pages));if(r.incident)assert(qualityHtml.includes('/actions/runs/'+r.incident));}
+console.log('PASS release evidence references');
