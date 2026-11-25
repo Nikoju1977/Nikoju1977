@@ -6,7 +6,7 @@
 
 ## International overview
 
-Six signature case studies showcasing design and engineering trade-offs, not a production-readiness claim. The [45-project technical register](PROJECTS.md#registre-technique--45-dépôts-documentés) links current READMEs and licenses. [Historical quality evidence](QUALITY_EVIDENCE.md) records specific commits and runs, not validation of future revisions.
+Six signature case studies showcasing design and engineering trade-offs, not a production-readiness claim. The [48-project technical register](PROJECTS.md#registre-technique--48-dépôts-documentés) links current READMEs and licenses. [Historical quality evidence](QUALITY_EVIDENCE.md) records specific commits and runs, not validation of future revisions.
 
 ## 01 — Vision-IA · Construire un film sans confondre faits et propositions
 
@@ -138,6 +138,10 @@ Ces cinq références complètent les six études signature sans modifier la sé
 ## Symbolic and cultural experiences
 
 [Tarot](https://github.com/Nikoju1977/tarot-de-niko) implements cryptographic shuffle and an opt-in encrypted journal. [Œil d’Hermès](https://github.com/Nikoju1977/oeil-hermes), created by Lyssa Jung and Niko, combines a graph and approximate astronomical calculations. [Codex Akashique](https://github.com/Nikoju1977/les-annales-akashiques) uses local templates and optional remote interpretation; its journal and drafts are not established as encrypted. These are symbolic experiences, not predictive science. No new runtime tests are claimed.
+
+## Everyday creative applications
+
+[BOUH! Delivery](https://github.com/Nikoju1977/Bouh-delivery) implements a modular fictional driving game. [Aylina Is Cooking](https://github.com/Nikoju1977/aylina-is-cooking) includes an unqualified dose display requiring removal and privacy review. [Watch design studio](https://github.com/Nikoju1977/applewatchcadrans) composes SVG and exports PNG/SVG/HTML; sensor indicators are synthetic, not watchOS data. No new runtime validation.
 
 ## Principes transversaux
 
