@@ -118,3 +118,12 @@ assert(/^[0-9a-f]{40}$/.test(music.commit));assert(/^[0-9a-f]{40}$/.test(medical
 for(const run of [medical.run,music.ci,music.route,music.pages]){assert(Number.isSafeInteger(run)&&run>0);assert(qualityHtml.includes('/actions/runs/'+run));}
 assert(qualityHtml.includes(medical.publicSha256));assert(qualityHtml.includes('/commit/'+music.commit));
 console.log('PASS distribution evidence and limits');
+
+const http=evidence.staticHttpSnapshot;
+assert.equal(http.productionRuntimeVerified,false);
+assert.equal(http.rows.length,7);assert.equal(http.counts.match,7);assert.equal(http.counts.mismatch,0);assert.equal(http.counts.unavailable,0);
+assert.equal(new Set(http.rows.map(r=>r.repo+'/'+r.path)).size,7);
+assert.equal(http.rows.filter(r=>r.repo==='the-lovestronautes-machine').length,4);assert.equal(http.rows.filter(r=>r.repo==='oracle-du-jardinier').length,3);
+for(const r of http.rows){assert.equal(r.status,'match');assert.equal(r.sourceStatus,200);assert.equal(r.publicStatus,200);assert.equal(r.sourceSha256,r.publicSha256);assert(/^[0-9a-f]{64}$/.test(r.publicSha256));assert(/^[0-9a-f]{40}$/.test(r.commit));assert.equal(r.sourceBytes,r.publicBytes);assert(Number.isSafeInteger(r.sourceBytes)&&r.sourceBytes>0);assert(qualityHtml.includes(r.publicSha256));assert(qualityHtml.includes('/commit/'+r.commit));}
+assert(qualityHtml.includes('/actions/runs/'+http.run));
+console.log('PASS seven static HTTP file evidence records');

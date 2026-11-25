@@ -98,3 +98,17 @@ Wan2GP : [nouveau contrôle](https://github.com/Nikoju1977/AutoCoder-Studio-Niko
 
 - MedicalVisionPro : [comparaison HTTP](https://github.com/Nikoju1977/medicalvisionproai/actions/runs/45549109277) : 200, SHA-256 public `4fa10f6dfc5df7ff4e98f027edea5d5e7006215b166851bb3f41697b83457f54`, identique au build généré, différent de la source. Le build de comparaison utilise le commit de fusion temporaire de PR `3fccffffe1c9a80a4aafaf3924e8cb18c6f352e1`. Source Pages legacy/main/racine. Le workflow personnalisé est conservé ; aucune validation clinique ni certification de révision complète.
 - Machine musicale : [commit](https://github.com/Nikoju1977/the-lovestronautes-machine/commit/2bde151a1497d9f7869646fefd17e3f5fb1bde84), [CI](https://github.com/Nikoju1977/the-lovestronautes-machine/actions/runs/45548941741), [routage](https://github.com/Nikoju1977/the-lovestronautes-machine/actions/runs/45548941668), [publication](https://github.com/Nikoju1977/the-lovestronautes-machine/actions/runs/45548941093) : le workflow personnalisé est ignoré, la publication native est réussie. Les octets HTTP et les appareils physiques restent à vérifier.
+
+## Intégrité HTTP statique — 25 novembre 2026, 04:50 UTC
+
+[Exécution AutoCoder](https://github.com/Nikoju1977/AutoCoder-Studio-Niko/actions/runs/45549492811) : 7 fichiers identiques, 0 différents, 0 inaccessibles. Toutes les réponses sources et publiques sont HTTP 200. Comparaison d'octets uniquement, sans certification de parcours utilisateur ou de révision complète.
+
+| Projet | Fichier | Commit | SHA-256 |
+|---|---|---|---|
+| the-lovestronautes-machine | index.html | [2bde151a](https://github.com/Nikoju1977/the-lovestronautes-machine/commit/2bde151a1497d9f7869646fefd17e3f5fb1bde84) | `e8863d7c135550d99c8a450d4cdfa05db48d9a297744a85d079de6a889f47d58` |
+| the-lovestronautes-machine | sw.js | [2bde151a](https://github.com/Nikoju1977/the-lovestronautes-machine/commit/2bde151a1497d9f7869646fefd17e3f5fb1bde84) | `b3088b468680f590f660472ad886825425a50a83ef4ac62fd829d4a6b21d931d` |
+| the-lovestronautes-machine | composition-pro.js | [2bde151a](https://github.com/Nikoju1977/the-lovestronautes-machine/commit/2bde151a1497d9f7869646fefd17e3f5fb1bde84) | `50494e25dcc7c8a0995f658392c7cca54244c425e49554b1adfe8ef197b9e7c4` |
+| the-lovestronautes-machine | manifest.json | [2bde151a](https://github.com/Nikoju1977/the-lovestronautes-machine/commit/2bde151a1497d9f7869646fefd17e3f5fb1bde84) | `80d64d264d35f6e4110165222e70d7b0f450dce5127071ea4504eba3ae3f2701` |
+| oracle-du-jardinier | index.html | [b62442ec](https://github.com/Nikoju1977/oracle-du-jardinier/commit/b62442ec1a9bee5516a593cff0ddebcb22ab72b8) | `74930f948939991554fd70b2f65f921a60963f689b84dcddecd0bd555914880e` |
+| oracle-du-jardinier | sw.js | [b62442ec](https://github.com/Nikoju1977/oracle-du-jardinier/commit/b62442ec1a9bee5516a593cff0ddebcb22ab72b8) | `de3b911b8eadcb6036305e021f3235eba454ae4f7f02aa88e26cb875a54fb794` |
+| oracle-du-jardinier | manifest.webmanifest | [b62442ec](https://github.com/Nikoju1977/oracle-du-jardinier/commit/b62442ec1a9bee5516a593cff0ddebcb22ab72b8) | `d2f2273afedbe020b83798bbd8f88c0f49f104da4bd76e815b6e884de99e0b96` |
