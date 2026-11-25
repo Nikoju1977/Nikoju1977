@@ -32,11 +32,11 @@ Independent creative technologist in France — filmmaking, interactive art, rea
 | Industrial quality & metrology | [Metrology-OS](https://github.com/Nikoju1977/Metrology-OS) · [MECARIA](https://github.com/Nikoju1977/cockpit-mecaria) |
 | Interactive art & imaging research | [Neural Art](https://github.com/Nikoju1977/Neural-Art-mars-2026) · [MedVision](https://github.com/Nikoju1977/medicalvisionproai) |
 
-**26 public technical READMEs / 26 README techniques publics** — [registre technique et licences](PROJECTS.md#registre-technique--26-dépôts-documentés). Inventaire relu le 25 novembre 2026 : 58 dépôts, 53 publics, cinq privés non détaillés. Les 39 références historiques et six signatures restent une sélection éditoriale distincte.
+**31 public technical READMEs / 31 README techniques publics** — [registre technique et licences](PROJECTS.md#registre-technique--31-dépôts-documentés). Inventaire relu le 25 novembre 2026 : 58 dépôts, 53 publics, cinq privés non détaillés. Les 39 références historiques et six signatures restent une sélection éditoriale distincte.
 
 [Studio Niko Hub](https://studio-niko-hub.vercel.app/) (adresse annoncée, disponibilité non confirmée ici) · [Sources du Hub](hub/README.md) · [Preuves datées](QUALITY_EVIDENCE.md).
 
-**Engineering scope:** 26 public project READMEs and license files checked on GitHub; architecture diagrams and English summaries present. This is documentation evidence, separate from dated CI, deployment or runtime evidence. The catalogue is an inventory, not a certification.
+**Engineering scope:** 31 public project READMEs and license references checked on GitHub; architecture diagrams and English summaries present. Two projects declare MIT in package.json without an identified standalone root license. One separate upstream fork guide is also documented. This is documentation evidence, separate from dated CI, deployment or runtime evidence. The catalogue is an inventory, not a certification.
 
 **Collaboration:** reproducible feedback is welcome. Each project's actual license applies. Not all repositories are open source. Medical and industrial prototypes are not certified; no production readiness is implied.
 
@@ -114,7 +114,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 | [Neural-Art-mars-2026](https://github.com/Nikoju1977/Neural-Art-mars-2026) | Expérimentation d'art génératif |
 | [galerie-studio-niko](https://github.com/Nikoju1977/galerie-studio-niko) | Galerie d'art immersive 3D |
 | [applewatchcadrans](https://github.com/Nikoju1977/applewatchcadrans) | Concepts graphiques de cadrans |
-| [Wan2GP](https://github.com/Nikoju1977/Wan2GP) | Outil de génération multimodale fondé sur WanGP ; voir crédits et licence du projet d'origine |
+| [Wan2GP](https://github.com/Nikoju1977/Wan2GP) | Fork WanGP de DeepBeepMeep ; licence communautaire avec restrictions commerciales |
 
 </details>
 
