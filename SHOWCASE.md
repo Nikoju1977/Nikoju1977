@@ -158,3 +158,12 @@ Ces cinq références complètent les six études signature sans modifier la sé
 **Rendre le travail exploratoire.** Les liens renvoient à des dépôts consultables. Les adresses de démonstration proviennent des README de projets et leur disponibilité n'a pas été confirmée lors de cette mise à jour.
 
 [Retour à la vitrine](README.md) · [Voir la feuille de route de fiabilité](QUALITY_ROADMAP.md)
+
+
+## Correction P0 — lot 1 (25 novembre 2026)
+
+- [agent-biometrique](https://github.com/Nikoju1977/agent-biometrique/commit/7d94d7666ac1ec8c98f4256d689639c49996688e) : Aperçu caméra facultatif, scores et alertes fictifs retirés du code. Aucune mesure biométrique ; cycle caméra à qualifier.
+- [SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL/commit/416dce75f69b5d93d1bd49836a6e9f0c1844de4b) : Repères faciaux expérimentaux et EAR ; pouls et fatigue retirés. Aucun usage médical ; modèle, permissions et suivi à qualifier.
+- [aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking/commit/c25e48bdf50a7f6b8eb6e9f7879b363a3d80e3e0) : Calcul alimentaire par portion et favoris locaux ; dose retirée, IA suspendue. Aucun calcul de traitement ; favoris non chiffrés, ancien profil effaçable volontairement.
+
+Sources relues après publication, empreintes SHA vérifiées ; aucun nouveau test d'exécution ou déploiement vérifié. Les constats antérieurs sont historiques, non des preuves de l'état actuel. Le chef distant est suspendu par précaution ; pas de suppression automatique des anciennes données locales.
