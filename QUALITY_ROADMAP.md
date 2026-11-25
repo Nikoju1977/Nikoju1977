@@ -232,3 +232,8 @@ Les cinq workflows de correction du lot précédent sont terminés avec succès 
 
 
 **DAPHNÉE OMNI — résultat confirmé :** [run 45705640274](https://github.com/Nikoju1977/compagnon-diabete/actions/runs/45705640274) terminé avec succès ; job 139526782356, journal du 25 novembre 2026 à 21:35:10 UTC : DAPHNEE CHROMIUM PASS. Unités, édition/filtrage/suppression, notes échappées, véritable export chiffré, rejet mots de passe et altérations, annulation/restauration, volatilité après rechargement, effacement ciblé, viewport mobile simulé, absence de POST. Tests sur données fictives, sans validation clinique ni appareil physique. L'avertissement de fermeture dépend du navigateur et n'est pas une garantie de sauvegarde.
+
+
+## Metrology-OS — qualification numérique (25 novembre 2026)
+
+[Correctif](https://github.com/Nikoju1977/Metrology-OS/commit/c2a25d0f5a841868c1fa7eab1173fb45db11d6ec) : différence décimale exacte avant conversion, refus des sous-dépassements non nuls et résultats non représentables, RSS cumulée avec plafond 10 000 composantes. Source relue et SHA vérifié. [Test](https://github.com/Nikoju1977/Metrology-OS/commit/05d5b0cb53f62f02969105c4230a6b58882f7fb6) des fonctions réelles extraites du HTML : 6 561 combinaisons de décision comparées à un oracle entier indépendant, cas frontières et incertitudes RSS. [CI](https://github.com/Nikoju1977/Metrology-OS/actions/runs/45705919795) en cours au premier contrôle. Pas de qualification de l'interface, d'instruments physiques, de corrélations, de certificats, ni d'accréditation. Licence inchangée.
