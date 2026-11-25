@@ -6,7 +6,7 @@
 
 ## International overview
 
-Six signature case studies showcasing design and engineering trade-offs, not a production-readiness claim. The [42-project technical register](PROJECTS.md#registre-technique--42-dépôts-documentés) links current READMEs and licenses. [Historical quality evidence](QUALITY_EVIDENCE.md) records specific commits and runs, not validation of future revisions.
+Six signature case studies showcasing design and engineering trade-offs, not a production-readiness claim. The [45-project technical register](PROJECTS.md#registre-technique--45-dépôts-documentés) links current READMEs and licenses. [Historical quality evidence](QUALITY_EVIDENCE.md) records specific commits and runs, not validation of future revisions.
 
 ## 01 — Vision-IA · Construire un film sans confondre faits et propositions
 
@@ -134,6 +134,10 @@ Ces cinq références complètent les six études signature sans modifier la sé
 ## Sound synthesis and interactive games
 
 [Cyber-Fest-Noz](https://github.com/Nikoju1977/EBM-BRETONNE.) implements custom-partial reed synthesis, harmonic drone and a six-channel groovebox. [Miaotris](https://github.com/Nikoju1977/miaotris) implements matrix-based falling-block rules, while [Cosmo Citrouille](https://github.com/Nikoju1977/Cosmo-citrouille) generates 140 level configurations with 14 bosses and a simulation-time goal. No new audio, game or native-device tests are claimed.
+
+## Symbolic and cultural experiences
+
+[Tarot](https://github.com/Nikoju1977/tarot-de-niko) implements cryptographic shuffle and an opt-in encrypted journal. [Œil d’Hermès](https://github.com/Nikoju1977/oeil-hermes), created by Lyssa Jung and Niko, combines a graph and approximate astronomical calculations. [Codex Akashique](https://github.com/Nikoju1977/les-annales-akashiques) uses local templates and optional remote interpretation; its journal and drafts are not established as encrypted. These are symbolic experiences, not predictive science. No new runtime tests are claimed.
 
 ## Principes transversaux
 
