@@ -88,7 +88,7 @@ Inventaire GitHub relu : 58 dépôts, 53 publics (profil inclus) et cinq privés
 | [oracle-du-jardinier](https://github.com/Nikoju1977/oracle-du-jardinier) | Assistant de jardinage : consulter la météo, explorer des plantes locales, préparer des conseils de culture et tester une analyse photo optionnelle avec IA. Les calendriers biodynamiques sont des pratiques interprétatives. | Prototype jardin |
 | [tarot-de-niko](https://github.com/Nikoju1977/tarot-de-niko) | Tarot numérique de réflexion symbolique : réaliser des tirages parmi 78 cartes, interpréter localement les associations et tenir un journal chiffré, avec commentaire IA facultatif. | Expérience symbolique |
 | [oeil-hermes](https://github.com/Nikoju1977/oeil-hermes) | Grimoire de correspondances alchimiques, astrologiques et symboliques : naviguer entre des notions, afficher un graphe et effectuer des calculs astronomiques et numérologiques. | Expérience symbolique |
-| [les-annales-akashiques](https://github.com/Nikoju1977/les-annales-akashiques) | Expérience numérique d'exploration spirituelle : numérologie, repères astrologiques et journal personnel avec sauvegarde locale. Les interprétations ne sont pas des prédictions scientifiques. | Expérience symbolique |
+| [les-annales-akashiques](https://github.com/Nikoju1977/les-annales-akashiques) | Expérience numérique d'exploration spirituelle : numérologie, repères astrologiques et journal personnel local non chiffré ; ne pas saisir de données intimes. Les interprétations ne sont pas des prédictions scientifiques. | Expérience symbolique |
 
 ### 9. Cybersécurité & qualité logicielle
 
@@ -119,9 +119,9 @@ Les interfaces liées à la santé ne sont **ni des dispositifs médicaux certif
 **[Revenir au profil Studio Niko Design](README.md)**
 
 
-## Registre technique — 42 dépôts documentés
+## Registre technique — 45 dépôts documentés
 
-README et références de licence relus le 25 novembre 2026. Les 42 README sont accessibles sur main et contiennent un diagramme Mermaid et un résumé anglais, vérifiés par lecture. Deux projets déclarent MIT dans package.json sans fichier de licence autonome identifié à la racine. Les mises à jour documentaires ne sont pas des tests. Les liens main sont mobiles. Aucune validation de production n'est inférée. Les licences tierces prévalent pour les composants concernés.
+README et références de licence relus le 25 novembre 2026. Les 45 README sont accessibles sur main et contiennent un diagramme Mermaid et un résumé anglais, vérifiés par lecture. Deux projets déclarent MIT dans package.json sans fichier de licence autonome identifié à la racine. Les mises à jour documentaires ne sont pas des tests. Les liens main sont mobiles. Aucune validation de production n'est inférée. Les licences tierces prévalent pour les composants concernés.
 
 | Projet / project | Périmètre | Licence |
 | --- | --- | --- |
@@ -174,7 +174,11 @@ README et références de licence relus le 25 novembre 2026. Les 42 README sont 
 | **[miaotris](https://github.com/Nikoju1977/miaotris/blob/main/README.md)** | Jeu / Canvas 2D, matrice 10 × 20, collisions et score · [commit documentaire](https://github.com/Nikoju1977/miaotris/commit/450756ea68915bec75933676da09ce2e45431c26) | [Droits réservés](https://github.com/Nikoju1977/miaotris/blob/main/LICENSE.md) |
 | **[Cosmo-citrouille](https://github.com/Nikoju1977/Cosmo-citrouille/blob/main/README.md)** | Jeu / 140 configurations, 14 boss, Canvas et projet Capacitor · [commit documentaire](https://github.com/Nikoju1977/Cosmo-citrouille/commit/60b6744321a40a92f940ff84fc8d27fd344c6d) | [Droits réservés](https://github.com/Nikoju1977/Cosmo-citrouille/blob/main/LICENSE.md) |
 
-### Documentation de projet tiers (hors des 42 README)
+| **[tarot-de-niko](https://github.com/Nikoju1977/tarot-de-niko/blob/main/README.md)** | Symbolique / Fisher–Yates, aléa Web Crypto, journal AES-GCM · [commit documentaire](https://github.com/Nikoju1977/tarot-de-niko/commit/3bc06676f03cb716948676a11d4cbfea5d28c53e) | [MIT](https://github.com/Nikoju1977/tarot-de-niko/blob/main/LICENSE) |
+| **[oeil-hermes](https://github.com/Nikoju1977/oeil-hermes/blob/main/README.md)** | Graphe de correspondances, calculs astronomiques approximatifs, clés chiffrées · [commit documentaire](https://github.com/Nikoju1977/oeil-hermes/commit/9326b98afd9373e686191a85648c200b8dd3c20d) | [Droits réservés](https://github.com/Nikoju1977/oeil-hermes/blob/main/LICENSE.md) |
+| **[les-annales-akashiques](https://github.com/Nikoju1977/les-annales-akashiques/blob/main/README.md)** | Narration symbolique / règles locales, IA optionnelle, journal non chiffré · [commit documentaire](https://github.com/Nikoju1977/les-annales-akashiques/commit/54ca5a79051e02c0c05ddec38e262dc4e3bb93cc) | [Droits réservés](https://github.com/Nikoju1977/les-annales-akashiques/blob/main/LICENSE.md) |
+
+### Documentation de projet tiers (hors des 45 README)
 
 [Wan2GP — guide du fork](https://github.com/Nikoju1977/Wan2GP/blob/main/GUIDE_UTILISATEUR.md) · [commit documentaire](https://github.com/Nikoju1977/Wan2GP/commit/9d53d8d1637a10a5484757c5e880b7be9a6a4b42) · [WanGP Community License 2.0](https://github.com/Nikoju1977/Wan2GP/blob/main/LICENSE.txt). Fork de DeepBeepMeep/WanGP, non revendiqué comme création originale ; restrictions commerciales et licences des modèles à respecter. README amont préservé.
 
