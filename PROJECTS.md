@@ -119,9 +119,9 @@ Les interfaces liées à la santé ne sont **ni des dispositifs médicaux certif
 **[Revenir au profil Studio Niko Design](README.md)**
 
 
-## Registre technique — 21 dépôts documentés
+## Registre technique — 26 dépôts documentés
 
-README sur main et fichiers de licence relus le 25 novembre 2026. Les 21 README conservent diagramme Mermaid, résumé anglais et feuille de route ; certains ont évolué depuis les commits initiaux. Les liens main sont mobiles. Aucune validation de production n'est inférée. Les licences tierces prévalent pour les composants concernés.
+README sur main et fichiers de licence relus le 25 novembre 2026. Les 26 README et leurs fichiers de licence sont accessibles sur main ; chacun contient un diagramme Mermaid et un résumé anglais, vérifiés par lecture. Les mises à jour documentaires ne sont pas des tests. Les liens main sont mobiles. Aucune validation de production n'est inférée. Les licences tierces prévalent pour les composants concernés.
 
 | Projet / project | Périmètre | Licence |
 | --- | --- | --- |
@@ -146,5 +146,11 @@ README sur main et fichiers de licence relus le 25 novembre 2026. Les 21 README 
 | **[ia-studio-cine](https://github.com/Nikoju1977/ia-studio-cine/blob/main/README.md)** | Cinéma / connecteurs LTX-Agnes, montage, MediaRecorder | [Droits réservés](https://github.com/Nikoju1977/ia-studio-cine/blob/main/LICENSE.md) |
 | **[N8V](https://github.com/Nikoju1977/N8V/blob/main/README.md)** | Audio / NIKO ANALOG 37, PCM WAV, pas un codec vidéo | [Droits réservés](https://github.com/Nikoju1977/N8V/blob/main/LICENSE.md) |
 | **[Vision-IA](https://github.com/Nikoju1977/Vision-IA/blob/main/README.md)** | Cinéma / dépouillement reprenable, conducteur local | [Droits réservés](https://github.com/Nikoju1977/Vision-IA/blob/main/LICENSE.md) |
+
+| **[Niko-Ultravision](https://github.com/Nikoju1977/Niko-Ultravision/blob/main/README.md)** | Image / ONNX local, WebGPU/WASM, WebCodecs et mesures SSIM/PSNR · [commit documentaire](https://github.com/Nikoju1977/Niko-Ultravision/commit/26288b30fd44fadf1305c22375ce0e38e5c405b8) | [Droits réservés](https://github.com/Nikoju1977/Niko-Ultravision/blob/main/LICENSE.md) |
+| **[AutoEntrepreneur-1M](https://github.com/Nikoju1977/AutoEntrepreneur-1M/blob/main/README.md)** | Business / catalogue combinatoire, rapports déterministes, pas de LLM · [commit documentaire](https://github.com/Nikoju1977/AutoEntrepreneur-1M/commit/6bb4c41e3776e2bfcdd311f12956808a572e5c48) | [Droits réservés](https://github.com/Nikoju1977/AutoEntrepreneur-1M/blob/main/LICENSE.md) |
+| **[job-search](https://github.com/Nikoju1977/job-search/blob/main/README.md)** | Emploi / six connecteurs, MiniLM local optionnel, veille serveur conditionnelle · [commit documentaire](https://github.com/Nikoju1977/job-search/commit/0aea2603ed4f01f479a79bcf43ade423ce5bb58e) | [Droits réservés](https://github.com/Nikoju1977/job-search/blob/main/LICENSE.md) |
+| **[Sage-companion](https://github.com/Nikoju1977/Sage-companion/blob/main/README.md)** | Assistant vocal / Mistral, mémoire locale, actions confirmées, coûts non garantis · [commit documentaire](https://github.com/Nikoju1977/Sage-companion/commit/5af2d2d12d2956934120947ec2e5d557484817a9) | [Droits réservés](https://github.com/Nikoju1977/Sage-companion/blob/main/LICENSE.md) |
+| **[niko-commande-live-tik-tok](https://github.com/Nikoju1977/niko-commande-live-tik-tok/blob/main/README.md)** | Live / conducteur et sauvegarde locale, sans commande TikTok ou OBS · [commit documentaire](https://github.com/Nikoju1977/niko-commande-live-tik-tok/commit/04a1655f04bebf3a8fe1542577ad5152aebc13f4) | [Droits réservés](https://github.com/Nikoju1977/niko-commande-live-tik-tok/blob/main/LICENSE.md) |
 
 [Preuves historiques](QUALITY_EVIDENCE.md). Les prototypes médicaux ne doivent pas servir à des décisions thérapeutiques. Les retours reproductibles respectent les licences individuelles.
