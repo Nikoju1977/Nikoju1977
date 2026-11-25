@@ -4,7 +4,7 @@ Portail public de **Studio Niko Design** — catalogue des dépôts publics, rec
 
 ## Portfolio technique — 25 novembre 2026
 
-[31 README publics documentés et références de licence](../PROJECTS.md#registre-technique--31-dépôts-documentés) ; 53 entrées publiques vérifiées par inventaire. Les descriptions de N8V (NIKO ANALOG 37, non codec), META-STUDIO V6 et des prototypes biomédicaux sont actualisées. Les états HTTP historiques restent datés ; aucun nouveau test fonctionnel ni redéploiement n'est revendiqué.
+[33 README publics documentés et références de licence](../PROJECTS.md#registre-technique--33-dépôts-documentés) ; 53 entrées publiques vérifiées par inventaire. Les descriptions de N8V (NIKO ANALOG 37, non codec), META-STUDIO V6 et des prototypes biomédicaux sont actualisées. Les états HTTP historiques restent datés ; aucun nouveau test fonctionnel ni redéploiement n'est revendiqué.
 
 ## Pilotage Studio Niko Core
 
@@ -24,13 +24,17 @@ La dernière vague renforce la récupération locale de projets AutoCoder et cor
 
 ## Actualisation documentaire du catalogue — 25 novembre 2026
 
-Les 31 références du registre technique sont distinctes des 53 entrées de l'inventaire public et des six projets signature. Les fiches de UltraVision, AutoEntrepreneur 1M, Niko Emploi, Sage et Niko Live Commander précisent les frontières d'exécution constatées dans les sources. Les champs de statut HTTP et de déploiement restent historiques et inchangés. Aucun nouveau test, contrôle HTTP ou redéploiement n'est attesté ici.
+Les 33 références du registre technique sont distinctes des 53 entrées de l'inventaire public et des six projets signature. Les fiches de UltraVision, AutoEntrepreneur 1M, Niko Emploi, Sage et Niko Live Commander précisent les frontières d'exécution constatées dans les sources. Les champs de statut HTTP et de déploiement restent historiques et inchangés. Aucun nouveau test, contrôle HTTP ou redéploiement n'est attesté ici.
 
-[Registre public des README et licences](../PROJECTS.md#registre-technique--31-dépôts-documentés).
+[Registre public des README et licences](../PROJECTS.md#registre-technique--33-dépôts-documentés).
 
 ## Complément documentaire
 
-31 README publics et un guide de fork distinct ; deux déclarations MIT dans package.json sans fichier autonome identifié. Les fiches de cybersécurité, géospatial, commerce, accessibilité et galerie 3D ont été revues. Aucun nouveau contrôle HTTP, essai matériel ou déploiement n'est attesté. Les preuves historiques restent inchangées.
+33 README publics et un guide de fork distinct ; deux déclarations MIT dans package.json sans fichier autonome identifié. Les fiches de cybersécurité, géospatial, commerce, accessibilité et galerie 3D ont été revues. Aucun nouveau contrôle HTTP, essai matériel ou déploiement n'est attesté. Les preuves historiques restent inchangées.
+
+## Correction de périmètre — traitement du signal et biométrie
+
+DBMètre : RMS/FFT, moyenne arithmétique des dB distincte du Leq. Agent biométrique : scores et alertes simulés, sans mesure issue de la caméra ; correction applicative prioritaire. MedVision public : MPR et projections min/max, non qualifiées cliniquement. Le catalogue et les notices ont été corrigés ; cache versionné renouvelé dans le code, déploiement non vérifié.
 
 ## Principe
 
