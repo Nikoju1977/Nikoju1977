@@ -6,7 +6,7 @@
 
 ## International overview
 
-Six signature case studies showcasing design and engineering trade-offs, not a production-readiness claim. The [26-project technical register](PROJECTS.md#registre-technique--26-dépôts-documentés) links current READMEs and licenses. [Historical quality evidence](QUALITY_EVIDENCE.md) records specific commits and runs, not validation of future revisions.
+Six signature case studies showcasing design and engineering trade-offs, not a production-readiness claim. The [31-project technical register](PROJECTS.md#registre-technique--31-dépôts-documentés) links current READMEs and licenses. [Historical quality evidence](QUALITY_EVIDENCE.md) records specific commits and runs, not validation of future revisions.
 
 ## 01 — Vision-IA · Construire un film sans confondre faits et propositions
 
@@ -32,7 +32,7 @@ Six signature case studies showcasing design and engineering trade-offs, not a p
 
 **À examiner dans le code.** `src/galerie.html`, `tools/build.sh`, `tools/verify.mjs`, `supabase/schema.sql`.
 
-**Limites.** Les médias volumineux ne font pas tous partie de la publication distante ; les accès d'édition reposent sur le serveur et son contrôle d'autorisation.
+**Limites.** Les médias volumineux ne font pas tous partie de la publication distante. Les écritures d'enregistrements et les téléversements relèvent de contrôles distincts ; le schéma de stockage fourni nécessite une revue d'autorisation.
 
 ## 03 — NikoAssist · Orchestrer des agents sans leur donner carte blanche
 
@@ -114,6 +114,10 @@ Les six projets ont des finalités différentes. Les liens ci-dessous permettent
 | Live production | [Niko Live Commander](https://github.com/Nikoju1977/niko-commande-live-tik-tok) | Local show preparation, not live-platform control |
 
 Ces cinq références complètent les six études signature sans modifier la sélection éditoriale. Les README et licences ont été consultés, aucun nouveau test fonctionnel ni contrôle HTTP des démonstrations n'a été effectué.
+
+## Additional engineering references
+
+[AEGIS White-hat](https://github.com/Nikoju1977/White-hat) — defensive review and statistical anomaly detection; [AEGIS Earth](https://github.com/Nikoju1977/aegis-earth-mobile) — geospatial exploration; [Morgane](https://github.com/Nikoju1977/Boutique-morgane) — storefront and conditional administration without established payment processing. [WanGP fork guide](https://github.com/Nikoju1977/Wan2GP/blob/main/GUIDE_UTILISATEUR.md) documents upstream technology separately, preserving attribution.
 
 ## Principes transversaux
 
