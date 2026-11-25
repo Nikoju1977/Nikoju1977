@@ -6,7 +6,7 @@
 
 ## International overview
 
-Six signature case studies showcasing design and engineering trade-offs, not a production-readiness claim. The [48-project technical register](PROJECTS.md#registre-technique--48-dépôts-documentés) links current READMEs and licenses. [Historical quality evidence](QUALITY_EVIDENCE.md) records specific commits and runs, not validation of future revisions.
+Six signature case studies showcasing design and engineering trade-offs, not a production-readiness claim. The [50-project technical register](PROJECTS.md#registre-technique--50-dépôts-documentés) links current READMEs and licenses. [Historical quality evidence](QUALITY_EVIDENCE.md) records specific commits and runs, not validation of future revisions.
 
 ## 01 — Vision-IA · Construire un film sans confondre faits et propositions
 
@@ -142,6 +142,10 @@ Ces cinq références complètent les six études signature sans modifier la sé
 ## Everyday creative applications
 
 [BOUH! Delivery](https://github.com/Nikoju1977/Bouh-delivery) implements a modular fictional driving game. [Aylina Is Cooking](https://github.com/Nikoju1977/aylina-is-cooking) includes an unqualified dose display requiring removal and privacy review. [Watch design studio](https://github.com/Nikoju1977/applewatchcadrans) composes SVG and exports PNG/SVG/HTML; sensor indicators are synthetic, not watchOS data. No new runtime validation.
+
+## Final inventory / Inventaire final
+
+[53 public references classified](PROJECTS.md#registre-technique--50-dépôts-documentés): 50 project READMEs, the profile and Hub, one upstream fork guide, and one empty repository. [L'Ultime Confrontation](https://github.com/Nikoju1977/l-ultime-confrontation) is a literary promotion site; [presentation-medtronic](https://github.com/Nikoju1977/presentation-medtronic) is an incomplete HTML/CSS draft. The empty repository is not an executable application. See [current quality priorities](QUALITY_ROADMAP.md); documentation coverage is not runtime validation.
 
 ## Principes transversaux
 
