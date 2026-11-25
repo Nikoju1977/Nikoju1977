@@ -133,3 +133,12 @@ Inventaire actuel : 58 dépôts, 53 publics et cinq privés non détaillés. Les
 | P2 | L'Ultime Confrontation, présentation-medtronic | Ressource audio manquante ; maquette HTML incomplète à reconstruire avec sources autorisées. |
 
 Critère de clôture : commit de correction identifié, reproduction sur données fictives ou environnement autorisé, résultat de test daté et vérification distincte de production. Aucun score global de qualité ni certification déduit. Ne pas modifier le registre historique de preuves, ne pas publier les dépôts privés. Aucun coût additionnel autorisé.
+
+
+## Correction P0 — lot 1 (25 novembre 2026)
+
+- [agent-biometrique](https://github.com/Nikoju1977/agent-biometrique/commit/7d94d7666ac1ec8c98f4256d689639c49996688e) : Aperçu caméra facultatif, scores et alertes fictifs retirés du code. Aucune mesure biométrique ; cycle caméra à qualifier.
+- [SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL/commit/416dce75f69b5d93d1bd49836a6e9f0c1844de4b) : Repères faciaux expérimentaux et EAR ; pouls et fatigue retirés. Aucun usage médical ; modèle, permissions et suivi à qualifier.
+- [aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking/commit/c25e48bdf50a7f6b8eb6e9f7879b363a3d80e3e0) : Calcul alimentaire par portion et favoris locaux ; dose retirée, IA suspendue. Aucun calcul de traitement ; favoris non chiffrés, ancien profil effaçable volontairement.
+
+Sources relues après publication, empreintes SHA vérifiées ; aucun nouveau test d'exécution ou déploiement vérifié. Les constats antérieurs sont historiques, non des preuves de l'état actuel. Le chef distant est suspendu par précaution ; pas de suppression automatique des anciennes données locales.
