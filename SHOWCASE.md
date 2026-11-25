@@ -6,7 +6,7 @@
 
 ## International overview
 
-Six signature case studies showcasing design and engineering trade-offs, not a production-readiness claim. The [31-project technical register](PROJECTS.md#registre-technique--31-dépôts-documentés) links current READMEs and licenses. [Historical quality evidence](QUALITY_EVIDENCE.md) records specific commits and runs, not validation of future revisions.
+Six signature case studies showcasing design and engineering trade-offs, not a production-readiness claim. The [33-project technical register](PROJECTS.md#registre-technique--33-dépôts-documentés) links current READMEs and licenses. [Historical quality evidence](QUALITY_EVIDENCE.md) records specific commits and runs, not validation of future revisions.
 
 ## 01 — Vision-IA · Construire un film sans confondre faits et propositions
 
@@ -54,7 +54,7 @@ Six signature case studies showcasing design and engineering trade-offs, not a p
 
 **Problème.** Consulter et comparer des images, annoter des régions et expérimenter une assistance visuelle tout en expliquant précisément le traitement des données.
 
-**Réponse technique documentée.** Import JPEG/PNG et séries DICOM monochromes non compressées, reconstruction multi-planaire, réglages Window/Level, dossiers locaux chiffrés, export et tests sur données synthétiques.
+**Réponse technique documentée.** Import JPEG/PNG et séries DICOM monochromes non compressées, reconstruction multi-planaire, projections MIP/MinIP, réglages Window/Level, dossiers locaux chiffrés, export et tests sur données synthétiques.
 
 **À examiner dans le code.** `imaging-pro.js`, `test/`, `VALIDATION.md`, `package.json`.
 
@@ -118,6 +118,10 @@ Ces cinq références complètent les six études signature sans modifier la sé
 ## Additional engineering references
 
 [AEGIS White-hat](https://github.com/Nikoju1977/White-hat) — defensive review and statistical anomaly detection; [AEGIS Earth](https://github.com/Nikoju1977/aegis-earth-mobile) — geospatial exploration; [Morgane](https://github.com/Nikoju1977/Boutique-morgane) — storefront and conditional administration without established payment processing. [WanGP fork guide](https://github.com/Nikoju1977/Wan2GP/blob/main/GUIDE_UTILISATEUR.md) documents upstream technology separately, preserving attribution.
+
+## Signal processing and synthetic demonstration
+
+[DBMètre Pro](https://github.com/Nikoju1977/Dbmetre-pro) implements digital RMS and FFT analysis; no certified SPL measurement. [Agent biométrique](https://github.com/Nikoju1977/agent-biometrique) is a synthetic interface demonstration, not image-based biometric measurement. Its clinical-looking outputs require correction. The public [MedVision README](https://github.com/Nikoju1977/medicalvisionproai/blob/main/README.md) documents actual DICOM geometry and slab projection limitations. No new execution test is claimed.
 
 ## Principes transversaux
 
