@@ -119,9 +119,9 @@ Les interfaces liées à la santé ne sont **ni des dispositifs médicaux certif
 **[Revenir au profil Studio Niko Design](README.md)**
 
 
-## Registre technique — 39 dépôts documentés
+## Registre technique — 42 dépôts documentés
 
-README et références de licence relus le 25 novembre 2026. Les 39 README sont accessibles sur main et contiennent un diagramme Mermaid et un résumé anglais, vérifiés par lecture. Deux projets déclarent MIT dans package.json sans fichier de licence autonome identifié à la racine. Les mises à jour documentaires ne sont pas des tests. Les liens main sont mobiles. Aucune validation de production n'est inférée. Les licences tierces prévalent pour les composants concernés.
+README et références de licence relus le 25 novembre 2026. Les 42 README sont accessibles sur main et contiennent un diagramme Mermaid et un résumé anglais, vérifiés par lecture. Deux projets déclarent MIT dans package.json sans fichier de licence autonome identifié à la racine. Les mises à jour documentaires ne sont pas des tests. Les liens main sont mobiles. Aucune validation de production n'est inférée. Les licences tierces prévalent pour les composants concernés.
 
 | Projet / project | Périmètre | Licence |
 | --- | --- | --- |
@@ -170,7 +170,11 @@ README et références de licence relus le 25 novembre 2026. Les 39 README sont 
 | **[le-jardin-de-niko](https://github.com/Nikoju1977/le-jardin-de-niko/blob/main/README.md)** | Variante / IndexedDB, météo, repli fournisseurs IA, sol déclaré · [commit documentaire](https://github.com/Nikoju1977/le-jardin-de-niko/commit/811f385c8b1555c02bb081728e5d1967bc17f0f6) | [MIT](https://github.com/Nikoju1977/le-jardin-de-niko/blob/main/LICENSE) |
 | **[radar-de-niko](https://github.com/Nikoju1977/radar-de-niko/blob/main/README.md)** | Veille / Node.js, graphe de collecte, Jaccard, sorties RSS et JSONL · [commit documentaire](https://github.com/Nikoju1977/radar-de-niko/commit/8c6d895a03c972022be5c13e85379ea9e01b859d) | [Droits réservés](https://github.com/Nikoju1977/radar-de-niko/blob/main/LICENSE.md) |
 
-### Documentation de projet tiers (hors des 39 README)
+| **[EBM-BRETONNE.](https://github.com/Nikoju1977/EBM-BRETONNE./blob/main/README.md)** | Audio / Tone.js, synthèse d'anche et bourdon, séquenceur 4 × 16 · [commit documentaire](https://github.com/Nikoju1977/EBM-BRETONNE./commit/97dd47753c1b7767588203946fd96783ffdc9d22) | [Droits réservés](https://github.com/Nikoju1977/EBM-BRETONNE./blob/main/LICENSE.md) |
+| **[miaotris](https://github.com/Nikoju1977/miaotris/blob/main/README.md)** | Jeu / Canvas 2D, matrice 10 × 20, collisions et score · [commit documentaire](https://github.com/Nikoju1977/miaotris/commit/450756ea68915bec75933676da09ce2e45431c26) | [Droits réservés](https://github.com/Nikoju1977/miaotris/blob/main/LICENSE.md) |
+| **[Cosmo-citrouille](https://github.com/Nikoju1977/Cosmo-citrouille/blob/main/README.md)** | Jeu / 140 configurations, 14 boss, Canvas et projet Capacitor · [commit documentaire](https://github.com/Nikoju1977/Cosmo-citrouille/commit/60b6744321a40a92f940ff84fc8d27fd344c6d) | [Droits réservés](https://github.com/Nikoju1977/Cosmo-citrouille/blob/main/LICENSE.md) |
+
+### Documentation de projet tiers (hors des 42 README)
 
 [Wan2GP — guide du fork](https://github.com/Nikoju1977/Wan2GP/blob/main/GUIDE_UTILISATEUR.md) · [commit documentaire](https://github.com/Nikoju1977/Wan2GP/commit/9d53d8d1637a10a5484757c5e880b7be9a6a4b42) · [WanGP Community License 2.0](https://github.com/Nikoju1977/Wan2GP/blob/main/LICENSE.txt). Fork de DeepBeepMeep/WanGP, non revendiqué comme création originale ; restrictions commerciales et licences des modèles à respecter. README amont préservé.
 
