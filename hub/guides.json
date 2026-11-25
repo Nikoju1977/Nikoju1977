@@ -358,14 +358,14 @@
       "slug": "le-jardin-de-niko",
       "title": "le-jardin-de-niko",
       "category": "Archives & Variantes",
-      "description": "Variante Terroir Synthétique de l'Oracle du Jardinier.",
+      "description": "Variante Terroir Synthétique : météo, journal local et repli IA conditionnel.",
       "steps": [
         "Choisissez votre commune ou votre environnement de jardinage.",
         "Consultez les informations météo et les recommandations saisonnières.",
         "Planifiez vos interventions après vérification des conditions réelles."
       ],
       "preparation": "Version secondaire ou historique : ses fonctions peuvent différer des projets principaux.",
-      "caution": null,
+      "caution": "Sol prédéfini, calendrier lunaire approximatif ; aucune garantie agronomique.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/le-jardin-de-niko",
       "launchUrl": "https://nikoju1977.github.io/le-jardin-de-niko/"
@@ -614,14 +614,14 @@
       "slug": "oracle-du-jardinier",
       "title": "oracle-du-jardinier",
       "category": "Cartographie & Nature",
-      "description": "Assistant jardin et permaculture, météo, tâches et calendrier.",
+      "description": "Gestion du jardin, Open-Meteo et vision générative optionnelle ; sol déclaré.",
       "steps": [
         "Choisissez une localisation et ouvrez le briefing jardin.",
         "Consultez la météo et les recommandations du calendrier.",
         "Planifiez puis vérifiez vos travaux selon le terrain et la saison."
       ],
       "preparation": "Certaines informations nécessitent Internet et l'accès à des services tiers.",
-      "caution": null,
+      "caution": "Profils de sol déclarés et interprétations IA non qualifiées ; vérifier les conseils.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/oracle-du-jardinier",
       "launchUrl": "https://oracle-du-jardinier.vercel.app"
@@ -662,14 +662,14 @@
       "slug": "radar-de-niko",
       "title": "radar-de-niko",
       "category": "Business & Services",
-      "description": "Radar 44 : revue de presse, sources régionales et services.",
+      "description": "Registre Node.js de veille, dédoublonnage heuristique et sorties RSS/JSONL.",
       "steps": [
         "Ouvrez Radar 44 et consultez les dernières informations reçues.",
         "Filtrez les articles par thème ou par territoire ; ouvrez leur source d'origine.",
         "Utilisez les modules pratiques (météo, vigilance, emploi) en vérifiant leur date."
       ],
       "preparation": "Vérifiez les données et les sources avant toute décision professionnelle.",
-      "caution": null,
+      "caution": "Ne jamais confondre les données fictives du mode stub avec des actualités réelles ; vérifier les sources.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/radar-de-niko",
       "launchUrl": "https://nikoju1977.github.io/radar-de-niko/"
