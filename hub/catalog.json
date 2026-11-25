@@ -300,13 +300,13 @@
     "slug": "le-jardin-de-niko",
     "name": "le-jardin-de-niko",
     "category": "Archives & Variantes",
-    "description": "Variante Terroir Synthétique de l'Oracle du Jardinier.",
+    "description": "Variante Terroir Synthétique : météo, journal local et repli IA conditionnel.",
     "repoUrl": "https://github.com/Nikoju1977/le-jardin-de-niko",
     "demoUrl": "https://nikoju1977.github.io/le-jardin-de-niko/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "La météo et les données externes demandent une connexion et peuvent être indisponibles."
+    "requirements": "La météo et les données externes demandent une connexion et peuvent être indisponibles. Quotas, coûts et compatibilité non vérifiés."
   },
   {
     "slug": "les-annales-akashiques",
@@ -511,7 +511,7 @@
     "slug": "oracle-du-jardinier",
     "name": "oracle-du-jardinier",
     "category": "Cartographie & Nature",
-    "description": "Assistant jardin et permaculture, météo, tâches et calendrier.",
+    "description": "Gestion du jardin, Open-Meteo et vision générative optionnelle ; sol déclaré.",
     "repoUrl": "https://github.com/Nikoju1977/oracle-du-jardinier",
     "demoUrl": "https://oracle-du-jardinier.vercel.app",
     "featured": false,
@@ -522,7 +522,7 @@
       "access": "protected",
       "project": "oracle-du-jardinier"
     },
-    "requirements": "L'application Vercel est protégée. Le lien historique est fourni sans garantie de disponibilité.",
+    "requirements": "L'application Vercel est protégée. Le lien historique est fourni sans garantie de disponibilité. Les photos ne mesurent pas le pH ; conseils à vérifier.",
     "pageCheckedOn": "2026-11-04"
   },
   {
@@ -551,12 +551,13 @@
     "slug": "radar-de-niko",
     "name": "radar-de-niko",
     "category": "Business & Services",
-    "description": "Radar 44 : revue de presse, sources régionales et services.",
+    "description": "Registre Node.js de veille, dédoublonnage heuristique et sorties RSS/JSONL.",
     "repoUrl": "https://github.com/Nikoju1977/radar-de-niko",
     "demoUrl": "https://nikoju1977.github.io/radar-de-niko/",
     "featured": false,
     "status": "page-responding",
-    "pageCheckedOn": "2026-11-04"
+    "pageCheckedOn": "2026-11-04",
+    "requirements": "Vérifier provenance et dates ; les sorties stub sont fictives et ne doivent pas être publiées comme actualités."
   },
   {
     "slug": "Rave-Generator-2",
