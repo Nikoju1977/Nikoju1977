@@ -119,9 +119,9 @@ Les interfaces liées à la santé ne sont **ni des dispositifs médicaux certif
 **[Revenir au profil Studio Niko Design](README.md)**
 
 
-## Registre technique — 36 dépôts documentés
+## Registre technique — 39 dépôts documentés
 
-README et références de licence relus le 25 novembre 2026. Les 36 README sont accessibles sur main et contiennent un diagramme Mermaid et un résumé anglais, vérifiés par lecture. Deux projets déclarent MIT dans package.json sans fichier de licence autonome identifié à la racine. Les mises à jour documentaires ne sont pas des tests. Les liens main sont mobiles. Aucune validation de production n'est inférée. Les licences tierces prévalent pour les composants concernés.
+README et références de licence relus le 25 novembre 2026. Les 39 README sont accessibles sur main et contiennent un diagramme Mermaid et un résumé anglais, vérifiés par lecture. Deux projets déclarent MIT dans package.json sans fichier de licence autonome identifié à la racine. Les mises à jour documentaires ne sont pas des tests. Les liens main sont mobiles. Aucune validation de production n'est inférée. Les licences tierces prévalent pour les composants concernés.
 
 | Projet / project | Périmètre | Licence |
 | --- | --- | --- |
@@ -166,7 +166,11 @@ README et références de licence relus le 25 novembre 2026. Les 36 README sont 
 | **[compagnon-diabete](https://github.com/Nikoju1977/compagnon-diabete/blob/main/README.md)** | Variante Daphnée / lecture Bluetooth non fiable, clé non chiffrée · [commit documentaire](https://github.com/Nikoju1977/compagnon-diabete/commit/9f383e463cbe69b118f61c68b6c9710e449fec88) | [Droits réservés](https://github.com/Nikoju1977/compagnon-diabete/blob/main/LICENSE.md) |
 | **[Medivision-ai-pro](https://github.com/Nikoju1977/Medivision-ai-pro/blob/main/README.md)** | Starter PWABuilder / Lit, Vite, Workbox ; aucun moteur médical · [commit documentaire](https://github.com/Nikoju1977/Medivision-ai-pro/commit/8caa2123115a4f570a34868ae19b99b420cc0c23) | [MIT notice Microsoft ; ISC dans manifeste, périmètre à clarifier](https://github.com/Nikoju1977/Medivision-ai-pro/blob/main/LICENSE.txt) |
 
-### Documentation de projet tiers (hors des 36 README)
+| **[oracle-du-jardinier](https://github.com/Nikoju1977/oracle-du-jardinier/blob/main/README.md)** | Jardin / Open-Meteo, profils locaux, vision Mistral non qualifiée · [commit documentaire](https://github.com/Nikoju1977/oracle-du-jardinier/commit/646e23a5b1793f2ed80d840ad0b63886549b0e59) | [Droits réservés](https://github.com/Nikoju1977/oracle-du-jardinier/blob/main/LICENSE.md) |
+| **[le-jardin-de-niko](https://github.com/Nikoju1977/le-jardin-de-niko/blob/main/README.md)** | Variante / IndexedDB, météo, repli fournisseurs IA, sol déclaré · [commit documentaire](https://github.com/Nikoju1977/le-jardin-de-niko/commit/811f385c8b1555c02bb081728e5d1967bc17f0f6) | [MIT](https://github.com/Nikoju1977/le-jardin-de-niko/blob/main/LICENSE) |
+| **[radar-de-niko](https://github.com/Nikoju1977/radar-de-niko/blob/main/README.md)** | Veille / Node.js, graphe de collecte, Jaccard, sorties RSS et JSONL · [commit documentaire](https://github.com/Nikoju1977/radar-de-niko/commit/8c6d895a03c972022be5c13e85379ea9e01b859d) | [Droits réservés](https://github.com/Nikoju1977/radar-de-niko/blob/main/LICENSE.md) |
+
+### Documentation de projet tiers (hors des 39 README)
 
 [Wan2GP — guide du fork](https://github.com/Nikoju1977/Wan2GP/blob/main/GUIDE_UTILISATEUR.md) · [commit documentaire](https://github.com/Nikoju1977/Wan2GP/commit/9d53d8d1637a10a5484757c5e880b7be9a6a4b42) · [WanGP Community License 2.0](https://github.com/Nikoju1977/Wan2GP/blob/main/LICENSE.txt). Fork de DeepBeepMeep/WanGP, non revendiqué comme création originale ; restrictions commerciales et licences des modèles à respecter. README amont préservé.
 
