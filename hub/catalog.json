@@ -121,13 +121,13 @@
     "slug": "compagnon-diabete",
     "name": "compagnon-diabete",
     "category": "Archives & Variantes",
-    "description": "Variante de compagnon de suivi du diabète.",
+    "description": "Variante Daphnée : lecture Bluetooth non fiable, prototype non médical.",
     "repoUrl": "https://github.com/Nikoju1977/compagnon-diabete",
     "demoUrl": "https://nikoju1977.github.io/compagnon-diabete/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Prototype expérimental. Connexions à des dispositifs médicaux non validées ; ne pas se fier aux recommandations de dose."
+    "requirements": "Ne pas connecter de dispositif médical réel ni saisir de clé ou données de santé."
   },
   {
     "slug": "Cosmo-citrouille",
@@ -258,13 +258,13 @@
     "slug": "jarvisdiabete",
     "name": "jarvisdiabete",
     "category": "Santé & Bien-être",
-    "description": "Compagnon de suivi du diabète, prototype expérimental.",
+    "description": "DiabCare : assistant documentaire, Qwen/Whisper locaux optionnels, journal manuel et coffre.",
     "repoUrl": "https://github.com/Nikoju1977/jarvisdiabete",
     "demoUrl": "https://nikoju1977.github.io/jarvisdiabete/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Assistant expérimental, non médical. La page s'ouvre mais les flux vocaux et sources médicales doivent être testés séparément."
+    "requirements": "Aucun calcul de dose ni contrôle de pompe ; inférence et compatibilité non vérifiées. Données fictives uniquement."
   },
   {
     "slug": "job-search",
@@ -342,11 +342,12 @@
     "slug": "Medivision-ai-pro",
     "name": "Medivision-ai-pro",
     "category": "Archives & Variantes",
-    "description": "Ancienne variante de MedVision AI Pro.",
+    "description": "Base PWABuilder Lit/TypeScript/Vite, sans moteur d'imagerie médicale.",
     "repoUrl": "https://github.com/Nikoju1977/Medivision-ai-pro",
     "demoUrl": null,
     "featured": false,
-    "status": "source-only"
+    "status": "source-only",
+    "requirements": "Starter tiers crédité ; déclarations MIT/ISC à clarifier."
   },
   {
     "slug": "Metrology-OS",
