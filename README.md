@@ -32,11 +32,11 @@ Independent creative technologist in France — filmmaking, interactive art, rea
 | Industrial quality & metrology | [Metrology-OS](https://github.com/Nikoju1977/Metrology-OS) · [MECARIA](https://github.com/Nikoju1977/cockpit-mecaria) |
 | Interactive art & imaging research | [Neural Art](https://github.com/Nikoju1977/Neural-Art-mars-2026) · [MedVision](https://github.com/Nikoju1977/medicalvisionproai) |
 
-**42 public technical READMEs / 42 README techniques publics** — [registre technique et licences](PROJECTS.md#registre-technique--42-dépôts-documentés). Inventaire relu le 25 novembre 2026 : 58 dépôts, 53 publics, cinq privés non détaillés. Les 39 références historiques et six signatures restent une sélection éditoriale distincte.
+**45 public technical READMEs / 45 README techniques publics** — [registre technique et licences](PROJECTS.md#registre-technique--45-dépôts-documentés). Inventaire relu le 25 novembre 2026 : 58 dépôts, 53 publics, cinq privés non détaillés. Les 39 références historiques et six signatures restent une sélection éditoriale distincte.
 
 [Studio Niko Hub](https://studio-niko-hub.vercel.app/) (adresse annoncée, disponibilité non confirmée ici) · [Sources du Hub](hub/README.md) · [Preuves datées](QUALITY_EVIDENCE.md).
 
-**Engineering scope:** 42 public project READMEs and license references checked on GitHub; architecture diagrams and English summaries present. Two projects declare MIT in package.json without an identified standalone root license. One separate upstream fork guide is also documented; the PWABuilder-derived starter is credited separately in its README. This is documentation evidence, separate from dated CI, deployment or runtime evidence. The catalogue is an inventory, not a certification.
+**Engineering scope:** 45 public project READMEs and license references checked on GitHub; architecture diagrams and English summaries present. Two projects declare MIT in package.json without an identified standalone root license. One separate upstream fork guide is also documented; the PWABuilder-derived starter is credited separately in its README. This is documentation evidence, separate from dated CI, deployment or runtime evidence. The catalogue is an inventory, not a certification.
 
 **Collaboration:** reproducible feedback is welcome. Each project's actual license applies. Not all repositories are open source. Medical and industrial prototypes are not certified; no production readiness is implied.
 
@@ -217,7 +217,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 | [oracle-du-jardinier](https://github.com/Nikoju1977/oracle-du-jardinier) | Assistant de jardinage et permaculture |
 | [tarot-de-niko](https://github.com/Nikoju1977/tarot-de-niko) | Tarot numérique et journal symbolique |
 | [oeil-hermes](https://github.com/Nikoju1977/oeil-hermes) | Grimoire numérique de correspondances symboliques |
-| [les-annales-akashiques](https://github.com/Nikoju1977/les-annales-akashiques) | Expérience de réflexion spirituelle |
+| [les-annales-akashiques](https://github.com/Nikoju1977/les-annales-akashiques) | Expérience de réflexion spirituelle ; stockage local non chiffré |
 
 </details>
 
