@@ -1,4 +1,4 @@
-const CACHE='studio-niko-hub-v18-followup-evidence-20261125';
+const CACHE='studio-niko-hub-v19-distribution-evidence-20261125';
 const ASSETS=['./','./index.html','./pilotage.html','./provenance.html','./quality.html','./quality.css','./quality-evidence.json','./provenance.js','./provenance-snapshot.json','./pilotage-workspace.js','./styles.css','./app.js','./workspace.js','./workspace.css','./catalog.json','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./install.js','./guide.js','./guides.json'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('studio-niko-hub-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
