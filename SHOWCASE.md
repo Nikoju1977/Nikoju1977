@@ -6,7 +6,7 @@
 
 ## International overview
 
-Six signature case studies showcasing design and engineering trade-offs, not a production-readiness claim. The [36-project technical register](PROJECTS.md#registre-technique--36-dépôts-documentés) links current READMEs and licenses. [Historical quality evidence](QUALITY_EVIDENCE.md) records specific commits and runs, not validation of future revisions.
+Six signature case studies showcasing design and engineering trade-offs, not a production-readiness claim. The [39-project technical register](PROJECTS.md#registre-technique--39-dépôts-documentés) links current READMEs and licenses. [Historical quality evidence](QUALITY_EVIDENCE.md) records specific commits and runs, not validation of future revisions.
 
 ## 01 — Vision-IA · Construire un film sans confondre faits et propositions
 
@@ -126,6 +126,10 @@ Ces cinq références complètent les six études signature sans modifier la sé
 ## Local inference and retained variants
 
 [DiabCare](https://github.com/Nikoju1977/jarvisdiabete) includes optional local Qwen and Whisper inference paths, a manual journal and encrypted storage, not a clinically validated assistant. [Daphnée](https://github.com/Nikoju1977/compagnon-diabete) has an unqualified Bluetooth reading and is retained for source inspection only. [Medivision-ai-pro](https://github.com/Nikoju1977/Medivision-ai-pro) is a PWABuilder-derived starter, not a medical image engine; existing credits and license declarations are preserved. No new execution or device test is claimed.
+
+## Environmental and information systems
+
+[Oracle](https://github.com/Nikoju1977/oracle-du-jardinier) and [Terroir Synthétique](https://github.com/Nikoju1977/le-jardin-de-niko) combine weather adapters and garden records with optional remote AI; soil profiles are declared, not measured. [Radar](https://github.com/Nikoju1977/radar-de-niko) implements dependency-based collection and heuristic deduplication. Its fabricated stub outputs must not be published as news. No new provider or execution tests are claimed.
 
 ## Principes transversaux
 
