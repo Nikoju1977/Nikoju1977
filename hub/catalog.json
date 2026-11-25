@@ -288,13 +288,13 @@
     "slug": "l-ultime-confrontation",
     "name": "l-ultime-confrontation",
     "category": "Jeux & Expériences",
-    "description": "Projet narratif interactif.",
+    "description": "Site promotionnel littéraire : couverture, animations et lien de paiement externe.",
     "repoUrl": "https://github.com/Nikoju1977/l-ultime-confrontation",
     "demoUrl": "https://nikoju1977.github.io/l-ultime-confrontation/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "La page du récit est accessible ; lecture audio et média restent à tester sur chaque navigateur."
+    "requirements": "Audio local référencé mais absent ; disponibilité commerciale et paiement non vérifiés."
   },
   {
     "slug": "le-jardin-de-niko",
@@ -477,7 +477,7 @@
     "slug": "Nikoju1977",
     "name": "Nikoju1977",
     "category": "Studio & Portfolio",
-    "description": "Profil et documentation de l'écosystème Studio Niko.",
+    "description": "Profil et Hub : 53 références publiques classées ; registre et plan qualité.",
     "repoUrl": "https://github.com/Nikoju1977/Nikoju1977",
     "demoUrl": null,
     "featured": false,
@@ -529,11 +529,12 @@
     "slug": "presentation-medtronic",
     "name": "presentation-medtronic",
     "category": "Business & Services",
-    "description": "Support de présentation technique.",
+    "description": "Maquette HTML/CSS incomplète, sans moteur de présentation ou médical.",
     "repoUrl": "https://github.com/Nikoju1977/presentation-medtronic",
     "demoUrl": null,
     "featured": false,
-    "status": "source-only"
+    "status": "source-only",
+    "requirements": "Deux sources interrompues au milieu du CSS ; non affilié à Medtronic."
   },
   {
     "slug": "purescanai",
