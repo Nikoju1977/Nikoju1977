@@ -154,3 +154,8 @@ Sources relues après publication, empreintes SHA vérifiées ; aucun nouveau te
 [Commit fonctionnel](https://github.com/Nikoju1977/compagnon-diabete/commit/a41a5043e37fdb3ceb4b39890ab54011d04381a2) : le journal descriptif remplace la maquette transitoire. Saisie avec unité explicite, modification, suppression, filtre, sauvegarde et restauration chiffrées implémentés. 13 assertions de validation des données ont réussi en JavaScript. Source relue ; tests navigateur, cryptographie bout en bout et publication non vérifiés. Fonctions médicales à risque toujours suspendues jusqu'à qualification. Aucune licence modifiée.
 
 Principe : conserver les fonctions utiles, corriger leur moteur et ne désactiver que les chemins non qualifiés présentant un risque significatif ; ne pas assimiler une maquette à une application stable.
+
+
+## Fiabilisation FibroCare (25 novembre 2026)
+
+[Correctif journal et PDF](https://github.com/Nikoju1977/fibrocare/commit/9f3b3c58582d5d1e17038bba589ea512e71eb1c7) et [dialogue de sauvegarde masqué](https://github.com/Nikoju1977/fibrocare/commit/5e0aee76c991cb3b7f72ad573e4642d298ec9341). Interface conservée ; sauvegarde chiffrée de cinq rubriques, restauration validée, effacement ciblé, PDF paginé et graphiques triés. 12 assertions de validation réussies ; sources relues. Stockage actif en clair, clés historiques génériques, contenu médical et tests de navigateur/crypto/PDF/déploiement encore à qualifier. Aucun changement de licence.
