@@ -113,3 +113,23 @@ Pour les dépôts mis en avant sur le profil, privilégier une sélection varié
 ---
 
 **Principe éditorial :** la confiance vient d'un état vérifiable, de crédits exacts et de limites visibles — pas de badges ou de certifications auto-déclarés.
+
+
+## Clôture documentaire — 25 novembre 2026
+
+Inventaire actuel : 58 dépôts, 53 publics et cinq privés non détaillés. Les 53 références publiques sont classées : 50 README de projets documentés, le dépôt de profil/Hub, le guide du fork Wan2GP et un dépôt vide. Cette couverture documentaire ne mesure ni la stabilité ni la sécurité. Les éléments ci-dessous sont des constats de lecture et des travaux proposés, non des correctifs exécutés.
+
+| Priorité | Périmètre public | Action et preuve attendue |
+| --- | --- | --- |
+| P0 | Agent biométrique, SCAN-BIOMEDICAL | Neutraliser les scores et mesures non établis ; vérifier les états indisponibles sur données fictives. |
+| P0 | OPENVITA-DT1, compagnon-diabete, aylina-is-cooking, fibrocare | Retirer les recommandations thérapeutiques et lectures non qualifiées ; vérifier leur absence dans tous les parcours. |
+| P0 | Metrology-OS, cockpit-mecaria | Empêcher les décisions de conformité avec entrées invalides ou preuves insuffisantes ; comparer à des oracles indépendants. |
+| P0 | purescanai, dermato-ai, medicalvisionproai | Séparer résultats générés et mesures ; limiter aux données synthétiques, qualifier géométrie et confidentialité. |
+| P1 | Galerie, Boutique Morgane, assistants et applications avec IA distante | Revoir autorisations, consentement, gestion des secrets et rendu de contenus non fiables ; tests sur environnement isolé. |
+| P1 | Annales Akashiques, Aylina, studio de cadrans | Corriger stockage en clair, affichages simulés et traitement de contenu non fiable ; vérifier suppression et confidentialité. |
+| P1 | Radar | Séparer strictement fixtures fictives et collecte réelle ; conserver provenance et dates. |
+| P1 | AEGIS Earth, Galerie | Clarifier les déclarations MIT sans fichier autonome ; respecter droits tiers. |
+| P2 | Audio, cinéma, jeux, art, PWA | Vérifier démarrage, stabilité, exports, parité des éditions, clavier/tactile et appareils physiques. |
+| P2 | L'Ultime Confrontation, présentation-medtronic | Ressource audio manquante ; maquette HTML incomplète à reconstruire avec sources autorisées. |
+
+Critère de clôture : commit de correction identifié, reproduction sur données fictives ou environnement autorisé, résultat de test daté et vérification distincte de production. Aucun score global de qualité ni certification déduit. Ne pas modifier le registre historique de preuves, ne pas publier les dépôts privés. Aucun coût additionnel autorisé.
