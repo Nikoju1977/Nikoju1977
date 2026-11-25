@@ -21,7 +21,7 @@ Inventaire GitHub relu : 58 dépôts, 53 publics (profil inclus) et cinq privés
 | [Niko-Ultravision](https://github.com/Nikoju1977/Niko-Ultravision) | Outil de restauration et d'agrandissement d'images ou vidéos : filtres Canvas et moteur local ONNX de super-résolution, avec accélération WebGPU ou repli WebAssembly. Les détails générés ne garantissent pas la fidélité à l'original. | Outil créatif |
 | [Neural-Art-mars-2026](https://github.com/Nikoju1977/Neural-Art-mars-2026) | Atelier de peinture numérique : dessiner avec des brosses, combiner des calques et effets WebGL, expérimenter des rendus assistés et exporter des images. | Prototype artistique |
 | [galerie-studio-niko](https://github.com/Nikoju1977/galerie-studio-niko) | Galerie d'exposition 3D : accrocher des tableaux, présenter sculptures, films et sons, régler l'éclairage, créer des cartels et préparer une publication web. | Projet signature |
-| [applewatchcadrans](https://github.com/Nikoju1977/applewatchcadrans) | Atelier de design de cadrans analogiques, numériques ou hybrides : prévisualiser une montre et exporter un SVG ou une page HTML animée. Ce ne sont pas des cadrans watchOS installables. | Outil de design |
+| [applewatchcadrans](https://github.com/Nikoju1977/applewatchcadrans) | Atelier de design de cadrans analogiques, numériques ou hybrides : prévisualiser une montre et exporter PNG, SVG ou HTML animé ; indicateurs de santé et batterie fictifs. Ce ne sont pas des cadrans watchOS installables. | Outil de design |
 | [Wan2GP](https://github.com/Nikoju1977/Wan2GP) | Distribution d'un logiciel tiers, WanGP, qui permet de lancer différents modèles ouverts pour générer vidéos, images et sons avec une interface web, une file d'attente et des réglages matériels. Crédit et licences du projet original à préserver. | Projet tiers / amont crédité |
 
 ### 2. Musique, audio & création sonore
@@ -70,7 +70,7 @@ Inventaire GitHub relu : 58 dépôts, 53 publics (profil inclus) et cinq privés
 | [Boutique-morgane](https://github.com/Nikoju1977/Boutique-morgane) | Site vitrine et catalogue de créations : présenter des articles, préparer une demande de commande, explorer un tarot, un grimoire et des fiches de minéraux. Aucun paiement intégré automatique n'est annoncé. | Site vitrine / boutique en préparation |
 | [handimonde](https://github.com/Nikoju1977/handimonde) | Carte d'informations sur l'accessibilité des lieux : rechercher des établissements et équipements à partir de données OpenStreetMap, avec services API complémentaires. Les données doivent être vérifiées avant un déplacement. | Projet signature / service cartographique |
 | [job-search](https://github.com/Nikoju1977/job-search) | Application de recherche d'emploi : classer des offres selon des critères explicables, organiser un profil candidat et activer une veille opt-in. Les fonctions serveur exigent une configuration privée et n'envoient pas de candidature sans autorisation. | Service candidat / backend conditionnel |
-| [aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking) | Carnet de desserts « Aylina Cookies » : consulter des recettes, explorer des portions avec un calculateur, accéder à Chef Mistral et enregistrer des favoris. Les conseils nutritionnels ne sont pas des décisions médicales. | Prototype culinaire |
+| [aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking) | Carnet de desserts « Aylina Cookies » : consulter des recettes, explorer des portions avec un calculateur, accéder à Chef Mistral et enregistrer des favoris. Le calcul de dose non validé doit être retiré ; ne jamais utiliser pour un traitement. | Prototype culinaire |
 
 ### 7. Industrie, géodonnées & outils métier
 
@@ -119,9 +119,9 @@ Les interfaces liées à la santé ne sont **ni des dispositifs médicaux certif
 **[Revenir au profil Studio Niko Design](README.md)**
 
 
-## Registre technique — 45 dépôts documentés
+## Registre technique — 48 dépôts documentés
 
-README et références de licence relus le 25 novembre 2026. Les 45 README sont accessibles sur main et contiennent un diagramme Mermaid et un résumé anglais, vérifiés par lecture. Deux projets déclarent MIT dans package.json sans fichier de licence autonome identifié à la racine. Les mises à jour documentaires ne sont pas des tests. Les liens main sont mobiles. Aucune validation de production n'est inférée. Les licences tierces prévalent pour les composants concernés.
+README et références de licence relus le 25 novembre 2026. Les 48 README sont accessibles sur main et contiennent un diagramme Mermaid et un résumé anglais, vérifiés par lecture. Deux projets déclarent MIT dans package.json sans fichier de licence autonome identifié à la racine. Les mises à jour documentaires ne sont pas des tests. Les liens main sont mobiles. Aucune validation de production n'est inférée. Les licences tierces prévalent pour les composants concernés.
 
 | Projet / project | Périmètre | Licence |
 | --- | --- | --- |
@@ -178,7 +178,11 @@ README et références de licence relus le 25 novembre 2026. Les 45 README sont 
 | **[oeil-hermes](https://github.com/Nikoju1977/oeil-hermes/blob/main/README.md)** | Graphe de correspondances, calculs astronomiques approximatifs, clés chiffrées · [commit documentaire](https://github.com/Nikoju1977/oeil-hermes/commit/9326b98afd9373e686191a85648c200b8dd3c20d) | [Droits réservés](https://github.com/Nikoju1977/oeil-hermes/blob/main/LICENSE.md) |
 | **[les-annales-akashiques](https://github.com/Nikoju1977/les-annales-akashiques/blob/main/README.md)** | Narration symbolique / règles locales, IA optionnelle, journal non chiffré · [commit documentaire](https://github.com/Nikoju1977/les-annales-akashiques/commit/54ca5a79051e02c0c05ddec38e262dc4e3bb93cc) | [Droits réservés](https://github.com/Nikoju1977/les-annales-akashiques/blob/main/LICENSE.md) |
 
-### Documentation de projet tiers (hors des 45 README)
+| **[Bouh-delivery](https://github.com/Nikoju1977/Bouh-delivery/blob/main/README.md)** | Jeu / simulation modulaire, Canvas, Web Audio, dix missions · [commit documentaire](https://github.com/Nikoju1977/Bouh-delivery/commit/34cda39bcf74586dc9faf6f62c44ba6023f2e203) | [Droits réservés](https://github.com/Nikoju1977/Bouh-delivery/blob/main/LICENSE.md) |
+| **[aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking/blob/main/README.md)** | Cuisine / portions, Mistral optionnel ; estimation de dose non validée, P0 · [commit documentaire](https://github.com/Nikoju1977/aylina-is-cooking/commit/70f1bc01319a8fd01d3f00b447bfd5bb61e2110a) | [Droits réservés](https://github.com/Nikoju1977/aylina-is-cooking/blob/main/LICENSE.md) |
+| **[applewatchcadrans](https://github.com/Nikoju1977/applewatchcadrans/blob/main/README.md)** | Design / génération SVG, exports PNG/SVG/HTML, indicateurs fictifs · [commit documentaire](https://github.com/Nikoju1977/applewatchcadrans/commit/573284726d6a1669c579c61eb670b862ddf7c0c0) | [Droits réservés](https://github.com/Nikoju1977/applewatchcadrans/blob/main/LICENSE.md) |
+
+### Documentation de projet tiers (hors des 48 README)
 
 [Wan2GP — guide du fork](https://github.com/Nikoju1977/Wan2GP/blob/main/GUIDE_UTILISATEUR.md) · [commit documentaire](https://github.com/Nikoju1977/Wan2GP/commit/9d53d8d1637a10a5484757c5e880b7be9a6a4b42) · [WanGP Community License 2.0](https://github.com/Nikoju1977/Wan2GP/blob/main/LICENSE.txt). Fork de DeepBeepMeep/WanGP, non revendiqué comme création originale ; restrictions commerciales et licences des modèles à respecter. README amont préservé.
 
