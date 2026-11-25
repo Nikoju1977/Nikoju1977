@@ -119,9 +119,9 @@ Les interfaces liées à la santé ne sont **ni des dispositifs médicaux certif
 **[Revenir au profil Studio Niko Design](README.md)**
 
 
-## Registre technique — 26 dépôts documentés
+## Registre technique — 31 dépôts documentés
 
-README sur main et fichiers de licence relus le 25 novembre 2026. Les 26 README et leurs fichiers de licence sont accessibles sur main ; chacun contient un diagramme Mermaid et un résumé anglais, vérifiés par lecture. Les mises à jour documentaires ne sont pas des tests. Les liens main sont mobiles. Aucune validation de production n'est inférée. Les licences tierces prévalent pour les composants concernés.
+README et références de licence relus le 25 novembre 2026. Les 31 README sont accessibles sur main et contiennent un diagramme Mermaid et un résumé anglais, vérifiés par lecture. Deux projets déclarent MIT dans package.json sans fichier de licence autonome identifié à la racine. Les mises à jour documentaires ne sont pas des tests. Les liens main sont mobiles. Aucune validation de production n'est inférée. Les licences tierces prévalent pour les composants concernés.
 
 | Projet / project | Périmètre | Licence |
 | --- | --- | --- |
@@ -152,5 +152,15 @@ README sur main et fichiers de licence relus le 25 novembre 2026. Les 26 README 
 | **[job-search](https://github.com/Nikoju1977/job-search/blob/main/README.md)** | Emploi / six connecteurs, MiniLM local optionnel, veille serveur conditionnelle · [commit documentaire](https://github.com/Nikoju1977/job-search/commit/0aea2603ed4f01f479a79bcf43ade423ce5bb58e) | [Droits réservés](https://github.com/Nikoju1977/job-search/blob/main/LICENSE.md) |
 | **[Sage-companion](https://github.com/Nikoju1977/Sage-companion/blob/main/README.md)** | Assistant vocal / Mistral, mémoire locale, actions confirmées, coûts non garantis · [commit documentaire](https://github.com/Nikoju1977/Sage-companion/commit/5af2d2d12d2956934120947ec2e5d557484817a9) | [Droits réservés](https://github.com/Nikoju1977/Sage-companion/blob/main/LICENSE.md) |
 | **[niko-commande-live-tik-tok](https://github.com/Nikoju1977/niko-commande-live-tik-tok/blob/main/README.md)** | Live / conducteur et sauvegarde locale, sans commande TikTok ou OBS · [commit documentaire](https://github.com/Nikoju1977/niko-commande-live-tik-tok/commit/04a1655f04bebf3a8fe1542577ad5152aebc13f4) | [Droits réservés](https://github.com/Nikoju1977/niko-commande-live-tik-tok/blob/main/LICENSE.md) |
+
+| **[White-hat](https://github.com/Nikoju1977/White-hat/blob/main/README.md)** | Sécurité / heuristiques GitHub et Sentinel statistique, non certifié · [commit documentaire](https://github.com/Nikoju1977/White-hat/commit/c49f3e31f2a15b6b9fb80b8c830594e94c7eb140) | [MIT](https://github.com/Nikoju1977/White-hat/blob/main/LICENSE) |
+| **[aegis-earth-mobile](https://github.com/Nikoju1977/aegis-earth-mobile/blob/main/README.md)** | Géospatial / Cesium, Haversine, données publiques, Capacitor · [commit documentaire](https://github.com/Nikoju1977/aegis-earth-mobile/commit/81315a4e1258f2b85e18234c0979083925c2a95d) | [MIT déclaré, fichier autonome absent](https://github.com/Nikoju1977/aegis-earth-mobile/blob/main/package.json) |
+| **[Boutique-morgane](https://github.com/Nikoju1977/Boutique-morgane/blob/main/README.md)** | Commerce / vitrine, demandes locales, D1 conditionnel ; aucun paiement établi · [commit documentaire](https://github.com/Nikoju1977/Boutique-morgane/commit/e6118cce6c705af580db25757209ba67e62c984a) | [Droits réservés](https://github.com/Nikoju1977/Boutique-morgane/blob/main/LICENSE.md) |
+| **[handimonde](https://github.com/Nikoju1977/handimonde/blob/main/README.md)** | Accessibilité / Leaflet, OSM, Overpass, relais IA optionnel · [commit documentaire](https://github.com/Nikoju1977/handimonde/commit/e128ea625374fb5f9e16edf6e33022bf56362be0) | [Droits réservés ; OSM ODbL](https://github.com/Nikoju1977/handimonde/blob/main/LICENSE) |
+| **[galerie-studio-niko](https://github.com/Nikoju1977/galerie-studio-niko/blob/main/README.md)** | Art / Three.js, audio spatial, publication Supabase à sécuriser · [commit documentaire](https://github.com/Nikoju1977/galerie-studio-niko/commit/eb73fbf9c64a06bb9cd2b300a3397dc8d2bb23a4) | [MIT déclaré, fichier autonome absent](https://github.com/Nikoju1977/galerie-studio-niko/blob/main/package.json) |
+
+### Documentation de projet tiers (hors des 31 README)
+
+[Wan2GP — guide du fork](https://github.com/Nikoju1977/Wan2GP/blob/main/GUIDE_UTILISATEUR.md) · [commit documentaire](https://github.com/Nikoju1977/Wan2GP/commit/9d53d8d1637a10a5484757c5e880b7be9a6a4b42) · [WanGP Community License 2.0](https://github.com/Nikoju1977/Wan2GP/blob/main/LICENSE.txt). Fork de DeepBeepMeep/WanGP, non revendiqué comme création originale ; restrictions commerciales et licences des modèles à respecter. README amont préservé.
 
 [Preuves historiques](QUALITY_EVIDENCE.md). Les prototypes médicaux ne doivent pas servir à des décisions thérapeutiques. Les retours reproductibles respectent les licences individuelles.
