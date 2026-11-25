@@ -189,3 +189,8 @@ Candidat construit depuis l'archive locale V4 PWA complète ; aucun dépôt V5 e
 ## Fiabilisation IA Studio Ciné (25 novembre 2026)
 
 [Rendu local](https://github.com/Nikoju1977/ia-studio-cine/commit/fe85546690a0090c942fe569e687e1c0f7fd4201), [LTX-2.3](https://github.com/Nikoju1977/ia-studio-cine/commit/28ad3fb411e0d1b5402e4b259e014f407a511e29), [LTX 13B](https://github.com/Nikoju1977/ia-studio-cine/commit/c7031929f0b078d20fef8d9339b2db4410e4caa1). 14 assertions timeline + 7 assertions SSE réussies sur fonctions isolées ; tests de régression ajoutés ; sources relues. Limites mémoire/rendu, arrêt en suspension, parsing SSE fragmenté et délai local borné. Génération GPU, rendu réel, CI et déploiement non vérifiés. Fonctions et licences historiques conservées.
+
+
+## Fiabilisation NikoAssist (25 novembre 2026)
+
+[Politique](https://github.com/Nikoju1977/Nikoassist/commit/7d8ce3b6adef907d3207ce276b046e2dfdabbf2d), [agent_team](https://github.com/Nikoju1977/Nikoassist/commit/8602aed25ecb176564bcabfca63be838d73a5b30), [runtime](https://github.com/Nikoju1977/Nikoassist/commit/08062facc9c6cf41d75299be8281fb1243f15700). Budget global, exclusion des appels de contrôle des preuves métier, arrêt après rôle mutateur sans vérification indépendante, pas de relance créateur/opérateur, approbation explicite du runtime auxiliaire. Six fichiers relus, tests de régression publiés, CI finale en attente au contrôle. Run intermédiaire de publication full-source 45703897282 en échec à la mise à jour fast-forward après syntaxe réussie ; cause exacte à établir. Aucune exécution fournisseur réelle, connexion PWA-runtime ou qualification mobile. GPL inchangée.
