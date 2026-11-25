@@ -32,11 +32,11 @@ Independent creative technologist in France — filmmaking, interactive art, rea
 | Industrial quality & metrology | [Metrology-OS](https://github.com/Nikoju1977/Metrology-OS) · [MECARIA](https://github.com/Nikoju1977/cockpit-mecaria) |
 | Interactive art & imaging research | [Neural Art](https://github.com/Nikoju1977/Neural-Art-mars-2026) · [MedVision](https://github.com/Nikoju1977/medicalvisionproai) |
 
-**36 public technical READMEs / 36 README techniques publics** — [registre technique et licences](PROJECTS.md#registre-technique--36-dépôts-documentés). Inventaire relu le 25 novembre 2026 : 58 dépôts, 53 publics, cinq privés non détaillés. Les 39 références historiques et six signatures restent une sélection éditoriale distincte.
+**39 public technical READMEs / 39 README techniques publics** — [registre technique et licences](PROJECTS.md#registre-technique--39-dépôts-documentés). Inventaire relu le 25 novembre 2026 : 58 dépôts, 53 publics, cinq privés non détaillés. Les 39 références historiques et six signatures restent une sélection éditoriale distincte.
 
 [Studio Niko Hub](https://studio-niko-hub.vercel.app/) (adresse annoncée, disponibilité non confirmée ici) · [Sources du Hub](hub/README.md) · [Preuves datées](QUALITY_EVIDENCE.md).
 
-**Engineering scope:** 36 public project READMEs and license references checked on GitHub; architecture diagrams and English summaries present. Two projects declare MIT in package.json without an identified standalone root license. One separate upstream fork guide is also documented; the PWABuilder-derived starter is credited separately in its README. This is documentation evidence, separate from dated CI, deployment or runtime evidence. The catalogue is an inventory, not a certification.
+**Engineering scope:** 39 public project READMEs and license references checked on GitHub; architecture diagrams and English summaries present. Two projects declare MIT in package.json without an identified standalone root license. One separate upstream fork guide is also documented; the PWABuilder-derived starter is credited separately in its README. This is documentation evidence, separate from dated CI, deployment or runtime evidence. The catalogue is an inventory, not a certification.
 
 **Collaboration:** reproducible feedback is welcome. Each project's actual license applies. Not all repositories are open source. Medical and industrial prototypes are not certified; no production readiness is implied.
 
@@ -203,7 +203,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 | [cockpit-mecaria](https://github.com/Nikoju1977/cockpit-mecaria) | Cockpit de qualité, production et amélioration continue |
 | [Metrology-OS](https://github.com/Nikoju1977/Metrology-OS) | Gestion métrologique et parc d'instruments |
 | [aegis-earth-mobile](https://github.com/Nikoju1977/aegis-earth-mobile) | Application géospatiale mobile-first |
-| [radar-de-niko](https://github.com/Nikoju1977/radar-de-niko) | Collecte et restitution de veille structurée |
+| [radar-de-niko](https://github.com/Nikoju1977/radar-de-niko) | Collecte et restitution de veille structurée ; mode stub fictif |
 
 </details>
 
