@@ -109,13 +109,13 @@
     "slug": "cockpit-mecaria",
     "name": "cockpit-mecaria",
     "category": "Business & Services",
-    "description": "Cockpit qualité, métrologie et production industrielle.",
+    "description": "Qualité, SPC, R&R, TRS et gouvernance IA.",
     "repoUrl": "https://github.com/Nikoju1977/cockpit-mecaria",
     "demoUrl": "https://nikoju1977.github.io/cockpit-mecaria/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Les tableaux nécessitent des données locales ou importées. N'utilisez pas de données d'entreprise confidentielles sur un service non autorisé."
+    "requirements": "Coffre de clés distinct ; rôles déclaratifs et journal modifiable."
   },
   {
     "slug": "compagnon-diabete",
@@ -157,12 +157,13 @@
     "slug": "dermato-ai",
     "name": "dermato-ai",
     "category": "Santé & Bien-être",
-    "description": "Exploration visuelle dermatologique, sans diagnostic.",
+    "description": "OpenCV, Face Mesh et Pixtral distant ; métriques non validées.",
     "repoUrl": "https://github.com/Nikoju1977/dermato-ai",
     "demoUrl": "https://nikoju1977.github.io/dermato-ai/",
     "featured": false,
     "status": "page-responding",
-    "pageCheckedOn": "2026-11-04"
+    "pageCheckedOn": "2026-11-04",
+    "requirements": "Scores de secours, stockage en clair et rendu HTML à sécuriser ; données fictives uniquement."
   },
   {
     "slug": "EBM-BRETONNE.",
@@ -180,24 +181,25 @@
     "slug": "fibrobot",
     "name": "fibrobot",
     "category": "Santé & Bien-être",
-    "description": "Compagnon fibromyalgie, journal et outils de bien-être.",
+    "description": "Compagnon documentaire, coffre AES-GCM et IA facultative.",
     "repoUrl": "https://github.com/Nikoju1977/fibrobot",
     "demoUrl": "https://nikoju1977.github.io/fibrobot/",
     "featured": false,
     "status": "page-responding",
-    "pageCheckedOn": "2026-11-04"
+    "pageCheckedOn": "2026-11-04",
+    "requirements": "Refus et rappels non validés cliniquement. Flux IA à auditer."
   },
   {
     "slug": "fibrocare",
     "name": "fibrocare",
     "category": "Santé & Bien-être",
-    "description": "Journal de suivi et d'organisation du quotidien.",
+    "description": "Journal, graphiques et PDF ; stockage local non chiffré.",
     "repoUrl": "https://github.com/Nikoju1977/fibrocare",
     "demoUrl": "https://nikoju1977.github.io/fibrocare/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Outil d'organisation personnel expérimental, non dispositif médical. Le partage de données de santé n'est pas activé depuis ce Hub."
+    "requirements": "Sauvegarde et informations thérapeutiques à fiabiliser. Données fictives uniquement."
   },
   {
     "slug": "galerie-studio-niko",
@@ -238,7 +240,7 @@
     "slug": "ia-studio-cine",
     "name": "ia-studio-cine",
     "category": "Cinéma & Image",
-    "description": "META-STUDIO PRO V5 : création audiovisuelle, timeline, looks et exports.",
+    "description": "META-STUDIO PRO V6 : storyboard, connecteurs LTX/Agnes, timeline et MediaRecorder.",
     "repoUrl": "https://github.com/Nikoju1977/ia-studio-cine",
     "demoUrl": "https://nikoju1977.github.io/ia-studio-cine/",
     "featured": true,
@@ -249,7 +251,7 @@
       "access": "protected",
       "project": "ia-studio-cine"
     },
-    "requirements": "Version publique GitHub Pages accessible. Certaines générations nécessitent Agnes API et une configuration de clé ; la version Vercel est protégée.",
+    "requirements": "Génération distante soumise aux quotas et CORS ; rendu réel non revérifié.",
     "pageCheckedOn": "2026-11-04"
   },
   {
@@ -322,7 +324,7 @@
     "slug": "medicalvisionproai",
     "name": "medicalvisionproai",
     "category": "Santé & Bien-être",
-    "description": "Visualisation d'images et de séries DICOM, prototype non certifié.",
+    "description": "DICOM/MPR local et IA distante optionnelle.",
     "repoUrl": "https://github.com/Nikoju1977/medicalvisionproai",
     "demoUrl": "https://nikoju1977.github.io/medicalvisionproai/",
     "featured": false,
@@ -333,7 +335,7 @@
       "access": "protected",
       "project": "medicalvisionproai"
     },
-    "requirements": "Prototype expérimental non certifié. Le déploiement Vercel est protégé.",
+    "requirements": "Images/contexte transmis au fournisseur ; clés hors coffre, anciens dossiers en clair possibles. Données fictives uniquement.",
     "pageCheckedOn": "2026-11-04"
   },
   {
@@ -350,7 +352,7 @@
     "slug": "Metrology-OS",
     "name": "Metrology-OS",
     "category": "Business & Services",
-    "description": "Suivi métrologique d'instruments et certificats.",
+    "description": "Incertitudes, bande de garde et gestion métrologique.",
     "repoUrl": "https://github.com/Nikoju1977/Metrology-OS",
     "demoUrl": "https://metrology-os-demo.vercel.app/",
     "featured": false,
@@ -362,7 +364,7 @@
       "project": "metrology-os-demo"
     },
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Démonstration de GMAO métrologique navigateur. Aucun audit de conformité ISO ni certification n'est attesté. N'utilisez pas de données industrielles confidentielles sans sauvegardes, accès contrôlés et validation des calculs."
+    "requirements": "Calculs simplifiés non qualifiés ; aucune accréditation ou certification."
   },
   {
     "slug": "miaotris",
@@ -385,13 +387,13 @@
   {
     "slug": "N8V",
     "name": "N8V",
-    "category": "Cinéma & Image",
-    "description": "Projet de format vidéo expérimental — dépôt vide.",
+    "category": "Musique & Audio",
+    "description": "NIKO ANALOG 37 : synthèse, groovebox, clavier 37 notes et WAV.",
     "repoUrl": "https://github.com/Nikoju1977/N8V",
     "demoUrl": null,
     "featured": false,
-    "status": "planned",
-    "requirements": "Dépôt sans application utilisable à ce stade."
+    "status": "source-only",
+    "requirements": "Sources présentes ; déploiement non confirmé. Pas de codec vidéo 8K."
   },
   {
     "slug": "Neural-Art-mars-2026",
@@ -496,12 +498,13 @@
     "slug": "OPENVITA-DT1",
     "name": "OPENVITA-DT1",
     "category": "Santé & Bien-être",
-    "description": "Suivi expérimental du diabète de type 1 via Nightscout.",
+    "description": "Journal glycémique manuel ; heuristiques de doses non validées.",
     "repoUrl": "https://github.com/Nikoju1977/OPENVITA-DT1",
     "demoUrl": "https://nikoju1977.github.io/OPENVITA-DT1/",
     "featured": false,
     "status": "page-responding",
-    "pageCheckedOn": "2026-11-04"
+    "pageCheckedOn": "2026-11-04",
+    "requirements": "Ne pas utiliser pour traiter. Nightscout/oref1/AGP non démontrés dans le fichier principal ; données et clés en clair."
   },
   {
     "slug": "oracle-du-jardinier",
@@ -535,13 +538,13 @@
     "slug": "purescanai",
     "name": "purescanai",
     "category": "Santé & Bien-être",
-    "description": "Interface expérimentale d'analyse visuelle de la peau.",
+    "description": "Trois requêtes Pixtral/Mistral ; scores cutanés générés, non mesurés.",
     "repoUrl": "https://github.com/Nikoju1977/purescanai",
     "demoUrl": "https://nikoju1977.github.io/purescanai/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Prototype non certifié. Ne remplace pas une consultation dermatologique et n'établit pas de diagnostic."
+    "requirements": "Ne pas utiliser pour diagnostiquer ou traiter. Flux d'images distants."
   },
   {
     "slug": "radar-de-niko",
@@ -616,13 +619,13 @@
     "slug": "SCAN-BIOMEDICAL",
     "name": "SCAN-BIOMEDICAL",
     "category": "Santé & Bien-être",
-    "description": "Prototype de caméra et indicateurs biométriques.",
+    "description": "Repères faciaux et EAR ; estimation BPM/fatigue non fiable.",
     "repoUrl": "https://github.com/Nikoju1977/SCAN-BIOMEDICAL",
     "demoUrl": "https://nikoju1977.github.io/SCAN-BIOMEDICAL/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Prototype expérimental, non médical. Caméra et permissions indispensables. Les indicateurs ne sont pas des mesures cliniques."
+    "requirements": "Prototype non clinique. Données fictives uniquement."
   },
   {
     "slug": "tarot-de-niko",
@@ -639,7 +642,7 @@
     "slug": "the-lovestronautes-machine",
     "name": "the-lovestronautes-machine",
     "category": "Musique & Audio",
-    "description": "Groovebox, synthèse Web Audio, composition, MIDI et exports.",
+    "description": "Station 18 pistes, synthèse, patchbay, WAV/MP3, MIDI et arrangement.",
     "repoUrl": "https://github.com/Nikoju1977/the-lovestronautes-machine",
     "demoUrl": "https://nikoju1977.github.io/the-lovestronautes-machine/",
     "featured": true,
@@ -650,12 +653,13 @@
     "slug": "Vision-IA",
     "name": "Vision-IA",
     "category": "Cinéma & Image",
-    "description": "Assistant de réalisation : scénario, découpage, conducteur et dossiers de production.",
+    "description": "Préproduction, documents, découpage, conducteur local et routage LLM.",
     "repoUrl": "https://github.com/Nikoju1977/Vision-IA",
     "demoUrl": "https://nikoju1977.github.io/Vision-IA/",
     "featured": true,
     "status": "page-responding",
-    "pageCheckedOn": "2026-11-04"
+    "pageCheckedOn": "2026-11-04",
+    "requirements": "Documents non chiffrés par le coffre de clés ; extraits susceptibles d'être transmis."
   },
   {
     "slug": "Wan2GP",
