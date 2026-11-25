@@ -133,13 +133,13 @@
     "slug": "Cosmo-citrouille",
     "name": "Cosmo-citrouille",
     "category": "Jeux & Expériences",
-    "description": "Aventure spatiale d'Halloween, 140 mondes annoncés.",
+    "description": "Arcade Canvas : 140 configurations, 14 boss, 800 points en 120 secondes de simulation.",
     "repoUrl": "https://github.com/Nikoju1977/Cosmo-citrouille",
     "demoUrl": "https://nikoju1977.github.io/Cosmo-citrouille/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "La page s'ouvre ; les 140 mondes annoncés, la sauvegarde et la maniabilité demandent une validation distincte."
+    "requirements": "Logique présente dans le code ; parité des éditions, maniabilité et build mobile non vérifiés."
   },
   {
     "slug": "Dbmetre-pro",
@@ -169,13 +169,13 @@
     "slug": "EBM-BRETONNE.",
     "name": "EBM-BRETONNE.",
     "category": "Musique & Audio",
-    "description": "Cyber-Fest-Noz : groovebox EBM aux influences bretonnes.",
+    "description": "Cyber-Fest-Noz : six voies, quatre patterns de 16 pas, synthèse d'anche et bourdon.",
     "repoUrl": "https://github.com/Nikoju1977/EBM-BRETONNE.",
     "demoUrl": "https://nikoju1977.github.io/EBM-BRETONNE./",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "L'audio Web nécessite un geste utilisateur. La disponibilité de certaines bibliothèques dépend d'une connexion réseau."
+    "requirements": "L'audio Web nécessite un geste utilisateur. La disponibilité de certaines bibliothèques dépend d'une connexion réseau. Format d'enregistrement dépendant du navigateur ; WAV PCM non garanti."
   },
   {
     "slug": "fibrobot",
@@ -371,7 +371,7 @@
     "slug": "miaotris",
     "name": "miaotris",
     "category": "Jeux & Expériences",
-    "description": "Jeu de blocs félin dans le navigateur.",
+    "description": "Jeu de blocs félin : plateau 10 × 20, rotation, collisions et score.",
     "repoUrl": "https://github.com/Nikoju1977/miaotris",
     "demoUrl": "https://alyina-vampire-of-halloween.vercel.app",
     "featured": false,
@@ -382,7 +382,7 @@
       "access": "public",
       "project": "alyina-vampire-of-halloween"
     },
-    "requirements": "Déploiement du jeu Vercel prêt sous l'intitulé Alyina Vampire of Halloween.",
+    "requirements": "Le lien Vercel historique correspond au sous-projet Alyina Vampire of Halloween ; il ne valide pas Miaotris à la racine.",
     "pageCheckedOn": "2026-11-04"
   },
   {
