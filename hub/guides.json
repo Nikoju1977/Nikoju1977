@@ -374,14 +374,14 @@
       "slug": "les-annales-akashiques",
       "title": "les-annales-akashiques",
       "category": "Arts & Symbolique",
-      "description": "Expérience créative et symbolique.",
+      "description": "Narration symbolique, calculs locaux et IA facultative ; stockage non chiffré.",
       "steps": [
-        "Accédez à l'oracle et choisissez l'expérience symbolique disponible.",
-        "Renseignez uniquement les informations que vous souhaitez partager.",
-        "Lisez l'interprétation comme une création spirituelle ou narrative."
+        "Explorez les contenus symboliques.",
+        "Utilisez uniquement des identités et textes fictifs.",
+        "Lisez les interprétations comme des créations narratives."
       ],
       "preparation": "Contenus de création, de symbolique ou de divertissement.",
-      "caution": null,
+      "caution": "Journal et brouillons non chiffrés ; échanges externes possibles.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/les-annales-akashiques",
       "launchUrl": "https://nikoju1977.github.io/les-annales-akashiques/"
@@ -582,14 +582,14 @@
       "slug": "oeil-hermes",
       "title": "oeil-hermes",
       "category": "Arts & Symbolique",
-      "description": "Grimoire numérique, correspondances et calculs astrologiques.",
+      "description": "Graphe symbolique bilingue et calculs astronomiques approximatifs ; clés chiffrées.",
       "steps": [
         "Sélectionnez la langue et cherchez une notion dans le grimoire.",
         "Parcourez les fiches symboliques et leurs correspondances.",
         "Utilisez le contenu comme ressource culturelle et créative."
       ],
       "preparation": "Contenus de création, de symbolique ou de divertissement.",
-      "caution": null,
+      "caution": "Ne pas partager de paramètres de naissance sans accord ; précision astronomique non certifiée.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/oeil-hermes",
       "launchUrl": "https://nikoju1977.github.io/oeil-hermes/"
@@ -773,14 +773,14 @@
       "slug": "tarot-de-niko",
       "title": "tarot-de-niko",
       "category": "Arts & Symbolique",
-      "description": "Tarot symbolique : 78 arcanes, grimoire et tirages.",
+      "description": "78 arcanes, mélange Fisher–Yates avec Web Crypto, grimoire chiffré optionnel.",
       "steps": [
         "Choisissez un type de tirage et prenez connaissance des cartes proposées.",
         "Découvrez la signification des arcanes et rédigez votre interprétation.",
         "Sauvegardez ou exportez un tirage si l'interface offre cette possibilité."
       ],
       "preparation": "Contenus de création, de symbolique ou de divertissement.",
-      "caution": null,
+      "caution": "Ne pas confondre tirage aléatoire et prédiction ; éviter les données sensibles dans les requêtes IA.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/tarot-de-niko",
       "launchUrl": "https://nikoju1977.github.io/tarot-de-niko/"
