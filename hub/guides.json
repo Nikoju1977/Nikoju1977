@@ -166,14 +166,14 @@
       "slug": "Cosmo-citrouille",
       "title": "Cosmo-citrouille",
       "category": "Jeux & Expériences",
-      "description": "Aventure spatiale d'Halloween, 140 mondes annoncés.",
+      "description": "Arcade Canvas : 140 configurations, 14 boss, 800 points en 120 secondes de simulation.",
       "steps": [
         "Lancez le jeu et choisissez un monde accessible.",
         "Utilisez les commandes tactiles ou clavier indiquées à l'écran.",
         "Collectez les objectifs et progressez ; réduisez les effets si le téléphone ralentit."
       ],
       "preparation": "Les commandes et les performances varient selon le téléphone et le navigateur.",
-      "caution": null,
+      "caution": "Le chrono de simulation peut différer du temps mural ; aucun APK/IPA validé.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/Cosmo-citrouille",
       "launchUrl": "https://nikoju1977.github.io/Cosmo-citrouille/"
@@ -214,14 +214,14 @@
       "slug": "EBM-BRETONNE.",
       "title": "EBM-BRETONNE.",
       "category": "Musique & Audio",
-      "description": "Cyber-Fest-Noz : groovebox EBM aux influences bretonnes.",
+      "description": "Cyber-Fest-Noz : six voies, quatre patterns de 16 pas, synthèse d'anche et bourdon.",
       "steps": [
         "Appuyez sur « Initialiser l'audio » pour autoriser le son.",
         "Réglez tempo, swing et tonalité, puis programmez les patterns.",
         "Lancez la lecture et ajustez les niveaux avant d'enregistrer votre travail si l'option est disponible."
       ],
       "preparation": "Pour entendre le son, appuyez sur un bouton audio dans la page ; le navigateur peut bloquer l'audio automatique.",
-      "caution": null,
+      "caution": "Format de capture dépendant de MediaRecorder ; aucun niveau true peak ni compatibilité mobile validés.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/EBM-BRETONNE.",
       "launchUrl": "https://nikoju1977.github.io/EBM-BRETONNE./"
@@ -438,14 +438,14 @@
       "slug": "miaotris",
       "title": "miaotris",
       "category": "Jeux & Expériences",
-      "description": "Jeu de blocs félin dans le navigateur.",
+      "description": "Jeu de blocs félin : plateau 10 × 20, rotation, collisions et score.",
       "steps": [
-        "Ouvrez l'interface du jeu et démarrez la partie.",
-        "Utilisez les touches ou commandes tactiles indiquées.",
-        "Suivez la progression et recommencez une partie pour améliorer votre score."
+        "Consultez index.html dans le dépôt Miaotris.",
+        "Utilisez les commandes clavier ou tactiles après ouverture du jeu racine.",
+        "Le record est local ; le déploiement du jeu racine reste à vérifier."
       ],
       "preparation": "Les commandes et les performances varient selon le téléphone et le navigateur.",
-      "caution": null,
+      "caution": "Le lien Vercel historique concerne Alyina, un sous-projet distinct. Consulter index.html à la racine pour Miaotris.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/miaotris",
       "launchUrl": "https://alyina-vampire-of-halloween.vercel.app"
