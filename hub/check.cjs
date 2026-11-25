@@ -127,3 +127,5 @@ assert.equal(http.rows.filter(r=>r.repo==='the-lovestronautes-machine').length,4
 for(const r of http.rows){assert.equal(r.status,'match');assert.equal(r.sourceStatus,200);assert.equal(r.publicStatus,200);assert.equal(r.sourceSha256,r.publicSha256);assert(/^[0-9a-f]{64}$/.test(r.publicSha256));assert(/^[0-9a-f]{40}$/.test(r.commit));assert.equal(r.sourceBytes,r.publicBytes);assert(Number.isSafeInteger(r.sourceBytes)&&r.sourceBytes>0);assert(qualityHtml.includes(r.publicSha256));assert(qualityHtml.includes('/commit/'+r.commit));}
 assert(qualityHtml.includes('/actions/runs/'+http.run));
 console.log('PASS seven static HTTP file evidence records');
+
+require('node:child_process').execFileSync(process.execPath,[path.join(dir,'cache-isolation.cjs')],{stdio:'inherit'});
