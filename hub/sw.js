@@ -1,5 +1,5 @@
 'use strict';
-const CACHE='studio-niko-hub-v26-documentation-20261125';
+const CACHE='studio-niko-hub-v27-documentation-20261125';
 const ASSETS=['./','./index.html','./pilotage.html','./provenance.html','./quality.html','./quality.css','./quality-evidence.json','./provenance.js','./provenance-snapshot.json','./pilotage-workspace.js','./styles.css','./app.js','./workspace.js','./workspace.css','./catalog.json','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./install.js','./guide.js','./guides.json'];
 const SCOPE=new URL(self.registration.scope);
 const INDEX=new URL('./index.html',SCOPE).href;
