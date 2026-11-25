@@ -4,7 +4,7 @@ Portail public de **Studio Niko Design** — catalogue des dépôts publics, rec
 
 ## Portfolio technique — 25 novembre 2026
 
-[21 README documentés et licences](../PROJECTS.md#registre-technique--21-dépôts-documentés) ; 53 entrées publiques vérifiées par inventaire. Les descriptions de N8V (NIKO ANALOG 37, non codec), META-STUDIO V6 et des prototypes biomédicaux sont actualisées. Les états HTTP historiques restent datés ; aucun nouveau test fonctionnel ni redéploiement n'est revendiqué.
+[26 README publics documentés et licences](../PROJECTS.md#registre-technique--26-dépôts-documentés) ; 53 entrées publiques vérifiées par inventaire. Les descriptions de N8V (NIKO ANALOG 37, non codec), META-STUDIO V6 et des prototypes biomédicaux sont actualisées. Les états HTTP historiques restent datés ; aucun nouveau test fonctionnel ni redéploiement n'est revendiqué.
 
 ## Pilotage Studio Niko Core
 
@@ -21,6 +21,12 @@ La dernière vague renforce la récupération locale de projets AutoCoder et cor
 ## Preuves de qualité (25 novembre 2026)
 
 [Tableau des preuves](quality.html) et [instantané JSON](quality-evidence.json) : 53 dépôts publics, 4 633 fichiers audités, 52 contrôles Docker d’intégrité et quatre comparaisons fonctionnelles ciblées. Les preuves historiques sont séparées des états de production. Le catalogue et les licences existants sont conservés.
+
+## Actualisation documentaire du catalogue — 25 novembre 2026
+
+Les 26 références du registre technique sont distinctes des 53 entrées de l'inventaire public et des six projets signature. Les fiches de UltraVision, AutoEntrepreneur 1M, Niko Emploi, Sage et Niko Live Commander précisent les frontières d'exécution constatées dans les sources. Les champs de statut HTTP et de déploiement restent historiques et inchangés. Aucun nouveau test, contrôle HTTP ou redéploiement n'est attesté ici.
+
+[Registre public des README et licences](../PROJECTS.md#registre-technique--26-dépôts-documentés).
 
 ## Principe
 
