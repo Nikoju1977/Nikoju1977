@@ -150,14 +150,14 @@
       "slug": "compagnon-diabete",
       "title": "compagnon-diabete",
       "category": "Archives & Variantes",
-      "description": "Variante de compagnon de suivi du diabète.",
+      "description": "Variante Daphnée : lecture Bluetooth non fiable, prototype non médical.",
       "steps": [
-        "Consultez les écrans de suivi disponibles sans connecter de dispositif réel au départ.",
-        "Renseignez uniquement des données de démonstration lors des premiers essais.",
-        "Vérifiez toute valeur auprès d'un dispositif médical certifié avant décision."
+        "Consultez le README pour comprendre les limites.",
+        "Ne connectez aucun dispositif médical réel.",
+        "Ne saisissez ni clé réelle ni données de santé."
       ],
       "preparation": "Version secondaire ou historique : ses fonctions peuvent différer des projets principaux.",
-      "caution": "Application expérimentale non certifiée, ne commande pas une pompe à insuline.",
+      "caution": "Lecture Bluetooth non qualifiée ; ne pas interpréter les valeurs ni les utiliser pour un traitement.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/compagnon-diabete",
       "launchUrl": "https://nikoju1977.github.io/compagnon-diabete/"
@@ -310,14 +310,14 @@
       "slug": "jarvisdiabete",
       "title": "jarvisdiabete",
       "category": "Santé & Bien-être",
-      "description": "Compagnon de suivi du diabète, prototype expérimental.",
+      "description": "DiabCare : assistant documentaire, Qwen/Whisper locaux optionnels, journal manuel et coffre.",
       "steps": [
-        "Ouvrez l'assistant et consultez les outils de suivi disponibles.",
-        "Utilisez la saisie ou la voix si le navigateur l'autorise.",
-        "Contrôlez toute information médicale auprès de votre équipe soignante."
+        "Consultez la documentation et utilisez uniquement des données fictives.",
+        "Explorez le journal manuel et les moteurs optionnels, sous réserve de compatibilité.",
+        "Ne pas utiliser pour une décision thérapeutique ou une urgence."
       ],
       "preparation": "Outil expérimental de suivi ou démonstration, non destiné au diagnostic ou aux décisions de traitement.",
-      "caution": "Assistant non certifié ; un professionnel de santé reste indispensable.",
+      "caution": "Prototype non clinique ; aucun calcul de dose, ni commande de pompe.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/jarvisdiabete",
       "launchUrl": "https://nikoju1977.github.io/jarvisdiabete/"
@@ -406,14 +406,14 @@
       "slug": "Medivision-ai-pro",
       "title": "Medivision-ai-pro",
       "category": "Archives & Variantes",
-      "description": "Ancienne variante de MedVision AI Pro.",
+      "description": "Base PWABuilder Lit/TypeScript/Vite, sans moteur d'imagerie médicale.",
       "steps": [
-        "Consultez le dépôt et sa documentation de version historique.",
-        "Vérifiez les prérequis avant d'essayer les fonctions d'imagerie.",
-        "Préférez la version active lorsque celle-ci est disponible."
+        "Consultez le README et les crédits PWABuilder.",
+        "Examinez la structure PWA et les prérequis de build.",
+        "Aucune fonction médicale n'est établie dans ce starter."
       ],
       "preparation": "Version secondaire ou historique : ses fonctions peuvent différer des projets principaux.",
-      "caution": "Ancienne variante. Aucune qualification médicale revendiquée.",
+      "caution": "Base de développement, non une application médicale.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/Medivision-ai-pro",
       "launchUrl": null
