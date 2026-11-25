@@ -312,13 +312,13 @@
     "slug": "les-annales-akashiques",
     "name": "les-annales-akashiques",
     "category": "Arts & Symbolique",
-    "description": "Expérience créative et symbolique.",
+    "description": "Narration symbolique, calculs locaux et IA facultative ; stockage non chiffré.",
     "repoUrl": "https://github.com/Nikoju1977/les-annales-akashiques",
     "demoUrl": "https://nikoju1977.github.io/les-annales-akashiques/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Expérience créative et symbolique ; les interprétations ne constituent pas des faits scientifiquement vérifiés."
+    "requirements": "Ne pas saisir de données intimes ni de secrets réels ; journal et brouillons non chiffrés."
   },
   {
     "slug": "medicalvisionproai",
@@ -487,13 +487,13 @@
     "slug": "oeil-hermes",
     "name": "oeil-hermes",
     "category": "Arts & Symbolique",
-    "description": "Grimoire numérique, correspondances et calculs astrologiques.",
+    "description": "Graphe symbolique bilingue et calculs astronomiques approximatifs ; clés chiffrées.",
     "repoUrl": "https://github.com/Nikoju1977/oeil-hermes",
     "demoUrl": "https://nikoju1977.github.io/oeil-hermes/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Grimoire numérique symbolique, non scientifique ni médical."
+    "requirements": "Expérience symbolique, calculs non qualifiés ; lien de partage pouvant exposer les paramètres de naissance."
   },
   {
     "slug": "OPENVITA-DT1",
@@ -633,12 +633,13 @@
     "slug": "tarot-de-niko",
     "name": "tarot-de-niko",
     "category": "Arts & Symbolique",
-    "description": "Tarot symbolique : 78 arcanes, grimoire et tirages.",
+    "description": "78 arcanes, mélange Fisher–Yates avec Web Crypto, grimoire chiffré optionnel.",
     "repoUrl": "https://github.com/Nikoju1977/tarot-de-niko",
     "demoUrl": "https://nikoju1977.github.io/tarot-de-niko/",
     "featured": false,
     "status": "page-responding",
-    "pageCheckedOn": "2026-11-04"
+    "pageCheckedOn": "2026-11-04",
+    "requirements": "Lecture symbolique ; Mistral facultatif et échanges externes. Aucun audit de sécurité nouveau."
   },
   {
     "slug": "the-lovestronautes-machine",
