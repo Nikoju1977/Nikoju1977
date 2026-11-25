@@ -20,17 +20,35 @@ Créateur indépendant en Loire-Atlantique, France. Je relie narration, design d
 
 ---
 
+## Portfolio international · Engineering & creative technology
+
+Independent creative technologist in France — filmmaking, interactive art, real-time audio, AI-assisted workflows and experimental industrial software. I combine creative direction, browser-native engineering, local-first design and traceable evidence.
+
+| Expertise | Source projects |
+| --- | --- |
+| Filmmaking & postproduction | [Vision-IA](https://github.com/Nikoju1977/Vision-IA) · [META-STUDIO PRO](https://github.com/Nikoju1977/ia-studio-cine) |
+| Real-time audio & DSP | [Thelovestronautes Machine](https://github.com/Nikoju1977/the-lovestronautes-machine) · [Rave Generator 2](https://github.com/Nikoju1977/Rave-Generator-2) |
+| AI orchestration & developer tools | [NikoAssist](https://github.com/Nikoju1977/Nikoassist) · [AutoCoder](https://github.com/Nikoju1977/AutoCoder-Studio-Niko) |
+| Industrial quality & metrology | [Metrology-OS](https://github.com/Nikoju1977/Metrology-OS) · [MECARIA](https://github.com/Nikoju1977/cockpit-mecaria) |
+| Interactive art & imaging research | [Neural Art](https://github.com/Nikoju1977/Neural-Art-mars-2026) · [MedVision](https://github.com/Nikoju1977/medicalvisionproai) |
+
+**21 technical READMEs refreshed / 21 README techniques modernisés** — [registre technique et licences](PROJECTS.md#registre-technique--21-dépôts-documentés). Inventaire relu le 25 novembre 2026 : 58 dépôts, 53 publics, cinq privés non détaillés. Les 39 références historiques et six signatures restent une sélection éditoriale distincte.
+
+[Studio Niko Hub](https://studio-niko-hub.vercel.app/) (adresse annoncée, disponibilité non confirmée ici) · [Sources du Hub](hub/README.md) · [Preuves datées](QUALITY_EVIDENCE.md).
+
+**Collaboration:** reproducible feedback is welcome. Each project's actual license applies. Not all repositories are open source. Medical and industrial prototypes are not certified; no production readiness is implied.
+
 ## Nouveau : Studio Niko Core
 
 [**Accéder au tableau de pilotage GitHub**](hub/pilotage.html) — inventaire daté de **53 dépôts publics**, avec recherche, priorités et état des six premières intégrations de [Studio Niko Core](studio-niko-core/README.md). Les cinq dépôts privés sont exclus de ce tableau public. Les statuts sont un **instantané daté**, pas une surveillance continue ; un commit ne prouve pas un fonctionnement vérifié.
 
 ## Qualité logicielle — preuves publiques
 
-**53 dépôts publics recensés · 4 633 fichiers audités · 52 contrôles Docker réussis · 4 scénarios de correction validés.**
+**Campagne historique : 53 dépôts publics recensés · 4 633 fichiers audités · 52 contrôles Docker d'intégrité réussis · 4 scénarios ciblés comparés.**
 
 [**Consulter les preuves par dépôt**](QUALITY_EVIDENCE.md) · [**Tableau de qualité du Hub**](hub/quality.html) · [**Code Mode Pro**](https://github.com/Nikoju1977/AutoCoder-Studio-Niko/pull/9)
 
-Instantané du 25 novembre 2026 : contrôles statiques et d'intégrité, quatre comparaisons fonctionnelles ciblées. Un dépôt partiellement audité et un dépôt vide ; aucune affirmation de validation globale en production.
+Instantané du 25 novembre 2026 : contrôles statiques et d'intégrité, quatre comparaisons fonctionnelles ciblées. Un dépôt partiellement audité et un dépôt vide ; le workflow global est en échec pour couverture partielle Wan2GP. Aucune validation globale en production.
 
 ## Ce qui rend ces projets différents
 
