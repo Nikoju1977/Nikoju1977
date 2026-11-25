@@ -27,13 +27,13 @@
     "slug": "applewatchcadrans",
     "name": "applewatchcadrans",
     "category": "Art & 3D",
-    "description": "Études et créations graphiques de cadrans.",
+    "description": "Concepts de cadrans : PNG, SVG, HTML animé ; indicateurs de capteurs fictifs.",
     "repoUrl": "https://github.com/Nikoju1977/applewatchcadrans",
     "demoUrl": "https://nikoju1977.github.io/applewatchcadrans/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Création visuelle de cadrans ; la mise en place sur une montre réelle dépend des outils et du système compatibles."
+    "requirements": "Pas de cadran watchOS natif ni de capteur réel ; génération SVG à sécuriser."
   },
   {
     "slug": "AutoCoder-Studio-Niko",
@@ -75,19 +75,19 @@
     "slug": "aylina-is-cooking",
     "name": "aylina-is-cooking",
     "category": "Santé & Bien-être",
-    "description": "Calculateur de glucides/part et estimation liée à l'insuline — prototype non médical.",
+    "description": "Prototype culinaire ; calcul de dose d'insuline non validé à retirer.",
     "repoUrl": "https://github.com/Nikoju1977/aylina-is-cooking",
     "demoUrl": "https://nikoju1977.github.io/aylina-is-cooking/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Calculateur éducatif de glucides et d'insuline, non certifié. Toute dose réelle doit être décidée avec un professionnel de santé."
+    "requirements": "Ne jamais utiliser pour un traitement. Ne saisir aucune donnée d'enfant ni clé réelle ; stockage non chiffré."
   },
   {
     "slug": "Bouh-delivery",
     "name": "Bouh-delivery",
     "category": "Jeux & Expériences",
-    "description": "Jeu d'arcade Halloween, conduite et défis.",
+    "description": "Jeu automobile Halloween : dix missions, trois boss, Canvas et audio synthétisé.",
     "repoUrl": "https://github.com/Nikoju1977/Bouh-delivery",
     "demoUrl": "https://nikoju1977.github.io/Bouh-delivery/",
     "featured": false,
