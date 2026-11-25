@@ -4,7 +4,7 @@ Portail public de **Studio Niko Design** — catalogue des dépôts publics, rec
 
 ## Portfolio technique — 25 novembre 2026
 
-[36 README publics documentés et références de licence](../PROJECTS.md#registre-technique--36-dépôts-documentés) ; 53 entrées publiques vérifiées par inventaire. Les descriptions de N8V (NIKO ANALOG 37, non codec), META-STUDIO V6 et des prototypes biomédicaux sont actualisées. Les états HTTP historiques restent datés ; aucun nouveau test fonctionnel ni redéploiement n'est revendiqué.
+[39 README publics documentés et références de licence](../PROJECTS.md#registre-technique--39-dépôts-documentés) ; 53 entrées publiques vérifiées par inventaire. Les descriptions de N8V (NIKO ANALOG 37, non codec), META-STUDIO V6 et des prototypes biomédicaux sont actualisées. Les états HTTP historiques restent datés ; aucun nouveau test fonctionnel ni redéploiement n'est revendiqué.
 
 ## Pilotage Studio Niko Core
 
@@ -24,13 +24,13 @@ La dernière vague renforce la récupération locale de projets AutoCoder et cor
 
 ## Actualisation documentaire du catalogue — 25 novembre 2026
 
-Les 36 références du registre technique sont distinctes des 53 entrées de l'inventaire public et des six projets signature. Les fiches de UltraVision, AutoEntrepreneur 1M, Niko Emploi, Sage et Niko Live Commander précisent les frontières d'exécution constatées dans les sources. Les champs de statut HTTP et de déploiement restent historiques et inchangés. Aucun nouveau test, contrôle HTTP ou redéploiement n'est attesté ici.
+Les 39 références du registre technique sont distinctes des 53 entrées de l'inventaire public et des six projets signature. Les fiches de UltraVision, AutoEntrepreneur 1M, Niko Emploi, Sage et Niko Live Commander précisent les frontières d'exécution constatées dans les sources. Les champs de statut HTTP et de déploiement restent historiques et inchangés. Aucun nouveau test, contrôle HTTP ou redéploiement n'est attesté ici.
 
-[Registre public des README et licences](../PROJECTS.md#registre-technique--36-dépôts-documentés).
+[Registre public des README et licences](../PROJECTS.md#registre-technique--39-dépôts-documentés).
 
 ## Complément documentaire
 
-36 README publics et un guide de fork distinct ; deux déclarations MIT dans package.json sans fichier autonome identifié. Les fiches de cybersécurité, géospatial, commerce, accessibilité et galerie 3D ont été revues. Aucun nouveau contrôle HTTP, essai matériel ou déploiement n'est attesté. Les preuves historiques restent inchangées.
+39 README publics et un guide de fork distinct ; deux déclarations MIT dans package.json sans fichier autonome identifié. Les fiches de cybersécurité, géospatial, commerce, accessibilité et galerie 3D ont été revues. Aucun nouveau contrôle HTTP, essai matériel ou déploiement n'est attesté. Les preuves historiques restent inchangées.
 
 ## Correction de périmètre — traitement du signal et biométrie
 
@@ -39,6 +39,10 @@ DBMètre : RMS/FFT, moyenne arithmétique des dB distincte du Leq. Agent biomét
 ## Complément — assistants documentaires et starter PWA
 
 DiabCare : chemins Qwen/Whisper locaux optionnels et coffre, sans commande de pompe ni calcul de dose. Daphnée : lecture Bluetooth non fiable, ne pas connecter de dispositif réel. Medivision-ai-pro : starter PWABuilder sans moteur d'imagerie établi. Les notices du Hub distinguent ces périmètres ; aucune validation clinique, compilation ou publication de production nouvelle.
+
+## Complément — jardin et veille territoriale
+
+Les notices précisent les limites des profils de sol déclarés, des calendriers lunaires approximatifs et des conseils IA. Radar utilise un dédoublonnage heuristique ; le mode stub produit des données fictives, à isoler de toute publication réelle. Aucun nouvel appel API ni déploiement vérifié.
 
 ## Principe
 
