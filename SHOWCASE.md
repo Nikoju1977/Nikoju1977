@@ -4,6 +4,10 @@
 
 **Approche :** montrer un problème concret, les choix d'implémentation et les limites. Les détails ci-dessous sont fondés sur la documentation et la structure déclarées des dépôts, **pas sur un audit indépendant de production**.
 
+## International overview
+
+Six signature case studies showcasing design and engineering trade-offs, not a production-readiness claim. The [21-project technical register](PROJECTS.md#registre-technique--21-dépôts-documentés) links current READMEs and licenses. [Historical quality evidence](QUALITY_EVIDENCE.md) records specific commits and runs, not validation of future revisions.
+
 ## 01 — Vision-IA · Construire un film sans confondre faits et propositions
 
 **Domaine :** cinéma, workflow éditorial, IA documentaire.  
@@ -15,7 +19,7 @@
 
 **À examiner dans le code.** Gestion des sources, reprise du dépouillement, sauvegarde IndexedDB, traitement des limites API et export du dossier.
 
-**Limites.** Les fournisseurs IA exigent une configuration et peuvent se tromper. L'utilisation sur des documents sensibles nécessite une vérification des flux de données.
+**Limites.** Les fournisseurs IA exigent une configuration et peuvent se tromper. Le coffre chiffre les clés, pas tous les documents ; des extraits peuvent être envoyés aux fournisseurs.
 
 ## 02 — Galerie Studio Niko · Une exposition 3D, pas seulement une page portfolio
 
@@ -41,7 +45,7 @@
 
 **À examiner dans le code.** `scripts/install_nikoassist.py`, `tests/`, `docs/INSTALLATION.md` et workflows de compilation.
 
-**Limites.** Ce travail adapte le logiciel libre nanoMuse et conserve ses attributions GPL. La présence d'un workflow Android/iOS ne démontre pas la disponibilité d'une application mobile installable et validée.
+**Limites.** Ce travail adapte le logiciel libre nanoMuse et conserve ses attributions GPL. La PWA web reste distincte du moteur Python. La présence d'un workflow Android/iOS ne démontre pas la disponibilité d'une application mobile installable et validée.
 
 ## 04 — MedVision AI Pro · Explorer l'imagerie sans prétendre diagnostiquer
 
@@ -54,7 +58,7 @@
 
 **À examiner dans le code.** `imaging-pro.js`, `test/`, `VALIDATION.md`, `package.json`.
 
-**Limites critiques.** **Prototype non certifié.** Une analyse IA distante transmet les images au fournisseur configuré. Ni performance diagnostique ni aptitude à une décision médicale ne sont revendiquées.
+**Limites critiques.** **Prototype non certifié.** Une analyse IA distante transmet les images au fournisseur configuré. Les clés API hors coffre et anciens enregistrements en clair doivent être audités. Ni performance diagnostique ni aptitude à une décision médicale ne sont revendiquées.
 
 ## 05 — Thelovestronautes Machine · Faire du navigateur un instrument
 
@@ -63,7 +67,7 @@
 
 **Problème.** Composer et jouer une groovebox sans environnement de production audio séparé.
 
-**Réponse technique documentée.** Séquenceur pas à pas, synthèse Web Audio, swing, morphing, automation, piste de biniou électronique, contrôles MIDI, export JSON et enregistrement selon le navigateur.
+**Réponse technique documentée.** Station 18 pistes, synthèse Web Audio, patchbay, arrangement, export MIDI/JSON, capture PCM WAV 16/24 bits et MP3 via lamejs LGPL-3.0. Application MIT.
 
 **À examiner dans le code.** `index.html` et `scripts/validate.mjs`.
 
