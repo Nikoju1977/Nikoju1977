@@ -194,3 +194,20 @@ Candidat construit depuis l'archive locale V4 PWA complète ; aucun dépôt V5 e
 ## Fiabilisation NikoAssist (25 novembre 2026)
 
 [Politique](https://github.com/Nikoju1977/Nikoassist/commit/7d8ce3b6adef907d3207ce276b046e2dfdabbf2d), [agent_team](https://github.com/Nikoju1977/Nikoassist/commit/8602aed25ecb176564bcabfca63be838d73a5b30), [runtime](https://github.com/Nikoju1977/Nikoassist/commit/08062facc9c6cf41d75299be8281fb1243f15700). Budget global, exclusion des appels de contrôle des preuves métier, arrêt après rôle mutateur sans vérification indépendante, pas de relance créateur/opérateur, approbation explicite du runtime auxiliaire. Six fichiers relus, tests de régression publiés, CI finale en attente au contrôle. Run intermédiaire de publication full-source 45703897282 en échec à la mise à jour fast-forward après syntaxe réussie ; cause exacte à établir. Aucune exécution fournisseur réelle, connexion PWA-runtime ou qualification mobile. GPL inchangée.
+
+
+## Qualification générale — contrôle CI du 25 novembre 2026
+
+| Application | Preuve GitHub observée | Périmètre |
+|---|---|---|
+| compagnon-diabete | [Pages 45701050061](https://github.com/Nikoju1977/compagnon-diabete/actions/runs/45701050061) : succès | Déploiement, pas de test clinique ni navigateur |
+| fibrocare | [CI 45701374662](https://github.com/Nikoju1977/fibrocare/actions/runs/45701374662), [Pages 45701372572](https://github.com/Nikoju1977/fibrocare/actions/runs/45701372572) : succès | Contrôle statique et publication |
+| OPENVITA-DT1 | [CI 45701619338](https://github.com/Nikoju1977/OPENVITA-DT1/actions/runs/45701619338), [Pages 45701619510](https://github.com/Nikoju1977/OPENVITA-DT1/actions/runs/45701619510) : succès | Contrôle statique et publication |
+| Metrology-OS | [CI 45701868558](https://github.com/Nikoju1977/Metrology-OS/actions/runs/45701868558) : succès | Contrôle statique |
+| cockpit-mecaria | [CI 45702063750](https://github.com/Nikoju1977/cockpit-mecaria/actions/runs/45702063750), [Pages 45702065489](https://github.com/Nikoju1977/cockpit-mecaria/actions/runs/45702065489) : succès | Contrôle statique et publication |
+| IA Studio Ciné | [Quality Gate 45703635631](https://github.com/Nikoju1977/ia-studio-cine/actions/runs/45703635631) : échec, Pages réussi | Journal : identifiant manual-export-download absent du HTML alors que le JS le crée dynamiquement. [Correctif](https://github.com/Nikoju1977/ia-studio-cine/commit/b883bd8e381a3f1f7dad4e106cb25d5b4d17988a) : lien statique masqué, contrôle d'unicité réussi. Nouvelle [CI](https://github.com/Nikoju1977/ia-studio-cine/actions/runs/45704278073) en cours au contrôle. |
+| NikoAssist | [CI 45703997736](https://github.com/Nikoju1977/Nikoassist/actions/runs/45703997736) : succès | Publication full-source 45703897282 rejetée (fetch first, écriture concurrente). [Correctif](https://github.com/Nikoju1977/Nikoassist/commit/40bd2b32b66395b1bc18b3a744ead8e2c84e9176) : groupe de concurrence, pas d'annulation du job actif, checkout main courant, push non forcé conservé. [Nouveau run](https://github.com/Nikoju1977/Nikoassist/actions/runs/45704298813) en attente au contrôle. |
+| Rausbeat / NIKO Studio Audio | Archives candidates testées localement, pas de nouvelle publication | Pas d'assimilation à un autre dépôt |
+| Portfolio | [CI catalogue 45704008846](https://github.com/Nikoju1977/Nikoju1977/actions/runs/45704008846) : succès | Contrôle du catalogue uniquement |
+
+Ne pas déduire une stabilité opérationnelle, une certification ou un essai physique d'un run statique ou Pages. Les corrections CI ci-dessus doivent être recontrôlées à leur SHA.
