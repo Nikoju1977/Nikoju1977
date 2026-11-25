@@ -6,14 +6,18 @@ Ce guide décrit **la fonction concrète de chaque dépôt public présenté par
 
 **Inventaire GitHub au 26 octobre 2026 :** 49 dépôts appartenant au compte, dont 45 publics (profil compris) et 4 privés. Parmi les 44 dépôts de projets publics, **39 projets distincts sont mis en avant**, **4 variantes sont décrites séparément** et **1 projet reste hors sélection éditoriale**. Les dépôts privés ne sont pas répertoriés.
 
+## Actualisation du 25 novembre 2026
+
+Inventaire GitHub relu : 58 dépôts, 53 publics (profil inclus) et cinq privés non détaillés. La sélection historique de 39 références et 4 variantes reste distincte du [catalogue complet](hub/catalog.json).
+
 ## 39 projets de référence
 
 ### 1. Cinéma, image & arts numériques
 
 | Dépôt | Ce qu'il fait concrètement | Positionnement |
 | --- | --- | --- |
-| [ia-studio-cine](https://github.com/Nikoju1977/ia-studio-cine) | Atelier de création vidéo dans le navigateur : importer images et clips, construire un montage sur une timeline, appliquer des looks et exporter le projet. Une génération via Agnes est proposée avec clé et accès réseau. | Atelier expérimental |
-| [Vision-IA](https://github.com/Nikoju1977/Vision-IA) | Assistant de préproduction cinématographique : transformer les documents d'un film en note d'intention, découpage technique, conducteur, pistes de production et dossier exportable. Distingue les données du scénario des suggestions de l'IA. | Projet signature |
+| [ia-studio-cine](https://github.com/Nikoju1977/ia-studio-cine) | META-STUDIO PRO V6 : storyboard, connecteurs LTX/Agnes, timeline et MediaRecorder. Génération distante soumise aux quotas et CORS ; rendu réel non revérifié. | Atelier expérimental |
+| [Vision-IA](https://github.com/Nikoju1977/Vision-IA) | Préproduction, documents, découpage, conducteur local et routage LLM. Documents non chiffrés par le coffre de clés ; extraits susceptibles d'être transmis. | Projet signature |
 | [Niko-Ultravision](https://github.com/Nikoju1977/Niko-Ultravision) | Outil de restauration et d'agrandissement d'images ou vidéos : filtres Canvas et moteur local ONNX de super-résolution, avec accélération WebGPU ou repli WebAssembly. Les détails générés ne garantissent pas la fidélité à l'original. | Outil créatif |
 | [Neural-Art-mars-2026](https://github.com/Nikoju1977/Neural-Art-mars-2026) | Atelier de peinture numérique : dessiner avec des brosses, combiner des calques et effets WebGL, expérimenter des rendus assistés et exporter des images. | Prototype artistique |
 | [galerie-studio-niko](https://github.com/Nikoju1977/galerie-studio-niko) | Galerie d'exposition 3D : accrocher des tableaux, présenter sculptures, films et sons, régler l'éclairage, créer des cartels et préparer une publication web. | Projet signature |
@@ -24,7 +28,7 @@ Ce guide décrit **la fonction concrète de chaque dépôt public présenté par
 
 | Dépôt | Ce qu'il fait concrètement | Positionnement |
 | --- | --- | --- |
-| [the-lovestronautes-machine](https://github.com/Nikoju1977/the-lovestronautes-machine) | Machine musicale interactive : composer des motifs rythmiques, programmer un séquenceur Web Audio, jouer sur des effets, utiliser MIDI et sauvegarder ou exporter des sessions suivant les capacités du navigateur. | Projet signature |
+| [the-lovestronautes-machine](https://github.com/Nikoju1977/the-lovestronautes-machine) | Station 18 pistes, synthèse, patchbay, WAV/MP3, MIDI et arrangement. | Projet signature |
 | [EBM-BRETONNE.](https://github.com/Nikoju1977/EBM-BRETONNE.) | Groovebox Cyber-Fest-Noz mêlant électronique EBM et références sonores bretonnes : programmer et jouer des rythmes directement dans une page web avec Tone.js. | Expérimentation musicale |
 | [Dbmetre-pro](https://github.com/Nikoju1977/Dbmetre-pro) | Analyseur sonore au microphone : suivre le niveau dBFS, visualiser le spectre et les fréquences, enregistrer des mesures et les exporter. Il ne remplace pas un sonomètre étalonné. | Outil de mesure exploratoire |
 
@@ -32,15 +36,15 @@ Ce guide décrit **la fonction concrète de chaque dépôt public présenté par
 
 | Dépôt | Ce qu'il fait concrètement | Positionnement |
 | --- | --- | --- |
-| [medicalvisionproai](https://github.com/Nikoju1977/medicalvisionproai) | Visualiseur d'imagerie : ouvrir et comparer des images, consulter certaines séries DICOM non compressées, reconstruire plusieurs plans, annoter et sauvegarder localement. Analyse IA optionnelle, sans validation diagnostique. | Projet signature / prototype |
-| [OPENVITA-DT1](https://github.com/Nikoju1977/OPENVITA-DT1) | Tableau de bord expérimental pour le diabète de type 1 : visualiser des données glycémiques Nightscout, des rapports AGP et des calculs pédagogiques inspirés d'oref1. Aucun calcul ne doit piloter un traitement. | Prototype HealthTech |
+| [medicalvisionproai](https://github.com/Nikoju1977/medicalvisionproai) | DICOM/MPR local et IA distante optionnelle. Images/contexte transmis au fournisseur ; clés hors coffre, anciens dossiers en clair possibles. Données fictives uniquement. | Projet signature / prototype |
+| [OPENVITA-DT1](https://github.com/Nikoju1977/OPENVITA-DT1) | Journal glycémique manuel ; heuristiques de doses non validées. Ne pas utiliser pour traiter. Nightscout/oref1/AGP non démontrés dans le fichier principal ; données et clés en clair. | Prototype HealthTech |
 | [jarvisdiabete](https://github.com/Nikoju1977/jarvisdiabete) | Compagnon vocal DiabCare pour le DT1 : noter des glycémies saisies, consulter un journal, estimer des glucides et utiliser des contenus pédagogiques. Les recommandations de doses d'insuline sont exclues. | Prototype HealthTech |
-| [dermato-ai](https://github.com/Nikoju1977/dermato-ai) | Démonstrateur de vision artificielle appliqué à la peau : importer ou photographier une image et obtenir une lecture descriptive par un modèle de vision. Ne permet pas de diagnostiquer une lésion. | Prototype biomédical |
-| [purescanai](https://github.com/Nikoju1977/purescanai) | Interface d'exploration dermatologique : autoriser la caméra, lancer une analyse de peau, parcourir les rapports et les espaces routine, produits et chat. Ne constitue ni un examen clinique ni une recommandation de traitement. | Prototype dermatologique |
-| [SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL) | Démonstrateur QUANTUM AI : activer un flux caméra, explorer une analyse IA et afficher des indicateurs biométriques et une courbe de fatigue. Ces métriques ne sont pas des mesures médicales validées. | Prototype biométrique |
+| [dermato-ai](https://github.com/Nikoju1977/dermato-ai) | OpenCV, Face Mesh et Pixtral distant ; métriques non validées. Scores de secours, stockage en clair et rendu HTML à sécuriser ; données fictives uniquement. | Prototype biomédical |
+| [purescanai](https://github.com/Nikoju1977/purescanai) | Trois requêtes Pixtral/Mistral ; scores cutanés générés, non mesurés. Ne pas utiliser pour diagnostiquer ou traiter. Flux d'images distants. | Prototype dermatologique |
+| [SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL) | Repères faciaux et EAR ; estimation BPM/fatigue non fiable. Prototype non clinique. Données fictives uniquement. | Prototype biométrique |
 | [agent-biometrique](https://github.com/Nikoju1977/agent-biometrique) | Interface de suivi biométrique : regrouper des mesures, observer leur évolution et explorer des interprétations visuelles ou IA. Les alertes et conclusions ne sont pas validées cliniquement. | Prototype biométrique |
-| [fibrobot](https://github.com/Nikoju1977/fibrobot) | Assistant conversationnel d'information sur la fibromyalgie : explorer des notions et références scientifiques et poser des questions. Ne remplace ni le diagnostic ni une consultation. | Assistant d'information |
-| [fibrocare](https://github.com/Nikoju1977/fibrocare) | Journal personnel de fibromyalgie : consigner douleurs, sommeil, fatigue et humeur, afficher des tendances et préparer une synthèse pour une consultation. | Outil de suivi personnel |
+| [fibrobot](https://github.com/Nikoju1977/fibrobot) | Compagnon documentaire, coffre AES-GCM et IA facultative. Refus et rappels non validés cliniquement. Flux IA à auditer. | Assistant d'information |
+| [fibrocare](https://github.com/Nikoju1977/fibrocare) | Journal, graphiques et PDF ; stockage local non chiffré. Sauvegarde et informations thérapeutiques à fiabiliser. Données fictives uniquement. | Outil de suivi personnel |
 | [presentation-medtronic](https://github.com/Nikoju1977/presentation-medtronic) | Présentation HTML interactive de concepts et technologies liés au diabète et aux boucles fermées. Projet indépendant, non affilié à Medtronic, sans vocation de programmation médicale. | Présentation pédagogique |
 
 ### 4. Assistants & agents IA
@@ -72,8 +76,8 @@ Ce guide décrit **la fonction concrète de chaque dépôt public présenté par
 
 | Dépôt | Ce qu'il fait concrètement | Positionnement |
 | --- | --- | --- |
-| [cockpit-mecaria](https://github.com/Nikoju1977/cockpit-mecaria) | Cockpit de pilotage d'atelier : tableaux qualité, métrologie, production, non-conformités, méthodes d'amélioration et exports locaux. La gestion des rôles est illustrative, pas une authentification. | Prototype industriel |
-| [Metrology-OS](https://github.com/Nikoju1977/Metrology-OS) | Outil de gestion d'un parc d'instruments : suivre étalonnages, périodicités, certificats, procédures et recherches dans une interface web. Ne délivre pas de certification métrologique. | Prototype métier |
+| [cockpit-mecaria](https://github.com/Nikoju1977/cockpit-mecaria) | Qualité, SPC, R&R, TRS et gouvernance IA. Coffre de clés distinct ; rôles déclaratifs et journal modifiable. | Prototype industriel |
+| [Metrology-OS](https://github.com/Nikoju1977/Metrology-OS) | Incertitudes, bande de garde et gestion métrologique. Calculs simplifiés non qualifiés ; aucune accréditation ou certification. | Prototype métier |
 | [aegis-earth-mobile](https://github.com/Nikoju1977/aegis-earth-mobile) | Carte géospatiale mobile combinant des couches publiques : caméras de circulation TfL, trafic aérien disponible, météo, qualité de l'air, indicateurs spatiaux et imports GeoJSON. Les flux tiers peuvent être limités. | PWA / adaptation mobile |
 | [radar-de-niko](https://github.com/Nikoju1977/radar-de-niko) | Moteur de veille territoriale modulaire : collecter des sources d'actualité, dédupliquer et transformer les résultats en flux RSS, JSONL, pages de synthèse et PWA locale. | Outil de veille |
 
@@ -113,3 +117,34 @@ Elles restent publiques pour préserver le code, les essais et l'historique, mai
 Les interfaces liées à la santé ne sont **ni des dispositifs médicaux certifiés ni des bases de décision thérapeutique**. Les applications d'IA peuvent demander un fournisseur externe, une clé personnelle ou une configuration serveur. Un lien vers un dépôt ne garantit pas une démo déployée.
 
 **[Revenir au profil Studio Niko Design](README.md)**
+
+
+## Registre technique — 21 dépôts documentés
+
+README sur main et fichiers de licence relus le 25 novembre 2026. Les 21 README conservent diagramme Mermaid, résumé anglais et feuille de route ; certains ont évolué depuis les commits initiaux. Les liens main sont mobiles. Aucune validation de production n'est inférée. Les licences tierces prévalent pour les composants concernés.
+
+| Projet / project | Périmètre | Licence |
+| --- | --- | --- |
+| **[Neural-Art-mars-2026](https://github.com/Nikoju1977/Neural-Art-mars-2026/blob/main/README.md)** | Art / Three.js, MediaPipe, cordes sonores | [Droits réservés](https://github.com/Nikoju1977/Neural-Art-mars-2026/blob/main/LICENSE.md) |
+| **[niko-music-lab](https://github.com/Nikoju1977/niko-music-lab/blob/main/README.md)** | Audio / 12 pistes, synthèse EBM, WAV/MIDI | [Droits réservés](https://github.com/Nikoju1977/niko-music-lab/blob/main/LICENSE.md) |
+| **[RF-Metrology-Pro](https://github.com/Nikoju1977/RF-Metrology-Pro/blob/main/README.md)** | RF / Android Java, export chiffré, qualification requise | [Droits réservés](https://github.com/Nikoju1977/RF-Metrology-Pro/blob/main/LICENSE.md) |
+| **[AutoCoder-Studio-Niko](https://github.com/Nikoju1977/AutoCoder-Studio-Niko/blob/main/README.md)** | Dev tools / templates locaux, Pyodide, sandbox HTML | [Droits réservés](https://github.com/Nikoju1977/AutoCoder-Studio-Niko/blob/main/LICENSE.md) |
+| **[Nikoassist](https://github.com/Nikoju1977/Nikoassist/blob/main/README.md)** | Agents / Python et PWA distincte | [GPL-3.0](https://github.com/Nikoju1977/Nikoassist/blob/main/LICENSE) |
+| **[Ron-](https://github.com/Nikoju1977/Ron-/blob/main/README.md)** | Agents / routage navigateur, local et distant | [Droits réservés](https://github.com/Nikoju1977/Ron-/blob/main/LICENSE.md) |
+| **[Rave-Generator-2](https://github.com/Nikoju1977/Rave-Generator-2/blob/main/README.md)** | Audio / groovebox Web Audio, WAV/MIDI | [Droits réservés](https://github.com/Nikoju1977/Rave-Generator-2/blob/main/LICENSE.md) |
+| **[the-lovestronautes-machine](https://github.com/Nikoju1977/the-lovestronautes-machine/blob/main/README.md)** | Audio / 18 pistes, PCM/MP3, lamejs LGPL-3.0 | [MIT](https://github.com/Nikoju1977/the-lovestronautes-machine/blob/main/LICENSE) |
+| **[nikogroove](https://github.com/Nikoju1977/nikogroove/blob/main/README.md)** | Audio / variante EBM-Breizh, Tone.js | [Droits réservés](https://github.com/Nikoju1977/nikogroove/blob/main/LICENSE.md) |
+| **[Metrology-OS](https://github.com/Nikoju1977/Metrology-OS/blob/main/README.md)** | Industrie / incertitudes, bande de garde non qualifiée | [Droits réservés](https://github.com/Nikoju1977/Metrology-OS/blob/main/LICENSE.md) |
+| **[SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL/blob/main/README.md)** | Vision / EAR, BPM et fatigue non fiables | [Droits réservés](https://github.com/Nikoju1977/SCAN-BIOMEDICAL/blob/main/LICENSE.md) |
+| **[cockpit-mecaria](https://github.com/Nikoju1977/cockpit-mecaria/blob/main/README.md)** | Industrie / SPC, R&R, TRS, coffre de clés | [Droits réservés](https://github.com/Nikoju1977/cockpit-mecaria/blob/main/LICENSE.md) |
+| **[fibrocare](https://github.com/Nikoju1977/fibrocare/blob/main/README.md)** | Santé / journal et PDF, stockage non chiffré | [MIT](https://github.com/Nikoju1977/fibrocare/blob/main/LICENSE) |
+| **[fibrobot](https://github.com/Nikoju1977/fibrobot/blob/main/README.md)** | Santé / coffre chiffré, règles documentaires, IA facultative | [Droits réservés](https://github.com/Nikoju1977/fibrobot/blob/main/LICENSE.md) |
+| **[OPENVITA-DT1](https://github.com/Nikoju1977/OPENVITA-DT1/blob/main/README.md)** | Santé / journal manuel, doses non validées | [MIT](https://github.com/Nikoju1977/OPENVITA-DT1/blob/main/LICENSE) |
+| **[medicalvisionproai](https://github.com/Nikoju1977/medicalvisionproai/blob/main/README.md)** | Imagerie / DICOM-MPR, coffre examens, IA distante | [MIT](https://github.com/Nikoju1977/medicalvisionproai/blob/main/LICENSE) |
+| **[dermato-ai](https://github.com/Nikoju1977/dermato-ai/blob/main/README.md)** | Vision / OpenCV, Face Mesh, Pixtral, métriques non validées | [MIT](https://github.com/Nikoju1977/dermato-ai/blob/main/LICENSE) |
+| **[purescanai](https://github.com/Nikoju1977/purescanai/blob/main/README.md)** | Vision / trois requêtes IA, scores non mesurés | [Droits réservés](https://github.com/Nikoju1977/purescanai/blob/main/LICENSE.md) |
+| **[ia-studio-cine](https://github.com/Nikoju1977/ia-studio-cine/blob/main/README.md)** | Cinéma / connecteurs LTX-Agnes, montage, MediaRecorder | [Droits réservés](https://github.com/Nikoju1977/ia-studio-cine/blob/main/LICENSE.md) |
+| **[N8V](https://github.com/Nikoju1977/N8V/blob/main/README.md)** | Audio / NIKO ANALOG 37, PCM WAV, pas un codec vidéo | [Droits réservés](https://github.com/Nikoju1977/N8V/blob/main/LICENSE.md) |
+| **[Vision-IA](https://github.com/Nikoju1977/Vision-IA/blob/main/README.md)** | Cinéma / dépouillement reprenable, conducteur local | [Droits réservés](https://github.com/Nikoju1977/Vision-IA/blob/main/LICENSE.md) |
+
+[Preuves historiques](QUALITY_EVIDENCE.md). Les prototypes médicaux ne doivent pas servir à des décisions thérapeutiques. Les retours reproductibles respectent les licences individuelles.
