@@ -143,8 +143,8 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 | [jarvisdiabete](https://github.com/Nikoju1977/jarvisdiabete) | Compagnon documentaire DiabCare, Qwen/Whisper locaux optionnels ; sans calcul de dose |
 | [dermato-ai](https://github.com/Nikoju1977/dermato-ai) | Exploration de la vision artificielle en dermatologie |
 | [purescanai](https://github.com/Nikoju1977/purescanai) | Prototype d'analyse visuelle de la peau et routines de soin |
-| [SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL) | Interface expérimentale de caméra et indicateurs biométriques |
-| [agent-biometrique](https://github.com/Nikoju1977/agent-biometrique) | Démonstrateur de session biométrique : scores fictifs, aucune mesure réelle |
+| [SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL) | Repères faciaux expérimentaux et EAR ; pouls et fatigue retirés. |
+| [agent-biometrique](https://github.com/Nikoju1977/agent-biometrique) | Aperçu caméra facultatif, scores et alertes fictifs retirés du code. |
 | [fibrobot](https://github.com/Nikoju1977/fibrobot) | Agent d'information autour de la fibromyalgie |
 | [fibrocare](https://github.com/Nikoju1977/fibrocare) | Journal de suivi de la fibromyalgie |
 | [presentation-medtronic](https://github.com/Nikoju1977/presentation-medtronic) | Maquette HTML/CSS incomplète, indépendante et non médicale |
@@ -189,7 +189,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 | [Boutique-morgane](https://github.com/Nikoju1977/Boutique-morgane) | Site vitrine et boutique |
 | [handimonde](https://github.com/Nikoju1977/handimonde) | Carte des lieux accessibles |
 | [job-search](https://github.com/Nikoju1977/job-search) | Recherche d'emploi et accompagnement des candidats |
-| [aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking) | Prototype culinaire ; estimation de dose non validée, à ne pas utiliser |
+| [aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking) | Calcul alimentaire par portion et favoris locaux ; dose retirée, IA suspendue. |
 
 </details>
 
@@ -255,3 +255,12 @@ La [bibliothèque Studio Niko Core v0.1.0](studio-niko-core/README.md) fournit d
 **STUDIO NIKO DESIGN** · Construire des mondes. Concevoir des outils. Documenter le réel.
 
 </div>
+
+
+## Correction P0 — lot 1 (25 novembre 2026)
+
+- [agent-biometrique](https://github.com/Nikoju1977/agent-biometrique/commit/7d94d7666ac1ec8c98f4256d689639c49996688e) : Aperçu caméra facultatif, scores et alertes fictifs retirés du code. Aucune mesure biométrique ; cycle caméra à qualifier.
+- [SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL/commit/416dce75f69b5d93d1bd49836a6e9f0c1844de4b) : Repères faciaux expérimentaux et EAR ; pouls et fatigue retirés. Aucun usage médical ; modèle, permissions et suivi à qualifier.
+- [aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking/commit/c25e48bdf50a7f6b8eb6e9f7879b363a3d80e3e0) : Calcul alimentaire par portion et favoris locaux ; dose retirée, IA suspendue. Aucun calcul de traitement ; favoris non chiffrés, ancien profil effaçable volontairement.
+
+Sources relues après publication, empreintes SHA vérifiées ; aucun nouveau test d'exécution ou déploiement vérifié. Les constats antérieurs sont historiques, non des preuves de l'état actuel. Le chef distant est suspendu par précaution ; pas de suppression automatique des anciennes données locales.
