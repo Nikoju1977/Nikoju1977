@@ -22,14 +22,14 @@
       "slug": "agent-biometrique",
       "title": "agent-biometrique",
       "category": "Santé & Bien-être",
-      "description": "Interface expérimentale d'analyse biométrique.",
+      "description": "Démonstrateur de scores et alertes simulés, sans mesure biométrique.",
       "steps": [
-        "Autorisez l'accès à la caméra uniquement si vous souhaitez essayer l'analyse.",
-        "Choisissez « Démarrer l'analyse » et placez votre visage dans le cadre.",
-        "Consultez les indicateurs à titre expérimental, puis arrêtez la caméra."
+        "Consultez le README pour comprendre la simulation.",
+        "Ne pas utiliser la caméra pour une évaluation de santé ou de fatigue.",
+        "Les valeurs affichées ne proviennent pas des pixels et ne doivent guider aucune décision."
       ],
-      "preparation": "Outil expérimental de suivi ou démonstration, non destiné au diagnostic ou aux décisions de traitement.",
-      "caution": "Indicateurs non médicaux, sans fiabilité clinique garantie.",
+      "preparation": "Interface de démonstration seulement ; éviter toute donnée personnelle.",
+      "caution": "Scores et alertes fictifs ; correction de l'interface nécessaire.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/agent-biometrique",
       "launchUrl": "https://nikoju1977.github.io/agent-biometrique/"
@@ -189,7 +189,7 @@
         "Arrêtez la capture et exportez les données si l'option est proposée."
       ],
       "preparation": "Pour entendre le son, appuyez sur un bouton audio dans la page ; le navigateur peut bloquer l'audio automatique.",
-      "caution": "Une valeur dBFS n'est pas une mesure certifiée de pression acoustique dB SPL.",
+      "caution": "dBFS numérique, offset SPL indicatif ; moyenne arithmétique des dB distincte du Leq.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/Dbmetre-pro",
       "launchUrl": "https://nikoju1977.github.io/Dbmetre-pro/"
@@ -392,12 +392,12 @@
       "category": "Santé & Bien-être",
       "description": "Visualisation d'images et de séries DICOM, prototype non certifié.",
       "steps": [
-        "Importez un fichier médical de test ou une série DICOM non sensible.",
-        "Explorez les fonctions de visualisation et ajustez l'affichage.",
-        "Exportez uniquement après contrôle ; aucune fonction ne remplace une interprétation médicale qualifiée."
+        "Utilisez uniquement des images de test fictives et des DICOM synthétiques.",
+        "Explorez les fonctions d'affichage sans interprétation clinique.",
+        "Ne transmettez aucune image réelle à un fournisseur IA."
       ],
       "preparation": "Outil expérimental de suivi ou démonstration, non destiné au diagnostic ou aux décisions de traitement.",
-      "caution": "Visualiseur expérimental non certifié pour un diagnostic.",
+      "caution": "Prototype non validé cliniquement ; géométrie et espacements à qualifier.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/medicalvisionproai",
       "launchUrl": "https://nikoju1977.github.io/medicalvisionproai/"
