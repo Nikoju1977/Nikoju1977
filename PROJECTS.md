@@ -42,7 +42,7 @@ Inventaire GitHub relu : 58 dépôts, 53 publics (profil inclus) et cinq privés
 | [dermato-ai](https://github.com/Nikoju1977/dermato-ai) | OpenCV, Face Mesh et Pixtral distant ; métriques non validées. Scores de secours, stockage en clair et rendu HTML à sécuriser ; données fictives uniquement. | Prototype biomédical |
 | [purescanai](https://github.com/Nikoju1977/purescanai) | Trois requêtes Pixtral/Mistral ; scores cutanés générés, non mesurés. Ne pas utiliser pour diagnostiquer ou traiter. Flux d'images distants. | Prototype dermatologique |
 | [SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL) | Repères faciaux et EAR ; estimation BPM/fatigue non fiable. Prototype non clinique. Données fictives uniquement. | Prototype biométrique |
-| [agent-biometrique](https://github.com/Nikoju1977/agent-biometrique) | Interface de suivi biométrique : regrouper des mesures, observer leur évolution et explorer des interprétations visuelles ou IA. Les alertes et conclusions ne sont pas validées cliniquement. | Prototype biométrique |
+| [agent-biometrique](https://github.com/Nikoju1977/agent-biometrique) | Démonstrateur : aperçu caméra, scores générés à partir de l'heure et du hasard, sans analyse de pixels. Aucune mesure biométrique établie ; ne pas utiliser pour la santé ou la sécurité. | Simulation |
 | [fibrobot](https://github.com/Nikoju1977/fibrobot) | Compagnon documentaire, coffre AES-GCM et IA facultative. Refus et rappels non validés cliniquement. Flux IA à auditer. | Assistant d'information |
 | [fibrocare](https://github.com/Nikoju1977/fibrocare) | Journal, graphiques et PDF ; stockage local non chiffré. Sauvegarde et informations thérapeutiques à fiabiliser. Données fictives uniquement. | Outil de suivi personnel |
 | [presentation-medtronic](https://github.com/Nikoju1977/presentation-medtronic) | Présentation HTML interactive de concepts et technologies liés au diabète et aux boucles fermées. Projet indépendant, non affilié à Medtronic, sans vocation de programmation médicale. | Présentation pédagogique |
@@ -119,9 +119,9 @@ Les interfaces liées à la santé ne sont **ni des dispositifs médicaux certif
 **[Revenir au profil Studio Niko Design](README.md)**
 
 
-## Registre technique — 31 dépôts documentés
+## Registre technique — 33 dépôts documentés
 
-README et références de licence relus le 25 novembre 2026. Les 31 README sont accessibles sur main et contiennent un diagramme Mermaid et un résumé anglais, vérifiés par lecture. Deux projets déclarent MIT dans package.json sans fichier de licence autonome identifié à la racine. Les mises à jour documentaires ne sont pas des tests. Les liens main sont mobiles. Aucune validation de production n'est inférée. Les licences tierces prévalent pour les composants concernés.
+README et références de licence relus le 25 novembre 2026. Les 33 README sont accessibles sur main et contiennent un diagramme Mermaid et un résumé anglais, vérifiés par lecture. Deux projets déclarent MIT dans package.json sans fichier de licence autonome identifié à la racine. Les mises à jour documentaires ne sont pas des tests. Les liens main sont mobiles. Aucune validation de production n'est inférée. Les licences tierces prévalent pour les composants concernés.
 
 | Projet / project | Périmètre | Licence |
 | --- | --- | --- |
@@ -140,7 +140,7 @@ README et références de licence relus le 25 novembre 2026. Les 31 README sont 
 | **[fibrocare](https://github.com/Nikoju1977/fibrocare/blob/main/README.md)** | Santé / journal et PDF, stockage non chiffré | [MIT](https://github.com/Nikoju1977/fibrocare/blob/main/LICENSE) |
 | **[fibrobot](https://github.com/Nikoju1977/fibrobot/blob/main/README.md)** | Santé / coffre chiffré, règles documentaires, IA facultative | [Droits réservés](https://github.com/Nikoju1977/fibrobot/blob/main/LICENSE.md) |
 | **[OPENVITA-DT1](https://github.com/Nikoju1977/OPENVITA-DT1/blob/main/README.md)** | Santé / journal manuel, doses non validées | [MIT](https://github.com/Nikoju1977/OPENVITA-DT1/blob/main/LICENSE) |
-| **[medicalvisionproai](https://github.com/Nikoju1977/medicalvisionproai/blob/main/README.md)** | Imagerie / DICOM-MPR, coffre examens, IA distante | [MIT](https://github.com/Nikoju1977/medicalvisionproai/blob/main/LICENSE) |
+| **[medicalvisionproai](https://github.com/Nikoju1977/medicalvisionproai/blob/main/README.md)** | Imagerie / DICOM-MPR, MIP/MinIP, coffre examens, IA distante ; [approfondissement](https://github.com/Nikoju1977/medicalvisionproai/commit/5d07e4ca0d3dbcf7c053e7196df60af40c751d31) | [MIT](https://github.com/Nikoju1977/medicalvisionproai/blob/main/LICENSE) |
 | **[dermato-ai](https://github.com/Nikoju1977/dermato-ai/blob/main/README.md)** | Vision / OpenCV, Face Mesh, Pixtral, métriques non validées | [MIT](https://github.com/Nikoju1977/dermato-ai/blob/main/LICENSE) |
 | **[purescanai](https://github.com/Nikoju1977/purescanai/blob/main/README.md)** | Vision / trois requêtes IA, scores non mesurés | [Droits réservés](https://github.com/Nikoju1977/purescanai/blob/main/LICENSE.md) |
 | **[ia-studio-cine](https://github.com/Nikoju1977/ia-studio-cine/blob/main/README.md)** | Cinéma / connecteurs LTX-Agnes, montage, MediaRecorder | [Droits réservés](https://github.com/Nikoju1977/ia-studio-cine/blob/main/LICENSE.md) |
@@ -159,7 +159,10 @@ README et références de licence relus le 25 novembre 2026. Les 31 README sont 
 | **[handimonde](https://github.com/Nikoju1977/handimonde/blob/main/README.md)** | Accessibilité / Leaflet, OSM, Overpass, relais IA optionnel · [commit documentaire](https://github.com/Nikoju1977/handimonde/commit/e128ea625374fb5f9e16edf6e33022bf56362be0) | [Droits réservés ; OSM ODbL](https://github.com/Nikoju1977/handimonde/blob/main/LICENSE) |
 | **[galerie-studio-niko](https://github.com/Nikoju1977/galerie-studio-niko/blob/main/README.md)** | Art / Three.js, audio spatial, publication Supabase à sécuriser · [commit documentaire](https://github.com/Nikoju1977/galerie-studio-niko/commit/eb73fbf9c64a06bb9cd2b300a3397dc8d2bb23a4) | [MIT déclaré, fichier autonome absent](https://github.com/Nikoju1977/galerie-studio-niko/blob/main/package.json) |
 
-### Documentation de projet tiers (hors des 31 README)
+| **[Dbmetre-pro](https://github.com/Nikoju1977/Dbmetre-pro/blob/main/README.md)** | Audio / RMS, FFT 4096 points, dBFS ; non étalonné · [commit documentaire](https://github.com/Nikoju1977/Dbmetre-pro/commit/fd487594b1b2a55307053be7edecffd5d20923b2) | [Droits réservés](https://github.com/Nikoju1977/Dbmetre-pro/blob/main/LICENSE.md) |
+| **[agent-biometrique](https://github.com/Nikoju1977/agent-biometrique/blob/main/README.md)** | Démonstrateur / caméra de prévisualisation, scores aléatoires non mesurés ; P0 · [commit documentaire](https://github.com/Nikoju1977/agent-biometrique/commit/1185aeb74c899a794b68a34c56703edabf6ce808) | [Droits réservés](https://github.com/Nikoju1977/agent-biometrique/blob/main/LICENSE.md) |
+
+### Documentation de projet tiers (hors des 33 README)
 
 [Wan2GP — guide du fork](https://github.com/Nikoju1977/Wan2GP/blob/main/GUIDE_UTILISATEUR.md) · [commit documentaire](https://github.com/Nikoju1977/Wan2GP/commit/9d53d8d1637a10a5484757c5e880b7be9a6a4b42) · [WanGP Community License 2.0](https://github.com/Nikoju1977/Wan2GP/blob/main/LICENSE.txt). Fork de DeepBeepMeep/WanGP, non revendiqué comme création originale ; restrictions commerciales et licences des modèles à respecter. README amont préservé.
 
