@@ -87,3 +87,9 @@ Quatre correctifs fusionnés et CI réussies après fusion. Les deux déploiemen
 | [Nikoju1977](https://github.com/Nikoju1977/Nikoju1977/pull/6) | [693bcbe0](https://github.com/Nikoju1977/Nikoju1977/commit/693bcbe014ab1a85c15f345630f5f6631414f16f) | [Réussie](https://github.com/Nikoju1977/Nikoju1977/actions/runs/45518869495) | Non confirmée |
 
 Le workflow Pages natif de la machine musicale a réussi après l'échec du workflow personnalisé sur le même commit. L'artefact de ce dernier est apparu après l'erreur. Pas de changement de configuration Pages sans confirmation de la source de publication. Le quota Vercel empêche actuellement de nouvelles publications via API.
+
+## Suivi complémentaire — 25 novembre 2026
+
+Les quatre preuves historiques et les chiffres de la campagne restent inchangés. Oracle du Jardinier : [tests ciblés avant fusion](https://github.com/Nikoju1977/oracle-du-jardinier/actions/runs/45525267513), [commit fusionné](https://github.com/Nikoju1977/oracle-du-jardinier/commit/b62442ec1a9bee5516a593cff0ddebcb22ab72b8), [CI statique après fusion](https://github.com/Nikoju1977/oracle-du-jardinier/actions/runs/45525525381), [publication Pages](https://github.com/Nikoju1977/oracle-du-jardinier/actions/runs/45525523910). Trois publications Pages historiques sont désormais confirmées dans le registre. Aucun parcours complet en production ni appareil physique certifié.
+
+Wan2GP : [nouveau contrôle](https://github.com/Nikoju1977/AutoCoder-Studio-Niko/actions/runs/45522322331) : six indentations réparées et compilation réussie ; fragment Gradio intentionnellement incomplet, fermeture de contrôle valide. [PR 4](https://github.com/Nikoju1977/Wan2GP/pull/4) non fusionnée ; GPU, équivalence numérique et assemblage JS complet non testés. Les deux fichiers volumineux restent hors périmètre.

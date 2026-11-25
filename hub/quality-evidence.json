@@ -935,7 +935,47 @@
         "pages": null,
         "url": null,
         "incident": null
+      },
+      {
+        "repo": "oracle-du-jardinier",
+        "commit": "b62442ec1a9bee5516a593cff0ddebcb22ab72b8",
+        "pr": 2,
+        "ci": 45525525381,
+        "pages": 45525523910,
+        "url": "https://nikoju1977.github.io/oracle-du-jardinier/",
+        "incident": null,
+        "preMerge": {
+          "commit": "44b0080e45b7ca055d033ae98839907e85cbf7a7",
+          "run": 45525267513,
+          "scope": "isolated Chromium DOM and IndexedDB; legacy profile fixture"
+        }
       }
     ]
+  },
+  "followup": {
+    "date": "2026-11-25",
+    "oracle": {
+      "repo": "oracle-du-jardinier",
+      "pr": 2,
+      "preMerge": {
+        "commit": "44b0080e45b7ca055d033ae98839907e85cbf7a7",
+        "run": 45525267513,
+        "scope": "isolated Chromium DOM and IndexedDB; legacy profile fixture"
+      },
+      "main": "b62442ec1a9bee5516a593cff0ddebcb22ab72b8",
+      "pages": 45525523910,
+      "productionRuntimeVerified": false
+    },
+    "wan": {
+      "repo": "Wan2GP",
+      "pr": 4,
+      "candidate": "78fbfba2287bd7057513f3417b988820997d98e4",
+      "run": 45522322331,
+      "python": "compile_passed",
+      "javascript": "intentional_fragment",
+      "fullAssemblyTested": false,
+      "gpuTested": false,
+      "merged": false
+    }
   }
 }
