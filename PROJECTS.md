@@ -104,7 +104,7 @@ Elles restent publiques pour préserver le code, les essais et l'historique, mai
 | --- | --- | --- |
 | [nikogroove](https://github.com/Nikoju1977/nikogroove) | Version parallèle du Cyber-Fest-Noz, groovebox HTML/Tone.js apparentée à EBM-BRETONNE. ; conservée pour suivre ses essais et son historique. | [EBM-BRETONNE.](https://github.com/Nikoju1977/EBM-BRETONNE.) |
 | [Medivision-ai-pro](https://github.com/Nikoju1977/Medivision-ai-pro) | Base PWA Lit/TypeScript/Vite issue d'un starter PWABuilder ; ne contient pas encore les fonctionnalités de visualisation médicale du projet de référence. | [medicalvisionproai](https://github.com/Nikoju1977/medicalvisionproai) |
-| [compagnon-diabete](https://github.com/Nikoju1977/compagnon-diabete) | Prototype DAPHNÉE OMNI : interface expérimentale de compagnon diabète, avec pistes d'assistance IA et suivi informatif ; non destinée au traitement. | [OPENVITA-DT1](https://github.com/Nikoju1977/OPENVITA-DT1) |
+| [compagnon-diabete](https://github.com/Nikoju1977/compagnon-diabete) | Prototype DAPHNÉE OMNI : lecture Bluetooth non fiable, secrets non chiffrés ; ne pas connecter de dispositif médical réel. | [OPENVITA-DT1](https://github.com/Nikoju1977/OPENVITA-DT1) |
 | [le-jardin-de-niko](https://github.com/Nikoju1977/le-jardin-de-niko) | Variante Terroir Synthétique de l'Oracle du Jardinier : météo, qualité de l'air, suivi des semis, tâches et journal local, avec pistes de conseils IA. | [oracle-du-jardinier](https://github.com/Nikoju1977/oracle-du-jardinier) |
 
 ## Comprendre le niveau de maturité
@@ -119,9 +119,9 @@ Les interfaces liées à la santé ne sont **ni des dispositifs médicaux certif
 **[Revenir au profil Studio Niko Design](README.md)**
 
 
-## Registre technique — 33 dépôts documentés
+## Registre technique — 36 dépôts documentés
 
-README et références de licence relus le 25 novembre 2026. Les 33 README sont accessibles sur main et contiennent un diagramme Mermaid et un résumé anglais, vérifiés par lecture. Deux projets déclarent MIT dans package.json sans fichier de licence autonome identifié à la racine. Les mises à jour documentaires ne sont pas des tests. Les liens main sont mobiles. Aucune validation de production n'est inférée. Les licences tierces prévalent pour les composants concernés.
+README et références de licence relus le 25 novembre 2026. Les 36 README sont accessibles sur main et contiennent un diagramme Mermaid et un résumé anglais, vérifiés par lecture. Deux projets déclarent MIT dans package.json sans fichier de licence autonome identifié à la racine. Les mises à jour documentaires ne sont pas des tests. Les liens main sont mobiles. Aucune validation de production n'est inférée. Les licences tierces prévalent pour les composants concernés.
 
 | Projet / project | Périmètre | Licence |
 | --- | --- | --- |
@@ -162,7 +162,11 @@ README et références de licence relus le 25 novembre 2026. Les 33 README sont 
 | **[Dbmetre-pro](https://github.com/Nikoju1977/Dbmetre-pro/blob/main/README.md)** | Audio / RMS, FFT 4096 points, dBFS ; non étalonné · [commit documentaire](https://github.com/Nikoju1977/Dbmetre-pro/commit/fd487594b1b2a55307053be7edecffd5d20923b2) | [Droits réservés](https://github.com/Nikoju1977/Dbmetre-pro/blob/main/LICENSE.md) |
 | **[agent-biometrique](https://github.com/Nikoju1977/agent-biometrique/blob/main/README.md)** | Démonstrateur / caméra de prévisualisation, scores aléatoires non mesurés ; P0 · [commit documentaire](https://github.com/Nikoju1977/agent-biometrique/commit/1185aeb74c899a794b68a34c56703edabf6ce808) | [Droits réservés](https://github.com/Nikoju1977/agent-biometrique/blob/main/LICENSE.md) |
 
-### Documentation de projet tiers (hors des 33 README)
+| **[jarvisdiabete](https://github.com/Nikoju1977/jarvisdiabete/blob/main/README.md)** | Assistant documentaire / Qwen et Whisper locaux optionnels, coffre AES-GCM · [commit documentaire](https://github.com/Nikoju1977/jarvisdiabete/commit/4ca10379a987711721ad3304ba11a373d292587c) | [Droits réservés](https://github.com/Nikoju1977/jarvisdiabete/blob/main/LICENSE.md) |
+| **[compagnon-diabete](https://github.com/Nikoju1977/compagnon-diabete/blob/main/README.md)** | Variante Daphnée / lecture Bluetooth non fiable, clé non chiffrée · [commit documentaire](https://github.com/Nikoju1977/compagnon-diabete/commit/9f383e463cbe69b118f61c68b6c9710e449fec88) | [Droits réservés](https://github.com/Nikoju1977/compagnon-diabete/blob/main/LICENSE.md) |
+| **[Medivision-ai-pro](https://github.com/Nikoju1977/Medivision-ai-pro/blob/main/README.md)** | Starter PWABuilder / Lit, Vite, Workbox ; aucun moteur médical · [commit documentaire](https://github.com/Nikoju1977/Medivision-ai-pro/commit/8caa2123115a4f570a34868ae19b99b420cc0c23) | [MIT notice Microsoft ; ISC dans manifeste, périmètre à clarifier](https://github.com/Nikoju1977/Medivision-ai-pro/blob/main/LICENSE.txt) |
+
+### Documentation de projet tiers (hors des 36 README)
 
 [Wan2GP — guide du fork](https://github.com/Nikoju1977/Wan2GP/blob/main/GUIDE_UTILISATEUR.md) · [commit documentaire](https://github.com/Nikoju1977/Wan2GP/commit/9d53d8d1637a10a5484757c5e880b7be9a6a4b42) · [WanGP Community License 2.0](https://github.com/Nikoju1977/Wan2GP/blob/main/LICENSE.txt). Fork de DeepBeepMeep/WanGP, non revendiqué comme création originale ; restrictions commerciales et licences des modèles à respecter. README amont préservé.
 
