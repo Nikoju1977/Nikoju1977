@@ -1008,5 +1008,111 @@
       "httpBytesVerified": false,
       "physicalDevicesVerified": false
     }
+  },
+  "staticHttpSnapshot": {
+    "date": "2026-11-25",
+    "checkedAt": "2026-11-25T04:50:33Z",
+    "run": 45549492811,
+    "runnerRepo": "Nikoju1977/AutoCoder-Studio-Niko",
+    "scope": "selected public HTTP response bytes compared with immutable GitHub source; not runtime, browser cache or full revision certification",
+    "productionRuntimeVerified": false,
+    "counts": {
+      "match": 7,
+      "mismatch": 0,
+      "unavailable": 0
+    },
+    "rows": [
+      {
+        "repo": "the-lovestronautes-machine",
+        "commit": "2bde151a1497d9f7869646fefd17e3f5fb1bde84",
+        "pagesRun": 45548941093,
+        "path": "index.html",
+        "status": "match",
+        "sourceStatus": 200,
+        "publicStatus": 200,
+        "sourceSha256": "e8863d7c135550d99c8a450d4cdfa05db48d9a297744a85d079de6a889f47d58",
+        "publicSha256": "e8863d7c135550d99c8a450d4cdfa05db48d9a297744a85d079de6a889f47d58",
+        "sourceBytes": 156189,
+        "publicBytes": 156189
+      },
+      {
+        "repo": "the-lovestronautes-machine",
+        "commit": "2bde151a1497d9f7869646fefd17e3f5fb1bde84",
+        "pagesRun": 45548941093,
+        "path": "sw.js",
+        "status": "match",
+        "sourceStatus": 200,
+        "publicStatus": 200,
+        "sourceSha256": "b3088b468680f590f660472ad886825425a50a83ef4ac62fd829d4a6b21d931d",
+        "publicSha256": "b3088b468680f590f660472ad886825425a50a83ef4ac62fd829d4a6b21d931d",
+        "sourceBytes": 4786,
+        "publicBytes": 4786
+      },
+      {
+        "repo": "the-lovestronautes-machine",
+        "commit": "2bde151a1497d9f7869646fefd17e3f5fb1bde84",
+        "pagesRun": 45548941093,
+        "path": "composition-pro.js",
+        "status": "match",
+        "sourceStatus": 200,
+        "publicStatus": 200,
+        "sourceSha256": "50494e25dcc7c8a0995f658392c7cca54244c425e49554b1adfe8ef197b9e7c4",
+        "publicSha256": "50494e25dcc7c8a0995f658392c7cca54244c425e49554b1adfe8ef197b9e7c4",
+        "sourceBytes": 46048,
+        "publicBytes": 46048
+      },
+      {
+        "repo": "the-lovestronautes-machine",
+        "commit": "2bde151a1497d9f7869646fefd17e3f5fb1bde84",
+        "pagesRun": 45548941093,
+        "path": "manifest.json",
+        "status": "match",
+        "sourceStatus": 200,
+        "publicStatus": 200,
+        "sourceSha256": "80d64d264d35f6e4110165222e70d7b0f450dce5127071ea4504eba3ae3f2701",
+        "publicSha256": "80d64d264d35f6e4110165222e70d7b0f450dce5127071ea4504eba3ae3f2701",
+        "sourceBytes": 526,
+        "publicBytes": 526
+      },
+      {
+        "repo": "oracle-du-jardinier",
+        "commit": "b62442ec1a9bee5516a593cff0ddebcb22ab72b8",
+        "pagesRun": 45525523910,
+        "path": "index.html",
+        "status": "match",
+        "sourceStatus": 200,
+        "publicStatus": 200,
+        "sourceSha256": "74930f948939991554fd70b2f65f921a60963f689b84dcddecd0bd555914880e",
+        "publicSha256": "74930f948939991554fd70b2f65f921a60963f689b84dcddecd0bd555914880e",
+        "sourceBytes": 257036,
+        "publicBytes": 257036
+      },
+      {
+        "repo": "oracle-du-jardinier",
+        "commit": "b62442ec1a9bee5516a593cff0ddebcb22ab72b8",
+        "pagesRun": 45525523910,
+        "path": "sw.js",
+        "status": "match",
+        "sourceStatus": 200,
+        "publicStatus": 200,
+        "sourceSha256": "de3b911b8eadcb6036305e021f3235eba454ae4f7f02aa88e26cb875a54fb794",
+        "publicSha256": "de3b911b8eadcb6036305e021f3235eba454ae4f7f02aa88e26cb875a54fb794",
+        "sourceBytes": 1712,
+        "publicBytes": 1712
+      },
+      {
+        "repo": "oracle-du-jardinier",
+        "commit": "b62442ec1a9bee5516a593cff0ddebcb22ab72b8",
+        "pagesRun": 45525523910,
+        "path": "manifest.webmanifest",
+        "status": "match",
+        "sourceStatus": 200,
+        "publicStatus": 200,
+        "sourceSha256": "d2f2273afedbe020b83798bbd8f88c0f49f104da4bd76e815b6e884de99e0b96",
+        "publicSha256": "d2f2273afedbe020b83798bbd8f88c0f49f104da4bd76e815b6e884de99e0b96",
+        "sourceBytes": 433,
+        "publicBytes": 433
+      }
+    ]
   }
 }
