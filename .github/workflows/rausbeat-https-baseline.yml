@@ -1,0 +1,22 @@
+name: RAUSBEAT - deployed HTTPS audio baseline
+on:
+  push:
+    paths:
+      - 'tests/rausbeat-https-baseline.cjs'
+      - '.github/workflows/rausbeat-https-baseline.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  chromium-https:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Check browser runtime
+        run: |
+          node --version
+          node -e 'if(typeof WebSocket!=="function")process.exit(1)'
+          google-chrome --version
+      - name: Check deployed audio recording without deployment changes
+        run: node tests/rausbeat-https-baseline.cjs
