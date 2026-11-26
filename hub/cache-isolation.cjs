@@ -2,7 +2,10 @@
 const assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs'),path=require('node:path');
 (async()=>{
  const source=fs.readFileSync(path.join(__dirname,'sw.js'),'utf8'),scope='https://example.test/hub/';
- const name='studio-niko-hub-v21-isolated-shell-20261125',old='studio-niko-hub-v20-static-http-evidence-20261125',foreign='neural-art-v22-5-isolated-shell';
+ const name=source.match(/^const CACHE='(studio-niko-hub-[^']+)';$/m)?.[1];
+ assert.ok(name,'Expected a versioned Hub cache name');
+ const old='studio-niko-hub-obsolete-test-cache',foreign='neural-art-v22-5-isolated-shell';
+ assert.notEqual(name,old);
  const handlers={},deleted=[],data=new Map(),keys=[name,old,foreign];let calls=0,offline=false,quota=false,claims=0;
  const response={ok:true,redirected:false,clone(){return 'new';}};
  const cache={addAll:async list=>{for(const p of list)data.set(new URL(p,scope).href,'cached:'+p);},match:async req=>data.get(typeof req==='string'?req:req.url),put:async(req,r)=>{if(quota)throw Error('quota');data.set(req.url,r);}};
