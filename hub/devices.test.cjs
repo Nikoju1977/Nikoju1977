@@ -1,0 +1,16 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),d=require('./devices-core.js');
+const at='2026-11-24T00:00:00Z',base={project:'fixture',revision:'a'.repeat(40),platform:'Android',context:'physical',browser:'Chrome test',device:'Synthetic fixture',at,tests:d.protocols.map(p=>({id:p.id,result:'not_tested',note:''}))};
+const update=(result,note)=>({...base,tests:base.tests.map((t,i)=>i===0?{...t,result,note}:t)});
+test('fresh protocol remains untested',()=>assert.equal(d.summarize(d.normalizeReport(base)).not_tested,6));
+test('manual pass cannot certify device',()=>assert.equal(d.normalizeReport(update('pass','Observed')).certification,false));
+test('pass without exact revision is rejected',()=>assert.throws(()=>d.normalizeReport({...update('pass','Observed'),revision:''}),/SHA exact/));
+test('abbreviated revision rejected',()=>assert.throws(()=>d.normalizeReport({...base,revision:'abc'}),/SHA complet/));
+test('non-untested result requires observation',()=>assert.throws(()=>d.normalizeReport(update('fail',' ')),/Observation/));
+test('blocked is not failed or passed',()=>assert.deepEqual(d.summarize(d.normalizeReport(update('blocked','Unavailable'))),{pass:0,fail:0,blocked:1,not_tested:5}));
+test('reject duplicate protocol entries',()=>assert.throws(()=>d.normalizeReport({...base,tests:Array(6).fill(base.tests[0])}),/incomplet/));
+test('reject unknown context and platform',()=>{assert.throws(()=>d.normalizeReport({...base,context:'certified'}));assert.throws(()=>d.normalizeReport({...base,platform:'invalid'}));});
+test('journal cannot restore certification or unknown project',()=>{const r=d.readJournal([{...base,certification:true},{...base,project:'other'}],['fixture']);assert.equal(r.length,1);assert.equal(r[0].certification,false);});
+test('journal retains bounded records',()=>assert.equal(d.readJournal(Array(90).fill(base)).length,80));
+test('browser capabilities do not infer runtime or device status',()=>{const r=d.capabilities({secure:true,online:true,webgl:false});assert.equal(r.find(x=>x.id==='network').state,'reported_online');assert.equal(r.find(x=>x.id==='webgl').state,'unavailable');assert(!r.some(x=>x.state==='pass'));});
+test('exports retain manual source and limits',()=>{const r=d.exportReport([base],at);assert.equal(r.reports[0].source,'manual_self_report');assert.match(r.scope,/not independently certified/);});

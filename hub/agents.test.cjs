@@ -1,0 +1,16 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),a=require('./agents-core.js');
+const p={name:'fixture',slug:'fixture',priority:'P0',core:'committed',hasUrl:true,observation:{commit:'a'.repeat(40),head:'a'.repeat(40)},observationDate:'2026-11-24',provenance:{},provenanceDate:'2026-11-24'};
+const now='2026-11-24T00:00:00Z',run=(raw={},mode='general',project=p)=>a.analyze(project,mode,raw,now);
+test('nine roles execute and no invented result',()=>{const r=run();assert.equal(r.trace.length,9);assert.equal(r.evidence.http,null);assert.equal(r.evidence.ci,null);assert.match(r.limits,/Aucun LLM/);});
+test('historical deployment is not live HTTP',()=>assert(run().tasks.some(t=>t.id==='http-check')));
+test('HTTP 503 triggers P0 and patch preparation, not an applied patch',()=>{const r=run({http:{slug:'fixture',state:'unavailable',httpStatus:503,checkedAt:now}});assert.equal(r.tasks[0].id,'http-error');assert(r.tasks.some(t=>t.id==='patch-plan'));});
+test('unrelated HTTP result ignored',()=>assert.equal(run({http:{slug:'other',state:'reachable',checkedAt:now}}).evidence.http,null));
+test('head divergence calls for fresh Vercel check',()=>assert(run({head:{sha:'b'.repeat(40),at:now}}).tasks.some(t=>t.id==='release-diff')));
+test('CI failure from another SHA ignored',()=>assert.equal(run({head:{sha:'a'.repeat(40),at:now},ci:{sha:'b'.repeat(40),state:'failure',at:now}}).evidence.ci,null));
+test('CI failure at matching SHA gets priority',()=>assert.equal(run({head:{sha:'a'.repeat(40),at:now},ci:{sha:'a'.repeat(40),state:'failure',at:now}}).tasks[0].id,'ci-failure'));
+test('no record not treated as failed deployment',()=>assert(run({},'release',{...p,observation:null}).tasks.some(t=>t.id==='production-check')));
+test('accepted action remains review, not done',()=>assert.equal(a.decisions(run(),['runtime'])[0].state,'accepted_for_review'));
+test('journal bounded and state cannot assert done',()=>{const j=Array.from({length:60},()=>({project:'fixture',at:now,actions:[{id:'runtime',title:'Test',state:'done'}]}));const r=a.readJournal(j);assert.equal(r.length,50);assert.equal(r[0].actions[0].state,'accepted_for_review');});
+test('unknown mode rejected',()=>assert.throws(()=>run({},'other'),/Mission/));
+test('catalog identity mismatch rejected',()=>assert.throws(()=>a.buildProjects([{repoUrl:'https://github.com/other/fixture'}],{repositories:[{name:'fixture'}]},{rows:[]},{repositories:[]}),/Identité/));

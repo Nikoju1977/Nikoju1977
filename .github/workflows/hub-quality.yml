@@ -34,8 +34,42 @@ jobs:
           node --check hub/api/health.js
           node --check hub/audit-links.cjs
           node --check hub/check.cjs
+          node --check hub/evidence.cjs
+          node --check hub/quality-core.js
+          node --check hub/quality.js
+          node --check hub/deployments-core.js
+          node --check hub/deployments.js
+          node --check hub/security-core.js
+          node --check hub/security.js
+          node --check hub/security-audit.cjs
+          node --check hub/agents-core.js
+          node --check hub/agents.js
+          node --check hub/devices-core.js
+          node --check hub/devices.js
+          node --check hub/recovery-core.js
+          node --check hub/recovery.js
+          node --check hub/command-core.js
+          node --check hub/command.js
+          node --check hub/design-core.js
+          node --check hub/design.js
       - name: Verify catalog, privacy and DOM bindings
         run: node hub/check.cjs
+      - name: Evidence regression tests
+        run: node --test hub/evidence.test.cjs hub/quality.test.cjs hub/deployments.test.cjs hub/security.test.cjs hub/agents.test.cjs hub/devices.test.cjs hub/recovery.test.cjs hub/command.test.cjs hub/design.test.cjs hub/pwa.test.cjs
       - name: Weekly or manual HTTP audit
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: node hub/audit-links.cjs
+
+  browser-smoke:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Install pinned browser test dependency
+        run: npm install --no-save --ignore-scripts --no-audit --no-fund playwright@1.56.1
+      - name: Install Chromium
+        run: npx playwright install chromium
+      - name: Browser smoke and offline tests
+        run: node hub/browser-smoke.cjs

@@ -1,0 +1,13 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),q=require('./deployments-core.js');
+const a='a'.repeat(40),b='b'.repeat(40),p={project:'test',url:'https://test.vercel.app/',commit:b,checked_on:'2026-11-22'};
+const o={repo:'test',project:'test',host:'test.vercel.app',id:'dpl_test',commit:a,head:a,branch:'main',target:'production',state:'READY',aliasConfirmed:true};
+const snapshot={repositories:[{name:'test',production_deployment:p},{name:'other'}]},observations={schema:'studio-niko-deployments/1',checkedOn:'2026-11-24',rows:[o]};
+test('same exact SHA',()=>assert.equal(q.classify(o,a),'aligned'));
+test('different SHA does not assert behind',()=>assert.equal(q.classify(o,b),'different'));
+test('missing alias or nonproduction cannot align',()=>{assert.equal(q.classify({...o,aliasConfirmed:false},a),'unknown');assert.equal(q.classify({...o,target:'preview'},a),'unknown');});
+test('short or missing SHA is unknown',()=>assert.equal(q.classify(o,'abc'),'unknown'));
+test('history stays independent and missing projects explicit',()=>{const r=q.buildRows(snapshot,observations);assert.equal(r[0].historical.commit,b);assert.equal(r[1].status,'no_record');});
+test('reject unregistered or mismatched production',()=>assert.throws(()=>q.buildRows(snapshot,{...observations,rows:[{...o,host:'fake.vercel.app'}]}),/non conforme/));
+test('reject duplicate observations',()=>assert.throws(()=>q.buildRows(snapshot,{...observations,rows:[o,o]}),/non conforme/));
+test('filter observed differences without pretending fresh',()=>assert.equal(q.filter(q.buildRows(snapshot,observations),'','no_record').length,1));

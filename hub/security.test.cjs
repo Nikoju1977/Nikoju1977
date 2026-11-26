@@ -1,0 +1,12 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),q=require('./security-core.js');
+const fake='gh'+'p_'+'A'.repeat(36);
+test('detect synthetic GitHub signature',()=>assert.deepEqual(q.scan('hello\n'+fake),[{rule:'github-token',severity:'high',line:2}]));
+test('detect synthetic private key header',()=>assert.equal(q.scan('-----BEGIN '+'PRIVATE KEY-----')[0].severity,'critical'));
+test('detect synthetic AWS identifier',()=>assert.equal(q.scan('AK'+'IA'+'A'.repeat(16))[0].rule,'aws-key-id'));
+test('detect synthetic payment signature',()=>assert.equal(q.scan('sk_'+'live_'+'A'.repeat(24))[0].rule,'stripe-live-secret'));
+test('ordinary placeholders do not match',()=>assert.deepEqual(q.scan('process.env.API_KEY\nYOUR_TOKEN_HERE'),[]));
+test('binary markers are excluded',()=>assert.equal(q.isBinary(new Uint8Array([65,0,66])),true));
+test('line numbering handles CRLF',()=>assert.equal(q.scan('first\r\nsecond\r\n'+fake)[0].line,3));
+test('export never includes matched values or source text',()=>{const r=q.report([{file:'test.js',status:'scanned',findings:[{...q.scan(fake)[0],value:fake,source:fake}]}],'synthetic','2026-11-24');assert(!JSON.stringify(r).includes(fake));assert.equal(r.summary.findings,1);});
+test('skipped is not counted as scanned',()=>assert.deepEqual(q.summarize([{status:'binary',findings:[]},{status:'scanned',findings:[]}]),{files:2,scanned:1,skipped:1,findings:0}));

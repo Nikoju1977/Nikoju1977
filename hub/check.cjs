@@ -2,6 +2,7 @@
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
+const {validateDeployment}=require('./evidence.cjs');
 const dir=__dirname;
 const app=fs.readFileSync(path.join(dir,'app.js'),'utf8');
 const index=fs.readFileSync(path.join(dir,'index.html'),'utf8');
@@ -33,6 +34,10 @@ const snapshot=JSON.parse(pilotage.slice(payloadStart,payloadEnd));
 assert(snapshot.repositories.length===registry.public_repositories,'Public registry count matches dashboard');
 assert(cat.length===registry.public_repositories,'Landing catalog includes all '+registry.public_repositories+' public repositories');
 const registryNames=new Set(registry.repositories.map(x=>x.name));
+const snapshotNames=new Set(snapshot.repositories.map(x=>x.name));
+assert.equal(registryNames.size,registry.repositories.length,'Registry identities are unique');
+assert.equal(snapshotNames.size,snapshot.repositories.length,'Snapshot identities are unique');
+assert.deepEqual(snapshotNames,registryNames,'Snapshot contains exactly the public registry identities');
 const catalogNames=new Set(cat.map(x=>x.repoUrl.split('/').at(-1)));
 assert(catalogNames.size===registryNames.size,'Catalog identities are unique');
 for(const name of registryNames)assert(catalogNames.has(name),'Missing public repository in landing catalog '+name);
@@ -42,22 +47,8 @@ assert(snapshot.private_repositories_omitted===registry.private_repositories_omi
 for(const repo of registry.repositories){
   const item=snapshot.repositories.find(x=>x.name===repo.name);
   assert(item,'Hub snapshot includes '+repo.name);
-  if(repo.preview_deployment){
-    assert(item.preview_deployment?.commit===repo.preview_deployment.commit,'Preview commit matches '+repo.name);
-    assert(item.preview_deployment?.verification==='build_ready_only','Preview evidence never claims runtime validation '+repo.name);
-    assert(new URL(item.preview_deployment.url).hostname.endsWith('.vercel.app'),'Preview URL is Vercel '+repo.name);
-  }
-  if(repo.production_deployment){
-    assert(item.production_deployment?.commit===repo.production_deployment.commit,'Production commit matches '+repo.name);
-    assert(item.production_deployment.state==='READY','Production is READY '+repo.name);
-    assert(['http_assets_only','deployment_ready_ci_only'].includes(item.production_deployment.verification),
-      'Recognized evidence scope only '+repo.name);
-    assert(/^[0-9a-f]{40}$/.test(item.production_deployment.commit),'Exact commit required '+repo.name);
-    assert(/^20[0-9]{2}-[0-9]{2}-[0-9]{2}$/.test(item.production_deployment.checked_on),
-      'Timestamp of inspected production required '+repo.name);
-    const url=new URL(item.production_deployment.url);
-    assert(url.protocol==='https:'&&url.hostname.endsWith('.vercel.app'),'Production link is HTTPS Vercel '+repo.name);
-  }
+  validateDeployment(repo.preview_deployment,item.preview_deployment,'preview',repo.name);
+  validateDeployment(repo.production_deployment,item.production_deployment,'production',repo.name);
 }
 assert(pilotage.includes('var httpVerified='),'Dashboard separates verified HTTP from CI-only READY');
 assert(index.includes('id="atelier"'),'Workspace section');
@@ -74,6 +65,47 @@ const guides=JSON.parse(fs.readFileSync(path.join(dir,'guides.json'),'utf8')).gu
 assert(guides.length===cat.length&&new Set(guides.map(g=>g.slug)).size===cat.length
   &&cat.every(x=>guides.some(g=>g.slug===x.slug)),'All public applications documented uniquely');
 new Function(fs.readFileSync(path.join(dir,'guide.js'),'utf8'));
+const quality=fs.readFileSync(path.join(dir,'diagnostics.html'),'utf8');
+const qualityJs=fs.readFileSync(path.join(dir,'quality.js'),'utf8');
+for(const match of qualityJs.matchAll(/\$\('([^']+)'\)/g))assert(quality.includes('id="'+match[1]+'"'),'Quality DOM id '+match[1]);
+for(const asset of ['diagnostics.html','diagnostics.css','quality-core.js','quality.js'])assert(sw.includes("'./"+asset+"'"),'Quality offline asset '+asset);
+assert(index.includes('href="./quality.html"')&&pilotage.includes('href="./quality.html"'),'Quality navigation');
+const deploymentPage=fs.readFileSync(path.join(dir,'deployments.html'),'utf8');
+const deploymentJs=fs.readFileSync(path.join(dir,'deployments.js'),'utf8');
+for(const match of deploymentJs.matchAll(/\$\('([^']+)'\)/g))assert(deploymentPage.includes('id="'+match[1]+'"'),'Deployment DOM id '+match[1]);
+for(const asset of ['deployments.html','deployments.js','deployments-core.js','deployment-observations.json'])assert(sw.includes("'./"+asset+"'"),'Deployment offline asset '+asset);
+require('./deployments-core.js').buildRows(snapshot,JSON.parse(fs.readFileSync(path.join(dir,'deployment-observations.json'),'utf8')));
+const securityPage=fs.readFileSync(path.join(dir,'security.html'),'utf8');
+const securityJs=fs.readFileSync(path.join(dir,'security.js'),'utf8');
+for(const match of securityJs.matchAll(/\$\('([^']+)'\)/g))assert(securityPage.includes('id="'+match[1]+'"'),'Security DOM id '+match[1]);
+for(const asset of ['security.html','security.js','security-core.js'])assert(sw.includes("'./"+asset+"'"),'Security offline asset '+asset);
+assert(index.includes('href="./security.html"'),'Security navigation');
+const agentPage=fs.readFileSync(path.join(dir,'agents.html'),'utf8');
+const agentJs=fs.readFileSync(path.join(dir,'agents.js'),'utf8');
+for(const match of agentJs.matchAll(/\$\('([^']+)'\)/g))assert(agentPage.includes('id="'+match[1]+'"'),'Agent DOM id '+match[1]);
+for(const asset of ['agents.html','agents.js','agents-core.js'])assert(sw.includes("'./"+asset+"'"),'Agent offline asset '+asset);
+assert(index.includes('href="./agents.html"'),'Agent navigation');
+require('./agents-core.js').buildProjects(cat,snapshot,JSON.parse(fs.readFileSync(path.join(dir,'deployment-observations.json'),'utf8')),JSON.parse(fs.readFileSync(path.join(dir,'provenance-snapshot.json'),'utf8')));
+const devicePage=fs.readFileSync(path.join(dir,'devices.html'),'utf8');
+const deviceJs=fs.readFileSync(path.join(dir,'devices.js'),'utf8');
+for(const match of deviceJs.matchAll(/\$\('([^']+)'\)/g))assert(devicePage.includes('id="'+match[1]+'"'),'Device DOM id '+match[1]);
+for(const asset of ['devices.html','devices.js','devices-core.js'])assert(sw.includes("'./"+asset+"'"),'Device offline asset '+asset);
+assert(index.includes('href="./devices.html"')&&pilotage.includes('href="./devices.html"'),'Device navigation');
+const recoveryPage=fs.readFileSync(path.join(dir,'recovery.html'),'utf8');
+const recoveryJs=fs.readFileSync(path.join(dir,'recovery.js'),'utf8');
+for(const match of recoveryJs.matchAll(/\$\('([^']+)'\)/g))assert(recoveryPage.includes('id="'+match[1]+'"'),'Recovery DOM id '+match[1]);
+for(const asset of ['recovery.html','recovery.js','recovery-core.js'])assert(sw.includes("'./"+asset+"'"),'Recovery offline asset '+asset);
+assert(index.includes('href="./recovery.html"')&&pilotage.includes('href="./recovery.html"'),'Recovery navigation');
+const commandPage=fs.readFileSync(path.join(dir,'command.html'),'utf8');
+const commandJs=fs.readFileSync(path.join(dir,'command.js'),'utf8');
+for(const match of commandJs.matchAll(/\$\('([^']+)'\)/g))assert(commandPage.includes('id="'+match[1]+'"'),'Command DOM id '+match[1]);
+for(const asset of ['command.html','command.js','command-core.js','command.css'])assert(sw.includes("'./"+asset+"'"),'Command offline asset '+asset);
+assert(index.includes('href="./command.html"')&&pilotage.includes('href="./command.html"'),'Command navigation');
+for(const page of ['index','pilotage','quality','diagnostics','deployments','security','agents','devices','recovery','command','provenance']){const html=fs.readFileSync(path.join(dir,page+'.html'),'utf8');for(const asset of ['design.css','design-core.js','design.js'])assert(html.includes('./'+asset),'Shared design '+page+' '+asset);}
+for(const asset of ['design.css','design-core.js','design.js'])assert(sw.includes("'./"+asset+"'"),'Design offline asset '+asset);
+const precache=sw.match(/const ASSETS=\[(.*?)\];/s);assert(precache,'PWA precache manifest');
+const entries=[...precache[1].matchAll(/'([^']+)'/g)].map(x=>x[1]);assert.equal(new Set(entries).size,entries.length,'Unique precache entries');for(const asset of entries)assert(fs.existsSync(path.join(dir,asset)),'Existing precache asset '+asset);
+for(const shortcut of manifest.shortcuts||[])assert(entries.includes(shortcut.url),'Offline shortcut '+shortcut.url);
 console.log('PASS catalog='+cat.length+' launchUrls='+cat.filter(x=>x.demoUrl).length+' DOM bindings checked');
 
 const evidence=JSON.parse(fs.readFileSync(path.join(dir,'quality-evidence.json'),'utf8'));

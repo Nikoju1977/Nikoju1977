@@ -1,0 +1,13 @@
+(()=>{'use strict';
+const $=id=>document.getElementById(id),core=globalThis.SecurityCore;
+let files=[],results=[],busy=false,checkedAt=null;
+function el(tag,text,cls){const n=document.createElement(tag);n.textContent=text;if(cls)n.className=cls;return n;}
+function render(){const s=core.summarize(results);$('total').textContent=files.length;$('scanned').textContent=s.scanned;$('skipped').textContent=s.skipped;$('findings').textContent=s.findings;$('run').disabled=busy||!files.length;$('clear').disabled=busy;$('files').disabled=busy;$('export').disabled=busy||!checkedAt;const frag=document.createDocumentFragment();
+for(const f of results){const c=el('article','','project');c.append(el('h2',f.file),el('p',f.status==='scanned'?(f.findings.length?f.findings.length+' signature(s) à examiner':'Aucune signature détectée'):'Ignoré : '+f.status));for(const x of f.findings)c.append(el('p',x.severity+' · '+x.rule+' · ligne '+x.line));frag.append(c);}$('rows').replaceChildren(frag);}
+$('files').addEventListener('change',()=>{files=Array.from($('files').files).slice(0,30);results=[];checkedAt=null;$('status').textContent=$('files').files.length>30?'Limite : seuls les 30 premiers fichiers seront analysés.':'Sélection prête. Aucun fichier envoyé.';render();});
+$('clear').addEventListener('click',()=>{files=[];results=[];checkedAt=null;$('files').value='';$('status').textContent='Sélection et rapport effacés de la session.';render();});
+$('run').addEventListener('click',async()=>{if(busy)return;busy=true;results=[];checkedAt=null;render();try{for(const f of files){let status='scanned',findings=[];if(f.size>core.MAX_BYTES)status='too-large';else{try{const b=new Uint8Array(await f.arrayBuffer());if(core.isBinary(b))status='binary';else{let text;try{text=new TextDecoder('utf-8',{fatal:true}).decode(b);}catch{status='non-utf8';}if(status==='scanned')findings=core.scan(text);}}catch{status='read-error';}}results.push({file:f.name,status,findings});$('status').textContent='Analyse locale '+results.length+' / '+files.length;render();}checkedAt=new Date().toISOString();$('status').textContent='Analyse locale terminée. Les résultats nécessitent une revue.';}finally{busy=false;render();}});
+$('export').addEventListener('click',()=>{if(!checkedAt)return;const url=URL.createObjectURL(new Blob([JSON.stringify(core.report(results,'selected local files only',checkedAt),null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='studio-niko-security.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+render();
+if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});
+})();

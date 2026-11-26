@@ -1,7 +1,7 @@
 {
   "name": "Studio Niko Hub",
   "short_name": "Niko Hub",
-  "description": "Portail Studio Niko Design",
+  "description": "Studio Niko Design — pilotage, qualité, sécurité et création",
   "id": "./",
   "start_url": "./",
   "scope": "./",
@@ -28,5 +28,23 @@
       "purpose": "any"
     }
   ],
-  "prefer_related_applications": false
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Command Center",
+      "url": "./command.html"
+    },
+    {
+      "name": "Quality Engine",
+      "url": "./quality.html"
+    },
+    {
+      "name": "Agent Studio",
+      "url": "./agents.html"
+    },
+    {
+      "name": "Sauvegardes",
+      "url": "./recovery.html"
+    }
+  ]
 }

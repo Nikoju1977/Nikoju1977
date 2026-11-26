@@ -1,0 +1,13 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),d=require('./design-core.js');
+test('defaults safe preferences',()=>assert.deepEqual(d.preferences({theme:'bad',density:'bad'}),{theme:'studio',density:'comfortable'}));
+test('three known themes',()=>{for(const theme of d.themes)assert.equal(d.preferences({theme}).theme,theme);});
+test('compact density accepted',()=>assert.equal(d.preferences({density:'compact'}).density,'compact'));
+test('empty search lists all modules',()=>assert.equal(d.search('').length,11));
+test('accent insensitive query',()=>assert(d.search('securite').some(r=>r.url==='security.html')));
+test('multiple search terms',()=>assert(d.search('github publication').some(r=>r.url==='deployments.html')));
+test('catalog search encoded local route',()=>{const r=d.search('alpha',[{name:'Alpha & Beta',slug:'alpha',category:'Audio'}]).find(x=>x.kind==='project');assert.equal(r.url,'index.html?q=Alpha%20%26%20Beta#catalogue');});
+test('invalid records ignored and no external routes',()=>assert(d.search('x',[{name:'x',slug:4,url:'javascript:bad'}]).every(r=>r.kind!=='project')));
+test('active route root and atelier',()=>{assert.equal(d.current('/hub/'),'index.html');assert.equal(d.current('/hub/index.html','#atelier'),'index.html#atelier');});
+test('unknown route not mapped to a module',()=>assert.equal(d.current('/other.html'),'other.html'));
+test('project results capped',()=>assert(d.search('alpha',Array.from({length:100},(_,i)=>({name:'Alpha '+i,slug:'a'+i}))).length<=30));

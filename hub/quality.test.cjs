@@ -1,0 +1,12 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),q=require('./quality-core.js');
+const catalog=[{slug:'one',name:'One',category:'Test',repoUrl:'https://github.com/example/one',demoUrl:'https://one.vercel.app'},{slug:'two',name:'Two',category:'Test',repoUrl:'https://github.com/example/two'}];
+const snapshot={repositories:[{name:'one',priority:'P0',production_deployment:{verification:'deployment_ready_ci_only',commit:'a'.repeat(40),checked_on:'2026-11-24',ci:'success'}},{name:'two',priority:'P1'}]};
+test('historical evidence never marks a live HTTP result',()=>{const rows=q.buildRows(catalog,snapshot);assert.equal(rows[0].probe.state,'untested');assert.equal(rows[1].probe.state,'no_url');});
+test('reject inconsistent identity',()=>assert.throws(()=>q.buildRows(catalog,{repositories:[{name:'one'},{name:'other'}]}),/Identité/));
+test('reject duplicate identities',()=>assert.throws(()=>q.buildRows([catalog[0],catalog[0]],snapshot),/Identité/));
+test('normalize actual HTTP status without functional claim',()=>assert.equal(q.normalizeProbe({slug:'one',state:'reachable',httpStatus:200,checkedAt:'2026-11-24T00:00:00Z'},'one').state,'reachable'));
+test('reject mismatched status',()=>assert.equal(q.normalizeProbe({slug:'one',state:'reachable',httpStatus:403,checkedAt:'2026-11-24T00:00:00Z'},'one').state,'unknown'));
+test('reject wrong slug and missing time',()=>assert.equal(q.normalizeProbe({slug:'two',state:'reachable',httpStatus:200},'one').state,'unknown'));
+test('search and summarize actual state',()=>{const rows=q.buildRows(catalog,snapshot);assert.equal(q.filterRows(rows,'P0','all').length,1);assert.equal(q.summarize(rows).no_url,1);assert.equal(q.filterRows(rows,'','issues').length,0);});
+test('export preserves separate evidence types',()=>{const r=q.report(q.buildRows(catalog,snapshot),'2026-11-24T00:00:00Z');assert.equal(r.rows[0].probe.state,'untested');assert.match(r.scope,/functional\/device tests not performed/);});
