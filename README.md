@@ -20,9 +20,37 @@ Créateur indépendant en Loire-Atlantique, France. Je relie narration, design d
 
 ---
 
+## Portfolio international · Engineering & creative technology
+
+Independent creative technologist in France — filmmaking, interactive art, real-time audio, AI-assisted workflows and experimental industrial software. I combine creative direction, browser-native engineering, local-first design and traceable evidence.
+
+| Expertise | Source projects |
+| --- | --- |
+| Filmmaking & postproduction | [Vision-IA](https://github.com/Nikoju1977/Vision-IA) · [META-STUDIO PRO](https://github.com/Nikoju1977/ia-studio-cine) |
+| Real-time audio & DSP | [Thelovestronautes Machine](https://github.com/Nikoju1977/the-lovestronautes-machine) · [Rave Generator 2](https://github.com/Nikoju1977/Rave-Generator-2) |
+| AI orchestration & developer tools | [NikoAssist](https://github.com/Nikoju1977/Nikoassist) · [AutoCoder](https://github.com/Nikoju1977/AutoCoder-Studio-Niko) |
+| Industrial quality & metrology | [Metrology-OS](https://github.com/Nikoju1977/Metrology-OS) · [MECARIA](https://github.com/Nikoju1977/cockpit-mecaria) |
+| Interactive art & imaging research | [Neural Art](https://github.com/Nikoju1977/Neural-Art-mars-2026) · [MedVision](https://github.com/Nikoju1977/medicalvisionproai) |
+
+**50 public project READMEs / 50 README de projets publics** — [registre technique et licences](PROJECTS.md#registre-technique--50-dépôts-documentés). Inventaire relu le 25 novembre 2026 : 58 dépôts, 53 publics, cinq privés non détaillés. Les 39 références historiques et six signatures restent une sélection éditoriale distincte. **53/53 références publiques classées** : 50 README de projets, ce profil/Hub, un guide de fork et un dépôt vide. [Plan qualité actualisé](QUALITY_ROADMAP.md).
+
+[Studio Niko Hub](https://studio-niko-hub.vercel.app/) (adresse annoncée, disponibilité non confirmée ici) · [Sources du Hub](hub/README.md) · [Preuves datées](QUALITY_EVIDENCE.md).
+
+**Engineering scope:** 50 public project READMEs and license references checked on GitHub; architecture diagrams and English summaries present. Two projects declare MIT in package.json without an identified standalone root license. One separate upstream fork guide is also documented; the PWABuilder-derived starter is credited separately in its README. This is documentation evidence, separate from dated CI, deployment or runtime evidence. The catalogue is an inventory, not a certification.
+
+**Collaboration:** reproducible feedback is welcome. Each project's actual license applies. Not all repositories are open source. Medical and industrial prototypes are not certified; no production readiness is implied.
+
 ## Nouveau : Studio Niko Core
 
-[**Accéder au tableau de pilotage GitHub**](hub/pilotage.html) — inventaire de **55 dépôts**, dont **50 publics**, avec recherche, priorités et état des six premières intégrations de [Studio Niko Core](studio-niko-core/README.md). Les cinq dépôts privés sont exclus de ce tableau public. Les statuts sont un **instantané daté**, pas une surveillance continue ; un commit ne prouve pas un fonctionnement vérifié.
+[**Accéder au tableau de pilotage GitHub**](hub/pilotage.html) — inventaire daté de **53 dépôts publics**, avec recherche, priorités et état des six premières intégrations de [Studio Niko Core](studio-niko-core/README.md). Les cinq dépôts privés sont exclus de ce tableau public. Les statuts sont un **instantané daté**, pas une surveillance continue ; un commit ne prouve pas un fonctionnement vérifié.
+
+## Qualité logicielle — preuves publiques
+
+**Campagne historique : 53 dépôts publics recensés · 4 633 fichiers audités · 52 contrôles Docker d'intégrité réussis · 4 scénarios ciblés comparés.**
+
+[**Consulter les preuves par dépôt**](QUALITY_EVIDENCE.md) · [**Tableau de qualité du Hub**](hub/quality.html) · [**Code Mode Pro**](https://github.com/Nikoju1977/AutoCoder-Studio-Niko/pull/9)
+
+Instantané du 25 novembre 2026 : contrôles statiques et d'intégrité, quatre comparaisons fonctionnelles ciblées. Un dépôt partiellement audité et un dépôt vide ; le workflow global est en échec pour couverture partielle Wan2GP. Aucune validation globale en production.
 
 ## Ce qui rend ces projets différents
 
@@ -71,7 +99,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 
 ## Projets retenus, classés par thème
 
-**39 projets publics sélectionnés parmi 44** sont répertoriés ci-dessous, chacun une seule fois. Les **4 variantes proches** et **1 projet hors sélection éditoriale** ne figurent plus dans cette vitrine. Les critères sont documentés dans [la politique de sélection](CURATION.md) ; [le guide de chaque application](PROJECTS.md) décrit concrètement leurs fonctionnalités, sans suppression de code. Les dépôts privés n'apparaissent pas dans ce catalogue. Les liens pointent vers le code et la documentation, pas nécessairement vers une application déployée.
+**39 projets de la sélection éditoriale historique** sont répertoriés ci-dessous, chacun une seule fois. Les **4 variantes proches** et **1 projet hors sélection éditoriale** ne figurent plus dans cette vitrine. Les critères sont documentés dans [la politique de sélection](CURATION.md) ; [le guide de chaque application](PROJECTS.md) décrit concrètement leurs fonctionnalités, sans suppression de code. Les dépôts privés n'apparaissent pas dans ce catalogue. Les liens pointent vers le code et la documentation, pas nécessairement vers une application déployée.
 
 <details>
 <summary><strong>01 · Cinéma, image & arts numériques</strong> — 7 projets</summary>
@@ -86,7 +114,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 | [Neural-Art-mars-2026](https://github.com/Nikoju1977/Neural-Art-mars-2026) | Expérimentation d'art génératif |
 | [galerie-studio-niko](https://github.com/Nikoju1977/galerie-studio-niko) | Galerie d'art immersive 3D |
 | [applewatchcadrans](https://github.com/Nikoju1977/applewatchcadrans) | Concepts graphiques de cadrans |
-| [Wan2GP](https://github.com/Nikoju1977/Wan2GP) | Outil de génération multimodale fondé sur WanGP ; voir crédits et licence du projet d'origine |
+| [Wan2GP](https://github.com/Nikoju1977/Wan2GP) | Fork WanGP de DeepBeepMeep ; licence communautaire avec restrictions commerciales |
 
 </details>
 
@@ -98,7 +126,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 | Dépôt | Objet |
 | --- | --- |
 | [the-lovestronautes-machine](https://github.com/Nikoju1977/the-lovestronautes-machine) | Séquenceur et synthèse Web Audio |
-| [EBM-BRETONNE.](https://github.com/Nikoju1977/EBM-BRETONNE.) | Groovebox électronique aux influences bretonnes |
+| [EBM-BRETONNE.](https://github.com/Nikoju1977/EBM-BRETONNE.) | Groovebox électronique aux influences bretonnes, synthèse d'anche et bourdon |
 | [Dbmetre-pro](https://github.com/Nikoju1977/Dbmetre-pro) | Analyse sonore et affichage du niveau micro (dBFS) |
 
 </details>
@@ -112,14 +140,14 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 | --- | --- |
 | [medicalvisionproai](https://github.com/Nikoju1977/medicalvisionproai) | Prototype de visualisation d'imagerie |
 | [OPENVITA-DT1](https://github.com/Nikoju1977/OPENVITA-DT1) | Prototype d'aide au suivi du diabète de type 1 |
-| [jarvisdiabete](https://github.com/Nikoju1977/jarvisdiabete) | Compagnon vocal DiabCare |
+| [jarvisdiabete](https://github.com/Nikoju1977/jarvisdiabete) | Compagnon documentaire DiabCare, Qwen/Whisper locaux optionnels ; sans calcul de dose |
 | [dermato-ai](https://github.com/Nikoju1977/dermato-ai) | Exploration de la vision artificielle en dermatologie |
 | [purescanai](https://github.com/Nikoju1977/purescanai) | Prototype d'analyse visuelle de la peau et routines de soin |
-| [SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL) | Interface expérimentale de caméra et indicateurs biométriques |
-| [agent-biometrique](https://github.com/Nikoju1977/agent-biometrique) | Analyse et visualisation de données biométriques |
+| [SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL) | Repères faciaux expérimentaux et EAR ; pouls et fatigue retirés. |
+| [agent-biometrique](https://github.com/Nikoju1977/agent-biometrique) | Aperçu caméra facultatif, scores et alertes fictifs retirés du code. |
 | [fibrobot](https://github.com/Nikoju1977/fibrobot) | Agent d'information autour de la fibromyalgie |
 | [fibrocare](https://github.com/Nikoju1977/fibrocare) | Journal de suivi de la fibromyalgie |
-| [presentation-medtronic](https://github.com/Nikoju1977/presentation-medtronic) | Présentation interactive sur des technologies du diabète |
+| [presentation-medtronic](https://github.com/Nikoju1977/presentation-medtronic) | Maquette HTML/CSS incomplète, indépendante et non médicale |
 
 > **Important :** ces projets sont présentés comme des prototypes et outils d'information. Leur présence ici ne vaut ni validation clinique, ni certification de dispositif médical, ni recommandation thérapeutique.
 
@@ -161,7 +189,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 | [Boutique-morgane](https://github.com/Nikoju1977/Boutique-morgane) | Site vitrine et boutique |
 | [handimonde](https://github.com/Nikoju1977/handimonde) | Carte des lieux accessibles |
 | [job-search](https://github.com/Nikoju1977/job-search) | Recherche d'emploi et accompagnement des candidats |
-| [aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking) | Recettes de desserts, portions et espace Chef IA |
+| [aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking) | Calcul alimentaire par portion et favoris locaux ; dose retirée, IA suspendue. |
 
 </details>
 
@@ -175,7 +203,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 | [cockpit-mecaria](https://github.com/Nikoju1977/cockpit-mecaria) | Cockpit de qualité, production et amélioration continue |
 | [Metrology-OS](https://github.com/Nikoju1977/Metrology-OS) | Gestion métrologique et parc d'instruments |
 | [aegis-earth-mobile](https://github.com/Nikoju1977/aegis-earth-mobile) | Application géospatiale mobile-first |
-| [radar-de-niko](https://github.com/Nikoju1977/radar-de-niko) | Collecte et restitution de veille structurée |
+| [radar-de-niko](https://github.com/Nikoju1977/radar-de-niko) | Collecte et restitution de veille structurée ; mode stub fictif |
 
 </details>
 
@@ -189,7 +217,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 | [oracle-du-jardinier](https://github.com/Nikoju1977/oracle-du-jardinier) | Assistant de jardinage et permaculture |
 | [tarot-de-niko](https://github.com/Nikoju1977/tarot-de-niko) | Tarot numérique et journal symbolique |
 | [oeil-hermes](https://github.com/Nikoju1977/oeil-hermes) | Grimoire numérique de correspondances symboliques |
-| [les-annales-akashiques](https://github.com/Nikoju1977/les-annales-akashiques) | Expérience de réflexion spirituelle |
+| [les-annales-akashiques](https://github.com/Nikoju1977/les-annales-akashiques) | Expérience de réflexion spirituelle ; stockage local non chiffré |
 
 </details>
 
@@ -218,7 +246,7 @@ Plutôt qu'empiler les technologies, je pars de **l'expérience à créer**, pui
 
 ## Studio Niko Core — socle partagé
 
-La [bibliothèque Studio Niko Core v0.1.0](studio-niko-core/README.md) fournit des utilitaires JavaScript locaux et un diagnostic volontaire sans télémétrie. Le [registre des 55 dépôts](studio-niko-core/registry.json), le [cockpit de pilotage](studio-niko-core/index.html) et la [feuille de route](studio-niko-core/ROADMAP.md) distinguent les intégrations enregistrées dans GitHub des fonctionnalités réellement validées. Six projets phares utilisent déjà une copie locale du socle ; cela ne garantit pas encore leur déploiement ni leur fonctionnement sur appareil.
+La [bibliothèque Studio Niko Core v0.1.0](studio-niko-core/README.md) fournit des utilitaires JavaScript locaux et un diagnostic volontaire sans télémétrie. Le [registre des dépôts publics](studio-niko-core/registry.json), le [cockpit de pilotage](studio-niko-core/index.html) et la [feuille de route](studio-niko-core/ROADMAP.md) distinguent les intégrations enregistrées dans GitHub des fonctionnalités réellement validées. Six projets phares utilisent déjà une copie locale du socle ; cela ne garantit pas encore leur déploiement ni leur fonctionnement sur appareil.
 
 **[Études de projet](SHOWCASE.md)** · **[Que fait chaque dépôt ?](PROJECTS.md)** · **[Politique de sélection](CURATION.md)** · **[Plan qualité](QUALITY_ROADMAP.md)**
 
@@ -227,3 +255,12 @@ La [bibliothèque Studio Niko Core v0.1.0](studio-niko-core/README.md) fournit d
 **STUDIO NIKO DESIGN** · Construire des mondes. Concevoir des outils. Documenter le réel.
 
 </div>
+
+
+## Correction P0 — lot 1 (25 novembre 2026)
+
+- [agent-biometrique](https://github.com/Nikoju1977/agent-biometrique/commit/7d94d7666ac1ec8c98f4256d689639c49996688e) : Aperçu caméra facultatif, scores et alertes fictifs retirés du code. Aucune mesure biométrique ; cycle caméra à qualifier.
+- [SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL/commit/416dce75f69b5d93d1bd49836a6e9f0c1844de4b) : Repères faciaux expérimentaux et EAR ; pouls et fatigue retirés. Aucun usage médical ; modèle, permissions et suivi à qualifier.
+- [aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking/commit/c25e48bdf50a7f6b8eb6e9f7879b363a3d80e3e0) : Calcul alimentaire par portion et favoris locaux ; dose retirée, IA suspendue. Aucun calcul de traitement ; favoris non chiffrés, ancien profil effaçable volontairement.
+
+Sources relues après publication, empreintes SHA vérifiées ; aucun nouveau test d'exécution ou déploiement vérifié. Les constats antérieurs sont historiques, non des preuves de l'état actuel. Le chef distant est suspendu par précaution ; pas de suppression automatique des anciennes données locales.

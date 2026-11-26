@@ -3,7 +3,7 @@
     "slug": "aegis-earth-mobile",
     "name": "aegis-earth-mobile",
     "category": "Cartographie & Nature",
-    "description": "Exploration géospatiale, météo, ciel et données publiques.",
+    "description": "Globe Cesium, repli 2D, Haversine et sources publiques ; pas de flux AIS intégré.",
     "repoUrl": "https://github.com/Nikoju1977/aegis-earth-mobile",
     "demoUrl": "https://nikoju1977.github.io/aegis-earth-mobile/",
     "featured": false,
@@ -15,25 +15,25 @@
     "slug": "agent-biometrique",
     "name": "agent-biometrique",
     "category": "Santé & Bien-être",
-    "description": "Interface expérimentale d'analyse biométrique.",
+    "description": "Aperçu caméra facultatif, scores et alertes fictifs retirés du code.",
     "repoUrl": "https://github.com/Nikoju1977/agent-biometrique",
     "demoUrl": "https://nikoju1977.github.io/agent-biometrique/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Outil non médical. Les estimations biométriques vidéo ne sont pas des constantes cliniques."
+    "requirements": "Aucune mesure biométrique ; cycle caméra à qualifier."
   },
   {
     "slug": "applewatchcadrans",
     "name": "applewatchcadrans",
     "category": "Art & 3D",
-    "description": "Études et créations graphiques de cadrans.",
+    "description": "Concepts de cadrans : PNG, SVG, HTML animé ; indicateurs de capteurs fictifs.",
     "repoUrl": "https://github.com/Nikoju1977/applewatchcadrans",
     "demoUrl": "https://nikoju1977.github.io/applewatchcadrans/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Création visuelle de cadrans ; la mise en place sur une montre réelle dépend des outils et du système compatibles."
+    "requirements": "Pas de cadran watchOS natif ni de capteur réel ; génération SVG à sécuriser."
   },
   {
     "slug": "AutoCoder-Studio-Niko",
@@ -57,7 +57,7 @@
     "slug": "AutoEntrepreneur-1M",
     "name": "AutoEntrepreneur-1M",
     "category": "Business & Services",
-    "description": "Atelier de profils experts et outils de gestion d'entreprise.",
+    "description": "Catalogue combinatoire de profils métier, rapports déterministes et gestion locale ; aucun LLM connecté.",
     "repoUrl": "https://github.com/Nikoju1977/AutoEntrepreneur-1M",
     "demoUrl": "https://nikoju1977.github.io/AutoEntrepreneur-1M/",
     "featured": false,
@@ -75,19 +75,19 @@
     "slug": "aylina-is-cooking",
     "name": "aylina-is-cooking",
     "category": "Santé & Bien-être",
-    "description": "Calculateur de glucides/part et estimation liée à l'insuline — prototype non médical.",
+    "description": "Calcul alimentaire par portion et favoris locaux ; dose retirée, IA suspendue.",
     "repoUrl": "https://github.com/Nikoju1977/aylina-is-cooking",
     "demoUrl": "https://nikoju1977.github.io/aylina-is-cooking/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Calculateur éducatif de glucides et d'insuline, non certifié. Toute dose réelle doit être décidée avec un professionnel de santé."
+    "requirements": "Aucun calcul de traitement ; favoris non chiffrés, ancien profil effaçable volontairement."
   },
   {
     "slug": "Bouh-delivery",
     "name": "Bouh-delivery",
     "category": "Jeux & Expériences",
-    "description": "Jeu d'arcade Halloween, conduite et défis.",
+    "description": "Jeu automobile Halloween : dix missions, trois boss, Canvas et audio synthétisé.",
     "repoUrl": "https://github.com/Nikoju1977/Bouh-delivery",
     "demoUrl": "https://nikoju1977.github.io/Bouh-delivery/",
     "featured": false,
@@ -99,7 +99,7 @@
     "slug": "Boutique-morgane",
     "name": "Boutique-morgane",
     "category": "Arts & Symbolique",
-    "description": "Univers Morgane : vitrine, boutique, tarot et consultations.",
+    "description": "Vitrine et demandes de contact locales, administration D1 sous configuration ; paiement non établi.",
     "repoUrl": "https://github.com/Nikoju1977/Boutique-morgane",
     "demoUrl": null,
     "featured": false,
@@ -109,101 +109,103 @@
     "slug": "cockpit-mecaria",
     "name": "cockpit-mecaria",
     "category": "Business & Services",
-    "description": "Cockpit qualité, métrologie et production industrielle.",
+    "description": "Qualité, SPC, R&R, TRS et gouvernance IA.",
     "repoUrl": "https://github.com/Nikoju1977/cockpit-mecaria",
     "demoUrl": "https://nikoju1977.github.io/cockpit-mecaria/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Les tableaux nécessitent des données locales ou importées. N'utilisez pas de données d'entreprise confidentielles sur un service non autorisé."
+    "requirements": "Coffre de clés distinct ; rôles déclaratifs et journal modifiable."
   },
   {
     "slug": "compagnon-diabete",
     "name": "compagnon-diabete",
     "category": "Archives & Variantes",
-    "description": "Variante de compagnon de suivi du diabète.",
+    "description": "Journal descriptif fonctionnel : saisie, historique, filtre, modification et sauvegarde chiffrée.",
     "repoUrl": "https://github.com/Nikoju1977/compagnon-diabete",
     "demoUrl": "https://nikoju1977.github.io/compagnon-diabete/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Prototype expérimental. Connexions à des dispositifs médicaux non validées ; ne pas se fier aux recommandations de dose."
+    "requirements": "Données fictives pendant qualification ; HTTPS ou localhost pour Web Crypto. Tests navigateur et déploiement non vérifiés."
   },
   {
     "slug": "Cosmo-citrouille",
     "name": "Cosmo-citrouille",
     "category": "Jeux & Expériences",
-    "description": "Aventure spatiale d'Halloween, 140 mondes annoncés.",
+    "description": "Arcade Canvas : 140 configurations, 14 boss, 800 points en 120 secondes de simulation.",
     "repoUrl": "https://github.com/Nikoju1977/Cosmo-citrouille",
     "demoUrl": "https://nikoju1977.github.io/Cosmo-citrouille/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "La page s'ouvre ; les 140 mondes annoncés, la sauvegarde et la maniabilité demandent une validation distincte."
+    "requirements": "Logique présente dans le code ; parité des éditions, maniabilité et build mobile non vérifiés."
   },
   {
     "slug": "Dbmetre-pro",
     "name": "Dbmetre-pro",
     "category": "Musique & Audio",
-    "description": "Analyseur spectral, mesure dBFS et enregistrement microphone.",
+    "description": "RMS dBFS, FFT 4096 points et capture microphone ; non étalonné.",
     "repoUrl": "https://github.com/Nikoju1977/Dbmetre-pro",
     "demoUrl": "https://nikoju1977.github.io/Dbmetre-pro/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Un microphone et une autorisation navigateur sont nécessaires. Les mesures dB SPL absolues exigent un calibrage acoustique."
+    "requirements": "Autorisation microphone nécessaire. Offset SPL indicatif, moyenne des dB non équivalente à Leq."
   },
   {
     "slug": "dermato-ai",
     "name": "dermato-ai",
     "category": "Santé & Bien-être",
-    "description": "Exploration visuelle dermatologique, sans diagnostic.",
+    "description": "OpenCV, Face Mesh et Pixtral distant ; métriques non validées.",
     "repoUrl": "https://github.com/Nikoju1977/dermato-ai",
     "demoUrl": "https://nikoju1977.github.io/dermato-ai/",
     "featured": false,
     "status": "page-responding",
-    "pageCheckedOn": "2026-11-04"
+    "pageCheckedOn": "2026-11-04",
+    "requirements": "Scores de secours, stockage en clair et rendu HTML à sécuriser ; données fictives uniquement."
   },
   {
     "slug": "EBM-BRETONNE.",
     "name": "EBM-BRETONNE.",
     "category": "Musique & Audio",
-    "description": "Cyber-Fest-Noz : groovebox EBM aux influences bretonnes.",
+    "description": "Cyber-Fest-Noz : six voies, quatre patterns de 16 pas, synthèse d'anche et bourdon.",
     "repoUrl": "https://github.com/Nikoju1977/EBM-BRETONNE.",
     "demoUrl": "https://nikoju1977.github.io/EBM-BRETONNE./",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "L'audio Web nécessite un geste utilisateur. La disponibilité de certaines bibliothèques dépend d'une connexion réseau."
+    "requirements": "L'audio Web nécessite un geste utilisateur. La disponibilité de certaines bibliothèques dépend d'une connexion réseau. Format d'enregistrement dépendant du navigateur ; WAV PCM non garanti."
   },
   {
     "slug": "fibrobot",
     "name": "fibrobot",
     "category": "Santé & Bien-être",
-    "description": "Compagnon fibromyalgie, journal et outils de bien-être.",
+    "description": "Compagnon documentaire, coffre AES-GCM et IA facultative.",
     "repoUrl": "https://github.com/Nikoju1977/fibrobot",
     "demoUrl": "https://nikoju1977.github.io/fibrobot/",
     "featured": false,
     "status": "page-responding",
-    "pageCheckedOn": "2026-11-04"
+    "pageCheckedOn": "2026-11-04",
+    "requirements": "Refus et rappels non validés cliniquement. Flux IA à auditer."
   },
   {
     "slug": "fibrocare",
     "name": "fibrocare",
     "category": "Santé & Bien-être",
-    "description": "Journal de suivi et d'organisation du quotidien.",
+    "description": "Journal, graphiques et PDF ; stockage local non chiffré.",
     "repoUrl": "https://github.com/Nikoju1977/fibrocare",
     "demoUrl": "https://nikoju1977.github.io/fibrocare/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Outil d'organisation personnel expérimental, non dispositif médical. Le partage de données de santé n'est pas activé depuis ce Hub."
+    "requirements": "Sauvegarde et informations thérapeutiques à fiabiliser. Données fictives uniquement."
   },
   {
     "slug": "galerie-studio-niko",
     "name": "galerie-studio-niko",
     "category": "Art & 3D",
-    "description": "Galerie immersive 3D pour exposer films, images, sculptures et sons.",
+    "description": "Exposition Three.js, audio spatial, sauvegardes et publication optionnelle ; autorisations de stockage à revoir.",
     "repoUrl": "https://github.com/Nikoju1977/galerie-studio-niko",
     "demoUrl": "https://galerie-studio-niko.vercel.app",
     "featured": true,
@@ -220,7 +222,7 @@
     "slug": "handimonde",
     "name": "handimonde",
     "category": "Cartographie & Nature",
-    "description": "Carte participative des lieux et équipements accessibles.",
+    "description": "Carte Leaflet/OSM et relais Overpass/Nominatim ; accessibilité déclarée, non vérifiée.",
     "repoUrl": "https://github.com/Nikoju1977/handimonde",
     "demoUrl": "https://handimonde.vercel.app",
     "featured": false,
@@ -238,7 +240,7 @@
     "slug": "ia-studio-cine",
     "name": "ia-studio-cine",
     "category": "Cinéma & Image",
-    "description": "META-STUDIO PRO V5 : création audiovisuelle, timeline, looks et exports.",
+    "description": "META-STUDIO PRO V6 : storyboard, connecteurs LTX/Agnes, timeline et MediaRecorder.",
     "repoUrl": "https://github.com/Nikoju1977/ia-studio-cine",
     "demoUrl": "https://nikoju1977.github.io/ia-studio-cine/",
     "featured": true,
@@ -249,26 +251,26 @@
       "access": "protected",
       "project": "ia-studio-cine"
     },
-    "requirements": "Version publique GitHub Pages accessible. Certaines générations nécessitent Agnes API et une configuration de clé ; la version Vercel est protégée.",
+    "requirements": "Génération distante soumise aux quotas et CORS ; rendu réel non revérifié.",
     "pageCheckedOn": "2026-11-04"
   },
   {
     "slug": "jarvisdiabete",
     "name": "jarvisdiabete",
     "category": "Santé & Bien-être",
-    "description": "Compagnon de suivi du diabète, prototype expérimental.",
+    "description": "DiabCare : assistant documentaire, Qwen/Whisper locaux optionnels, journal manuel et coffre.",
     "repoUrl": "https://github.com/Nikoju1977/jarvisdiabete",
     "demoUrl": "https://nikoju1977.github.io/jarvisdiabete/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Assistant expérimental, non médical. La page s'ouvre mais les flux vocaux et sources médicales doivent être testés séparément."
+    "requirements": "Aucun calcul de dose ni contrôle de pompe ; inférence et compatibilité non vérifiées. Données fictives uniquement."
   },
   {
     "slug": "job-search",
     "name": "job-search",
     "category": "Business & Services",
-    "description": "Niko Emploi : recherche, suivi et rapprochement d'offres.",
+    "description": "Niko Emploi : offres multisources, classement explicable, MiniLM local optionnel et veille serveur conditionnelle.",
     "repoUrl": "https://github.com/Nikoju1977/job-search",
     "demoUrl": "https://niko-emploi.vercel.app",
     "featured": false,
@@ -286,43 +288,43 @@
     "slug": "l-ultime-confrontation",
     "name": "l-ultime-confrontation",
     "category": "Jeux & Expériences",
-    "description": "Projet narratif interactif.",
+    "description": "Site promotionnel littéraire : couverture, animations et lien de paiement externe.",
     "repoUrl": "https://github.com/Nikoju1977/l-ultime-confrontation",
     "demoUrl": "https://nikoju1977.github.io/l-ultime-confrontation/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "La page du récit est accessible ; lecture audio et média restent à tester sur chaque navigateur."
+    "requirements": "Audio local référencé mais absent ; disponibilité commerciale et paiement non vérifiés."
   },
   {
     "slug": "le-jardin-de-niko",
     "name": "le-jardin-de-niko",
     "category": "Archives & Variantes",
-    "description": "Variante Terroir Synthétique de l'Oracle du Jardinier.",
+    "description": "Variante Terroir Synthétique : météo, journal local et repli IA conditionnel.",
     "repoUrl": "https://github.com/Nikoju1977/le-jardin-de-niko",
     "demoUrl": "https://nikoju1977.github.io/le-jardin-de-niko/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "La météo et les données externes demandent une connexion et peuvent être indisponibles."
+    "requirements": "La météo et les données externes demandent une connexion et peuvent être indisponibles. Quotas, coûts et compatibilité non vérifiés."
   },
   {
     "slug": "les-annales-akashiques",
     "name": "les-annales-akashiques",
     "category": "Arts & Symbolique",
-    "description": "Expérience créative et symbolique.",
+    "description": "Narration symbolique, calculs locaux et IA facultative ; stockage non chiffré.",
     "repoUrl": "https://github.com/Nikoju1977/les-annales-akashiques",
     "demoUrl": "https://nikoju1977.github.io/les-annales-akashiques/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Expérience créative et symbolique ; les interprétations ne constituent pas des faits scientifiquement vérifiés."
+    "requirements": "Ne pas saisir de données intimes ni de secrets réels ; journal et brouillons non chiffrés."
   },
   {
     "slug": "medicalvisionproai",
     "name": "medicalvisionproai",
     "category": "Santé & Bien-être",
-    "description": "Visualisation d'images et de séries DICOM, prototype non certifié.",
+    "description": "DICOM/MPR local, projections MIP/MinIP et IA distante optionnelle ; prototype non clinique.",
     "repoUrl": "https://github.com/Nikoju1977/medicalvisionproai",
     "demoUrl": "https://nikoju1977.github.io/medicalvisionproai/",
     "featured": false,
@@ -333,24 +335,25 @@
       "access": "protected",
       "project": "medicalvisionproai"
     },
-    "requirements": "Prototype expérimental non certifié. Le déploiement Vercel est protégé.",
+    "requirements": "Images/contexte transmis au fournisseur ; clés hors coffre, anciens dossiers en clair possibles. Données fictives uniquement.",
     "pageCheckedOn": "2026-11-04"
   },
   {
     "slug": "Medivision-ai-pro",
     "name": "Medivision-ai-pro",
     "category": "Archives & Variantes",
-    "description": "Ancienne variante de MedVision AI Pro.",
+    "description": "Base PWABuilder Lit/TypeScript/Vite, sans moteur d'imagerie médicale.",
     "repoUrl": "https://github.com/Nikoju1977/Medivision-ai-pro",
     "demoUrl": null,
     "featured": false,
-    "status": "source-only"
+    "status": "source-only",
+    "requirements": "Starter tiers crédité ; déclarations MIT/ISC à clarifier."
   },
   {
     "slug": "Metrology-OS",
     "name": "Metrology-OS",
     "category": "Business & Services",
-    "description": "Suivi métrologique d'instruments et certificats.",
+    "description": "Incertitudes, bande de garde et gestion métrologique.",
     "repoUrl": "https://github.com/Nikoju1977/Metrology-OS",
     "demoUrl": "https://metrology-os-demo.vercel.app/",
     "featured": false,
@@ -362,13 +365,13 @@
       "project": "metrology-os-demo"
     },
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Démonstration de GMAO métrologique navigateur. Aucun audit de conformité ISO ni certification n'est attesté. N'utilisez pas de données industrielles confidentielles sans sauvegardes, accès contrôlés et validation des calculs."
+    "requirements": "Calculs simplifiés non qualifiés ; aucune accréditation ou certification."
   },
   {
     "slug": "miaotris",
     "name": "miaotris",
     "category": "Jeux & Expériences",
-    "description": "Jeu de blocs félin dans le navigateur.",
+    "description": "Jeu de blocs félin : plateau 10 × 20, rotation, collisions et score.",
     "repoUrl": "https://github.com/Nikoju1977/miaotris",
     "demoUrl": "https://alyina-vampire-of-halloween.vercel.app",
     "featured": false,
@@ -379,19 +382,19 @@
       "access": "public",
       "project": "alyina-vampire-of-halloween"
     },
-    "requirements": "Déploiement du jeu Vercel prêt sous l'intitulé Alyina Vampire of Halloween.",
+    "requirements": "Le lien Vercel historique correspond au sous-projet Alyina Vampire of Halloween ; il ne valide pas Miaotris à la racine.",
     "pageCheckedOn": "2026-11-04"
   },
   {
     "slug": "N8V",
     "name": "N8V",
-    "category": "Cinéma & Image",
-    "description": "Projet de format vidéo expérimental — dépôt vide.",
+    "category": "Musique & Audio",
+    "description": "NIKO ANALOG 37 : synthèse, groovebox, clavier 37 notes et WAV.",
     "repoUrl": "https://github.com/Nikoju1977/N8V",
     "demoUrl": null,
     "featured": false,
-    "status": "planned",
-    "requirements": "Dépôt sans application utilisable à ce stade."
+    "status": "source-only",
+    "requirements": "Sources présentes ; déploiement non confirmé. Pas de codec vidéo 8K."
   },
   {
     "slug": "Neural-Art-mars-2026",
@@ -409,7 +412,7 @@
     "slug": "niko-commande-live-tik-tok",
     "name": "Niko Live Commander",
     "category": "Musique & Audio",
-    "description": "Régie locale de préparation de lives : conducteur, horloges Miami/Paris, chronomètre, cues, checklist et setlist.",
+    "description": "Conducteur de live local, horloges, chronomètre, setlist et import JSON validé ; aucun contrôle TikTok ou OBS.",
     "repoUrl": "https://github.com/Nikoju1977/niko-commande-live-tik-tok",
     "demoUrl": "https://niko-live-commander.vercel.app/",
     "featured": false,
@@ -432,7 +435,7 @@
     "slug": "Niko-Ultravision",
     "name": "Niko-Ultravision",
     "category": "Cinéma & Image",
-    "description": "Restauration et super-résolution locale d'images et de vidéos.",
+    "description": "Restauration et super-résolution : Canvas, ONNX local, WebCodecs ; fidélité non garantie.",
     "repoUrl": "https://github.com/Nikoju1977/Niko-Ultravision",
     "demoUrl": "https://nikoju1977.github.io/Niko-Ultravision/",
     "featured": true,
@@ -474,7 +477,7 @@
     "slug": "Nikoju1977",
     "name": "Nikoju1977",
     "category": "Studio & Portfolio",
-    "description": "Profil et documentation de l'écosystème Studio Niko.",
+    "description": "Profil et Hub : 53 références publiques classées ; registre et plan qualité.",
     "repoUrl": "https://github.com/Nikoju1977/Nikoju1977",
     "demoUrl": null,
     "featured": false,
@@ -484,30 +487,31 @@
     "slug": "oeil-hermes",
     "name": "oeil-hermes",
     "category": "Arts & Symbolique",
-    "description": "Grimoire numérique, correspondances et calculs astrologiques.",
+    "description": "Graphe symbolique bilingue et calculs astronomiques approximatifs ; clés chiffrées.",
     "repoUrl": "https://github.com/Nikoju1977/oeil-hermes",
     "demoUrl": "https://nikoju1977.github.io/oeil-hermes/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Grimoire numérique symbolique, non scientifique ni médical."
+    "requirements": "Expérience symbolique, calculs non qualifiés ; lien de partage pouvant exposer les paramètres de naissance."
   },
   {
     "slug": "OPENVITA-DT1",
     "name": "OPENVITA-DT1",
     "category": "Santé & Bien-être",
-    "description": "Suivi expérimental du diabète de type 1 via Nightscout.",
+    "description": "Journal glycémique manuel ; heuristiques de doses non validées.",
     "repoUrl": "https://github.com/Nikoju1977/OPENVITA-DT1",
     "demoUrl": "https://nikoju1977.github.io/OPENVITA-DT1/",
     "featured": false,
     "status": "page-responding",
-    "pageCheckedOn": "2026-11-04"
+    "pageCheckedOn": "2026-11-04",
+    "requirements": "Ne pas utiliser pour traiter. Nightscout/oref1/AGP non démontrés dans le fichier principal ; données et clés en clair."
   },
   {
     "slug": "oracle-du-jardinier",
     "name": "oracle-du-jardinier",
     "category": "Cartographie & Nature",
-    "description": "Assistant jardin et permaculture, météo, tâches et calendrier.",
+    "description": "Gestion du jardin, Open-Meteo et vision générative optionnelle ; sol déclaré.",
     "repoUrl": "https://github.com/Nikoju1977/oracle-du-jardinier",
     "demoUrl": "https://oracle-du-jardinier.vercel.app",
     "featured": false,
@@ -518,41 +522,43 @@
       "access": "protected",
       "project": "oracle-du-jardinier"
     },
-    "requirements": "L'application Vercel est protégée. Le lien historique est fourni sans garantie de disponibilité.",
+    "requirements": "L'application Vercel est protégée. Le lien historique est fourni sans garantie de disponibilité. Les photos ne mesurent pas le pH ; conseils à vérifier.",
     "pageCheckedOn": "2026-11-04"
   },
   {
     "slug": "presentation-medtronic",
     "name": "presentation-medtronic",
     "category": "Business & Services",
-    "description": "Support de présentation technique.",
+    "description": "Maquette HTML/CSS incomplète, sans moteur de présentation ou médical.",
     "repoUrl": "https://github.com/Nikoju1977/presentation-medtronic",
     "demoUrl": null,
     "featured": false,
-    "status": "source-only"
+    "status": "source-only",
+    "requirements": "Deux sources interrompues au milieu du CSS ; non affilié à Medtronic."
   },
   {
     "slug": "purescanai",
     "name": "purescanai",
     "category": "Santé & Bien-être",
-    "description": "Interface expérimentale d'analyse visuelle de la peau.",
+    "description": "Trois requêtes Pixtral/Mistral ; scores cutanés générés, non mesurés.",
     "repoUrl": "https://github.com/Nikoju1977/purescanai",
     "demoUrl": "https://nikoju1977.github.io/purescanai/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Prototype non certifié. Ne remplace pas une consultation dermatologique et n'établit pas de diagnostic."
+    "requirements": "Ne pas utiliser pour diagnostiquer ou traiter. Flux d'images distants."
   },
   {
     "slug": "radar-de-niko",
     "name": "radar-de-niko",
     "category": "Business & Services",
-    "description": "Radar 44 : revue de presse, sources régionales et services.",
+    "description": "Registre Node.js de veille, dédoublonnage heuristique et sorties RSS/JSONL.",
     "repoUrl": "https://github.com/Nikoju1977/radar-de-niko",
     "demoUrl": "https://nikoju1977.github.io/radar-de-niko/",
     "featured": false,
     "status": "page-responding",
-    "pageCheckedOn": "2026-11-04"
+    "pageCheckedOn": "2026-11-04",
+    "requirements": "Vérifier provenance et dates ; les sorties stub sont fictives et ne doivent pas être publiées comme actualités."
   },
   {
     "slug": "Rave-Generator-2",
@@ -604,7 +610,7 @@
     "slug": "Sage-companion",
     "name": "Sage-companion",
     "category": "Intelligence & Agents",
-    "description": "Compagnon vocal avec outils et commandes confirmées.",
+    "description": "Compagnon vocal Mistral, mémoire locale et actions navigateur ; coûts non garantis.",
     "repoUrl": "https://github.com/Nikoju1977/Sage-companion",
     "demoUrl": "https://nikoju1977.github.io/Sage-companion/",
     "featured": false,
@@ -616,30 +622,31 @@
     "slug": "SCAN-BIOMEDICAL",
     "name": "SCAN-BIOMEDICAL",
     "category": "Santé & Bien-être",
-    "description": "Prototype de caméra et indicateurs biométriques.",
+    "description": "Repères faciaux expérimentaux et EAR ; pouls et fatigue retirés.",
     "repoUrl": "https://github.com/Nikoju1977/SCAN-BIOMEDICAL",
     "demoUrl": "https://nikoju1977.github.io/SCAN-BIOMEDICAL/",
     "featured": false,
     "status": "page-responding",
     "pageCheckedOn": "2026-11-04",
-    "requirements": "Prototype expérimental, non médical. Caméra et permissions indispensables. Les indicateurs ne sont pas des mesures cliniques."
+    "requirements": "Aucun usage médical ; modèle, permissions et suivi à qualifier."
   },
   {
     "slug": "tarot-de-niko",
     "name": "tarot-de-niko",
     "category": "Arts & Symbolique",
-    "description": "Tarot symbolique : 78 arcanes, grimoire et tirages.",
+    "description": "78 arcanes, mélange Fisher–Yates avec Web Crypto, grimoire chiffré optionnel.",
     "repoUrl": "https://github.com/Nikoju1977/tarot-de-niko",
     "demoUrl": "https://nikoju1977.github.io/tarot-de-niko/",
     "featured": false,
     "status": "page-responding",
-    "pageCheckedOn": "2026-11-04"
+    "pageCheckedOn": "2026-11-04",
+    "requirements": "Lecture symbolique ; Mistral facultatif et échanges externes. Aucun audit de sécurité nouveau."
   },
   {
     "slug": "the-lovestronautes-machine",
     "name": "the-lovestronautes-machine",
     "category": "Musique & Audio",
-    "description": "Groovebox, synthèse Web Audio, composition, MIDI et exports.",
+    "description": "Station 18 pistes, synthèse, patchbay, WAV/MP3, MIDI et arrangement.",
     "repoUrl": "https://github.com/Nikoju1977/the-lovestronautes-machine",
     "demoUrl": "https://nikoju1977.github.io/the-lovestronautes-machine/",
     "featured": true,
@@ -650,18 +657,19 @@
     "slug": "Vision-IA",
     "name": "Vision-IA",
     "category": "Cinéma & Image",
-    "description": "Assistant de réalisation : scénario, découpage, conducteur et dossiers de production.",
+    "description": "Préproduction, documents, découpage, conducteur local et routage LLM.",
     "repoUrl": "https://github.com/Nikoju1977/Vision-IA",
     "demoUrl": "https://nikoju1977.github.io/Vision-IA/",
     "featured": true,
     "status": "page-responding",
-    "pageCheckedOn": "2026-11-04"
+    "pageCheckedOn": "2026-11-04",
+    "requirements": "Documents non chiffrés par le coffre de clés ; extraits susceptibles d'être transmis."
   },
   {
     "slug": "Wan2GP",
     "name": "Wan2GP",
     "category": "Cinéma & Image",
-    "description": "Moteur de génération multimodale lourd, nécessite une machine GPU.",
+    "description": "Fork de WanGP (DeepBeepMeep), moteur multimodal tiers sous licence communautaire avec restrictions commerciales.",
     "repoUrl": "https://github.com/Nikoju1977/Wan2GP",
     "demoUrl": null,
     "featured": false,
@@ -672,7 +680,7 @@
     "slug": "White-hat",
     "name": "White-hat",
     "category": "Sécurité & Outils",
-    "description": "AEGIS : cockpit de contrôle défensif des dépôts.",
+    "description": "Revue défensive GitHub et service Sentinel séparé : statistiques robustes et Isolation Forest conditionnel ; non certifié.",
     "repoUrl": "https://github.com/Nikoju1977/White-hat",
     "demoUrl": "https://aegis-white-hat.vercel.app/",
     "featured": false,

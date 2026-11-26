@@ -4,6 +4,10 @@
 
 **Approche :** montrer un problème concret, les choix d'implémentation et les limites. Les détails ci-dessous sont fondés sur la documentation et la structure déclarées des dépôts, **pas sur un audit indépendant de production**.
 
+## International overview
+
+Six signature case studies showcasing design and engineering trade-offs, not a production-readiness claim. The [50-project technical register](PROJECTS.md#registre-technique--50-dépôts-documentés) links current READMEs and licenses. [Historical quality evidence](QUALITY_EVIDENCE.md) records specific commits and runs, not validation of future revisions.
+
 ## 01 — Vision-IA · Construire un film sans confondre faits et propositions
 
 **Domaine :** cinéma, workflow éditorial, IA documentaire.  
@@ -15,7 +19,7 @@
 
 **À examiner dans le code.** Gestion des sources, reprise du dépouillement, sauvegarde IndexedDB, traitement des limites API et export du dossier.
 
-**Limites.** Les fournisseurs IA exigent une configuration et peuvent se tromper. L'utilisation sur des documents sensibles nécessite une vérification des flux de données.
+**Limites.** Les fournisseurs IA exigent une configuration et peuvent se tromper. Le coffre chiffre les clés, pas tous les documents ; des extraits peuvent être envoyés aux fournisseurs.
 
 ## 02 — Galerie Studio Niko · Une exposition 3D, pas seulement une page portfolio
 
@@ -28,7 +32,7 @@
 
 **À examiner dans le code.** `src/galerie.html`, `tools/build.sh`, `tools/verify.mjs`, `supabase/schema.sql`.
 
-**Limites.** Les médias volumineux ne font pas tous partie de la publication distante ; les accès d'édition reposent sur le serveur et son contrôle d'autorisation.
+**Limites.** Les médias volumineux ne font pas tous partie de la publication distante. Les écritures d'enregistrements et les téléversements relèvent de contrôles distincts ; le schéma de stockage fourni nécessite une revue d'autorisation.
 
 ## 03 — NikoAssist · Orchestrer des agents sans leur donner carte blanche
 
@@ -41,7 +45,7 @@
 
 **À examiner dans le code.** `scripts/install_nikoassist.py`, `tests/`, `docs/INSTALLATION.md` et workflows de compilation.
 
-**Limites.** Ce travail adapte le logiciel libre nanoMuse et conserve ses attributions GPL. La présence d'un workflow Android/iOS ne démontre pas la disponibilité d'une application mobile installable et validée.
+**Limites.** Ce travail adapte le logiciel libre nanoMuse et conserve ses attributions GPL. La PWA web reste distincte du moteur Python. La présence d'un workflow Android/iOS ne démontre pas la disponibilité d'une application mobile installable et validée.
 
 ## 04 — MedVision AI Pro · Explorer l'imagerie sans prétendre diagnostiquer
 
@@ -50,11 +54,11 @@
 
 **Problème.** Consulter et comparer des images, annoter des régions et expérimenter une assistance visuelle tout en expliquant précisément le traitement des données.
 
-**Réponse technique documentée.** Import JPEG/PNG et séries DICOM monochromes non compressées, reconstruction multi-planaire, réglages Window/Level, dossiers locaux chiffrés, export et tests sur données synthétiques.
+**Réponse technique documentée.** Import JPEG/PNG et séries DICOM monochromes non compressées, reconstruction multi-planaire, projections MIP/MinIP, réglages Window/Level, dossiers locaux chiffrés, export et tests sur données synthétiques.
 
 **À examiner dans le code.** `imaging-pro.js`, `test/`, `VALIDATION.md`, `package.json`.
 
-**Limites critiques.** **Prototype non certifié.** Une analyse IA distante transmet les images au fournisseur configuré. Ni performance diagnostique ni aptitude à une décision médicale ne sont revendiquées.
+**Limites critiques.** **Prototype non certifié.** Une analyse IA distante transmet les images au fournisseur configuré. Les clés API hors coffre et anciens enregistrements en clair doivent être audités. Ni performance diagnostique ni aptitude à une décision médicale ne sont revendiquées.
 
 ## 05 — Thelovestronautes Machine · Faire du navigateur un instrument
 
@@ -63,7 +67,7 @@
 
 **Problème.** Composer et jouer une groovebox sans environnement de production audio séparé.
 
-**Réponse technique documentée.** Séquenceur pas à pas, synthèse Web Audio, swing, morphing, automation, piste de biniou électronique, contrôles MIDI, export JSON et enregistrement selon le navigateur.
+**Réponse technique documentée.** Station 18 pistes, synthèse Web Audio, patchbay, arrangement, export MIDI/JSON, capture PCM WAV 16/24 bits et MP3 via lamejs LGPL-3.0. Application MIT.
 
 **À examiner dans le code.** `index.html` et `scripts/validate.mjs`.
 
@@ -99,6 +103,50 @@ Les six projets ont des finalités différentes. Les liens ci-dessous permettent
 
 **Lecture juste :** « présence d'un test » n'est pas « test passé », et « démo annoncée » n'est pas « disponibilité confirmée ». Les liens de démonstration ne doivent pas être utilisés comme preuve de fonctionnement sans essai.
 
+## Further engineering work / Autres compétences documentées
+
+| Domain | Project | Evidence and boundary |
+| --- | --- | --- |
+| Image restoration | [UltraVision](https://github.com/Nikoju1977/Niko-Ultravision) | ONNX inference, WebCodecs and explicit fidelity limits |
+| Business tooling | [AutoEntrepreneur 1M](https://github.com/Nikoju1977/AutoEntrepreneur-1M) | Addressable specialist profiles and deterministic reports, not independent LLMs |
+| Employment | [Niko Emploi](https://github.com/Nikoju1977/job-search) | Job API adapters, optional browser embeddings and conditional server automation |
+| Voice interaction | [Sage](https://github.com/Nikoju1977/Sage-companion) | Mistral orchestration and browser actions; no billing guarantee |
+| Live production | [Niko Live Commander](https://github.com/Nikoju1977/niko-commande-live-tik-tok) | Local show preparation, not live-platform control |
+
+Ces cinq références complètent les six études signature sans modifier la sélection éditoriale. Les README et licences ont été consultés, aucun nouveau test fonctionnel ni contrôle HTTP des démonstrations n'a été effectué.
+
+## Additional engineering references
+
+[AEGIS White-hat](https://github.com/Nikoju1977/White-hat) — defensive review and statistical anomaly detection; [AEGIS Earth](https://github.com/Nikoju1977/aegis-earth-mobile) — geospatial exploration; [Morgane](https://github.com/Nikoju1977/Boutique-morgane) — storefront and conditional administration without established payment processing. [WanGP fork guide](https://github.com/Nikoju1977/Wan2GP/blob/main/GUIDE_UTILISATEUR.md) documents upstream technology separately, preserving attribution.
+
+## Signal processing and synthetic demonstration
+
+[DBMètre Pro](https://github.com/Nikoju1977/Dbmetre-pro) implements digital RMS and FFT analysis; no certified SPL measurement. [Agent biométrique](https://github.com/Nikoju1977/agent-biometrique) is a synthetic interface demonstration, not image-based biometric measurement. Its clinical-looking outputs require correction. The public [MedVision README](https://github.com/Nikoju1977/medicalvisionproai/blob/main/README.md) documents actual DICOM geometry and slab projection limitations. No new execution test is claimed.
+
+## Local inference and retained variants
+
+[DiabCare](https://github.com/Nikoju1977/jarvisdiabete) includes optional local Qwen and Whisper inference paths, a manual journal and encrypted storage, not a clinically validated assistant. [Daphnée](https://github.com/Nikoju1977/compagnon-diabete) has an unqualified Bluetooth reading and is retained for source inspection only. [Medivision-ai-pro](https://github.com/Nikoju1977/Medivision-ai-pro) is a PWABuilder-derived starter, not a medical image engine; existing credits and license declarations are preserved. No new execution or device test is claimed.
+
+## Environmental and information systems
+
+[Oracle](https://github.com/Nikoju1977/oracle-du-jardinier) and [Terroir Synthétique](https://github.com/Nikoju1977/le-jardin-de-niko) combine weather adapters and garden records with optional remote AI; soil profiles are declared, not measured. [Radar](https://github.com/Nikoju1977/radar-de-niko) implements dependency-based collection and heuristic deduplication. Its fabricated stub outputs must not be published as news. No new provider or execution tests are claimed.
+
+## Sound synthesis and interactive games
+
+[Cyber-Fest-Noz](https://github.com/Nikoju1977/EBM-BRETONNE.) implements custom-partial reed synthesis, harmonic drone and a six-channel groovebox. [Miaotris](https://github.com/Nikoju1977/miaotris) implements matrix-based falling-block rules, while [Cosmo Citrouille](https://github.com/Nikoju1977/Cosmo-citrouille) generates 140 level configurations with 14 bosses and a simulation-time goal. No new audio, game or native-device tests are claimed.
+
+## Symbolic and cultural experiences
+
+[Tarot](https://github.com/Nikoju1977/tarot-de-niko) implements cryptographic shuffle and an opt-in encrypted journal. [Œil d’Hermès](https://github.com/Nikoju1977/oeil-hermes), created by Lyssa Jung and Niko, combines a graph and approximate astronomical calculations. [Codex Akashique](https://github.com/Nikoju1977/les-annales-akashiques) uses local templates and optional remote interpretation; its journal and drafts are not established as encrypted. These are symbolic experiences, not predictive science. No new runtime tests are claimed.
+
+## Everyday creative applications
+
+[BOUH! Delivery](https://github.com/Nikoju1977/Bouh-delivery) implements a modular fictional driving game. [Aylina Is Cooking](https://github.com/Nikoju1977/aylina-is-cooking) includes an unqualified dose display requiring removal and privacy review. [Watch design studio](https://github.com/Nikoju1977/applewatchcadrans) composes SVG and exports PNG/SVG/HTML; sensor indicators are synthetic, not watchOS data. No new runtime validation.
+
+## Final inventory / Inventaire final
+
+[53 public references classified](PROJECTS.md#registre-technique--50-dépôts-documentés): 50 project READMEs, the profile and Hub, one upstream fork guide, and one empty repository. [L'Ultime Confrontation](https://github.com/Nikoju1977/l-ultime-confrontation) is a literary promotion site; [presentation-medtronic](https://github.com/Nikoju1977/presentation-medtronic) is an incomplete HTML/CSS draft. The empty repository is not an executable application. See [current quality priorities](QUALITY_ROADMAP.md); documentation coverage is not runtime validation.
+
 ## Principes transversaux
 
 **Créer avec une intention.** Le récit, l'usage et le public doivent dicter les interactions plutôt que l'inverse.
@@ -110,3 +158,12 @@ Les six projets ont des finalités différentes. Les liens ci-dessous permettent
 **Rendre le travail exploratoire.** Les liens renvoient à des dépôts consultables. Les adresses de démonstration proviennent des README de projets et leur disponibilité n'a pas été confirmée lors de cette mise à jour.
 
 [Retour à la vitrine](README.md) · [Voir la feuille de route de fiabilité](QUALITY_ROADMAP.md)
+
+
+## Correction P0 — lot 1 (25 novembre 2026)
+
+- [agent-biometrique](https://github.com/Nikoju1977/agent-biometrique/commit/7d94d7666ac1ec8c98f4256d689639c49996688e) : Aperçu caméra facultatif, scores et alertes fictifs retirés du code. Aucune mesure biométrique ; cycle caméra à qualifier.
+- [SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL/commit/416dce75f69b5d93d1bd49836a6e9f0c1844de4b) : Repères faciaux expérimentaux et EAR ; pouls et fatigue retirés. Aucun usage médical ; modèle, permissions et suivi à qualifier.
+- [aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking/commit/c25e48bdf50a7f6b8eb6e9f7879b363a3d80e3e0) : Calcul alimentaire par portion et favoris locaux ; dose retirée, IA suspendue. Aucun calcul de traitement ; favoris non chiffrés, ancien profil effaçable volontairement.
+
+Sources relues après publication, empreintes SHA vérifiées ; aucun nouveau test d'exécution ou déploiement vérifié. Les constats antérieurs sont historiques, non des preuves de l'état actuel. Le chef distant est suspendu par précaution ; pas de suppression automatique des anciennes données locales.

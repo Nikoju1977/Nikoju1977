@@ -22,14 +22,14 @@
       "slug": "agent-biometrique",
       "title": "agent-biometrique",
       "category": "Santé & Bien-être",
-      "description": "Interface expérimentale d'analyse biométrique.",
+      "description": "Aperçu caméra facultatif, scores et alertes fictifs retirés du code.",
       "steps": [
-        "Autorisez l'accès à la caméra uniquement si vous souhaitez essayer l'analyse.",
-        "Choisissez « Démarrer l'analyse » et placez votre visage dans le cadre.",
-        "Consultez les indicateurs à titre expérimental, puis arrêtez la caméra."
+        "Activez la caméra uniquement pour un aperçu.",
+        "Aucune mesure de santé n’est calculée.",
+        "Arrêtez la caméra."
       ],
-      "preparation": "Outil expérimental de suivi ou démonstration, non destiné au diagnostic ou aux décisions de traitement.",
-      "caution": "Indicateurs non médicaux, sans fiabilité clinique garantie.",
+      "preparation": "Interface de démonstration seulement ; éviter toute donnée personnelle.",
+      "caution": "Aucune mesure biométrique ; cycle caméra à qualifier.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/agent-biometrique",
       "launchUrl": "https://nikoju1977.github.io/agent-biometrique/"
@@ -38,14 +38,14 @@
       "slug": "applewatchcadrans",
       "title": "applewatchcadrans",
       "category": "Art & 3D",
-      "description": "Études et créations graphiques de cadrans.",
+      "description": "Concepts de cadrans : PNG, SVG, HTML animé ; indicateurs de capteurs fictifs.",
       "steps": [
         "Choisissez un style visuel de cadran parmi les propositions.",
         "Réglez la présentation (aiguilles ou numérique), les couleurs et les détails.",
         "Prévisualisez le rendu avant d'utiliser une éventuelle option d'export."
       ],
       "preparation": "Les performances varient selon le GPU du téléphone et les autorisations du navigateur.",
-      "caution": null,
+      "caution": "Valeurs BPM, pas et batterie simulées. Aucun cadran watchOS natif ; ne pas saisir de clé réelle avant qualification du rendu.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/applewatchcadrans",
       "launchUrl": "https://nikoju1977.github.io/applewatchcadrans/"
@@ -86,14 +86,14 @@
       "slug": "aylina-is-cooking",
       "title": "aylina-is-cooking",
       "category": "Santé & Bien-être",
-      "description": "Calculateur de glucides/part et estimation liée à l'insuline — prototype non médical.",
+      "description": "Calcul alimentaire par portion et favoris locaux ; dose retirée, IA suspendue.",
       "steps": [
-        "Renseignez la quantité de glucides du gâteau et le nombre de portions.",
-        "Vérifiez les informations saisies avant le calcul par portion.",
-        "N'utilisez jamais une estimation de dose affichée pour décider seul d'une injection d'insuline."
+        "Saisissez les glucides totaux et un nombre entier de portions.",
+        "Consultez les idées de desserts et favoris.",
+        "Vérifiez quantités et allergènes."
       ],
       "preparation": "Outil expérimental de suivi ou démonstration, non destiné au diagnostic ou aux décisions de traitement.",
-      "caution": "Prototype éducatif : ne calculez pas une dose d'insuline réelle à partir de ce résultat.",
+      "caution": "Aucun calcul de traitement ; favoris non chiffrés, ancien profil effaçable volontairement.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/aylina-is-cooking",
       "launchUrl": "https://nikoju1977.github.io/aylina-is-cooking/"
@@ -102,7 +102,7 @@
       "slug": "Bouh-delivery",
       "title": "Bouh-delivery",
       "category": "Jeux & Expériences",
-      "description": "Jeu d'arcade Halloween, conduite et défis.",
+      "description": "Jeu automobile Halloween : dix missions, trois boss, Canvas et audio synthétisé.",
       "steps": [
         "Ouvrez le jeu et choisissez une mission ou un niveau disponible.",
         "Lisez les commandes affichées et entraînez-vous au déplacement du véhicule.",
@@ -150,14 +150,14 @@
       "slug": "compagnon-diabete",
       "title": "compagnon-diabete",
       "category": "Archives & Variantes",
-      "description": "Variante de compagnon de suivi du diabète.",
+      "description": "Variante Daphnée : lecture Bluetooth non fiable, prototype non médical.",
       "steps": [
-        "Consultez les écrans de suivi disponibles sans connecter de dispositif réel au départ.",
-        "Renseignez uniquement des données de démonstration lors des premiers essais.",
-        "Vérifiez toute valeur auprès d'un dispositif médical certifié avant décision."
+        "Consultez le README pour comprendre les limites.",
+        "Ne connectez aucun dispositif médical réel.",
+        "Ne saisissez ni clé réelle ni données de santé."
       ],
       "preparation": "Version secondaire ou historique : ses fonctions peuvent différer des projets principaux.",
-      "caution": "Application expérimentale non certifiée, ne commande pas une pompe à insuline.",
+      "caution": "Lecture Bluetooth non qualifiée ; ne pas interpréter les valeurs ni les utiliser pour un traitement.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/compagnon-diabete",
       "launchUrl": "https://nikoju1977.github.io/compagnon-diabete/"
@@ -166,14 +166,14 @@
       "slug": "Cosmo-citrouille",
       "title": "Cosmo-citrouille",
       "category": "Jeux & Expériences",
-      "description": "Aventure spatiale d'Halloween, 140 mondes annoncés.",
+      "description": "Arcade Canvas : 140 configurations, 14 boss, 800 points en 120 secondes de simulation.",
       "steps": [
         "Lancez le jeu et choisissez un monde accessible.",
         "Utilisez les commandes tactiles ou clavier indiquées à l'écran.",
         "Collectez les objectifs et progressez ; réduisez les effets si le téléphone ralentit."
       ],
       "preparation": "Les commandes et les performances varient selon le téléphone et le navigateur.",
-      "caution": null,
+      "caution": "Le chrono de simulation peut différer du temps mural ; aucun APK/IPA validé.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/Cosmo-citrouille",
       "launchUrl": "https://nikoju1977.github.io/Cosmo-citrouille/"
@@ -189,7 +189,7 @@
         "Arrêtez la capture et exportez les données si l'option est proposée."
       ],
       "preparation": "Pour entendre le son, appuyez sur un bouton audio dans la page ; le navigateur peut bloquer l'audio automatique.",
-      "caution": "Une valeur dBFS n'est pas une mesure certifiée de pression acoustique dB SPL.",
+      "caution": "dBFS numérique, offset SPL indicatif ; moyenne arithmétique des dB distincte du Leq.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/Dbmetre-pro",
       "launchUrl": "https://nikoju1977.github.io/Dbmetre-pro/"
@@ -214,14 +214,14 @@
       "slug": "EBM-BRETONNE.",
       "title": "EBM-BRETONNE.",
       "category": "Musique & Audio",
-      "description": "Cyber-Fest-Noz : groovebox EBM aux influences bretonnes.",
+      "description": "Cyber-Fest-Noz : six voies, quatre patterns de 16 pas, synthèse d'anche et bourdon.",
       "steps": [
         "Appuyez sur « Initialiser l'audio » pour autoriser le son.",
         "Réglez tempo, swing et tonalité, puis programmez les patterns.",
         "Lancez la lecture et ajustez les niveaux avant d'enregistrer votre travail si l'option est disponible."
       ],
       "preparation": "Pour entendre le son, appuyez sur un bouton audio dans la page ; le navigateur peut bloquer l'audio automatique.",
-      "caution": null,
+      "caution": "Format de capture dépendant de MediaRecorder ; aucun niveau true peak ni compatibilité mobile validés.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/EBM-BRETONNE.",
       "launchUrl": "https://nikoju1977.github.io/EBM-BRETONNE./"
@@ -310,14 +310,14 @@
       "slug": "jarvisdiabete",
       "title": "jarvisdiabete",
       "category": "Santé & Bien-être",
-      "description": "Compagnon de suivi du diabète, prototype expérimental.",
+      "description": "DiabCare : assistant documentaire, Qwen/Whisper locaux optionnels, journal manuel et coffre.",
       "steps": [
-        "Ouvrez l'assistant et consultez les outils de suivi disponibles.",
-        "Utilisez la saisie ou la voix si le navigateur l'autorise.",
-        "Contrôlez toute information médicale auprès de votre équipe soignante."
+        "Consultez la documentation et utilisez uniquement des données fictives.",
+        "Explorez le journal manuel et les moteurs optionnels, sous réserve de compatibilité.",
+        "Ne pas utiliser pour une décision thérapeutique ou une urgence."
       ],
       "preparation": "Outil expérimental de suivi ou démonstration, non destiné au diagnostic ou aux décisions de traitement.",
-      "caution": "Assistant non certifié ; un professionnel de santé reste indispensable.",
+      "caution": "Prototype non clinique ; aucun calcul de dose, ni commande de pompe.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/jarvisdiabete",
       "launchUrl": "https://nikoju1977.github.io/jarvisdiabete/"
@@ -342,14 +342,14 @@
       "slug": "l-ultime-confrontation",
       "title": "l-ultime-confrontation",
       "category": "Jeux & Expériences",
-      "description": "Projet narratif interactif.",
+      "description": "Site promotionnel littéraire : couverture, animations et lien de paiement externe.",
       "steps": [
-        "Ouvrez le récit et sélectionnez le chapitre ou la section disponible.",
-        "Lisez le texte et activez éventuellement l'ambiance sonore.",
-        "Utilisez les commandes de lecture proposées pour poursuivre l'expérience."
+        "Consultez la présentation du roman et ses illustrations.",
+        "Vérifiez les informations commerciales avant toute commande.",
+        "La page ne contient pas le livre complet."
       ],
       "preparation": "Les commandes et les performances varient selon le téléphone et le navigateur.",
-      "caution": null,
+      "caution": "Ressource audio absente ; paiement externe non vérifié.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/l-ultime-confrontation",
       "launchUrl": "https://nikoju1977.github.io/l-ultime-confrontation/"
@@ -358,14 +358,14 @@
       "slug": "le-jardin-de-niko",
       "title": "le-jardin-de-niko",
       "category": "Archives & Variantes",
-      "description": "Variante Terroir Synthétique de l'Oracle du Jardinier.",
+      "description": "Variante Terroir Synthétique : météo, journal local et repli IA conditionnel.",
       "steps": [
         "Choisissez votre commune ou votre environnement de jardinage.",
         "Consultez les informations météo et les recommandations saisonnières.",
         "Planifiez vos interventions après vérification des conditions réelles."
       ],
       "preparation": "Version secondaire ou historique : ses fonctions peuvent différer des projets principaux.",
-      "caution": null,
+      "caution": "Sol prédéfini, calendrier lunaire approximatif ; aucune garantie agronomique.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/le-jardin-de-niko",
       "launchUrl": "https://nikoju1977.github.io/le-jardin-de-niko/"
@@ -374,14 +374,14 @@
       "slug": "les-annales-akashiques",
       "title": "les-annales-akashiques",
       "category": "Arts & Symbolique",
-      "description": "Expérience créative et symbolique.",
+      "description": "Narration symbolique, calculs locaux et IA facultative ; stockage non chiffré.",
       "steps": [
-        "Accédez à l'oracle et choisissez l'expérience symbolique disponible.",
-        "Renseignez uniquement les informations que vous souhaitez partager.",
-        "Lisez l'interprétation comme une création spirituelle ou narrative."
+        "Explorez les contenus symboliques.",
+        "Utilisez uniquement des identités et textes fictifs.",
+        "Lisez les interprétations comme des créations narratives."
       ],
       "preparation": "Contenus de création, de symbolique ou de divertissement.",
-      "caution": null,
+      "caution": "Journal et brouillons non chiffrés ; échanges externes possibles.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/les-annales-akashiques",
       "launchUrl": "https://nikoju1977.github.io/les-annales-akashiques/"
@@ -392,12 +392,12 @@
       "category": "Santé & Bien-être",
       "description": "Visualisation d'images et de séries DICOM, prototype non certifié.",
       "steps": [
-        "Importez un fichier médical de test ou une série DICOM non sensible.",
-        "Explorez les fonctions de visualisation et ajustez l'affichage.",
-        "Exportez uniquement après contrôle ; aucune fonction ne remplace une interprétation médicale qualifiée."
+        "Utilisez uniquement des images de test fictives et des DICOM synthétiques.",
+        "Explorez les fonctions d'affichage sans interprétation clinique.",
+        "Ne transmettez aucune image réelle à un fournisseur IA."
       ],
       "preparation": "Outil expérimental de suivi ou démonstration, non destiné au diagnostic ou aux décisions de traitement.",
-      "caution": "Visualiseur expérimental non certifié pour un diagnostic.",
+      "caution": "Prototype non validé cliniquement ; géométrie et espacements à qualifier.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/medicalvisionproai",
       "launchUrl": "https://nikoju1977.github.io/medicalvisionproai/"
@@ -406,14 +406,14 @@
       "slug": "Medivision-ai-pro",
       "title": "Medivision-ai-pro",
       "category": "Archives & Variantes",
-      "description": "Ancienne variante de MedVision AI Pro.",
+      "description": "Base PWABuilder Lit/TypeScript/Vite, sans moteur d'imagerie médicale.",
       "steps": [
-        "Consultez le dépôt et sa documentation de version historique.",
-        "Vérifiez les prérequis avant d'essayer les fonctions d'imagerie.",
-        "Préférez la version active lorsque celle-ci est disponible."
+        "Consultez le README et les crédits PWABuilder.",
+        "Examinez la structure PWA et les prérequis de build.",
+        "Aucune fonction médicale n'est établie dans ce starter."
       ],
       "preparation": "Version secondaire ou historique : ses fonctions peuvent différer des projets principaux.",
-      "caution": "Ancienne variante. Aucune qualification médicale revendiquée.",
+      "caution": "Base de développement, non une application médicale.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/Medivision-ai-pro",
       "launchUrl": null
@@ -438,14 +438,14 @@
       "slug": "miaotris",
       "title": "miaotris",
       "category": "Jeux & Expériences",
-      "description": "Jeu de blocs félin dans le navigateur.",
+      "description": "Jeu de blocs félin : plateau 10 × 20, rotation, collisions et score.",
       "steps": [
-        "Ouvrez l'interface du jeu et démarrez la partie.",
-        "Utilisez les touches ou commandes tactiles indiquées.",
-        "Suivez la progression et recommencez une partie pour améliorer votre score."
+        "Consultez index.html dans le dépôt Miaotris.",
+        "Utilisez les commandes clavier ou tactiles après ouverture du jeu racine.",
+        "Le record est local ; le déploiement du jeu racine reste à vérifier."
       ],
       "preparation": "Les commandes et les performances varient selon le téléphone et le navigateur.",
-      "caution": null,
+      "caution": "Le lien Vercel historique concerne Alyina, un sous-projet distinct. Consulter index.html à la racine pour Miaotris.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/miaotris",
       "launchUrl": "https://alyina-vampire-of-halloween.vercel.app"
@@ -566,14 +566,14 @@
       "slug": "Nikoju1977",
       "title": "Nikoju1977",
       "category": "Studio & Portfolio",
-      "description": "Profil et documentation de l'écosystème Studio Niko.",
+      "description": "Profil et Hub : 53 références publiques classées ; registre et plan qualité.",
       "steps": [
         "Ouvrez le profil Studio Niko puis son catalogue de projets.",
         "Choisissez une application adaptée à votre usage.",
         "Consultez la documentation et les contraintes du dépôt avant installation."
       ],
       "preparation": "Ce dépôt sert de présentation et de documentation.",
-      "caution": null,
+      "caution": "Couverture documentaire, non validation fonctionnelle.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/Nikoju1977",
       "launchUrl": null
@@ -582,14 +582,14 @@
       "slug": "oeil-hermes",
       "title": "oeil-hermes",
       "category": "Arts & Symbolique",
-      "description": "Grimoire numérique, correspondances et calculs astrologiques.",
+      "description": "Graphe symbolique bilingue et calculs astronomiques approximatifs ; clés chiffrées.",
       "steps": [
         "Sélectionnez la langue et cherchez une notion dans le grimoire.",
         "Parcourez les fiches symboliques et leurs correspondances.",
         "Utilisez le contenu comme ressource culturelle et créative."
       ],
       "preparation": "Contenus de création, de symbolique ou de divertissement.",
-      "caution": null,
+      "caution": "Ne pas partager de paramètres de naissance sans accord ; précision astronomique non certifiée.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/oeil-hermes",
       "launchUrl": "https://nikoju1977.github.io/oeil-hermes/"
@@ -614,14 +614,14 @@
       "slug": "oracle-du-jardinier",
       "title": "oracle-du-jardinier",
       "category": "Cartographie & Nature",
-      "description": "Assistant jardin et permaculture, météo, tâches et calendrier.",
+      "description": "Gestion du jardin, Open-Meteo et vision générative optionnelle ; sol déclaré.",
       "steps": [
         "Choisissez une localisation et ouvrez le briefing jardin.",
         "Consultez la météo et les recommandations du calendrier.",
         "Planifiez puis vérifiez vos travaux selon le terrain et la saison."
       ],
       "preparation": "Certaines informations nécessitent Internet et l'accès à des services tiers.",
-      "caution": null,
+      "caution": "Profils de sol déclarés et interprétations IA non qualifiées ; vérifier les conseils.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/oracle-du-jardinier",
       "launchUrl": "https://oracle-du-jardinier.vercel.app"
@@ -630,14 +630,13 @@
       "slug": "presentation-medtronic",
       "title": "presentation-medtronic",
       "category": "Business & Services",
-      "description": "Support de présentation technique.",
+      "description": "Maquette HTML/CSS incomplète, sans moteur de présentation ou médical.",
       "steps": [
-        "Ouvrez les documents de présentation présents dans le dépôt.",
-        "Vérifiez l'ordre des diapositives et les mentions de sources.",
-        "N'utilisez pas de données internes sans droits de diffusion."
+        "Consultez les sources HTML et le README.",
+        "La maquette doit être complétée avant utilisation."
       ],
       "preparation": "Vérifiez les données et les sources avant toute décision professionnelle.",
-      "caution": null,
+      "caution": "Aucun moteur médical ou présentation fonctionnelle établi.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/presentation-medtronic",
       "launchUrl": null
@@ -662,14 +661,14 @@
       "slug": "radar-de-niko",
       "title": "radar-de-niko",
       "category": "Business & Services",
-      "description": "Radar 44 : revue de presse, sources régionales et services.",
+      "description": "Registre Node.js de veille, dédoublonnage heuristique et sorties RSS/JSONL.",
       "steps": [
         "Ouvrez Radar 44 et consultez les dernières informations reçues.",
         "Filtrez les articles par thème ou par territoire ; ouvrez leur source d'origine.",
         "Utilisez les modules pratiques (météo, vigilance, emploi) en vérifiant leur date."
       ],
       "preparation": "Vérifiez les données et les sources avant toute décision professionnelle.",
-      "caution": null,
+      "caution": "Ne jamais confondre les données fictives du mode stub avec des actualités réelles ; vérifier les sources.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/radar-de-niko",
       "launchUrl": "https://nikoju1977.github.io/radar-de-niko/"
@@ -757,14 +756,14 @@
       "slug": "SCAN-BIOMEDICAL",
       "title": "SCAN-BIOMEDICAL",
       "category": "Santé & Bien-être",
-      "description": "Prototype de caméra et indicateurs biométriques.",
+      "description": "Repères faciaux expérimentaux et EAR ; pouls et fatigue retirés.",
       "steps": [
-        "Autorisez la caméra puis démarrez le flux vidéo.",
-        "Observez les indicateurs affichés à titre démonstratif.",
-        "Arrêtez la caméra après l'essai ; ne les utilisez pas pour une décision médicale."
+        "Activez la caméra si souhaité.",
+        "Affichez les repères géométriques facultatifs.",
+        "Arrêtez la caméra."
       ],
       "preparation": "Outil expérimental de suivi ou démonstration, non destiné au diagnostic ou aux décisions de traitement.",
-      "caution": "Indicateurs de démonstration, non mesures médicales.",
+      "caution": "Aucun usage médical ; modèle, permissions et suivi à qualifier.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/SCAN-BIOMEDICAL",
       "launchUrl": "https://nikoju1977.github.io/SCAN-BIOMEDICAL/"
@@ -773,14 +772,14 @@
       "slug": "tarot-de-niko",
       "title": "tarot-de-niko",
       "category": "Arts & Symbolique",
-      "description": "Tarot symbolique : 78 arcanes, grimoire et tirages.",
+      "description": "78 arcanes, mélange Fisher–Yates avec Web Crypto, grimoire chiffré optionnel.",
       "steps": [
         "Choisissez un type de tirage et prenez connaissance des cartes proposées.",
         "Découvrez la signification des arcanes et rédigez votre interprétation.",
         "Sauvegardez ou exportez un tirage si l'interface offre cette possibilité."
       ],
       "preparation": "Contenus de création, de symbolique ou de divertissement.",
-      "caution": null,
+      "caution": "Ne pas confondre tirage aléatoire et prédiction ; éviter les données sensibles dans les requêtes IA.",
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/tarot-de-niko",
       "launchUrl": "https://nikoju1977.github.io/tarot-de-niko/"

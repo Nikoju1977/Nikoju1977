@@ -65,10 +65,10 @@ const guides=JSON.parse(fs.readFileSync(path.join(dir,'guides.json'),'utf8')).gu
 assert(guides.length===cat.length&&new Set(guides.map(g=>g.slug)).size===cat.length
   &&cat.every(x=>guides.some(g=>g.slug===x.slug)),'All public applications documented uniquely');
 new Function(fs.readFileSync(path.join(dir,'guide.js'),'utf8'));
-const quality=fs.readFileSync(path.join(dir,'quality.html'),'utf8');
+const quality=fs.readFileSync(path.join(dir,'diagnostics.html'),'utf8');
 const qualityJs=fs.readFileSync(path.join(dir,'quality.js'),'utf8');
 for(const match of qualityJs.matchAll(/\$\('([^']+)'\)/g))assert(quality.includes('id="'+match[1]+'"'),'Quality DOM id '+match[1]);
-for(const asset of ['quality.html','quality.css','quality-core.js','quality.js'])assert(sw.includes("'./"+asset+"'"),'Quality offline asset '+asset);
+for(const asset of ['diagnostics.html','diagnostics.css','quality-core.js','quality.js'])assert(sw.includes("'./"+asset+"'"),'Quality offline asset '+asset);
 assert(index.includes('href="./quality.html"')&&pilotage.includes('href="./quality.html"'),'Quality navigation');
 const deploymentPage=fs.readFileSync(path.join(dir,'deployments.html'),'utf8');
 const deploymentJs=fs.readFileSync(path.join(dir,'deployments.js'),'utf8');
@@ -101,9 +101,63 @@ const commandJs=fs.readFileSync(path.join(dir,'command.js'),'utf8');
 for(const match of commandJs.matchAll(/\$\('([^']+)'\)/g))assert(commandPage.includes('id="'+match[1]+'"'),'Command DOM id '+match[1]);
 for(const asset of ['command.html','command.js','command-core.js','command.css'])assert(sw.includes("'./"+asset+"'"),'Command offline asset '+asset);
 assert(index.includes('href="./command.html"')&&pilotage.includes('href="./command.html"'),'Command navigation');
-for(const page of ['index','pilotage','quality','deployments','security','agents','devices','recovery','command','provenance']){const html=fs.readFileSync(path.join(dir,page+'.html'),'utf8');for(const asset of ['design.css','design-core.js','design.js'])assert(html.includes('./'+asset),'Shared design '+page+' '+asset);}
+for(const page of ['index','pilotage','quality','diagnostics','deployments','security','agents','devices','recovery','command','provenance']){const html=fs.readFileSync(path.join(dir,page+'.html'),'utf8');for(const asset of ['design.css','design-core.js','design.js'])assert(html.includes('./'+asset),'Shared design '+page+' '+asset);}
 for(const asset of ['design.css','design-core.js','design.js'])assert(sw.includes("'./"+asset+"'"),'Design offline asset '+asset);
 const precache=sw.match(/const ASSETS=\[(.*?)\];/s);assert(precache,'PWA precache manifest');
 const entries=[...precache[1].matchAll(/'([^']+)'/g)].map(x=>x[1]);assert.equal(new Set(entries).size,entries.length,'Unique precache entries');for(const asset of entries)assert(fs.existsSync(path.join(dir,asset)),'Existing precache asset '+asset);
 for(const shortcut of manifest.shortcuts||[])assert(entries.includes(shortcut.url),'Offline shortcut '+shortcut.url);
 console.log('PASS catalog='+cat.length+' launchUrls='+cat.filter(x=>x.demoUrl).length+' DOM bindings checked');
+
+const evidence=JSON.parse(fs.readFileSync(path.join(dir,'quality-evidence.json'),'utf8'));
+assert.equal(evidence.rows.length,cat.length);
+assert.equal(new Set(evidence.rows.map(r=>r.repo)).size,cat.length);
+for(const r of evidence.rows){assert(registry.repositories.some(x=>x.full_name===r.repo));assert(r.commit===null||/^[a-f0-9]{40}$/.test(r.commit));assert.equal(r.functionalTests,false);}
+assert.equal(evidence.rows.reduce((n,r)=>n+r.files,0),evidence.totals.files);
+assert.equal(evidence.rows.reduce((n,r)=>n+r.batches,0),evidence.totals.batches);
+assert.equal(evidence.rows.filter(r=>r.docker==='passed').length,evidence.totals.dockerPassed);
+assert.equal(evidence.fixes.length,4);
+for(const file of ['quality.html','quality.css','quality-evidence.json']){assert(fs.existsSync(path.join(dir,file)));assert(sw.includes("'./"+file+"'"));}
+assert(index.includes('href="./quality.html"'));
+console.log('PASS quality evidence references and counts');
+
+
+require('node:child_process').execFileSync(process.execPath,[path.join(dir,'workspace-regression.cjs')],{stdio:'inherit'});
+
+const releases=evidence.releaseSnapshot;
+assert.equal(releases.rows.length,5);
+assert.equal(new Set(releases.rows.map(r=>r.repo)).size,releases.rows.length);
+for(const r of releases.rows){assert(evidence.fixes.some(f=>f.repo===r.repo)||r.repo===evidence.followup.oracle.repo);assert(/^[a-f0-9]{40}$/.test(r.commit));assert(Number.isSafeInteger(r.ci)&&r.ci>0);assert(r.pages===null||Number.isSafeInteger(r.pages)&&r.pages>0);assert(r.incident===null||Number.isSafeInteger(r.incident)&&r.incident>0);if(r.url){assert.equal(new URL(r.url).origin,'https://nikoju1977.github.io');assert(r.pages!==null)}}
+const qualityHtml=fs.readFileSync(path.join(dir,'quality.html'),'utf8');
+for(const r of releases.rows){assert(qualityHtml.includes('/commit/'+r.commit));assert(qualityHtml.includes('/actions/runs/'+r.ci));if(r.pages)assert(qualityHtml.includes('/actions/runs/'+r.pages));if(r.incident)assert(qualityHtml.includes('/actions/runs/'+r.incident));}
+console.log('PASS release evidence references');
+
+assert.equal(evidence.followup.oracle.productionRuntimeVerified,false);
+assert.equal(evidence.followup.wan.gpuTested,false);
+assert.equal(evidence.followup.wan.merged,false);
+assert.equal(releases.rows.find(r=>r.repo===evidence.followup.oracle.repo).commit,evidence.followup.oracle.main);
+assert(qualityHtml.includes('/actions/runs/'+evidence.followup.oracle.preMerge.run));
+assert(qualityHtml.includes('/actions/runs/'+evidence.followup.wan.run));
+console.log('PASS scoped follow-up evidence');
+
+const distribution=evidence.distributionFollowup;
+const medical=distribution.medical,music=distribution.music;
+assert.equal(medical.httpStatus,200);
+for(const hash of [medical.sourceSha256,medical.distSha256,medical.publicSha256])assert(/^[0-9a-f]{64}$/.test(hash));
+assert.equal(medical.distSha256,medical.publicSha256);assert.notEqual(medical.sourceSha256,medical.distSha256);
+assert.equal(medical.fullRevisionVerified,false);assert.equal(medical.clinicalValidation,false);assert.equal(medical.customWorkflowRetained,true);
+assert.equal(music.customDeploy,'skipped');assert.equal(music.source,'legacy-main-root-confirmed');assert.equal(music.httpBytesVerified,false);assert.equal(music.physicalDevicesVerified,false);
+assert(/^[0-9a-f]{40}$/.test(music.commit));assert(/^[0-9a-f]{40}$/.test(medical.checkedCommit));
+for(const run of [medical.run,music.ci,music.route,music.pages]){assert(Number.isSafeInteger(run)&&run>0);assert(qualityHtml.includes('/actions/runs/'+run));}
+assert(qualityHtml.includes(medical.publicSha256));assert(qualityHtml.includes('/commit/'+music.commit));
+console.log('PASS distribution evidence and limits');
+
+const http=evidence.staticHttpSnapshot;
+assert.equal(http.productionRuntimeVerified,false);
+assert.equal(http.rows.length,7);assert.equal(http.counts.match,7);assert.equal(http.counts.mismatch,0);assert.equal(http.counts.unavailable,0);
+assert.equal(new Set(http.rows.map(r=>r.repo+'/'+r.path)).size,7);
+assert.equal(http.rows.filter(r=>r.repo==='the-lovestronautes-machine').length,4);assert.equal(http.rows.filter(r=>r.repo==='oracle-du-jardinier').length,3);
+for(const r of http.rows){assert.equal(r.status,'match');assert.equal(r.sourceStatus,200);assert.equal(r.publicStatus,200);assert.equal(r.sourceSha256,r.publicSha256);assert(/^[0-9a-f]{64}$/.test(r.publicSha256));assert(/^[0-9a-f]{40}$/.test(r.commit));assert.equal(r.sourceBytes,r.publicBytes);assert(Number.isSafeInteger(r.sourceBytes)&&r.sourceBytes>0);assert(qualityHtml.includes(r.publicSha256));assert(qualityHtml.includes('/commit/'+r.commit));}
+assert(qualityHtml.includes('/actions/runs/'+http.run));
+console.log('PASS seven static HTTP file evidence records');
+
+require('node:child_process').execFileSync(process.execPath,[path.join(dir,'cache-isolation.cjs')],{stdio:'inherit'});

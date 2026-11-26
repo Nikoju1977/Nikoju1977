@@ -1,28 +1,30 @@
 'use strict';
-const CACHE='studio-niko-hub-v23-ultimate-20261124';
-const ASSETS=['./','./index.html','./pilotage.html','./quality.html','./quality.css','./quality-core.js','./quality.js','./deployments.html','./deployments.js','./deployments-core.js','./deployment-observations.json','./security.html','./security.js','./security-core.js','./agents.html','./agents.js','./agents-core.js','./devices.html','./devices.js','./devices-core.js','./recovery.html','./recovery.js','./recovery-core.js','./command.html','./command.js','./command-core.js','./command.css','./design.css','./design-core.js','./design.js','./offline.html','./provenance.html','./provenance.js','./provenance-snapshot.json','./pilotage-workspace.js','./styles.css','./app.js','./workspace.js','./workspace.css','./catalog.json','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./install.js','./guide.js','./guides.json'];
-const scope=self.registration.scope;
-const known=new Set(ASSETS.map(p=>new URL(p,scope).href));
-const cacheKey=url=>{const u=new URL(url);u.search='';u.hash='';return u.href;};
-self.addEventListener('install',event=>{event.waitUntil((async()=>{
- const cache=await caches.open(CACHE);
- try{await cache.addAll(ASSETS.map(p=>new Request(new URL(p,scope),{cache:'reload'})));}
- catch(e){await caches.delete(CACHE);throw e;}
-})());});
-self.addEventListener('activate',event=>{event.waitUntil((async()=>{
- await Promise.all((await caches.keys()).filter(k=>k.startsWith('studio-niko-hub-')&&k!==CACHE).map(k=>caches.delete(k)));
- await self.clients.claim();
-})());});
-self.addEventListener('message',event=>{if(event.data?.type==='ACTIVATE_UPDATE')event.waitUntil(self.skipWaiting());});
+const CACHE='studio-niko-hub-v30-modules';
+const ASSETS=['./','./index.html','./pilotage.html','./provenance.html','./quality.html','./quality.css','./quality-evidence.json','./provenance.js','./provenance-snapshot.json','./pilotage-workspace.js','./styles.css','./app.js','./workspace.js','./workspace.css','./catalog.json','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./install.js','./guide.js','./guides.json','./quality-core.js','./quality.js','./deployments.html','./deployments.js','./deployments-core.js','./deployment-observations.json','./security.html','./security.js','./security-core.js','./agents.html','./agents.js','./agents-core.js','./devices.html','./devices.js','./devices-core.js','./recovery.html','./recovery.js','./recovery-core.js','./command.html','./command.js','./command-core.js','./command.css','./design.css','./design-core.js','./design.js','./offline.html','./diagnostics.html','./diagnostics.css'];
+const SCOPE=new URL(self.registration.scope);
+const INDEX=new URL('./index.html',SCOPE).href;
+const ALLOWED=new Set(ASSETS.map(p=>new URL(p,SCOPE).href));
+self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));});
+self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('studio-niko-hub-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
 self.addEventListener('fetch',event=>{
- const req=event.request,u=new URL(req.url);
- if(req.method!=='GET'||u.origin!==self.location.origin||!u.href.startsWith(scope))return;
- // All API routes bypass the service worker; no stale diagnostic or API response.
- if(u.pathname.startsWith(new URL('api/',scope).pathname))return;
- const key=cacheKey(u.href);
- if(known.has(key)){
-  event.respondWith((async()=>{const cache=await caches.open(CACHE),hit=await cache.match(key);if(hit)return hit;return fetch(req);})());
- }else if(req.mode==='navigate'){
-  event.respondWith(fetch(req).catch(async()=>{const cache=await caches.open(CACHE);return (await cache.match(new URL('offline.html',scope).href))||Response.error();}));
- }
+ const req=event.request,url=new URL(req.url);
+ if(req.method!=='GET'||url.origin!==SCOPE.origin||!url.pathname.startsWith(SCOPE.pathname)||!ALLOWED.has(url.href))return;
+ // Diagnostics, query strings and other applications must reach the network directly.
+ const networkFirst=req.mode==='navigate'||url.href===new URL('./catalog.json',SCOPE).href||req.cache==='no-store';
+ event.respondWith((async()=>{
+   let cache;
+   try{cache=await caches.open(CACHE);}catch(_){}
+   if(!networkFirst&&cache){try{const hit=await cache.match(req);if(hit)return hit;}catch(_){}}
+   try{
+     const res=await fetch(req);
+     if(networkFirst&&cache&&res.ok&&!res.redirected){try{await cache.put(req,res.clone());}catch(_){}}
+     return res;
+   }catch(_){
+     if(cache){try{
+       const hit=await cache.match(req);if(hit)return hit;
+       if(req.mode==='navigate')return await cache.match(INDEX)||Response.error();
+     }catch(_){}}
+     return Response.error();
+   }
+ })());
 });

@@ -2,9 +2,13 @@
 
 Portail public de **Studio Niko Design** — catalogue des dépôts publics, recherche, univers, favoris locaux, accès RON et PWA.
 
+## Portfolio technique — 25 novembre 2026
+
+[50 README publics documentés et références de licence](../PROJECTS.md#registre-technique--50-dépôts-documentés) ; 53 entrées publiques vérifiées par inventaire. Les descriptions de N8V (NIKO ANALOG 37, non codec), META-STUDIO V6 et des prototypes biomédicaux sont actualisées. Les états HTTP historiques restent datés ; aucun nouveau test fonctionnel ni redéploiement n'est revendiqué.
+
 ## Pilotage Studio Niko Core
 
-Le fichier [`pilotage.html`](./pilotage.html) contient un tableau public autonome et responsive : **55 dépôts recensés, 50 publics, 5 privés volontairement masqués et 8 intégrations Core committées au 22 novembre 2026**. Recherche, domaine, priorité, état du socle, liens vers les dépôts et liens de publication connus.
+Le fichier [`pilotage.html`](./pilotage.html) contient un tableau public autonome et responsive : **53 dépôts publics dans le registre du 24 novembre 2026**. Recherche, domaine, priorité, état du socle, liens vers les dépôts et liens de publication connus.
 
 Les statuts « déploiement non confirmé » et « fonctionnement non confirmé » sont volontairement distincts des commits GitHub. Le tableau ne sonde pas le réseau en arrière-plan, ne simule pas les résultats et ne publie aucun nom de dépôt privé. Le suivi manuel des modules, versions, blocages et décisions s'enregistre dans le navigateur et propose un export/import JSON. Aucune déclaration utilisateur n'est promue au rang de preuve automatique. Le registre source est [`../studio-niko-core/registry.json`](../studio-niko-core/registry.json) ; pour mettre à jour le snapshot de la page : `node studio-niko-core/tools/refresh-hub.mjs --apply` depuis la racine du dépôt.
 
@@ -13,6 +17,48 @@ Les statuts « déploiement non confirmé » et « fonctionnement non confirmé 
 Le registre et le tableau `pilotage.html` distinguent désormais l'état des **six applications prioritaires** : quatre parcours ont des correctifs partiels committés (cinéma, audio, AutoCoder, Niko Emploi) et deux restent définis sans validation de cette phase (Galerie Studio Niko et NikoAssist). Chaque fiche décrit les limites et, lorsque disponible, renvoie à la procédure du dépôt. Aucun « code committé » n'est transformé en preuve de déploiement ou de fonctionnement sur appareil.
 
 La dernière vague renforce la récupération locale de projets AutoCoder et corrige les exports iCalendar, CSV et JSON du radar Niko Emploi. Le shell public du radar est référencé dans son cache PWA ; seules les notes locales déjà enregistrées peuvent être affichées hors connexion, pas les APIs de recherche.
+
+## Preuves de qualité (25 novembre 2026)
+
+[Tableau des preuves](quality.html) et [instantané JSON](quality-evidence.json) : 53 dépôts publics, 4 633 fichiers audités, 52 contrôles Docker d’intégrité et quatre comparaisons fonctionnelles ciblées. Les preuves historiques sont séparées des états de production. Le catalogue et les licences existants sont conservés.
+
+## Actualisation documentaire du catalogue — 25 novembre 2026
+
+Les 50 références du registre technique sont distinctes des 53 entrées de l'inventaire public et des six projets signature. Les fiches de UltraVision, AutoEntrepreneur 1M, Niko Emploi, Sage et Niko Live Commander précisent les frontières d'exécution constatées dans les sources. Les champs de statut HTTP et de déploiement restent historiques et inchangés. Aucun nouveau test, contrôle HTTP ou redéploiement n'est attesté ici.
+
+[Registre public des README et licences](../PROJECTS.md#registre-technique--50-dépôts-documentés).
+
+## Complément documentaire
+
+50 README publics et un guide de fork distinct ; deux déclarations MIT dans package.json sans fichier autonome identifié. Les fiches de cybersécurité, géospatial, commerce, accessibilité et galerie 3D ont été revues. Aucun nouveau contrôle HTTP, essai matériel ou déploiement n'est attesté. Les preuves historiques restent inchangées.
+
+## Correction de périmètre — traitement du signal et biométrie
+
+DBMètre : RMS/FFT, moyenne arithmétique des dB distincte du Leq. Agent biométrique : scores et alertes simulés, sans mesure issue de la caméra ; correction applicative prioritaire. MedVision public : MPR et projections min/max, non qualifiées cliniquement. Le catalogue et les notices ont été corrigés ; cache versionné renouvelé dans le code, déploiement non vérifié.
+
+## Complément — assistants documentaires et starter PWA
+
+DiabCare : chemins Qwen/Whisper locaux optionnels et coffre, sans commande de pompe ni calcul de dose. Daphnée : lecture Bluetooth non fiable, ne pas connecter de dispositif réel. Medivision-ai-pro : starter PWABuilder sans moteur d'imagerie établi. Les notices du Hub distinguent ces périmètres ; aucune validation clinique, compilation ou publication de production nouvelle.
+
+## Complément — jardin et veille territoriale
+
+Les notices précisent les limites des profils de sol déclarés, des calendriers lunaires approximatifs et des conseils IA. Radar utilise un dédoublonnage heuristique ; le mode stub produit des données fictives, à isoler de toute publication réelle. Aucun nouvel appel API ni déploiement vérifié.
+
+## Complément — synthèse audio et jeux
+
+Cyber-Fest-Noz : synthèse d'anche, bourdon et enregistrement dépendant du navigateur. Miaotris : moteur de blocs distinct du sous-projet Alyina ; le lien Vercel historique ne valide pas le jeu racine. Cosmo Citrouille : 140 configurations et chrono de simulation, sans binaire mobile validé. Aucun nouvel essai ni déploiement vérifié.
+
+## Complément — expériences symboliques
+
+Tarot : mélange Fisher–Yates et journal chiffré. Hermès : graphe, calculs approximatifs et clés chiffrées ; liens pouvant exposer les paramètres de naissance. Annales : journal et brouillons non chiffrés, ne pas saisir de données intimes. Aucune prédiction scientifique, validation cryptographique nouvelle ni exécution distante revendiquée.
+
+## Complément — jeux et applications quotidiennes
+
+BOUH! Delivery est un jeu fictif. Aylina contient une estimation de dose non validée à retirer. Le studio de cadrans exporte des concepts graphiques, pas des cadrans watchOS natifs ; les indicateurs de capteurs sont fictifs. Aucun nouveau test ni déploiement vérifié.
+
+## Clôture documentaire
+
+53/53 références classées : 50 README de projets, profil/Hub, guide du fork Wan2GP et dépôt vide rf-metrolgy-pro (confirmé par GitHub). La présentation Medtronic est une maquette incomplète ; L'Ultime Confrontation est un site promotionnel avec ressource audio manquante. [Plan qualité](../QUALITY_ROADMAP.md). Aucun nouveau test fonctionnel ou déploiement vérifié.
 
 ## Principe
 
@@ -153,3 +199,12 @@ Le registre public `studio-niko-core/registry.json` et le tableau `hub/pilotage.
 Les champs `verification: http_assets_only` et `verification: deployment_ready_ci_only` distinguent ces deux périmètres. Le tableau affiche la **date de relève** et rappelle que l'état n'est pas mis à jour en direct. Pour rafraîchir correctement les preuves : relever l'alias Vercel, son environnement `production`, le SHA et l'état `READY`, puis exécuter un audit HTTP indépendant si l'on veut revendiquer cette preuve. Le registre, la capture `repository-snapshot` et les contrôles de cohérence doivent rester concordants.
 
 La vérification en navigateur de production, les interactions des moteurs métiers, l'installation PWA sur vrais appareils et les intégrations IA restent à documenter séparément. Aucun déploiement ou clic de démonstration ne prouve ces fonctions à lui seul.
+
+
+## Correction P0 — lot 1 (25 novembre 2026)
+
+- [agent-biometrique](https://github.com/Nikoju1977/agent-biometrique/commit/7d94d7666ac1ec8c98f4256d689639c49996688e) : Aperçu caméra facultatif, scores et alertes fictifs retirés du code. Aucune mesure biométrique ; cycle caméra à qualifier.
+- [SCAN-BIOMEDICAL](https://github.com/Nikoju1977/SCAN-BIOMEDICAL/commit/416dce75f69b5d93d1bd49836a6e9f0c1844de4b) : Repères faciaux expérimentaux et EAR ; pouls et fatigue retirés. Aucun usage médical ; modèle, permissions et suivi à qualifier.
+- [aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking/commit/c25e48bdf50a7f6b8eb6e9f7879b363a3d80e3e0) : Calcul alimentaire par portion et favoris locaux ; dose retirée, IA suspendue. Aucun calcul de traitement ; favoris non chiffrés, ancien profil effaçable volontairement.
+
+Sources relues après publication, empreintes SHA vérifiées ; aucun nouveau test d'exécution ou déploiement vérifié. Les constats antérieurs sont historiques, non des preuves de l'état actuel. Le chef distant est suspendu par précaution ; pas de suppression automatique des anciennes données locales.
