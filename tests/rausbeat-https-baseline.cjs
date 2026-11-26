@@ -9,6 +9,8 @@ const path=require('node:path');
 
 const root=path.resolve(__dirname,'..');
 const base='https://rausbeat-2-0.vercel.app';
+const durationSeconds=Number(process.env.RAUSBEAT_QA_SECONDS||60);
+assert.ok([60,300].includes(durationSeconds),'Supported QA durations: 60 or 300 seconds');
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 async function poll(fn,label,timeout=20000){
  const start=Date.now();let error;
@@ -77,7 +79,7 @@ async function main(){
    return out.result?.value;
   }
   const wait=(expression,label)=>poll(()=>evaluate(expression),label,15000);
-  await call('Page.enable');await call('Runtime.enable');await call('Network.enable');
+  await call('Page.enable');await call('Runtime.enable');await call('Network.enable');await call('Performance.enable');
   await call('Page.navigate',{url:base+'/'});
   await wait('document.readyState==="complete"&&!!window.__RAUSBEAT_DIAGNOSTICS__&&!!window.__RAUSBEAT_PRO__','production app initialized');
   assert.equal(await evaluate('location.origin'),base);
@@ -109,15 +111,20 @@ async function main(){
   await press('#rb-rec');
   await wait('window.__RAUSBEAT_PRO__.recording&&window.__RAUSBEAT_PRO__.frames>0','audio recorder receives PCM');
   const started=Date.now(), samples=[];
-  for(let i=0;i<6;i++){
+  for(let i=0;i<durationSeconds/10;i++){
     await sleep(10000);
     const state=await diag();
     assert.equal(state.recording,true,'Recorder stopped unexpectedly');
     assert.equal(state.mode,'worklet');
     assert.equal(state.stepFaults,0);
     assert.ok(Number.isFinite(state.frames)&&state.frames>(samples.at(-1)?.frames??0),'PCM capture stalled');
-    samples.push(state);
-    console.log('RAUSBEAT ENDURANCE '+JSON.stringify({elapsedMs:Date.now()-started,...state}));
+    const metrics=(await call('Performance.getMetrics')).metrics;
+    const heap=metrics.find(m=>m.name==='JSHeapUsedSize')?.value??null;
+    const previous=samples.at(-1);
+    if(previous)assert.ok(state.steps>previous.steps,'Transport stopped advancing');
+    assert.equal(state.schedulers,1,'Unexpected number of active schedulers');
+    samples.push({...state,heap});
+    console.log('RAUSBEAT ENDURANCE '+JSON.stringify({elapsedMs:Date.now()-started,...state,jsHeapBytes:heap}));
   }
   const wallSeconds=(Date.now()-started)/1000;
   const running=await diag();console.log('RAUSBEAT LIVE CAPTURE '+JSON.stringify(running));
@@ -134,7 +141,7 @@ async function main(){
     return {riff:str(0,4),wave:str(8,4),data:str(36,4),size,bytes:b.byteLength,bits,rate,channels,rms:n?Math.sqrt(sum/n):0,peak,clipped,windows:levels.length,quietWindows:levels.filter(v=>v<.001).length,minWindowRms:Math.min(...levels),seconds:size/(rate*channels*bits/8)};
   }+')()');
   assert.equal(wav.riff,'RIFF');assert.equal(wav.wave,'WAVE');assert.equal(wav.data,'data');
-  assert.equal(wav.bits,16);assert.equal(wav.channels,2);assert.equal(wav.bytes,44+wav.size);assert.ok(wav.seconds>=58&&Math.abs(wav.seconds-wallSeconds)<3,'Capture duration deviates from wall time');assert.ok(wav.rms>0.0001&&wav.peak<1);assert.equal(wav.clipped,0);assert.ok(wav.windows>=580);assert.equal(wav.quietWindows,0,'Unexpected near-silent 100ms PCM window in continuous test pattern');
+  assert.equal(wav.bits,16);assert.equal(wav.channels,2);assert.equal(wav.bytes,44+wav.size);assert.ok(wav.seconds>=durationSeconds-2&&Math.abs(wav.seconds-wallSeconds)<3,'Capture duration deviates from wall time');assert.ok(wav.rms>0.0001&&wav.peak<1);assert.equal(wav.clipped,0);assert.ok(wav.windows>=(durationSeconds-2)*10);assert.equal(wav.quietWindows,0,'Unexpected near-silent 100ms PCM window in continuous test pattern');
   console.log('RAUSBEAT NATIVE WAV '+JSON.stringify(wav));
   const storageAfter=await filesInStorage();
   console.log('RAUSBEAT OPFS AFTER '+JSON.stringify(storageAfter));
@@ -142,6 +149,8 @@ async function main(){
   const stopped=await diag();console.log('RAUSBEAT STOP '+JSON.stringify(stopped));
   assert.equal(stopped.schedulers,0);assert.equal(stopped.voices,0);assert.equal(stopped.graphs,0);
   assert.deepEqual(browserErrors,[],'Uncaught browser exceptions');
+  const heapSamples=samples.map(s=>s.heap).filter(Number.isFinite);
+  console.log('RAUSBEAT RESOURCE SAMPLES '+JSON.stringify({checkpoints:samples.length,peakVoices:Math.max(...samples.map(s=>s.voices)),peakGraphs:Math.max(...samples.map(s=>s.graphs)),jsHeapFirst:heapSamples[0]??null,jsHeapLast:heapSamples.at(-1)??null,jsHeapMax:heapSamples.length?Math.max(...heapSamples):null}));
   console.log('RAUSBEAT NATIVE ENDURANCE PASS: '+wallSeconds.toFixed(3)+'s wall, '+wav.seconds.toFixed(3)+'s PCM, '+wav.windows+' complete 100ms windows, '+wav.quietWindows+' quiet windows, no clipping, stop cleanup; existing production only, not RC1.2.');
   const progressive=running.storage==='opfs'||storageDuring.some(f=>f.size>44&&!storageBefore.some(g=>g.name===f.name&&g.size===f.size));
   console.log('RAUSBEAT PROGRESSIVE OPFS '+(progressive?'OBSERVED':'NOT DEMONSTRATED')+'; actual recording file observation, not certification.');
