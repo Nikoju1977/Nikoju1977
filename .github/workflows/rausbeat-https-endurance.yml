@@ -1,0 +1,28 @@
+name: RAUSBEAT - five-minute native audio endurance
+on:
+  push:
+    paths:
+      - '.github/workflows/rausbeat-https-endurance.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: rausbeat-native-five-minute-qa
+  cancel-in-progress: false
+jobs:
+  chromium-300s:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      RAUSBEAT_QA_SECONDS: '300'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Check native browser runtime
+        run: |
+          node --version
+          node -e 'if(typeof WebSocket!=="function")process.exit(1)'
+          google-chrome --version
+      - name: Capture and analyze five minutes of actual production PCM
+        run: node tests/rausbeat-https-baseline.cjs
