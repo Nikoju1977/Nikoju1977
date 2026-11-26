@@ -27,6 +27,7 @@ function chromeBinary(){
 }
 async function main(){
  let server,chrome,ws;const pending=new Map(),browserErrors=[],httpPosts=[];
+ const responses=[];
  const tmp=await fs.mkdtemp(path.join(os.tmpdir(),'rausbeat-production-'));
  let seq=0,diagnostics='';
  try{
@@ -55,6 +56,7 @@ async function main(){
   });
   ws.addEventListener('message',event=>{
    const msg=JSON.parse(event.data);
+   if(msg.method==='Network.responseReceived')responses.push({url:msg.params.response.url,type:msg.params.type,fromServiceWorker:msg.params.response.fromServiceWorker,status:msg.params.response.status});
    if(msg.method==='Runtime.exceptionThrown')browserErrors.push(msg.params?.exceptionDetails?.exception?.description||'Browser exception');
    if(msg.method==='Network.requestWillBeSent'&&msg.params?.request?.method==='POST')httpPosts.push(msg.params.request.url);
    if(!msg.id||!pending.has(msg.id))return;
@@ -106,7 +108,18 @@ async function main(){
   const storageBefore=await filesInStorage();
   await press('#rb-rec');
   await wait('window.__RAUSBEAT_PRO__.recording&&window.__RAUSBEAT_PRO__.frames>0','audio recorder receives PCM');
-  await sleep(4000);
+  const started=Date.now(), samples=[];
+  for(let i=0;i<6;i++){
+    await sleep(10000);
+    const state=await diag();
+    assert.equal(state.recording,true,'Recorder stopped unexpectedly');
+    assert.equal(state.mode,'worklet');
+    assert.equal(state.stepFaults,0);
+    assert.ok(Number.isFinite(state.frames)&&state.frames>(samples.at(-1)?.frames??0),'PCM capture stalled');
+    samples.push(state);
+    console.log('RAUSBEAT ENDURANCE '+JSON.stringify({elapsedMs:Date.now()-started,...state}));
+  }
+  const wallSeconds=(Date.now()-started)/1000;
   const running=await diag();console.log('RAUSBEAT LIVE CAPTURE '+JSON.stringify(running));
   assert.equal(running.mode,'worklet','Actual app must use native AudioWorklet');
   const storageDuring=await filesInStorage();
@@ -116,12 +129,12 @@ async function main(){
   const wav=await evaluate('('+async function(){
     const b=await window.__qaWav.arrayBuffer(),d=new DataView(b),str=(o,n)=>String.fromCharCode(...new Uint8Array(b,o,n));
     const size=d.getUint32(40,true),bits=d.getUint16(34,true),rate=d.getUint32(24,true),channels=d.getUint16(22,true);
-    let sum=0,peak=0,n=0;
-    if(bits===16)for(let i=44;i+1<b.byteLength;i+=2){const v=d.getInt16(i,true)/32768;sum+=v*v;peak=Math.max(peak,Math.abs(v));n++;}
-    return {riff:str(0,4),wave:str(8,4),data:str(36,4),size,bytes:b.byteLength,bits,rate,channels,rms:n?Math.sqrt(sum/n):0,peak,seconds:size/(rate*channels*bits/8)};
+    let sum=0,peak=0,n=0,clipped=0,windowSum=0,windowN=0;const levels=[],windowSamples=Math.round(rate*channels*.1);
+    if(bits===16)for(let i=44;i+1<b.byteLength;i+=2){const raw=d.getInt16(i,true),v=raw/32768;sum+=v*v;peak=Math.max(peak,Math.abs(v));n++;if(raw===32767||raw===-32768)clipped++;windowSum+=v*v;windowN++;if(windowN===windowSamples){levels.push(Math.sqrt(windowSum/windowN));windowN=0;windowSum=0;}}
+    return {riff:str(0,4),wave:str(8,4),data:str(36,4),size,bytes:b.byteLength,bits,rate,channels,rms:n?Math.sqrt(sum/n):0,peak,clipped,windows:levels.length,quietWindows:levels.filter(v=>v<.001).length,minWindowRms:Math.min(...levels),seconds:size/(rate*channels*bits/8)};
   }+')()');
   assert.equal(wav.riff,'RIFF');assert.equal(wav.wave,'WAVE');assert.equal(wav.data,'data');
-  assert.equal(wav.bits,16);assert.equal(wav.channels,2);assert.equal(wav.bytes,44+wav.size);assert.ok(wav.seconds>=3.5&&wav.seconds<=8);assert.ok(wav.rms>0.0001&&wav.peak<1);
+  assert.equal(wav.bits,16);assert.equal(wav.channels,2);assert.equal(wav.bytes,44+wav.size);assert.ok(wav.seconds>=58&&Math.abs(wav.seconds-wallSeconds)<3,'Capture duration deviates from wall time');assert.ok(wav.rms>0.0001&&wav.peak<1);assert.equal(wav.clipped,0);assert.ok(wav.windows>=580);assert.equal(wav.quietWindows,0,'Unexpected near-silent 100ms PCM window in continuous test pattern');
   console.log('RAUSBEAT NATIVE WAV '+JSON.stringify(wav));
   const storageAfter=await filesInStorage();
   console.log('RAUSBEAT OPFS AFTER '+JSON.stringify(storageAfter));
@@ -129,9 +142,35 @@ async function main(){
   const stopped=await diag();console.log('RAUSBEAT STOP '+JSON.stringify(stopped));
   assert.equal(stopped.schedulers,0);assert.equal(stopped.voices,0);assert.equal(stopped.graphs,0);
   assert.deepEqual(browserErrors,[],'Uncaught browser exceptions');
-  console.log('RAUSBEAT HTTPS BASELINE PASS: native OPFS API, native worklet capture, actual PCM WAV, stop cleanup; existing production only, not RC1.2.');
+  console.log('RAUSBEAT NATIVE ENDURANCE PASS: '+wallSeconds.toFixed(3)+'s wall, '+wav.seconds.toFixed(3)+'s PCM, '+wav.windows+' complete 100ms windows, '+wav.quietWindows+' quiet windows, no clipping, stop cleanup; existing production only, not RC1.2.');
   const progressive=running.storage==='opfs'||storageDuring.some(f=>f.size>44&&!storageBefore.some(g=>g.name===f.name&&g.size===f.size));
   console.log('RAUSBEAT PROGRESSIVE OPFS '+(progressive?'OBSERVED':'NOT DEMONSTRATED')+'; actual recording file observation, not certification.');
+  // Test the app's own service worker, never install a substitute worker.
+  const registered=await evaluate('navigator.serviceWorker.getRegistrations().then(rs=>rs.map(r=>({scope:r.scope,active:r.active?.scriptURL??null})))');
+  console.log('RAUSBEAT SERVICE WORKER REGISTRATIONS '+JSON.stringify(registered));
+  await wait('!!navigator.serviceWorker.controller','installed app service worker controls page');
+  const cache=await evaluate('caches.keys()');console.log('RAUSBEAT CACHE KEYS '+JSON.stringify(cache));
+  assert.ok(cache.length>0,'No app cache');
+  await call('Network.setCacheDisabled',{cacheDisabled:true});
+  await call('Network.emulateNetworkConditions',{offline:true,latency:0,downloadThroughput:0,uploadThroughput:0});
+  try{
+    responses.length=0;
+    const nav=await call('Page.navigate',{url:base+'/index.html?qa-offline=1'});
+    assert.ok(!nav.errorText,'Offline navigation failed: '+nav.errorText);
+    await wait('document.readyState==="complete"&&!!window.__RAUSBEAT_DIAGNOSTICS__&&!!window.__RAUSBEAT_PRO__','offline app initialized');
+    assert.equal(await evaluate('navigator.onLine'),false);
+    assert.equal(await evaluate('location.origin'),base);
+    assert.ok(responses.some(r=>r.type==='Document'&&r.fromServiceWorker&&r.status===200),'Offline document not served by app service worker');
+    await press('#btn-play');
+    await wait('window.__RAUSBEAT_DIAGNOSTICS__.scheduledSteps>3','offline transport running');
+    await sleep(2000);
+    const offline=await diag();
+    assert.equal(offline.stepFaults,0);
+    await press('#btn-play');await sleep(1000);
+    const offStop=await diag();assert.equal(offStop.schedulers,0);assert.equal(offStop.voices,0);assert.equal(offStop.graphs,0);
+    assert.deepEqual(browserErrors,[],'Uncaught JS errors including offline');
+    console.log('RAUSBEAT OFFLINE PASS: app service worker served document with network disabled, transport played and stopped, '+offline.steps+' scheduled steps; existing production only.');
+  }finally{await call('Network.emulateNetworkConditions',{offline:false,latency:0,downloadThroughput:-1,uploadThroughput:-1});}
  }catch(error){
   throw Error(error.message+(diagnostics?'\nBrowser diagnostics: '+diagnostics.slice(-1000):''));
  }finally{
