@@ -394,10 +394,15 @@
       "full_name": "Nikoju1977/Niko-3D-VIBES",
       "domain": "visual-arts",
       "priority": "P1",
-      "core_integration": "not_started",
+      "core_integration": "committed",
       "deployment": "not_verified_for_this_batch",
       "runtime": "not_verified_for_this_batch",
-      "visibility": "public"
+      "visibility": "public",
+      "core_version": "0.1.0",
+      "core_asset": "studio-niko-core.js",
+      "phase_b_status": "committed_partial",
+      "phase_b_scope": "V3.1 : copie canonique Core et diagnostic volontaire, cache et build actualisés ; runner Ubuntu 24.04 corrigé. Commit 6e000eabb716deddbc6fdd0606bb9184228db17d ; CI et appareils physiques à confirmer.",
+      "phase_b_document": "README.md"
     },
     {
       "name": "niko-commande-live-tik-tok",
