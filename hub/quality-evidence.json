@@ -1128,15 +1128,15 @@
       },
       "functionalTests": false,
       "followup": {
-        "commit": "6e000eabb716deddbc6fdd0606bb9184228db17d",
+        "commit": "8244a9cbf8a1d813e8c53b8b5a2f50aa897078cb",
         "ci": {
           "state": "success",
-          "url": "https://github.com/Nikoju1977/Niko-3D-VIBES/actions/runs/45938450383",
-          "scope": "Vercel READY et alias associés au commit exact ; CI GitHub réussie, Chromium sur deux viewports (10 modes, OBJ, arrêt, diagnostic Core). Page publique lue sans authentification ; caméra réelle, MediaPipe, MIDI, Blender et appareils physiques non validés."
+          "url": "https://github.com/Nikoju1977/Niko-3D-VIBES/actions/runs/46006233122",
+          "scope": "V6.5 fusionnée sur main ; arbre identique au candidat df5e54a. Deux CI réussies, 92/92 tests Node, 34 empreintes SHA-256, Chromium PC/mobile (11 ateliers), WebGL PNG/GLB/réimport. Alias Vercel READY sur le commit exact. Aucun audit HTTP de cette version ni validation sur appareils physiques ou clinique."
         },
         "production": {
           "url": "https://niko-3d-vibes.vercel.app/",
-          "id": "dpl_E37ey3ecLv4jdNqGFm7ZVv7yHtUD",
+          "id": "dpl_3uYLpBHE3c2Hgbq2Qq7Z2ULxS5HZ",
           "state": "READY"
         },
         "physicalDevicesVerified": false
