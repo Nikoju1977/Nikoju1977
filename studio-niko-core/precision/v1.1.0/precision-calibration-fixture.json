@@ -1,0 +1,50 @@
+{
+  "schema": "niko-calibration-v1",
+  "metric": "angle_deg",
+  "protocol": "synthetic-calibration-demo",
+  "fitId": "synthetic-fit",
+  "validationId": "synthetic-holdout",
+  "fit": [
+    {
+      "estimate": 20,
+      "reference": 22
+    },
+    {
+      "estimate": 40,
+      "reference": 42
+    },
+    {
+      "estimate": 60,
+      "reference": 62
+    },
+    {
+      "estimate": 80,
+      "reference": 82
+    },
+    {
+      "estimate": 100,
+      "reference": 102
+    }
+  ],
+  "validation": [
+    {
+      "estimate": 30,
+      "reference": 32
+    },
+    {
+      "estimate": 70,
+      "reference": 72
+    },
+    {
+      "estimate": 110,
+      "reference": 112
+    }
+  ],
+  "criteria": {
+    "minPairs": 2,
+    "minCoverage": 0.6,
+    "maxMAE": 1,
+    "maxAbsBias": 1,
+    "maxRMSE": 1
+  }
+}

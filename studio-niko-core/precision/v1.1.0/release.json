@@ -1,0 +1,16 @@
+{
+  "schema": "studio-niko-precision-release-v1",
+  "version": "1.1.0",
+  "sessionFormatEngine": "1.0.0",
+  "source": {
+    "repository": "Nikoju1977/Niko-3D-VIBES",
+    "commit": "e368ec13043acb0073935c7de30e71d7c0c0e440",
+    "path": "niko-precision-core.js",
+    "gitBlob": "830162526edc0f34d6a176973d6a9e198ccd5c40"
+  },
+  "asset": "niko-precision-core.mjs",
+  "status": "experimental_non_medical",
+  "clinicalValidation": false,
+  "productionIntegration": false,
+  "sourceTestRun": "https://github.com/Nikoju1977/Niko-3D-VIBES/actions/runs/45989487267"
+}
