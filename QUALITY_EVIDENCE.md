@@ -112,3 +112,14 @@ Wan2GP : [nouveau contrôle](https://github.com/Nikoju1977/AutoCoder-Studio-Niko
 | oracle-du-jardinier | index.html | [b62442ec](https://github.com/Nikoju1977/oracle-du-jardinier/commit/b62442ec1a9bee5516a593cff0ddebcb22ab72b8) | `74930f948939991554fd70b2f65f921a60963f689b84dcddecd0bd555914880e` |
 | oracle-du-jardinier | sw.js | [b62442ec](https://github.com/Nikoju1977/oracle-du-jardinier/commit/b62442ec1a9bee5516a593cff0ddebcb22ab72b8) | `de3b911b8eadcb6036305e021f3235eba454ae4f7f02aa88e26cb875a54fb794` |
 | oracle-du-jardinier | manifest.webmanifest | [b62442ec](https://github.com/Nikoju1977/oracle-du-jardinier/commit/b62442ec1a9bee5516a593cff0ddebcb22ab72b8) | `d2f2273afedbe020b83798bbd8f88c0f49f104da4bd76e815b6e884de99e0b96` |
+
+## Niko Emploi — installation PWA, 27 novembre 2026
+
+La réouverture tardive de l’aide à l’installation a été reproduite dans un scénario local avant correction. Le scénario réussit après correction et les huit tests ciblés PWA et cache passent. La [CI de la PR](https://github.com/Nikoju1977/job-search/actions/runs/45914604268) a réussi avant fusion. Le [commit fusionné](https://github.com/Nikoju1977/job-search/commit/72a85e91edfa8d5df4dcb3e0af09ca70d960afaf) est associé au [déploiement Vercel de production](https://vercel.com/nikoju1977s-projects/niko-emploi/AFc28SfMcPyN5kT9hnBBMhUYz7Dn).
+
+Les fichiers publics `pwa.js` et `sw.js` correspondent octet pour octet aux fichiers du commit fusionné. La CI sur le commit fusionné et l’installation sur appareil réel restent à confirmer.
+
+| Fichier | SHA-256 en production |
+| --- | --- |
+| `pwa.js` | `67794107b6bd6330550e4640b648c32fa810f347136f6adb54cd22a8e28295b8` |
+| `sw.js` | `c3a5158c1d37ebb41546a53fc71033054f89f46561ae44ede0707aaaa0dcb0f3` |
