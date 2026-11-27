@@ -1,0 +1,26 @@
+{
+  "schema": "niko-reference-v1",
+  "metric": "angle_deg",
+  "protocol": "synthetic-01",
+  "criteria": {
+    "minPairs": 2,
+    "minCoverage": 0.6,
+    "maxMAE": 2,
+    "maxAbsBias": 1,
+    "maxRMSE": 2
+  },
+  "pairs": [
+    {
+      "reference": 90,
+      "estimate": 92
+    },
+    {
+      "reference": 90,
+      "estimate": 88
+    },
+    {
+      "reference": 90,
+      "estimate": null
+    }
+  ]
+}

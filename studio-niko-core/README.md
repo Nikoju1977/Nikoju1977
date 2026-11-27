@@ -70,3 +70,6 @@ node studio-niko-core/tools/refresh-hub.mjs --apply
 La première commande compare sans rien écrire, la deuxième actualise le fichier `hub/pilotage.html`. Il faut ensuite effectuer un commit et, si souhaité, publier le Hub. Aucun déploiement automatique n'est déclenché par ce script.
 
 Voir [ROADMAP.md](./ROADMAP.md) pour la suite des 55 dépôts.
+
+## Module Precision Core (candidat 1.1.0)
+Voir [Precision Core](./precision/v1.1.0/README.md). Socle scientifique expérimental séparé, sans intégration automatique aux applications, sans validation clinique. La version 0.1.0 et son registre restent inchangés.
