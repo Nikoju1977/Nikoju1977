@@ -1114,5 +1114,19 @@
         "publicBytes": 433
       }
     ]
-  }
+  },
+  "outsideCampaign": [
+    {
+      "repo": "Nikoju1977/Niko-3D-VIBES",
+      "commit": "ce3f4f3026b7673c4abfce70405011cec26a968b",
+      "addedOn": "2026-11-27",
+      "status": "not_audited_in_campaign",
+      "ci": {
+        "state": "failure",
+        "url": "https://github.com/Nikoju1977/Niko-3D-VIBES/actions/runs/45938198279",
+        "scope": "Tests Node, contrôles et build réussis ; installation Chromium en échec, test navigateur ignoré."
+      },
+      "functionalTests": false
+    }
+  ]
 }

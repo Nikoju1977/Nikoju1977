@@ -1,5 +1,5 @@
 'use strict';
-const CACHE='studio-niko-hub-v30-modules';
+const CACHE='studio-niko-hub-v31-vibes';
 const ASSETS=['./','./index.html','./pilotage.html','./provenance.html','./quality.html','./quality.css','./quality-evidence.json','./provenance.js','./provenance-snapshot.json','./pilotage-workspace.js','./styles.css','./app.js','./workspace.js','./workspace.css','./catalog.json','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./install.js','./guide.js','./guides.json','./quality-core.js','./quality.js','./deployments.html','./deployments.js','./deployments-core.js','./deployment-observations.json','./security.html','./security.js','./security-core.js','./agents.html','./agents.js','./agents-core.js','./devices.html','./devices.js','./devices-core.js','./recovery.html','./recovery.js','./recovery-core.js','./command.html','./command.js','./command-core.js','./command.css','./design.css','./design-core.js','./design.js','./offline.html','./diagnostics.html','./diagnostics.css'];
 const SCOPE=new URL(self.registration.scope);
 const INDEX=new URL('./index.html',SCOPE).href;

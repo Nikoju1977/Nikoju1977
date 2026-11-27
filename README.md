@@ -40,6 +40,11 @@ Independent creative technologist in France — filmmaking, interactive art, rea
 
 **Collaboration:** reproducible feedback is welcome. Each project's actual license applies. Not all repositories are open source. Medical and industrial prototypes are not certified; no production readiness is implied.
 
+
+## Actualisation du 27 novembre 2026 — NIKO 3D VIBES
+
+Le [projet NIKO 3D VIBES](https://github.com/Nikoju1977/Niko-3D-VIBES) rejoint le catalogue Art & 3D et le registre de pilotage : 59 dépôts recensés, 54 publics et 5 privés non détaillés. Le [commit source](https://github.com/Nikoju1977/Niko-3D-VIBES/commit/ce3f4f3026b7673c4abfce70405011cec26a968b) est vérifié sur GitHub. Les tests Node et le build de la [CI](https://github.com/Nikoju1977/Niko-3D-VIBES/actions/runs/45938198279) ont réussi, mais son installation Chromium a échoué et le test navigateur n'a pas été exécuté. Aucun accès de production, essai physique, intégration Core ou preuve de provenance nouvelle n'est revendiqué. La campagne historique du 25 novembre (53 dépôts) reste inchangée.
+
 ## Nouveau : Studio Niko Core
 
 [**Accéder au tableau de pilotage GitHub**](hub/pilotage.html) — inventaire daté de **53 dépôts publics**, avec recherche, priorités et état des six premières intégrations de [Studio Niko Core](studio-niko-core/README.md). Les cinq dépôts privés sont exclus de ce tableau public. Les statuts sont un **instantané daté**, pas une surveillance continue ; un commit ne prouve pas un fonctionnement vérifié.

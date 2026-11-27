@@ -409,6 +409,17 @@
     "requirements": "Certaines fonctions demandent une clé Mistral et la permission caméra. La page accessible ne prouve pas que les fonctions IA sont configurées."
   },
   {
+    "slug": "Niko-3D-VIBES",
+    "name": "NIKO 3D VIBES",
+    "category": "Art & 3D",
+    "description": "NeuroMotion Engine V3 : vision gestuelle et corporelle MediaPipe, création 3D Canvas, audio/MIDI, caméra virtuelle et capture de mouvements.",
+    "repoUrl": "https://github.com/Nikoju1977/Niko-3D-VIBES",
+    "demoUrl": null,
+    "featured": true,
+    "status": "source-only",
+    "requirements": "HTTPS ou localhost, caméra facultative, Internet au premier chargement des modèles. CI du 27/11 : tests Node et build réussis, installation Chromium en échec ; aucun test navigateur ou appareil physique ni déploiement confirmé. Biomécanique expérimentale, non médicale."
+  },
+  {
     "slug": "niko-commande-live-tik-tok",
     "name": "Niko Live Commander",
     "category": "Musique & Audio",

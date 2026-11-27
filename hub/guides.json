@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "date": "2026-11-24",
+  "date": "2026-11-27",
   "guides": [
     {
       "slug": "aegis-earth-mobile",
@@ -481,6 +481,22 @@
       "troubleshooting": "En cas de page vide ou d'erreur : rechargez une fois, vérifiez la connexion et les permissions ; sur une PWA déjà installée, fermez-la puis rouvrez-la pour actualiser son cache. Consultez le dépôt GitHub si le problème persiste.",
       "repoUrl": "https://github.com/Nikoju1977/Neural-Art-mars-2026",
       "launchUrl": "https://nikoju1977.github.io/Neural-Art-mars-2026/"
+    },
+    {
+      "slug": "Niko-3D-VIBES",
+      "title": "NIKO 3D VIBES",
+      "category": "Art & 3D",
+      "description": "NeuroMotion Engine V3 : vision gestuelle et corporelle MediaPipe, création 3D Canvas, audio/MIDI, caméra virtuelle et capture de mouvements.",
+      "steps": [
+        "Depuis GitHub, cloner ou télécharger le dépôt, puis lancer python -m http.server à sa racine.",
+        "Ouvrir localhost, choisir un mode et autoriser la caméra ou importer une vidéo de test.",
+        "Arrêter le flux après utilisation et exporter les données JSON ou OBJ lorsque le mode le permet."
+      ],
+      "preparation": "Navigateur moderne, localhost ou HTTPS ; Internet au premier chargement MediaPipe. MIDI selon navigateur et périphérique.",
+      "caution": "Ne pas utiliser les mesures à des fins médicales. Rendu Canvas, pas WebGL ; tests navigateur et appareils réels non confirmés.",
+      "troubleshooting": "Vérifier la connexion, les permissions caméra et la console. Consulter le workflow CI du dépôt ; le lancement public n'est pas encore établi.",
+      "repoUrl": "https://github.com/Nikoju1977/Niko-3D-VIBES",
+      "launchUrl": null
     },
     {
       "slug": "niko-commande-live-tik-tok",

@@ -109,8 +109,12 @@ for(const shortcut of manifest.shortcuts||[])assert(entries.includes(shortcut.ur
 console.log('PASS catalog='+cat.length+' launchUrls='+cat.filter(x=>x.demoUrl).length+' DOM bindings checked');
 
 const evidence=JSON.parse(fs.readFileSync(path.join(dir,'quality-evidence.json'),'utf8'));
-assert.equal(evidence.rows.length,cat.length);
-assert.equal(new Set(evidence.rows.map(r=>r.repo)).size,cat.length);
+const historical=evidence.rows, outside=evidence.outsideCampaign||[];
+assert.equal(historical.length,evidence.totals.repositories,'Historical campaign count');
+for(const r of outside){assert.equal(r.status,'not_audited_in_campaign');assert.equal(r.functionalTests,false);assert(/^[a-f0-9]{40}$/.test(r.commit));assert(registry.repositories.some(x=>x.full_name===r.repo));}
+const covered=[...historical,...outside];
+assert.equal(covered.length,cat.length,'Current inventory and historical coverage are distinct');
+assert.equal(new Set(covered.map(r=>r.repo)).size,cat.length);
 for(const r of evidence.rows){assert(registry.repositories.some(x=>x.full_name===r.repo));assert(r.commit===null||/^[a-f0-9]{40}$/.test(r.commit));assert.equal(r.functionalTests,false);}
 assert.equal(evidence.rows.reduce((n,r)=>n+r.files,0),evidence.totals.files);
 assert.equal(evidence.rows.reduce((n,r)=>n+r.batches,0),evidence.totals.batches);
