@@ -401,19 +401,19 @@
       "core_version": "0.1.0",
       "core_asset": "studio-niko-core.js",
       "phase_b_status": "committed_partial",
-      "phase_b_scope": "V3.1 : diagnostic Core 0.1.0, cache, build ; CI réussie après correction Ubuntu 24.04. Vercel READY et alias associés au commit exact ; CI GitHub réussie, Chromium sur deux viewports (10 modes, OBJ, arrêt, diagnostic Core). Page publique lue sans authentification ; caméra réelle, MediaPipe, MIDI, Blender et appareils physiques non validés.",
+      "phase_b_scope": "Core 0.1.0 intégré. V4 consolidée sur main ; candidat V6.5 en PR 7, 91 tests et workflow complet 46005477907 ; autre workflow interrompu par HTTP 403 lors de l'installation Playwright. Révision CI suivante à vérifier. Aucun résultat clinique validé.",
       "phase_b_document": "README.md",
       "production_deployment": {
         "provider": "Vercel",
         "project": "niko-3d-vibes",
         "environment": "production",
         "state": "READY",
-        "commit": "6e000eabb716deddbc6fdd0606bb9184228db17d",
+        "commit": "9a0ec8bda4fb8c06b7806e1ac1f5828611df5991",
         "url": "https://niko-3d-vibes.vercel.app/",
         "checked_on": "2026-11-27",
         "verification": "deployment_ready_ci_only",
         "ci": "success",
-        "evidence": "Vercel READY et alias associés au commit exact ; CI GitHub réussie, Chromium sur deux viewports (10 modes, OBJ, arrêt, diagnostic Core). Page publique lue sans authentification ; caméra réelle, MediaPipe, MIDI, Blender et appareils physiques non validés."
+        "evidence": "Alias Vercel vérifié READY sur V3.4, commit 9a0ec8bda4fb8c06b7806e1ac1f5828611df5991, déploiement dpl_t2PBQXUxUGb3QmoZdS957mTCk4JW. Candidat V6.5 non déployé. Appareils physiques non vérifiés."
       }
     },
     {
