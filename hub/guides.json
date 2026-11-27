@@ -486,17 +486,17 @@
       "slug": "Niko-3D-VIBES",
       "title": "NIKO 3D VIBES",
       "category": "Art & 3D",
-      "description": "NeuroMotion Engine V3 : vision gestuelle et corporelle MediaPipe, création 3D Canvas, audio/MIDI, caméra virtuelle et capture de mouvements.",
+      "description": "NeuroMotion Engine V3.1 : vision gestuelle et corporelle MediaPipe, création 3D Canvas, audio/MIDI, caméra virtuelle et capture de mouvements.",
       "steps": [
-        "Depuis GitHub, cloner ou télécharger le dépôt, puis lancer python -m http.server à sa racine.",
-        "Ouvrir localhost, choisir un mode et autoriser la caméra ou importer une vidéo de test.",
+        "Ouvrir l'application HTTPS depuis le Hub, choisir un mode.",
+        "Autoriser la caméra ou importer une vidéo de test ; Internet requis au premier chargement des modèles.",
         "Arrêter le flux après utilisation et exporter les données JSON ou OBJ lorsque le mode le permet."
       ],
       "preparation": "Navigateur moderne, localhost ou HTTPS ; Internet au premier chargement MediaPipe. MIDI selon navigateur et périphérique.",
-      "caution": "Ne pas utiliser les mesures à des fins médicales. Rendu Canvas, pas WebGL ; tests navigateur et appareils réels non confirmés.",
-      "troubleshooting": "Vérifier la connexion, les permissions caméra et la console. Consulter le workflow CI du dépôt ; le lancement public n'est pas encore établi.",
+      "caution": "Ne pas utiliser les mesures à des fins médicales. Rendu Canvas, pas WebGL. CI navigateur sur deux viewports réussie ; caméra réelle, MIDI et appareils physiques non confirmés.",
+      "troubleshooting": "Vérifier connexion, permissions caméra et console ; utiliser le diagnostic Core volontaire et consulter le dépôt.",
       "repoUrl": "https://github.com/Nikoju1977/Niko-3D-VIBES",
-      "launchUrl": null
+      "launchUrl": "https://niko-3d-vibes.vercel.app/"
     },
     {
       "slug": "niko-commande-live-tik-tok",

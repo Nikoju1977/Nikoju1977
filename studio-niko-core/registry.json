@@ -395,14 +395,26 @@
       "domain": "visual-arts",
       "priority": "P1",
       "core_integration": "committed",
-      "deployment": "not_verified_for_this_batch",
-      "runtime": "not_verified_for_this_batch",
+      "deployment": "production_ready_ci_only",
+      "runtime": "browser_ci_tested_local_public_page_read_devices_not_verified",
       "visibility": "public",
       "core_version": "0.1.0",
       "core_asset": "studio-niko-core.js",
       "phase_b_status": "committed_partial",
-      "phase_b_scope": "V3.1 : copie canonique Core et diagnostic volontaire, cache et build actualisés ; runner Ubuntu 24.04 corrigé. Commit 6e000eabb716deddbc6fdd0606bb9184228db17d ; CI et appareils physiques à confirmer.",
-      "phase_b_document": "README.md"
+      "phase_b_scope": "V3.1 : diagnostic Core 0.1.0, cache, build ; CI réussie après correction Ubuntu 24.04. Vercel READY et alias associés au commit exact ; CI GitHub réussie, Chromium sur deux viewports (10 modes, OBJ, arrêt, diagnostic Core). Page publique lue sans authentification ; caméra réelle, MediaPipe, MIDI, Blender et appareils physiques non validés.",
+      "phase_b_document": "README.md",
+      "production_deployment": {
+        "provider": "Vercel",
+        "project": "niko-3d-vibes",
+        "environment": "production",
+        "state": "READY",
+        "commit": "6e000eabb716deddbc6fdd0606bb9184228db17d",
+        "url": "https://niko-3d-vibes.vercel.app/",
+        "checked_on": "2026-11-27",
+        "verification": "deployment_ready_ci_only",
+        "ci": "success",
+        "evidence": "Vercel READY et alias associés au commit exact ; CI GitHub réussie, Chromium sur deux viewports (10 modes, OBJ, arrêt, diagnostic Core). Page publique lue sans authentification ; caméra réelle, MediaPipe, MIDI, Blender et appareils physiques non validés."
+      }
     },
     {
       "name": "niko-commande-live-tik-tok",

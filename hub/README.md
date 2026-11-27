@@ -213,3 +213,7 @@ La vérification en navigateur de production, les interactions des moteurs méti
 - [aylina-is-cooking](https://github.com/Nikoju1977/aylina-is-cooking/commit/c25e48bdf50a7f6b8eb6e9f7879b363a3d80e3e0) : Calcul alimentaire par portion et favoris locaux ; dose retirée, IA suspendue. Aucun calcul de traitement ; favoris non chiffrés, ancien profil effaçable volontairement.
 
 Sources relues après publication, empreintes SHA vérifiées ; aucun nouveau test d'exécution ou déploiement vérifié. Les constats antérieurs sont historiques, non des preuves de l'état actuel. Le chef distant est suspendu par précaution ; pas de suppression automatique des anciennes données locales.
+
+## NIKO 3D VIBES V3.1 — production (27 novembre 2026)
+
+[Ouvrir l'application](https://niko-3d-vibes.vercel.app/) ; [CI réussie](https://github.com/Nikoju1977/Niko-3D-VIBES/actions/runs/45938450383) ; commit `6e000eabb716deddbc6fdd0606bb9184228db17d`. Vercel READY et alias associés au commit exact ; CI GitHub réussie, Chromium sur deux viewports (10 modes, OBJ, arrêt, diagnostic Core). Page publique lue sans authentification ; caméra réelle, MediaPipe, MIDI, Blender et appareils physiques non validés. Les huit relevés Vercel/GitHub sont datés du 27 novembre, 5 SHA alignés au moment du relevé. Les autres preuves historiques restent distinctes.

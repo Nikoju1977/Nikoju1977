@@ -414,10 +414,17 @@
     "category": "Art & 3D",
     "description": "NeuroMotion Engine V3.1 : vision gestuelle et corporelle MediaPipe, création 3D Canvas, audio/MIDI, caméra virtuelle et capture de mouvements.",
     "repoUrl": "https://github.com/Nikoju1977/Niko-3D-VIBES",
-    "demoUrl": null,
+    "demoUrl": "https://niko-3d-vibes.vercel.app/",
     "featured": true,
-    "status": "source-only",
-    "requirements": "HTTPS ou localhost, caméra facultative, Internet au premier chargement des modèles. CI du 27/11 : tests Node et build réussis, installation Chromium en échec ; aucun test navigateur ou appareil physique ni déploiement confirmé. Biomécanique expérimentale, non médicale. Correctif Ubuntu 24.04 et Core 0.1.0 committés ; nouvelle CI à confirmer."
+    "status": "page-responding",
+    "requirements": "HTTPS, connexion Internet au premier chargement MediaPipe. Vercel READY et alias associés au commit exact ; CI GitHub réussie, Chromium sur deux viewports (10 modes, OBJ, arrêt, diagnostic Core). Page publique lue sans authentification ; caméra réelle, MediaPipe, MIDI, Blender et appareils physiques non validés. Biomécanique expérimentale, non médicale.",
+    "pageCheckedOn": "2026-11-27",
+    "deployment": {
+      "provider": "Vercel",
+      "state": "READY",
+      "access": "public",
+      "project": "niko-3d-vibes"
+    }
   },
   {
     "slug": "niko-commande-live-tik-tok",
